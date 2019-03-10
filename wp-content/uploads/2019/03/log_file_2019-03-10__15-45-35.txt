@@ -1,0 +1,48 @@
+
+---Downloaded files---
+The import files for: Fawzi were successfully downloaded!
+Initial max execution time = 30
+Files info:
+Site URL = http://localhost
+Data file = D:\Web\quangchau247\wordpress/wp-content/uploads/2019/03/demo-content-import-file_2019-03-10__15-45-35.xml
+Widget file = D:\Web\quangchau247\wordpress/wp-content/uploads/2019/03/demo-widgets-import-file_2019-03-10__15-45-35.json
+Customizer file = not defined!
+Redux files:
+not defined!
+
+------
+New AJAX call!
+
+
+------
+Codestar Framework files loaded.
+
+---Importing widgets---
+Main Widget Area : 
+
+Tìm kiếm - SEARCH - Imported
+Chuyên mục - CATEGORIES - Imported
+Fawzi: Recent Posts - No Title - Imported
+Lưu trữ - ARCHIVES - Imported
+Mây Thẻ - POPULAR TAGS - Imported
+
+Footer Widget 1 : 
+
+Fawzi: Text Widget - ABOUT US - Imported
+
+Footer Widget 2 : 
+
+Fawzi: Text Widget - USEFUL LINKS - Imported
+
+Footer Widget 3 : 
+
+Fawzi: Text Widget - GET IN TOUCH - Imported
+
+Footer Widget 4 : 
+
+Fawzi: Text Widget - NEWSLETTER - Imported
+
+
+
+---pt-ocdi/after_import---
+
