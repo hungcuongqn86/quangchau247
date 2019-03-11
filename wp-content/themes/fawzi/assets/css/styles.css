@@ -658,7 +658,7 @@ nav.menu-main-menu-container {
 }
 .nav > li:hover > a, .nav > li > a:hover, .nav > li > a:focus, .nav > li.active > a, .nav .open > a, .nav .open > a:focus, .nav .open > a:hover {
   background: none;
-  color: #518ff5;
+  color: #bc9355;
 }
 .open > .dropdown-menu, .dropdown-submenu:hover > .dropdown-menu {
   opacity: 1;
