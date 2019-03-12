@@ -1,0 +1,349 @@
+function showRecharge(el) {
+   $(el).each(function() {
+      $(this).change(function() {
+         var status = $(this).is(':checked');
+         var target = $(this).data('target');
+         if (status) {
+            $(target).fadeIn('fast');
+         } else {
+            $(target).fadeOut('fast');
+         }
+      }).triggerHandler('change');
+   });
+}
+
+// function showMaxMoney(el) {
+//    $(el).each(function() {
+//       $(this).change(function() {
+//          var target = $(this).data('target');
+//          var maxMoney = $(this).find('option:selected').data('max') || 0;
+//          $(target).parent().find('.show-max').html(maxMoney);
+//       }).triggerHandler('change');
+//    });
+// }
+
+// function changeOrderByUser(el) {
+//    $(el).each(function() {
+//       $(this).change(function() {
+//          var _user_id = $(this).find('option:selected').val();
+//          var _token = $('body').data('token');
+//          var target = $(this).data('target');
+//          $.ajax({
+//             url: "/ajax/backend/getOrderByUser",
+//             method: "POST",
+//             data: {user_id: _user_id, _token: _token},
+//             beforeSend: function() {
+//                $(target).attr('disabled', 'disabled');
+//             },
+//             success: function(result){
+//                var html = ['<option value="">-- Select order --</option>'];
+//                $.each(result, function(index, value) {
+//                   html.push('<option value="' + index + '">' + value + '</option>');
+//                });
+//                $(target).html(html.join());
+//             },
+//             complete: function() {
+//                $(target).removeAttr('disabled');
+//             }
+//          });
+//       });
+//    });
+// }
+
+function showTarget(el) {
+   $(el).each(function() {
+      $(this).change(function() {
+         var checked = $(this).is(':checked');
+         var show = $(this).find('option:selected').data('show') || $(this).data('show');
+         var target = $(this).data('target');
+         if ($(this).tagName == 'select' || checked) {
+            $(target).fadeOut('fast');
+            $(show).fadeIn('fast');
+         };
+      }).triggerHandler('change');
+   });
+}
+
+$(function() {
+   $('.see-add-noti').click(function(e) {
+      e.preventDefault();
+      var _this = $(this);
+      _this.parents('.noti-parent').find('.noti-count').removeClass('count');
+      _this.parents('.noti-parent').find('.noti-count').addClass('count-0');
+      _this.parents('.noti-parent').find('.noti-count').find('b').text('0');
+      _this.parents('.noti-parent').find('.notification').removeClass('unread');
+      $.ajax({
+         url: _this.data('url'),
+         type: 'GET',
+         dataType: 'json',
+         success: function(data) {
+
+         }
+      });
+   });
+
+   $('.noti-icon').click(function(e) {
+      _this = $(this);
+      if( _this.data('show') == false ) {
+         $.ajax({
+            url: _this.data('url'),
+            type: 'GET',
+            dataType: 'json',
+            beforeSend: function(xhr) {
+               $('.'+_this.data('target')).html('<li class="dropdown-header">Đang tải...</li>');
+            },
+            success: function(data) {
+               $('.'+_this.data('target')).html(data.message);
+               if( data.status == 'SUCCESS' ) {
+                  // count = parseInt($('.noti-count').find('b').text()) - parseInt(data.count_readed);
+                  // $('.noti-count').find('b').text(count);
+                  _this.data('show', true);
+               }
+            }
+         });
+      }
+   });
+
+   $('.item-staff').append(' <i class="fa fa-exclamation-triangle"></i>');
+   // report js
+   $('.item-staff').click(function (event) {
+       // Avoid the real one
+       event.preventDefault();
+       id = $(this).data('id');
+       referent = $(this).data('referent');
+       type = $(this).data('type');
+       $('#custom-menu-report').data('id', id);
+       $('#custom-menu-report').data('referent', referent);
+       $('#custom-menu-report').data('type', type);
+       // Show contextmenu
+       $("#custom-menu-report").finish().toggle(100).
+       // In the right position (the mouse)
+       css({
+           top: event.pageY + "px",
+           left: event.pageX + "px"
+       });
+   });
+   // If the document is clicked somewhere
+   $(document).bind("mousedown", function (e) {
+
+       // If the clicked element is not the menu
+       if (!$(e.target).parents(".custom-menu").length > 0) {
+
+           // Hide it
+           $(".custom-menu").hide(100);
+       }
+   });
+   $(".custom-menu li").click(function(){
+      var id = $(this).parent().data('id');
+      var referent = $(this).parent().data('referent');
+      var type = $(this).parent().data('type');
+    // This is the triggered action name
+       switch($(this).attr("data-action")) {
+           // A case for each action. Your actions here
+           case "report": report(id, referent, type); break;
+       }
+       // Hide it AFTER the action was triggered
+       $(".custom-menu").hide(100);
+  });
+   function report(id, referent, type, url) {
+      $('.modal-report').find('textarea').val('');
+      if( url != null ) {
+         $('.modal-report').find('form.form-ajax').attr('action', url);
+      } else {
+         $('.modal-report').find('form.form-ajax').attr('action', $('.modal-report').find('form.form-ajax').data('action'));
+      }
+      $('.modal-report').find('input[type="submit"]').removeClass('disabled');
+      $('.modal-report').find('.input_user_id').val(id);
+      $('.modal-report').find('.input_referent_id').val(referent);
+      if( $('.model-select-content').data('find') != 'true' ) {
+         $.ajax({
+            url: '/1688/reson-reports/ajax?type=' + type,
+            type: 'GET',
+            dataType: 'json',
+            beforeSend: function(xhr) {
+               $('.model-select-content').append("<option>Đang tải...</option>");
+            },
+            success: function(data) {
+               $('.model-select-content').html("<option value='0'>--- Chọn mô tả lỗi ---</option>");
+               $.each(data, function(key, value) {
+                  $('.model-select-content').append("<option value='" + value.id + "'>" + value.title + "</option>");
+               })
+               // $('.model-select-content').append(data);
+               $('.model-select-content').data('find', 'true');
+            }
+         });
+      }
+   }
+
+   $('.btnDeleteReport').click(function() {
+      var id = $(this).data('userid');
+      var referent = $(this).data('referent');
+      var type = $(this).data('type');
+      var url = $(this).data('url')
+      report(id, referent, type, url);
+
+   });
+
+   $('.form-ajax').submit(function(e) {
+      e.preventDefault();
+      _this = $(this);
+      $.ajax({
+            url: _this.attr('action'),
+            type: _this.attr('method'),
+            dataType: 'json',
+            data: _this.serializeArray(),
+            beforeSend: function(xhr) {
+               _this.find('input[type="submit"]').addClass('disabled');
+            },
+            success: function(data) {
+               if(data.status == 'success') {
+                  if( data.remove != null ) {
+                     tag = 'tr#'+data.remove;
+                     $('tr#'+data.remove).hide('slow');
+                  }
+                  var msg = data.msg || "Thực hiện thành công.";
+                  swal({
+                     type: "success",
+                     title: "Action!",
+                     text: msg,
+                     timer: 2000,
+                     showConfirmButton: false
+                  });
+               } else {
+                  var msg = data.msg || "Thực hiện thất bại.";
+                  swal({
+                     type: "error",
+                     title: "Action!",
+                     text: msg,
+                     timer: 2000,
+                     showConfirmButton: false
+                  });
+               }
+               _this.find('.btn-cancel').trigger('click');
+               _this.find('input[type="submit"]').removeClass('disabled');
+            }
+         });
+   });
+
+   $('.changeStatusPrivate').click(function(e) {
+      e.preventDefault();
+      _this = $(this);
+      _url = $(this).attr('href');
+      _token = $('body').data('token');
+      _status = $(this).data('value');
+      swal({
+         title: "Bạn có chắc chắn thực hiện?",
+         type: "warning",
+         showCancelButton: true,
+         confirmButtonColor: "#DD6B55",
+         confirmButtonText: "Ok",
+         cancelButtonText: "Cancel",
+         showLoaderOnConfirm: true,
+         closeOnConfirm: false
+      },
+         function() {
+            $.ajax({
+               url: _url,
+               type: "POST",
+               dataType : 'json',
+               data: { status: _status, _token: _token },
+               beforeSend: function(){
+
+               },
+               success : function(response) {
+                  if(response.status == 'success') {
+                     var msg = response.text || "Thực hiện thành công.";
+                     swal({
+                        type: "success",
+                        title: "Action!",
+                        text: msg,
+                        timer: 2000,
+                        showConfirmButton: false
+                     });
+                     _that = _this.closest('.dropdown').find('.lading_status_show');
+                     _that.text(response.value);
+                     _that.removeClass('btn-default');
+                     _that.removeClass('btn-primary');
+                     _that.removeClass('btn-info');
+                     _that.removeClass('btn-warning');
+                     _that.removeClass('btn-danger');
+                     _that.removeClass('btn-success');
+                     _that.addClass(response.css);
+                  } else {
+                     var msg = response.text || "Thực hiện thất bại.";
+                     swal({
+                        type: "error",
+                        title: "Action!",
+                        text: msg,
+                        timer: 2000,
+                        showConfirmButton: false
+                     });
+                  }
+               }
+            });
+         }
+      );
+   });
+
+   $('.changeStatusSpecial').click(function(e) {
+      e.preventDefault();
+      _this = $(this);
+      _url = $(this).attr('href');
+      _token = $('body').data('token');
+      _status = $(this).data('value');
+      _column = $(this).data('column');
+      swal({
+         title: "Bạn có chắc chắn thực hiện?",
+         type: "warning",
+         showCancelButton: true,
+         confirmButtonColor: "#DD6B55",
+         confirmButtonText: "Ok",
+         cancelButtonText: "Cancel",
+         showLoaderOnConfirm: true,
+         closeOnConfirm: false
+      },
+         function() {
+            $.ajax({
+               url: _url,
+               type: "GET",
+               dataType : 'json',
+               data: { column: _column , newstatus: _status, _token: _token },
+               beforeSend: function(){
+
+               },
+               success : function(response) {
+                  if(response.status == 'success') {
+                     var msg = response.text || "Thực hiện thành công.";
+                     swal({
+                        type: "success",
+                        title: "Action!",
+                        text: msg,
+                        timer: 2000,
+                        showConfirmButton: false
+                     });
+                     _that = _this.closest('.dropdown').find('.lading_status_show');
+                     _that.text(response.value);
+                     // _that.removeClass('btn-default');
+                     // _that.removeClass('btn-primary');
+                     // _that.removeClass('btn-info');
+                     // _that.removeClass('btn-warning');
+                     // _that.removeClass('btn-danger');
+                     // _that.removeClass('btn-success');
+                     // _that.addClass(response.css);
+                  } else {
+                     var msg = response.text || "Thực hiện thất bại.";
+                     swal({
+                        type: "error",
+                        title: "Action!",
+                        text: msg,
+                        timer: 2000,
+                        showConfirmButton: false
+                     });
+                  }
+               }
+            });
+         }
+      );
+   });
+
+});

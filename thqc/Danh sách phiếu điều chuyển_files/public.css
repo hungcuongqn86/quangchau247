@@ -1,0 +1,85 @@
+#comment-relative {
+   position: relative;
+   width: 100%;
+   z-index: 0;
+}
+#comment-relative .content {
+   height: 200px;
+}
+.public-comment {
+   position: fixed;
+   bottom: 0;
+   right: 30px;
+   width: 300px;
+   z-index: 100000;
+   padding: 0;
+}
+.comment-container {
+
+}
+.public-comment .content {
+   background-color: #e9eaed;
+   overflow-y: scroll;
+   height: 300px;
+}
+
+.public-comment .content .text-comment {
+   min-height: 35px;
+}
+
+.public-comment > p {
+   cursor: pointer;
+   color: white;
+   padding: 7px;
+   margin: 0;
+   text-decoration: uppercase;
+   background-color: #6A436D;
+}
+
+.body-comment .c-customer {
+   float: right;
+   clear: both;
+   width: 100%;
+   text-align: right;
+}
+
+.body-comment .c-staff {
+   clear: both;
+   width: 100%;
+   float:left;
+}
+
+.body-comment .text-comment span {
+   padding: 5px 5px 5px;
+   margin-top: 2px;
+   border-radius: 20px;
+   border:1px solid #ccc;
+   display: inline-block;
+}
+.c-customer span {
+   background-color: #e0edff;
+}
+.c-staff span {
+   background-color: #fff;
+}
+.info-user-chatbox .show-name .User-name b {
+   color: #337ab7;
+}
+.body-comment .content {
+   padding: 10px;
+}
+
+#c_comment {
+   min-height: 35px;
+}
+.send-comment {
+   height: 54px;
+   position: relative;
+}
+.send-comment button {
+   height: inherit;
+   width: 60px;
+   position: absolute;
+   right: 0;
+   top: 0;
+}

@@ -1,0 +1,2101 @@
+<!DOCTYPE html>
+<!-- saved from url=(0044)https://timhangquangchau.com/thqc/rel?type=2 -->
+<html class=" "><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <title>Danh sách đơn hàng</title>
+   <!-- Tell the browser to be responsive to screen width -->
+   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+   <!-- Bootstrap 3.3.6 -->
+   <link rel="stylesheet" href="./Danh sách đơn hàng-kygui_files/bootstrap.min.css">
+   <!-- Font Awesome -->
+   <link rel="stylesheet" type="text/css" href="./Danh sách đơn hàng-kygui_files/font-awesome.min.css">
+   <link href="./Danh sách đơn hàng-kygui_files/sweetalert.css" rel="stylesheet">
+   <!-- Ionicons -->
+      <!-- Theme style -->
+   <link rel="stylesheet" href="./Danh sách đơn hàng-kygui_files/AdminLTE.min.css">
+   <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+   <link rel="stylesheet" href="./Danh sách đơn hàng-kygui_files/_all-skins.min.css">
+   <!-- iCheck -->
+   <link rel="stylesheet" href="./Danh sách đơn hàng-kygui_files/blue.css">
+   <!-- Date Picker -->
+   <link rel="stylesheet" href="./Danh sách đơn hàng-kygui_files/datepicker3.css">
+   <!-- Daterange picker -->
+      <!-- bootstrap wysihtml5 - text editor -->
+   <link rel="stylesheet" href="./Danh sách đơn hàng-kygui_files/bootstrap3-wysihtml5.min.css">
+
+   <link href="./Danh sách đơn hàng-kygui_files/jquery.gritter.css" rel="stylesheet">
+   <link href="./Danh sách đơn hàng-kygui_files/bootstrap-datepicker3.min.css" rel="stylesheet">
+   <link href="./Danh sách đơn hàng-kygui_files/select2.css" rel="stylesheet">
+   <!-- Custom style -->
+   <link rel="stylesheet" type="text/css" href="./Danh sách đơn hàng-kygui_files/style-version2.css">
+   <link rel="stylesheet" type="text/css" href="./Danh sách đơn hàng-kygui_files/admin-ver2.css">
+   <link rel="stylesheet" type="text/css" href="./Danh sách đơn hàng-kygui_files/public.css">
+   <link rel="stylesheet" href="./Danh sách đơn hàng-kygui_files/nprogress.css">
+   <link rel="stylesheet" href="./Danh sách đơn hàng-kygui_files/f-thqc.css">
+   <link rel="shortcut icon" type="image/x-icon" href="https://timhangquangchau.com/thqc/img/32.png">
+
+   <!--[if lt IE 9]>
+   <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+   <![endif]-->
+   <style>
+      .menu-status a{
+         border: none;
+         color: #000;
+         font-weight: 600;
+         margin: 0;
+         padding: 10px 20px;
+         position: relative;
+         font-size: 13px;
+      }
+      .menu-status .active a{
+         background-color: #f5f5f5 !important;
+      }
+      .sup-status{
+         color:red;
+         font-size:10px;
+         padding-left: 5px
+      }
+   </style>
+</head>
+<body class="skin-blue sidebar-mini" data-token="w0ZF4euKWqOnnZACQCrOSv8N29wV2LUISSakkAAT">
+<div class="wrapper">
+   <header class="main-header g-no-print">
+      <!-- Logo -->
+      <a href="https://timhangquangchau.com/" class="logo">
+         <!-- mini logo for sidebar mini 50x50 pixels -->
+         <span class="logo-mini"><b>Admin</b>THQC</span>
+         <!-- logo for regular state and mobile devices -->
+         <span class="logo-lg"><b>Admin</b>THQC</span>
+      </a>
+      <!-- Header Navbar: style can be found in header.less -->
+      <nav class="navbar navbar-static-top">
+         <!-- Sidebar toggle button-->
+        <a href="https://timhangquangchau.com/thqc/rel?type=2#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+          <span class="sr-only">Toggle navigation</span>
+        </a>
+
+        <div class="navbar-custom-menu" style="float:none">
+         <ul class="nav navbar-nav navbar-right" style="margin: 0; height: inherit;">
+            <!-- alert comment order -->
+            <li class="dropdown noti-parent">
+               <a href="https://timhangquangchau.com/thqc/rel?type=2#" class="dropdown-toggle noti-icon" data-show="false" data-url="https://timhangquangchau.com/thqc/ajax-get-comment-order" data-target="show-notification" data-toggle="dropdown">
+                  <i class="fa fa-globe"></i>
+                  <span class="noti-count"><b>0</b></span>
+                  <span class="caret"></span>
+               </a>
+
+               <ul class="dropdown-menu flat menu-down dropdown-menu-notificaion">
+                  <li class="dropdown-header header-noti-parent">
+                     <p class="header-noti" style="font-weight: bold">Thông báo đơn hàng</p>
+                  </li>
+                  <div class="menu-down-noti show-messagers show-notification" style="max-height: 416px;overflow-y: scroll;width: 100%;">
+                  </div>
+                  <li class="dropdown-header see-add">
+                  <a href="https://timhangquangchau.com/thqc/notifications" title="Xem tất cả thông báo">Xem tất cả thông báo</a>
+                  </li>
+               </ul>
+            </li>
+
+            <!-- alert all -->
+            <li class="dropdown noti-parent">
+               <a href="https://timhangquangchau.com/thqc/rel?type=2#" class="dropdown-toggle noti-icon" data-show="false" data-url="https://timhangquangchau.com/thqc/ajax-get-message" data-toggle="dropdown" data-target="show-messager">
+                  <i class="fa fa-envelope-o"></i>
+                  <span class="noti-count"><b>0</b></span>
+                  <span class="caret"></span>
+               </a>
+               <ul class="dropdown-menu flat menu-down dropdown-menu-notificaion">
+                  <li class="dropdown-header header-noti-parent">
+                     <span class="header-noti">Tin nhắn</span>
+                     <span class="see-add-noti" title="Đánh dấu đã xem" data-url="https://timhangquangchau.com/quan-ly/tin-nhan/xem-tat-ca">Đánh dấu tất cả là đã đọc</span>
+                  </li>
+                  <div class="menu-down-noti show-messager">
+                  </div>
+                  <li class="dropdown-header see-add"><a href="https://timhangquangchau.com/thqc/notifications">Xem tất cả</a></li>
+               </ul>
+            </li>
+                        <li class="dropdown">
+               <a href="https://timhangquangchau.com/thqc/rel?type=2#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user-secret"></i> <span class="caret"></span></a>
+               <ul class="dropdown-menu">
+                  <li><a href="https://timhangquangchau.com/thqc/users/profile"><i class=" fa fa-suitcase"></i> Đổi thông tin Hoai</a></li>
+                  <li><a href="https://timhangquangchau.com/thqc/users/password"><i class="fa fa-cog"></i> Đổi mật khẩu</a></li>
+                  <li><a href="https://timhangquangchau.com/thqc/logout"><i class="fa fa-key"></i> Log Out</a></li>
+               </ul>
+            </li>
+                     </ul>
+         </div>
+         </nav>
+    </header>      <!-- Left side column. contains the logo and sidebar -->
+   <aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+      <section class="sidebar" style="height: auto;">
+         <!-- Sidebar user panel -->
+         <div class="user-panel">
+            <div class="pull-left image">
+             <img src="./Danh sách đơn hàng-kygui_files/1024px-No_image_available.svg.png" class="img-circle" alt="User Image">
+            </div>
+            <div class="pull-left info">
+             <p>Hoai</p>
+             <a href="https://timhangquangchau.com/thqc/rel?type=2#"><i class="fa fa-circle text-success"></i> Online</a>
+            </div>
+         </div>
+         <ul class="sidebar-menu">
+            <li class="treeview ">
+               <a href="https://timhangquangchau.com/thqc/rel?type=2#">
+                  <i class="fa fa-dashboard"></i> <span>Thống kê</span>
+                  <span class="pull-right-container">
+                     <i class="fa fa-angle-left pull-right"></i>
+                  </span>
+               </a>
+               <ul class="treeview-menu">
+                  <li class=" hidden">
+                     <a href="https://timhangquangchau.com/thqc/dashboard"><i class="fa fa-cubes"></i> Trạng thái hệ thống</a>
+                  </li>
+                  <li class=" hidden">
+                     <a href="https://timhangquangchau.com/thqc/dashboard/don-hang"><i class="fa fa-cubes"></i> Thống kê đơn hàng</a>
+                  </li>
+                                    <li class=" hidden">
+                     <a href="https://timhangquangchau.com/thqc/dashboard/thong-ke-cskh"><i class="fa fa-cubes"></i> Thống kê CSKH</a>
+                  </li>
+                                 </ul>
+            </li>
+            <li class="active">
+               <a href="https://timhangquangchau.com/thqc/rel">
+                  <i class="fa fa-th"></i> <span>Đơn hàng</span>
+               </a>
+            </li>
+                        <li class="">
+               <a href="https://timhangquangchau.com/thqc/rel/ky-gui/danh-sach-yeu-cau">
+                  <i class="fa fa-th"></i> <span>Yêu cầu ký gửi</span>
+               </a>
+            </li>
+            <li class="">
+               <a href="https://timhangquangchau.com/thqc/rel?type=2">
+                  <i class="fa fa-th"></i> <span>Đơn ký gửi</span>
+               </a>
+            </li>
+
+            <li class="">
+               <a href="https://timhangquangchau.com/thqc/order-shop/lading"><i class="fa fa-th"></i> Kiện hàng</a>
+            </li>
+                        <li class="treeview ">
+                <a href="https://timhangquangchau.com/thqc/rel?type=2#">
+                  <i class="fa fa-dashboard"></i> <span>Khiếu nại</span>
+                  <span class="pull-right-container">
+                     <i class="fa fa-angle-left pull-right"></i>
+                  </span>
+               </a>
+               <ul class="treeview-menu">
+                  <li class="">
+                     <a href="https://timhangquangchau.com/thqc/complain/list-complain-new?check_complain=2"><i class="fa fa-phone"></i> Tất cả</a>
+                  </li>
+                  <li class="">
+                     <a href="https://timhangquangchau.com/thqc/complain/list-complain-new?type_order=0&amp;check_complain=2"><i class="fa fa-phone"></i> order</a>
+                  </li>
+                  <li class="">
+                     <a href="https://timhangquangchau.com/thqc/complain/list-complain-new?type_order=2"><i class="fa fa-phone"></i> ký gửi</a>
+                  </li>
+                   <li class=" hidden">
+                     <a href="https://timhangquangchau.com/thqc/complain/list-complain-new?type_order=1"><i class="fa fa-phone"></i> Khiếu nại đơn hàng lẻ</a>
+                  </li>
+               </ul>
+            </li>
+                                     <li class="treeview ">
+                <a href="https://timhangquangchau.com/thqc/rel?type=2#">
+                  <i class="fa fa-dashboard"></i> <span>Kho TQ / 仓库</span>
+                  <span class="pull-right-container">
+                     <i class="fa fa-angle-left pull-right"></i>
+                  </span>
+               </a>
+               <ul class="treeview-menu">
+                                    <li class="">
+                     <a href="https://timhangquangchau.com/thqc/import/danh-sach-phieu-nhap-kho"><i class="fa fa-share"></i>Phiếu nhập kho</a>
+                  </li>
+                  <li class=" hidden">
+                     <a href="https://timhangquangchau.com/thqc/import/danh-sach-phieu-nhap-kho?i_inventory=1"><i class="fa fa-share"></i>Phiếu nhập kho - chờ đi container</a>
+                  </li>
+                                                         <li class="">
+                        <a href="https://timhangquangchau.com/thqc/bao-hang/danh-sach-bao-hang"><i class="fa fa-files-o"></i>Danh sách bao</a>
+                     </li>
+                                                         <li class="">
+                        <a href="https://timhangquangchau.com/thqc/bao-hang/tao-bao?fast=1"><i class="fa fa-plus"></i>Tạo bao nhanh / 造包货</a>
+                     </li>
+                     <li class="">
+                        <a href="https://timhangquangchau.com/thqc/users/kho-tao-don-ki-gui"><i class="fa fa-users"></i>&nbsp;Tạo đơn kí gửi</a>
+                     </li>
+                                                   </ul>
+            </li>
+            
+                        <li class="treeview ">
+                <a href="https://timhangquangchau.com/thqc/rel?type=2#">
+                  <i class="fa fa-dashboard"></i> <span>Kho VN</span>
+                  <span class="pull-right-container">
+                     <i class="fa fa-angle-left pull-right"></i>
+                  </span>
+               </a>
+               <ul class="treeview-menu">
+                                       <li class="">
+                        <a href="https://timhangquangchau.com/thqc/phieu-xuat/co-the-xuat"><i class="fa fa-files-o"></i>Chờ xuất</a>
+                     </li>
+                     <li class="">
+                        <a href="https://timhangquangchau.com/thqc/phieu-xuat/danh-sach-phieu"><i class="fa fa-files-o"></i>Phiếu xuất</a>
+                     </li>
+                     <li class="">
+                        <a href="https://timhangquangchau.com/thqc/bao-hang/danh-sach-bao-hang"><i class="fa fa-files-o"></i>Danh sách bao</a>
+                     </li>
+                     <li class=" hidden">
+                        <a href="https://timhangquangchau.com/thqc/phieu-xuat/yeu-cau-ship"><i class="fa fa-truck" aria-hidden="true"></i>Yêu cầu ship</a>
+                     </li>
+                     <li class="">
+                        <a href="https://timhangquangchau.com/thqc/port/list"><i class="fa fa-refresh"></i>Phiếu điều chuyển</a>
+                     </li>
+                     <li class="">
+                        <a href="https://timhangquangchau.com/thqc/order-shop/truc-tiep-vn"><i class="fa fa-files-o"></i>Nhập kho VN</a>
+                     </li>
+                                 </ul>
+            </li>
+            
+                        <li class="treeview ">
+                <a href="https://timhangquangchau.com/thqc/rel?type=2#">
+                  <i class="fa fa-dashboard"></i> <span>Sau mua hàng</span>
+                  <span class="pull-right-container">
+                     <i class="fa fa-angle-left pull-right"></i>
+                  </span>
+               </a>
+               <ul class="treeview-menu">
+                                    <li class="">
+                     <a href="https://timhangquangchau.com/thqc/orderDetails/losingid">
+                        <i class="fa fa-file-image-o"></i> Hàng mất mã</a>
+                  </li>
+                                    <li class="">
+                     <a href="https://timhangquangchau.com/thqc/order-shop/chuyen-ma-van-don">
+                        <i class="fa fa-file-image-o"></i> Chuyển mã</a>
+                  </li>
+                                 </ul>
+            </li>
+            
+            
+            
+            
+                         <li class="treeview ">
+                <a href="https://timhangquangchau.com/thqc/rel?type=2#">
+                  <i class="fa fa-dashboard"></i> <span>Nhân viên</span>
+                  <span class="pull-right-container">
+                     <i class="fa fa-angle-left pull-right"></i>
+                  </span>
+               </a>
+               <ul class="treeview-menu">
+                  <li class="">
+                     <a href="https://timhangquangchau.com/thqc/employers"><i class="fa fa-user-secret"></i>&nbsp;Quản lý đi/nghỉ</a>
+                  </li>
+                  <li class=" hidden">
+                     <a href="https://timhangquangchau.com/admin/employers/cskh/gan-khach"><i class="fa fa-street-view"></i>Gán khách cho cskh</a>
+                  </li>
+                  <li class=" hidden">
+                     <a href="https://timhangquangchau.com/thqc/employers/trader/gan-khach"><i class="fa fa-street-view"></i>Gán khách cho đặt hàng</a>
+                  </li>
+               </ul>
+            </li>
+            
+                         <li class="treeview ">
+                <a href="https://timhangquangchau.com/thqc/rel?type=2#">
+                  <i class="fa fa-dashboard"></i> <span>Tin tức - thông báo</span>
+                  <span class="pull-right-container">
+                     <i class="fa fa-angle-left pull-right"></i>
+                  </span>
+               </a>
+               <ul class="treeview-menu">
+                  <li class="">
+                     <a href="https://timhangquangchau.com/thqc/blogs"><i class="fa fa-rss-square"></i>&nbsp;Q.L Blogs</a>
+                  </li>
+                  <li class="">
+                     <a href="https://timhangquangchau.com/thqc/categories"><i class="fa fa-rss-square"></i>&nbsp;Q.L Danh mục</a>
+                  </li>
+               </ul>
+            </li>
+            
+                         <li class="treeview ">
+                <a href="https://timhangquangchau.com/thqc/rel?type=2#">
+                  <i class="fa fa-dashboard"></i> <span>Người dùng</span>
+                  <span class="pull-right-container">
+                     <i class="fa fa-angle-left pull-right"></i>
+                  </span>
+               </a>
+               <ul class="treeview-menu">
+                  <li class="">
+                     <a href="https://timhangquangchau.com/thqc/users"><i class="fa fa-user"></i>&nbsp;Q.L người dùng</a>
+                  </li>
+                  <li class="">
+                     <a href="https://timhangquangchau.com/thqc/roles"><i class="fa fa-users"></i>&nbsp;Nhóm người dùng</a>
+                  </li>
+                  <li class="">
+                     <a href="https://timhangquangchau.com/thqc/permissions"><i class="fa fa-trophy"></i>&nbsp;Quyền</a>
+                  </li>
+               </ul>
+            </li>
+            
+            
+         </ul>
+       </section>
+    <!-- /.sidebar -->
+   </aside>
+
+   <!-- Content Wrapper. Contains page content -->
+   <div class="content-wrapper" style="min-height: 1086px;">
+       <!-- Main content -->
+         <div class="no-print">
+            <div class="col-sm-12">
+                           </div>
+         </div>
+               <div class="navbar-collapse collapse" id="tablist">
+      <ul class="list-understyle nav nav-tabs menu-status" role="tablist" aria-expanded="false">
+         <li class="active">
+	<a href="https://timhangquangchau.com/thqc/rel">
+		Tất cả
+	</a>
+</li>
+
+<li class="">
+	<a href="https://timhangquangchau.com/thqc/rel?time_type=1">
+		Chờ báo giá <sup class="sup-status">4</sup>
+	</a>
+</li>
+<li class="">
+	<a href="https://timhangquangchau.com/thqc/rel?time_type=2">
+		Chờ đặt cọc
+	</a>
+</li>
+<li class="">
+	<a href="https://timhangquangchau.com/thqc/rel?time_type=3">
+		Đang mua hàng<sup class="sup-status">56</sup>
+	</a>
+</li>
+<li class="">
+	<a href="https://timhangquangchau.com/thqc/rel?time_type=4">
+		Đã mua<sup class="sup-status">1184</sup>
+	</a>
+</li>
+<li class="">
+	<a href="https://timhangquangchau.com/thqc/rel?time_type=5">
+		Thanh lý
+	</a>
+</li>
+<li class="">
+	<a href="https://timhangquangchau.com/thqc/rel?time_type=6">
+		Hủy
+	</a>
+</li>      </ul>
+   </div>
+      <div class="row">
+      <div class="col-sm-12">
+         <section>
+            <header class="panel-heading">
+               <span class="uppercase">Danh sách đơn hàng</span>
+                           </header>
+            <div class="panel-body panel-overflow">
+               <form class="form-filter form-inline search">
+                  <div class="form-group">
+                     <select id="time_type" name="time_type" class="form-control input-sm">
+                                                   <option selected="" value="0">Tất cả</option>
+                                                   <option value="1">Chờ báo giá</option>
+                                                   <option value="2">Chờ đặt cọc</option>
+                                                   <option value="3">Đang mua hàng</option>
+                                                   <option value="4">Đã mua hàng</option>
+                                                   <option value="5">Thanh lý</option>
+                                                   <option value="6">Huỷ</option>
+                                             </select>
+                  </div>
+                  <div class="form-group">
+                     <input type="text" name="code" data-original-title="Mã đơn hàng" rel="tooltip" data-toggle="tooltip" data-placement="top" placeholder="Mã đơn hàng" class="form-control input-sm text-left" dir="ltr" style="text-align: left;" value="">
+                  </div>
+                  <div class="form-group">
+                     <input type="text" name="customer_email" data-original-title="Email khách hàng" rel="tooltip" data-toggle="tooltip" data-placement="top" placeholder="Email khách hàng" class="form-control input-sm" value="">
+                  </div>
+                  <div class="form-group">
+                     <input type="text" name="customer_name" data-original-title="Tên khách" rel="tooltip" data-toggle="tooltip" data-placement="top" placeholder="Tên khách" class="form-control input-sm" value="">
+                  </div>
+                  <div class="form-group">
+                     <input type="text" name="customer_phone" data-original-title="Điện thoại" rel="tooltip" data-toggle="tooltip" data-placement="top" placeholder="Điện thoại" class="form-control input-sm" value="">
+                  </div>
+                  <div class="form-group">
+                     <select id="care_id" name="care_id" class="form-control input-sm select2 select2-hidden-accessible" tabindex="-1" aria-hidden="true">
+                        <option value="">--Chọn CSKH--</option>
+                                                   <option value="22226">Huyền Nguyễn</option>
+                                                   <option value="22231">CSKH Thủy</option>
+                                                   <option value="22232">Hường</option>
+                                                   <option value="22397">Huyền Nguyễn</option>
+                                                   <option value="22398">Phạm Thị Kiều Anh</option>
+                                                   <option value="22487">Sa</option>
+                                                   <option value="22554">CSKH</option>
+                                                   <option value="22595">Ngọc</option>
+                                                   <option value="22635">Hoai</option>
+                                                   <option value="22655">Kthn2-thể</option>
+                                             </select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: 200px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-care_id-container"><span class="select2-selection__rendered" id="select2-care_id-container" title="--Chọn CSKH--">--Chọn CSKH--</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                  </div>
+                  <div class="form-group">
+                     <select id="booker_id" name="booker_id" class="form-control input-sm select2 select2-hidden-accessible" tabindex="-1" aria-hidden="true">
+                        <option value="">--Chọn đặt hàng--</option>
+                                                   <option value="22228">Hồng Nhung (Phạm Hảo)</option>
+                                                   <option value="22229">Thanh Thủy (Phạm Hảo)</option>
+                                                   <option value="22313">Admin (Lê Tân)</option>
+                                                   <option value="22314">Hồng Nhung (Lê Tân)</option>
+                                                   <option value="22333">Đinh Nhung (Hồng Nhung)</option>
+                                                   <option value="22334">Phán Vinh Phi</option>
+                                                   <option value="22561">Đặt Hàng -  Đảm (phạm Hảo)</option>
+                                                   <option value="22581">Thắng</option>
+                                             </select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: 200px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-booker_id-container"><span class="select2-selection__rendered" id="select2-booker_id-container" title="--Chọn đặt hàng--">--Chọn đặt hàng--</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                  </div>
+                  <div class="form-group">
+                     <input type="text" name="sdate" data-original-title="Từ ngày" rel="tooltip" data-toggle="tooltip" data-placement="top" placeholder="Từ ngày" class="form-control input-sm datepicker" value="">
+                  </div>
+                  <div class="form-group">
+                     <input type="text" name="edate" data-original-title="Tới ngày" rel="tooltip" data-toggle="tooltip" data-placement="top" placeholder="Tới ngày" class="form-control input-sm datepicker" value="">
+                  </div>
+                  <div class="form-group hidden">
+                     <select name="source" rel="tooltip" title="" class="form-control input-sm" data-original-title="Tạo đơn hàng bằng">
+                        <option value="-1">Tất cả</option>
+                                                   <option value="0">Từ web</option>
+                                                   <option value="1">Excel</option>
+                                                   <option value="2">Extension</option>
+                                             </select>
+                  </div>
+                  <div class="form-group">
+                     <select name="warehouse_id" rel="tooltip" class="form-control input-sm" data-original-title="" title="">
+                        <option value="-1">Tất cả</option>
+                                                   <option value="1">Cầu Giấy</option>
+                                                   <option value="2">Kho Trung Quốc</option>
+                                                   <option value="4">Kho HCM</option>
+                                             </select>
+                  </div>
+                  <div class="form-group hidden">
+                     <select name="type" rel="tooltip" title="" class="form-control input-sm" data-original-title="Loại đơn hàng">
+                        <option value="-1">Tất cả</option>
+                                                   <option value="0">Hàng order</option>
+                                                   <option value="1">Hàng lẻ</option>
+                                                   <option selected="" value="2">Hàng ký gửi</option>
+                                                   <option value="3">Loại khác</option>
+                                             </select>
+                  </div>
+                  <div class="form-group hidden">
+                     <select name="order_type" rel="tooltip" title="" class="form-control input-sm" data-original-title="Kiểu đơn hàng">
+                        <option value="-1">Tất cả</option>
+                                                   <option value="0">Hàng của khách</option>
+                                                   <option value="1">Hàng công ty</option>
+                                             </select>
+                  </div>
+                  <div class="form-group hidden">
+                     <input type="text" name="over_date" data-original-title="Quá số ngày chưa thanh lý kể từ ngày đặt xong" rel="tooltip" data-toggle="tooltip" data-placement="top" placeholder="Quá số ngày chưa thanh lý kể từ ngày đặt xong" class="form-control input-sm money" value="" style="text-align: right;">
+                  </div>
+                                    <div class="checkbox">
+                     <label>
+                        <input type="checkbox" name="is_me" id="is_me" value="1"> Đơn CSKH
+                     </label>
+                  </div>
+                                    <div class="form-group">
+                     <button id="btnSearch" type="submit" class="btn btn-primary btn-flat btn-sm">
+                        <i class="fa fa-filter"></i>
+                     </button>
+                  </div>
+               </form>
+               <table class="table table-bordered hidden">
+                  <tbody><tr>
+                     <th class="bg-warning">Đơn hàng qúa 2 ngày chưa được xử lý</th>
+                     <th class="bg-danger">Đơn hàng qúa 3 ngày chưa được xử lý</th>
+                  </tr>
+               </tbody></table>
+               <hr>
+               <div class="paginate-top">
+               <div class="row-fluid">
+		<div class="span6">
+		<div class="dataTables_info">Đang hiển thị <b>20</b> trong tổng số <b>1830</b> bản ghi.</div>
+	</div>
+		<div class="span6"><div class="dataTables_paginate paging_bootstrap pagination"><ul class="pagination"><li class="disabled" aria-disabled="true"><a href="javascript:void(0)">« Trước</a></li> <li class="active"><a href="javascript:void(0)">1</a></li><li><a href="https://timhangquangchau.com/thqc/rel?type=2&amp;page=2">2</a></li><li><a href="https://timhangquangchau.com/thqc/rel?type=2&amp;page=3">3</a></li><li><a href="https://timhangquangchau.com/thqc/rel?type=2&amp;page=4">4</a></li><li><a href="https://timhangquangchau.com/thqc/rel?type=2&amp;page=5">5</a></li><li><a href="https://timhangquangchau.com/thqc/rel?type=2&amp;page=6">6</a></li><li><a href="https://timhangquangchau.com/thqc/rel?type=2&amp;page=7">7</a></li><li><a href="https://timhangquangchau.com/thqc/rel?type=2&amp;page=8">8</a></li><li class="disabled" aria-disabled="true"><a href="javascript:void(0)">…</a></li><li><a href="https://timhangquangchau.com/thqc/rel?type=2&amp;page=91">91</a></li><li><a href="https://timhangquangchau.com/thqc/rel?type=2&amp;page=92">92</a></li> <li><a href="https://timhangquangchau.com/thqc/rel?type=2&amp;page=2" rel="next">Sau »</a></li></ul></div></div>
+</div>
+               </div>
+               <table class="table table-bordered table-condensed">
+                     <thead>
+                        <tr>
+                           <th>Đơn hàng</th>
+                           <th>Khách hàng</th>
+                           <th>Tiền hàng</th>
+                           <th>Nhân viên</th>
+                           <th>Thanh toán </th>
+                           <th style="width: 130px">Thao tác</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                                                                                 <tr id="order-103" class="">
+                                 <td style="width: 200px;">
+				<ul class="list-unstyled list-order">
+					<li>
+						<span class="text-info bold ">103</span> <span class="label label-danger">Thanh lý</span>
+					</li>
+					<li>
+						<label class="mg-0">Thông tin đơn hàng</label>
+						<span class="text-info bold btn-flat">KH A Tuấn 0965712201</span>
+					</li>
+					<li>
+						<label class="mg-0">Ngày tạo</label>
+						<span class="text-info bold btn-flat">
+							13-10-2016 
+						</span>
+					</li>
+				</ul>
+			</td>
+				<td>
+			<ul class="list-unstyled list-order">
+								<li><span class="lbl-value"> Tong Anh Tuan -  0965712201 </span></li>
+				<li><span class="lbl-value"> <a rel="tooltip" title="" target="_blank" href="https://timhangquangchau.com/thqc/payments/debt?user_id=22225" data-original-title="Xem công nợ khách">tuantdh2201@gmail.com</a></span></li>
+				<li><span class="lbl-value" data-toggle="tooltip" rel="tooltip" data-placement="top" data-original-title="Địa chỉ"> -- --</span></li>
+								<li><span class="lbl-value" rel="tooltip" title="" data-original-title="Hàng về kho"> Cầu Giấy</span>
+				</li>
+									<li>
+						<span data-toggle="tooltip" title="" data-original-title="Vip ">
+							Vip đơn: 0
+						</span>
+					</li>
+							</ul>
+		</td>
+		<td style="width: 170px">
+			<ul class="list-unstyled list-order">
+				<li>
+										<span>&nbsp;</span>	<span rel="tooltip" title="" class=" text-danger pull-right" data-original-title="Tiền hàng">0<sup>đ</sup></span>
+				</li>
+				<li>
+										<span>&nbsp;</span> <span rel="tooltip" title="" class=" text-danger pull-right" data-original-title="Thanh toán">0<sup>đ</sup></span>
+				</li>
+				<li style="border-top: 1px dotted #ccc;">
+					<span> &nbsp;</span><span class=" text-danger pull-right" rel="tooltip" title="" data-original-title="Còn thiếu">0<sup>đ</sup></span>
+				</li>
+			</ul>
+		</td>
+		<td style="width: 200px">
+			<ul class="list-unstyled list-order">
+				<li>
+										<span rel="tooltip" title="" class="pull-right" data-original-title="CSKH">CSKH Thủy</span>
+				</li>
+				<li>
+										<span rel="tooltip" title="" class="pull-right" data-original-title="ĐH">...</span>
+				</li>
+			</ul>
+		</td>
+					<td></td>
+		                                 <td>
+                                    <ul class="list-unstyled">
+<li>
+   <a onclick="$(this).parents(&#39;tr&#39;).css(&#39;background-color&#39;, &#39;#ccc&#39;)" target="_blank" data-toggle="tooltip" title="" href="https://timhangquangchau.com/thqc/rel/103/detail" class="btn btn-info btn-flat btn-xs" data-original-title="Xem chi tiết đơn hàng">chi tiết</a>
+               <a class="btn btn-danger btn-xs" href="https://timhangquangchau.com/thqc/complain/creat-complain-admin/103" target="_blank" title="" rel="tooltip" data-original-title="Tạo khiếu nại">Tạo khiếu nại</a>
+   </li>
+
+<li class="hidden">
+   <i class="fa fa-book"></i>
+   <span data-toggle="tooltip" title="" data-original-title="Phí trả thêm (tệ)">0.00<i class="fa fa-jpy"></i></span>
+   <span data-toggle="tooltip" title="" class="bold" data-original-title="Loại đơn hàng">Hàng ký gửi</span>
+</li>
+</ul>
+                                 </td>
+                              </tr>
+                                                         <tr id="order-112" class="">
+                                 <td style="width: 200px;">
+				<ul class="list-unstyled list-order">
+					<li>
+						<span class="text-info bold ">112</span> <span class="label label-danger">Thanh lý</span>
+					</li>
+					<li>
+						<label class="mg-0">Thông tin đơn hàng</label>
+						<span class="text-info bold btn-flat">junytuongvy
+</span>
+					</li>
+					<li>
+						<label class="mg-0">Ngày tạo</label>
+						<span class="text-info bold btn-flat">
+							15-10-2016 
+						</span>
+					</li>
+				</ul>
+			</td>
+				<td>
+			<ul class="list-unstyled list-order">
+								<li><span class="lbl-value"> Bui Thi Tuong Vy -  0949192627 </span></li>
+				<li><span class="lbl-value"> <a rel="tooltip" title="" target="_blank" href="https://timhangquangchau.com/thqc/payments/debt?user_id=22262" data-original-title="Xem công nợ khách">junytuongvy@gmail.com</a></span></li>
+				<li><span class="lbl-value" data-toggle="tooltip" rel="tooltip" data-placement="top" data-original-title="Địa chỉ"> -- --</span></li>
+								<li><span class="lbl-value" rel="tooltip" title="" data-original-title="Hàng về kho"> Cầu Giấy</span>
+				</li>
+									<li>
+						<span data-toggle="tooltip" title="" data-original-title="Vip ">
+							Vip đơn: 0
+						</span>
+					</li>
+							</ul>
+		</td>
+		<td style="width: 170px">
+			<ul class="list-unstyled list-order">
+				<li>
+										<span>&nbsp;</span>	<span rel="tooltip" title="" class=" text-danger pull-right" data-original-title="Tiền hàng">0<sup>đ</sup></span>
+				</li>
+				<li>
+										<span>&nbsp;</span> <span rel="tooltip" title="" class=" text-danger pull-right" data-original-title="Thanh toán">0<sup>đ</sup></span>
+				</li>
+				<li style="border-top: 1px dotted #ccc;">
+					<span> &nbsp;</span><span class=" text-danger pull-right" rel="tooltip" title="" data-original-title="Còn thiếu">0<sup>đ</sup></span>
+				</li>
+			</ul>
+		</td>
+		<td style="width: 200px">
+			<ul class="list-unstyled list-order">
+				<li>
+										<span rel="tooltip" title="" class="pull-right" data-original-title="CSKH">CSKH Thủy</span>
+				</li>
+				<li>
+										<span rel="tooltip" title="" class="pull-right" data-original-title="ĐH">...</span>
+				</li>
+			</ul>
+		</td>
+					<td></td>
+		                                 <td>
+                                    <ul class="list-unstyled">
+<li>
+   <a onclick="$(this).parents(&#39;tr&#39;).css(&#39;background-color&#39;, &#39;#ccc&#39;)" target="_blank" data-toggle="tooltip" title="" href="https://timhangquangchau.com/thqc/rel/112/detail" class="btn btn-info btn-flat btn-xs" data-original-title="Xem chi tiết đơn hàng">chi tiết</a>
+               <a class="btn btn-danger btn-xs" href="https://timhangquangchau.com/thqc/complain/creat-complain-admin/112" target="_blank" title="" rel="tooltip" data-original-title="Tạo khiếu nại">Tạo khiếu nại</a>
+   </li>
+
+<li class="hidden">
+   <i class="fa fa-book"></i>
+   <span data-toggle="tooltip" title="" data-original-title="Phí trả thêm (tệ)">0.00<i class="fa fa-jpy"></i></span>
+   <span data-toggle="tooltip" title="" class="bold" data-original-title="Loại đơn hàng">Hàng ký gửi</span>
+</li>
+</ul>
+                                 </td>
+                              </tr>
+                                                         <tr id="order-145" class="">
+                                 <td style="width: 200px;">
+				<ul class="list-unstyled list-order">
+					<li>
+						<span class="text-info bold ">145</span> <span class="label label-danger">Thanh lý</span>
+					</li>
+					<li>
+						<label class="mg-0">Thông tin đơn hàng</label>
+						<span class="text-info bold btn-flat">KH. A Tuấn</span>
+					</li>
+					<li>
+						<label class="mg-0">Ngày tạo</label>
+						<span class="text-info bold btn-flat">
+							18-10-2016 
+						</span>
+					</li>
+				</ul>
+			</td>
+				<td>
+			<ul class="list-unstyled list-order">
+								<li><span class="lbl-value"> Tong Anh Tuan -  0965712201 </span></li>
+				<li><span class="lbl-value"> <a rel="tooltip" title="" target="_blank" href="https://timhangquangchau.com/thqc/payments/debt?user_id=22225" data-original-title="Xem công nợ khách">tuantdh2201@gmail.com</a></span></li>
+				<li><span class="lbl-value" data-toggle="tooltip" rel="tooltip" data-placement="top" data-original-title="Địa chỉ"> -- --</span></li>
+								<li><span class="lbl-value" rel="tooltip" title="" data-original-title="Hàng về kho"> Cầu Giấy</span>
+				</li>
+									<li>
+						<span data-toggle="tooltip" title="" data-original-title="Vip ">
+							Vip đơn: 0
+						</span>
+					</li>
+							</ul>
+		</td>
+		<td style="width: 170px">
+			<ul class="list-unstyled list-order">
+				<li>
+										<span>&nbsp;</span>	<span rel="tooltip" title="" class=" text-danger pull-right" data-original-title="Tiền hàng">0<sup>đ</sup></span>
+				</li>
+				<li>
+										<span>&nbsp;</span> <span rel="tooltip" title="" class=" text-danger pull-right" data-original-title="Thanh toán">0<sup>đ</sup></span>
+				</li>
+				<li style="border-top: 1px dotted #ccc;">
+					<span> &nbsp;</span><span class=" text-danger pull-right" rel="tooltip" title="" data-original-title="Còn thiếu">0<sup>đ</sup></span>
+				</li>
+			</ul>
+		</td>
+		<td style="width: 200px">
+			<ul class="list-unstyled list-order">
+				<li>
+										<span rel="tooltip" title="" class="pull-right" data-original-title="CSKH">CSKH Thủy</span>
+				</li>
+				<li>
+										<span rel="tooltip" title="" class="pull-right" data-original-title="ĐH">...</span>
+				</li>
+			</ul>
+		</td>
+					<td></td>
+		                                 <td>
+                                    <ul class="list-unstyled">
+<li>
+   <a onclick="$(this).parents(&#39;tr&#39;).css(&#39;background-color&#39;, &#39;#ccc&#39;)" target="_blank" data-toggle="tooltip" title="" href="https://timhangquangchau.com/thqc/rel/145/detail" class="btn btn-info btn-flat btn-xs" data-original-title="Xem chi tiết đơn hàng">chi tiết</a>
+               <a class="btn btn-danger btn-xs" href="https://timhangquangchau.com/thqc/complain/creat-complain-admin/145" target="_blank" title="" rel="tooltip" data-original-title="Tạo khiếu nại">Tạo khiếu nại</a>
+   </li>
+
+<li class="hidden">
+   <i class="fa fa-book"></i>
+   <span data-toggle="tooltip" title="" data-original-title="Phí trả thêm (tệ)">0.00<i class="fa fa-jpy"></i></span>
+   <span data-toggle="tooltip" title="" class="bold" data-original-title="Loại đơn hàng">Hàng ký gửi</span>
+</li>
+</ul>
+                                 </td>
+                              </tr>
+                                                         <tr id="order-147" class="">
+                                 <td style="width: 200px;">
+				<ul class="list-unstyled list-order">
+					<li>
+						<span class="text-info bold ">147</span> <span class="label label-danger">Thanh lý</span>
+					</li>
+					<li>
+						<label class="mg-0">Thông tin đơn hàng</label>
+						<span class="text-info bold btn-flat">KH Quốc Việt - 0941876666</span>
+					</li>
+					<li>
+						<label class="mg-0">Ngày tạo</label>
+						<span class="text-info bold btn-flat">
+							18-10-2016 
+						</span>
+					</li>
+				</ul>
+			</td>
+				<td>
+			<ul class="list-unstyled list-order">
+								<li><span class="lbl-value"> Vương Quốc Việt -  0941876666 </span></li>
+				<li><span class="lbl-value"> <a rel="tooltip" title="" target="_blank" href="https://timhangquangchau.com/thqc/payments/debt?user_id=22280" data-original-title="Xem công nợ khách">vuongquocviet1704@gmail.com</a></span></li>
+				<li><span class="lbl-value" data-toggle="tooltip" rel="tooltip" data-placement="top" data-original-title="Địa chỉ"> -- --</span></li>
+								<li><span class="lbl-value" rel="tooltip" title="" data-original-title="Hàng về kho"> Cầu Giấy</span>
+				</li>
+									<li>
+						<span data-toggle="tooltip" title="" data-original-title="Vip ">
+							Vip đơn: 0
+						</span>
+					</li>
+							</ul>
+		</td>
+		<td style="width: 170px">
+			<ul class="list-unstyled list-order">
+				<li>
+										<span>&nbsp;</span>	<span rel="tooltip" title="" class=" text-danger pull-right" data-original-title="Tiền hàng">0<sup>đ</sup></span>
+				</li>
+				<li>
+										<span>&nbsp;</span> <span rel="tooltip" title="" class=" text-danger pull-right" data-original-title="Thanh toán">0<sup>đ</sup></span>
+				</li>
+				<li style="border-top: 1px dotted #ccc;">
+					<span> &nbsp;</span><span class=" text-danger pull-right" rel="tooltip" title="" data-original-title="Còn thiếu">0<sup>đ</sup></span>
+				</li>
+			</ul>
+		</td>
+		<td style="width: 200px">
+			<ul class="list-unstyled list-order">
+				<li>
+										<span rel="tooltip" title="" class="pull-right" data-original-title="CSKH">CSKH Thủy</span>
+				</li>
+				<li>
+										<span rel="tooltip" title="" class="pull-right" data-original-title="ĐH">...</span>
+				</li>
+			</ul>
+		</td>
+					<td></td>
+		                                 <td>
+                                    <ul class="list-unstyled">
+<li>
+   <a onclick="$(this).parents(&#39;tr&#39;).css(&#39;background-color&#39;, &#39;#ccc&#39;)" target="_blank" data-toggle="tooltip" title="" href="https://timhangquangchau.com/thqc/rel/147/detail" class="btn btn-info btn-flat btn-xs" data-original-title="Xem chi tiết đơn hàng">chi tiết</a>
+               <a class="btn btn-danger btn-xs" href="https://timhangquangchau.com/thqc/complain/creat-complain-admin/147" target="_blank" title="" rel="tooltip" data-original-title="Tạo khiếu nại">Tạo khiếu nại</a>
+   </li>
+
+<li class="hidden">
+   <i class="fa fa-book"></i>
+   <span data-toggle="tooltip" title="" data-original-title="Phí trả thêm (tệ)">0.00<i class="fa fa-jpy"></i></span>
+   <span data-toggle="tooltip" title="" class="bold" data-original-title="Loại đơn hàng">Hàng ký gửi</span>
+</li>
+</ul>
+                                 </td>
+                              </tr>
+                                                         <tr id="order-182" class="">
+                                 <td style="width: 200px;">
+				<ul class="list-unstyled list-order">
+					<li>
+						<span class="text-info bold ">182</span> <span class="label label-danger">Thanh lý</span>
+					</li>
+					<li>
+						<label class="mg-0">Thông tin đơn hàng</label>
+						<span class="text-info bold btn-flat">kh: tuantdh2201
+0965712201
+</span>
+					</li>
+					<li>
+						<label class="mg-0">Ngày tạo</label>
+						<span class="text-info bold btn-flat">
+							21-10-2016 
+						</span>
+					</li>
+				</ul>
+			</td>
+				<td>
+			<ul class="list-unstyled list-order">
+								<li><span class="lbl-value"> Tong Anh Tuan -  0965712201 </span></li>
+				<li><span class="lbl-value"> <a rel="tooltip" title="" target="_blank" href="https://timhangquangchau.com/thqc/payments/debt?user_id=22225" data-original-title="Xem công nợ khách">tuantdh2201@gmail.com</a></span></li>
+				<li><span class="lbl-value" data-toggle="tooltip" rel="tooltip" data-placement="top" data-original-title="Địa chỉ"> -- --</span></li>
+								<li><span class="lbl-value" rel="tooltip" title="" data-original-title="Hàng về kho"> Cầu Giấy</span>
+				</li>
+									<li>
+						<span data-toggle="tooltip" title="" data-original-title="Vip ">
+							Vip đơn: 0
+						</span>
+					</li>
+							</ul>
+		</td>
+		<td style="width: 170px">
+			<ul class="list-unstyled list-order">
+				<li>
+										<span>&nbsp;</span>	<span rel="tooltip" title="" class=" text-danger pull-right" data-original-title="Tiền hàng">0<sup>đ</sup></span>
+				</li>
+				<li>
+										<span>&nbsp;</span> <span rel="tooltip" title="" class=" text-danger pull-right" data-original-title="Thanh toán">0<sup>đ</sup></span>
+				</li>
+				<li style="border-top: 1px dotted #ccc;">
+					<span> &nbsp;</span><span class=" text-danger pull-right" rel="tooltip" title="" data-original-title="Còn thiếu">0<sup>đ</sup></span>
+				</li>
+			</ul>
+		</td>
+		<td style="width: 200px">
+			<ul class="list-unstyled list-order">
+				<li>
+										<span rel="tooltip" title="" class="pull-right" data-original-title="CSKH">CSKH Thủy</span>
+				</li>
+				<li>
+										<span rel="tooltip" title="" class="pull-right" data-original-title="ĐH">...</span>
+				</li>
+			</ul>
+		</td>
+					<td></td>
+		                                 <td>
+                                    <ul class="list-unstyled">
+<li>
+   <a onclick="$(this).parents(&#39;tr&#39;).css(&#39;background-color&#39;, &#39;#ccc&#39;)" target="_blank" data-toggle="tooltip" title="" href="https://timhangquangchau.com/thqc/rel/182/detail" class="btn btn-info btn-flat btn-xs" data-original-title="Xem chi tiết đơn hàng">chi tiết</a>
+               <a class="btn btn-danger btn-xs" href="https://timhangquangchau.com/thqc/complain/creat-complain-admin/182" target="_blank" title="" rel="tooltip" data-original-title="Tạo khiếu nại">Tạo khiếu nại</a>
+   </li>
+
+<li class="hidden">
+   <i class="fa fa-book"></i>
+   <span data-toggle="tooltip" title="" data-original-title="Phí trả thêm (tệ)">0.00<i class="fa fa-jpy"></i></span>
+   <span data-toggle="tooltip" title="" class="bold" data-original-title="Loại đơn hàng">Hàng ký gửi</span>
+</li>
+</ul>
+                                 </td>
+                              </tr>
+                                                         <tr id="order-202" class="">
+                                 <td style="width: 200px;">
+				<ul class="list-unstyled list-order">
+					<li>
+						<span class="text-info bold ">202</span> <span class="label label-danger">Thanh lý</span>
+					</li>
+					<li>
+						<label class="mg-0">Thông tin đơn hàng</label>
+						<span class="text-info bold btn-flat">KH Juny</span>
+					</li>
+					<li>
+						<label class="mg-0">Ngày tạo</label>
+						<span class="text-info bold btn-flat">
+							23-10-2016 
+						</span>
+					</li>
+				</ul>
+			</td>
+				<td>
+			<ul class="list-unstyled list-order">
+								<li><span class="lbl-value"> Bui Thi Tuong Vy -  0949192627 </span></li>
+				<li><span class="lbl-value"> <a rel="tooltip" title="" target="_blank" href="https://timhangquangchau.com/thqc/payments/debt?user_id=22262" data-original-title="Xem công nợ khách">junytuongvy@gmail.com</a></span></li>
+				<li><span class="lbl-value" data-toggle="tooltip" rel="tooltip" data-placement="top" data-original-title="Địa chỉ"> -- --</span></li>
+								<li><span class="lbl-value" rel="tooltip" title="" data-original-title="Hàng về kho"> Cầu Giấy</span>
+				</li>
+									<li>
+						<span data-toggle="tooltip" title="" data-original-title="Vip ">
+							Vip đơn: 0
+						</span>
+					</li>
+							</ul>
+		</td>
+		<td style="width: 170px">
+			<ul class="list-unstyled list-order">
+				<li>
+										<span>&nbsp;</span>	<span rel="tooltip" title="" class=" text-danger pull-right" data-original-title="Tiền hàng">0<sup>đ</sup></span>
+				</li>
+				<li>
+										<span>&nbsp;</span> <span rel="tooltip" title="" class=" text-danger pull-right" data-original-title="Thanh toán">0<sup>đ</sup></span>
+				</li>
+				<li style="border-top: 1px dotted #ccc;">
+					<span> &nbsp;</span><span class=" text-danger pull-right" rel="tooltip" title="" data-original-title="Còn thiếu">0<sup>đ</sup></span>
+				</li>
+			</ul>
+		</td>
+		<td style="width: 200px">
+			<ul class="list-unstyled list-order">
+				<li>
+										<span rel="tooltip" title="" class="pull-right" data-original-title="CSKH">CSKH Thủy</span>
+				</li>
+				<li>
+										<span rel="tooltip" title="" class="pull-right" data-original-title="ĐH">...</span>
+				</li>
+			</ul>
+		</td>
+					<td></td>
+		                                 <td>
+                                    <ul class="list-unstyled">
+<li>
+   <a onclick="$(this).parents(&#39;tr&#39;).css(&#39;background-color&#39;, &#39;#ccc&#39;)" target="_blank" data-toggle="tooltip" title="" href="https://timhangquangchau.com/thqc/rel/202/detail" class="btn btn-info btn-flat btn-xs" data-original-title="Xem chi tiết đơn hàng">chi tiết</a>
+               <a class="btn btn-danger btn-xs" href="https://timhangquangchau.com/thqc/complain/creat-complain-admin/202" target="_blank" title="" rel="tooltip" data-original-title="Tạo khiếu nại">Tạo khiếu nại</a>
+   </li>
+
+<li class="hidden">
+   <i class="fa fa-book"></i>
+   <span data-toggle="tooltip" title="" data-original-title="Phí trả thêm (tệ)">0.00<i class="fa fa-jpy"></i></span>
+   <span data-toggle="tooltip" title="" class="bold" data-original-title="Loại đơn hàng">Hàng ký gửi</span>
+</li>
+</ul>
+                                 </td>
+                              </tr>
+                                                         <tr id="order-236" class="">
+                                 <td style="width: 200px;">
+				<ul class="list-unstyled list-order">
+					<li>
+						<span class="text-info bold ">236</span> <span class="label label-danger">Thanh lý</span>
+					</li>
+					<li>
+						<label class="mg-0">Thông tin đơn hàng</label>
+						<span class="text-info bold btn-flat">KH a Tuấn</span>
+					</li>
+					<li>
+						<label class="mg-0">Ngày tạo</label>
+						<span class="text-info bold btn-flat">
+							24-10-2016 
+						</span>
+					</li>
+				</ul>
+			</td>
+				<td>
+			<ul class="list-unstyled list-order">
+								<li><span class="lbl-value"> Tong Anh Tuan -  0965712201 </span></li>
+				<li><span class="lbl-value"> <a rel="tooltip" title="" target="_blank" href="https://timhangquangchau.com/thqc/payments/debt?user_id=22225" data-original-title="Xem công nợ khách">tuantdh2201@gmail.com</a></span></li>
+				<li><span class="lbl-value" data-toggle="tooltip" rel="tooltip" data-placement="top" data-original-title="Địa chỉ"> -- --</span></li>
+								<li><span class="lbl-value" rel="tooltip" title="" data-original-title="Hàng về kho"> Cầu Giấy</span>
+				</li>
+									<li>
+						<span data-toggle="tooltip" title="" data-original-title="Vip ">
+							Vip đơn: 0
+						</span>
+					</li>
+							</ul>
+		</td>
+		<td style="width: 170px">
+			<ul class="list-unstyled list-order">
+				<li>
+										<span>&nbsp;</span>	<span rel="tooltip" title="" class=" text-danger pull-right" data-original-title="Tiền hàng">0<sup>đ</sup></span>
+				</li>
+				<li>
+										<span>&nbsp;</span> <span rel="tooltip" title="" class=" text-danger pull-right" data-original-title="Thanh toán">0<sup>đ</sup></span>
+				</li>
+				<li style="border-top: 1px dotted #ccc;">
+					<span> &nbsp;</span><span class=" text-danger pull-right" rel="tooltip" title="" data-original-title="Còn thiếu">0<sup>đ</sup></span>
+				</li>
+			</ul>
+		</td>
+		<td style="width: 200px">
+			<ul class="list-unstyled list-order">
+				<li>
+										<span rel="tooltip" title="" class="pull-right" data-original-title="CSKH">Hường</span>
+				</li>
+				<li>
+										<span rel="tooltip" title="" class="pull-right" data-original-title="ĐH">...</span>
+				</li>
+			</ul>
+		</td>
+					<td></td>
+		                                 <td>
+                                    <ul class="list-unstyled">
+<li>
+   <a onclick="$(this).parents(&#39;tr&#39;).css(&#39;background-color&#39;, &#39;#ccc&#39;)" target="_blank" data-toggle="tooltip" title="" href="https://timhangquangchau.com/thqc/rel/236/detail" class="btn btn-info btn-flat btn-xs" data-original-title="Xem chi tiết đơn hàng">chi tiết</a>
+               <a class="btn btn-danger btn-xs" href="https://timhangquangchau.com/thqc/complain/creat-complain-admin/236" target="_blank" title="" rel="tooltip" data-original-title="Tạo khiếu nại">Tạo khiếu nại</a>
+   </li>
+
+<li class="hidden">
+   <i class="fa fa-book"></i>
+   <span data-toggle="tooltip" title="" data-original-title="Phí trả thêm (tệ)">0.00<i class="fa fa-jpy"></i></span>
+   <span data-toggle="tooltip" title="" class="bold" data-original-title="Loại đơn hàng">Hàng ký gửi</span>
+</li>
+</ul>
+                                 </td>
+                              </tr>
+                                                         <tr id="order-320" class="">
+                                 <td style="width: 200px;">
+				<ul class="list-unstyled list-order">
+					<li>
+						<span class="text-info bold ">320</span> <span class="label label-danger">Thanh lý</span>
+					</li>
+					<li>
+						<label class="mg-0">Thông tin đơn hàng</label>
+						<span class="text-info bold btn-flat">kh: a viet</span>
+					</li>
+					<li>
+						<label class="mg-0">Ngày tạo</label>
+						<span class="text-info bold btn-flat">
+							26-10-2016 
+						</span>
+					</li>
+				</ul>
+			</td>
+				<td>
+			<ul class="list-unstyled list-order">
+								<li><span class="lbl-value"> Vương Quốc Việt -  0941876666 </span></li>
+				<li><span class="lbl-value"> <a rel="tooltip" title="" target="_blank" href="https://timhangquangchau.com/thqc/payments/debt?user_id=22280" data-original-title="Xem công nợ khách">vuongquocviet1704@gmail.com</a></span></li>
+				<li><span class="lbl-value" data-toggle="tooltip" rel="tooltip" data-placement="top" data-original-title="Địa chỉ"> -- --</span></li>
+								<li><span class="lbl-value" rel="tooltip" title="" data-original-title="Hàng về kho"> Cầu Giấy</span>
+				</li>
+									<li>
+						<span data-toggle="tooltip" title="" data-original-title="Vip ">
+							Vip đơn: 0
+						</span>
+					</li>
+							</ul>
+		</td>
+		<td style="width: 170px">
+			<ul class="list-unstyled list-order">
+				<li>
+										<span>&nbsp;</span>	<span rel="tooltip" title="" class=" text-danger pull-right" data-original-title="Tiền hàng">0<sup>đ</sup></span>
+				</li>
+				<li>
+										<span>&nbsp;</span> <span rel="tooltip" title="" class=" text-danger pull-right" data-original-title="Thanh toán">0<sup>đ</sup></span>
+				</li>
+				<li style="border-top: 1px dotted #ccc;">
+					<span> &nbsp;</span><span class=" text-danger pull-right" rel="tooltip" title="" data-original-title="Còn thiếu">0<sup>đ</sup></span>
+				</li>
+			</ul>
+		</td>
+		<td style="width: 200px">
+			<ul class="list-unstyled list-order">
+				<li>
+										<span rel="tooltip" title="" class="pull-right" data-original-title="CSKH">Hường</span>
+				</li>
+				<li>
+										<span rel="tooltip" title="" class="pull-right" data-original-title="ĐH">...</span>
+				</li>
+			</ul>
+		</td>
+					<td></td>
+		                                 <td>
+                                    <ul class="list-unstyled">
+<li>
+   <a onclick="$(this).parents(&#39;tr&#39;).css(&#39;background-color&#39;, &#39;#ccc&#39;)" target="_blank" data-toggle="tooltip" title="" href="https://timhangquangchau.com/thqc/rel/320/detail" class="btn btn-info btn-flat btn-xs" data-original-title="Xem chi tiết đơn hàng">chi tiết</a>
+               <a class="btn btn-danger btn-xs" href="https://timhangquangchau.com/thqc/complain/creat-complain-admin/320" target="_blank" title="" rel="tooltip" data-original-title="Tạo khiếu nại">Tạo khiếu nại</a>
+   </li>
+
+<li class="hidden">
+   <i class="fa fa-book"></i>
+   <span data-toggle="tooltip" title="" data-original-title="Phí trả thêm (tệ)">0.00<i class="fa fa-jpy"></i></span>
+   <span data-toggle="tooltip" title="" class="bold" data-original-title="Loại đơn hàng">Hàng ký gửi</span>
+</li>
+</ul>
+                                 </td>
+                              </tr>
+                                                         <tr id="order-359" class="">
+                                 <td style="width: 200px;">
+				<ul class="list-unstyled list-order">
+					<li>
+						<span class="text-info bold ">359</span> <span class="label label-danger">Thanh lý</span>
+					</li>
+					<li>
+						<label class="mg-0">Thông tin đơn hàng</label>
+						<span class="text-info bold btn-flat">A Tuấn</span>
+					</li>
+					<li>
+						<label class="mg-0">Ngày tạo</label>
+						<span class="text-info bold btn-flat">
+							28-10-2016 
+						</span>
+					</li>
+				</ul>
+			</td>
+				<td>
+			<ul class="list-unstyled list-order">
+								<li><span class="lbl-value"> Tong Anh Tuan -  0965712201 </span></li>
+				<li><span class="lbl-value"> <a rel="tooltip" title="" target="_blank" href="https://timhangquangchau.com/thqc/payments/debt?user_id=22225" data-original-title="Xem công nợ khách">tuantdh2201@gmail.com</a></span></li>
+				<li><span class="lbl-value" data-toggle="tooltip" rel="tooltip" data-placement="top" data-original-title="Địa chỉ"> -- --</span></li>
+								<li><span class="lbl-value" rel="tooltip" title="" data-original-title="Hàng về kho"> Cầu Giấy</span>
+				</li>
+									<li>
+						<span data-toggle="tooltip" title="" data-original-title="Vip ">
+							Vip đơn: 0
+						</span>
+					</li>
+							</ul>
+		</td>
+		<td style="width: 170px">
+			<ul class="list-unstyled list-order">
+				<li>
+										<span>&nbsp;</span>	<span rel="tooltip" title="" class=" text-danger pull-right" data-original-title="Tiền hàng">0<sup>đ</sup></span>
+				</li>
+				<li>
+										<span>&nbsp;</span> <span rel="tooltip" title="" class=" text-danger pull-right" data-original-title="Thanh toán">0<sup>đ</sup></span>
+				</li>
+				<li style="border-top: 1px dotted #ccc;">
+					<span> &nbsp;</span><span class=" text-danger pull-right" rel="tooltip" title="" data-original-title="Còn thiếu">0<sup>đ</sup></span>
+				</li>
+			</ul>
+		</td>
+		<td style="width: 200px">
+			<ul class="list-unstyled list-order">
+				<li>
+										<span rel="tooltip" title="" class="pull-right" data-original-title="CSKH">CSKH Thủy</span>
+				</li>
+				<li>
+										<span rel="tooltip" title="" class="pull-right" data-original-title="ĐH">...</span>
+				</li>
+			</ul>
+		</td>
+					<td></td>
+		                                 <td>
+                                    <ul class="list-unstyled">
+<li>
+   <a onclick="$(this).parents(&#39;tr&#39;).css(&#39;background-color&#39;, &#39;#ccc&#39;)" target="_blank" data-toggle="tooltip" title="" href="https://timhangquangchau.com/thqc/rel/359/detail" class="btn btn-info btn-flat btn-xs" data-original-title="Xem chi tiết đơn hàng">chi tiết</a>
+               <a class="btn btn-danger btn-xs" href="https://timhangquangchau.com/thqc/complain/creat-complain-admin/359" target="_blank" title="" rel="tooltip" data-original-title="Tạo khiếu nại">Tạo khiếu nại</a>
+   </li>
+
+<li class="hidden">
+   <i class="fa fa-book"></i>
+   <span data-toggle="tooltip" title="" data-original-title="Phí trả thêm (tệ)">0.00<i class="fa fa-jpy"></i></span>
+   <span data-toggle="tooltip" title="" class="bold" data-original-title="Loại đơn hàng">Hàng ký gửi</span>
+</li>
+</ul>
+                                 </td>
+                              </tr>
+                                                         <tr id="order-376" class="">
+                                 <td style="width: 200px;">
+				<ul class="list-unstyled list-order">
+					<li>
+						<span class="text-info bold ">376</span> <span class="label label-danger">Thanh lý</span>
+					</li>
+					<li>
+						<label class="mg-0">Thông tin đơn hàng</label>
+						<span class="text-info bold btn-flat">a việt 
+0941876666</span>
+					</li>
+					<li>
+						<label class="mg-0">Ngày tạo</label>
+						<span class="text-info bold btn-flat">
+							29-10-2016 
+						</span>
+					</li>
+				</ul>
+			</td>
+				<td>
+			<ul class="list-unstyled list-order">
+								<li><span class="lbl-value"> Vương Quốc Việt -  0941876666 </span></li>
+				<li><span class="lbl-value"> <a rel="tooltip" title="" target="_blank" href="https://timhangquangchau.com/thqc/payments/debt?user_id=22280" data-original-title="Xem công nợ khách">vuongquocviet1704@gmail.com</a></span></li>
+				<li><span class="lbl-value" data-toggle="tooltip" rel="tooltip" data-placement="top" data-original-title="Địa chỉ"> -- --</span></li>
+								<li><span class="lbl-value" rel="tooltip" title="" data-original-title="Hàng về kho"> Cầu Giấy</span>
+				</li>
+									<li>
+						<span data-toggle="tooltip" title="" data-original-title="Vip ">
+							Vip đơn: 0
+						</span>
+					</li>
+							</ul>
+		</td>
+		<td style="width: 170px">
+			<ul class="list-unstyled list-order">
+				<li>
+										<span>&nbsp;</span>	<span rel="tooltip" title="" class=" text-danger pull-right" data-original-title="Tiền hàng">0<sup>đ</sup></span>
+				</li>
+				<li>
+										<span>&nbsp;</span> <span rel="tooltip" title="" class=" text-danger pull-right" data-original-title="Thanh toán">0<sup>đ</sup></span>
+				</li>
+				<li style="border-top: 1px dotted #ccc;">
+					<span> &nbsp;</span><span class=" text-danger pull-right" rel="tooltip" title="" data-original-title="Còn thiếu">0<sup>đ</sup></span>
+				</li>
+			</ul>
+		</td>
+		<td style="width: 200px">
+			<ul class="list-unstyled list-order">
+				<li>
+										<span rel="tooltip" title="" class="pull-right" data-original-title="CSKH">Hường</span>
+				</li>
+				<li>
+										<span rel="tooltip" title="" class="pull-right" data-original-title="ĐH">...</span>
+				</li>
+			</ul>
+		</td>
+					<td></td>
+		                                 <td>
+                                    <ul class="list-unstyled">
+<li>
+   <a onclick="$(this).parents(&#39;tr&#39;).css(&#39;background-color&#39;, &#39;#ccc&#39;)" target="_blank" data-toggle="tooltip" title="" href="https://timhangquangchau.com/thqc/rel/376/detail" class="btn btn-info btn-flat btn-xs" data-original-title="Xem chi tiết đơn hàng">chi tiết</a>
+               <a class="btn btn-danger btn-xs" href="https://timhangquangchau.com/thqc/complain/creat-complain-admin/376" target="_blank" title="" rel="tooltip" data-original-title="Tạo khiếu nại">Tạo khiếu nại</a>
+   </li>
+
+<li class="hidden">
+   <i class="fa fa-book"></i>
+   <span data-toggle="tooltip" title="" data-original-title="Phí trả thêm (tệ)">0.00<i class="fa fa-jpy"></i></span>
+   <span data-toggle="tooltip" title="" class="bold" data-original-title="Loại đơn hàng">Hàng ký gửi</span>
+</li>
+</ul>
+                                 </td>
+                              </tr>
+                                                         <tr id="order-618" class="">
+                                 <td style="width: 200px;">
+				<ul class="list-unstyled list-order">
+					<li>
+						<span class="text-info bold ">618</span> <span class="label label-danger">Thanh lý</span>
+					</li>
+					<li>
+						<label class="mg-0">Thông tin đơn hàng</label>
+						<span class="text-info bold btn-flat">a tuan</span>
+					</li>
+					<li>
+						<label class="mg-0">Ngày tạo</label>
+						<span class="text-info bold btn-flat">
+							06-11-2016 
+						</span>
+					</li>
+				</ul>
+			</td>
+				<td>
+			<ul class="list-unstyled list-order">
+								<li><span class="lbl-value"> Tong Anh Tuan -  0965712201 </span></li>
+				<li><span class="lbl-value"> <a rel="tooltip" title="" target="_blank" href="https://timhangquangchau.com/thqc/payments/debt?user_id=22225" data-original-title="Xem công nợ khách">tuantdh2201@gmail.com</a></span></li>
+				<li><span class="lbl-value" data-toggle="tooltip" rel="tooltip" data-placement="top" data-original-title="Địa chỉ"> -- --</span></li>
+								<li><span class="lbl-value" rel="tooltip" title="" data-original-title="Hàng về kho"> Cầu Giấy</span>
+				</li>
+									<li>
+						<span data-toggle="tooltip" title="" data-original-title="Vip ">
+							Vip đơn: 0
+						</span>
+					</li>
+							</ul>
+		</td>
+		<td style="width: 170px">
+			<ul class="list-unstyled list-order">
+				<li>
+										<span>&nbsp;</span>	<span rel="tooltip" title="" class=" text-danger pull-right" data-original-title="Tiền hàng">0<sup>đ</sup></span>
+				</li>
+				<li>
+										<span>&nbsp;</span> <span rel="tooltip" title="" class=" text-danger pull-right" data-original-title="Thanh toán">0<sup>đ</sup></span>
+				</li>
+				<li style="border-top: 1px dotted #ccc;">
+					<span> &nbsp;</span><span class=" text-danger pull-right" rel="tooltip" title="" data-original-title="Còn thiếu">0<sup>đ</sup></span>
+				</li>
+			</ul>
+		</td>
+		<td style="width: 200px">
+			<ul class="list-unstyled list-order">
+				<li>
+										<span rel="tooltip" title="" class="pull-right" data-original-title="CSKH">Hường</span>
+				</li>
+				<li>
+										<span rel="tooltip" title="" class="pull-right" data-original-title="ĐH">...</span>
+				</li>
+			</ul>
+		</td>
+					<td></td>
+		                                 <td>
+                                    <ul class="list-unstyled">
+<li>
+   <a onclick="$(this).parents(&#39;tr&#39;).css(&#39;background-color&#39;, &#39;#ccc&#39;)" target="_blank" data-toggle="tooltip" title="" href="https://timhangquangchau.com/thqc/rel/618/detail" class="btn btn-info btn-flat btn-xs" data-original-title="Xem chi tiết đơn hàng">chi tiết</a>
+               <a class="btn btn-danger btn-xs" href="https://timhangquangchau.com/thqc/complain/creat-complain-admin/618" target="_blank" title="" rel="tooltip" data-original-title="Tạo khiếu nại">Tạo khiếu nại</a>
+   </li>
+
+<li class="hidden">
+   <i class="fa fa-book"></i>
+   <span data-toggle="tooltip" title="" data-original-title="Phí trả thêm (tệ)">0.00<i class="fa fa-jpy"></i></span>
+   <span data-toggle="tooltip" title="" class="bold" data-original-title="Loại đơn hàng">Hàng ký gửi</span>
+</li>
+</ul>
+                                 </td>
+                              </tr>
+                                                         <tr id="order-656" class="">
+                                 <td style="width: 200px;">
+				<ul class="list-unstyled list-order">
+					<li>
+						<span class="text-info bold ">656</span> <span class="label label-danger">Thanh lý</span>
+					</li>
+					<li>
+						<label class="mg-0">Thông tin đơn hàng</label>
+						<span class="text-info bold btn-flat">Juny Tường Vy</span>
+					</li>
+					<li>
+						<label class="mg-0">Ngày tạo</label>
+						<span class="text-info bold btn-flat">
+							07-11-2016 
+						</span>
+					</li>
+				</ul>
+			</td>
+				<td>
+			<ul class="list-unstyled list-order">
+								<li><span class="lbl-value"> Bui Thi Tuong Vy -  0949192627 </span></li>
+				<li><span class="lbl-value"> <a rel="tooltip" title="" target="_blank" href="https://timhangquangchau.com/thqc/payments/debt?user_id=22262" data-original-title="Xem công nợ khách">junytuongvy@gmail.com</a></span></li>
+				<li><span class="lbl-value" data-toggle="tooltip" rel="tooltip" data-placement="top" data-original-title="Địa chỉ"> -- --</span></li>
+								<li><span class="lbl-value" rel="tooltip" title="" data-original-title="Hàng về kho"> Cầu Giấy</span>
+				</li>
+									<li>
+						<span data-toggle="tooltip" title="" data-original-title="Vip ">
+							Vip đơn: 0
+						</span>
+					</li>
+							</ul>
+		</td>
+		<td style="width: 170px">
+			<ul class="list-unstyled list-order">
+				<li>
+										<span>&nbsp;</span>	<span rel="tooltip" title="" class=" text-danger pull-right" data-original-title="Tiền hàng">0<sup>đ</sup></span>
+				</li>
+				<li>
+										<span>&nbsp;</span> <span rel="tooltip" title="" class=" text-danger pull-right" data-original-title="Thanh toán">0<sup>đ</sup></span>
+				</li>
+				<li style="border-top: 1px dotted #ccc;">
+					<span> &nbsp;</span><span class=" text-danger pull-right" rel="tooltip" title="" data-original-title="Còn thiếu">0<sup>đ</sup></span>
+				</li>
+			</ul>
+		</td>
+		<td style="width: 200px">
+			<ul class="list-unstyled list-order">
+				<li>
+										<span rel="tooltip" title="" class="pull-right" data-original-title="CSKH">CSKH Thủy</span>
+				</li>
+				<li>
+										<span rel="tooltip" title="" class="pull-right" data-original-title="ĐH">...</span>
+				</li>
+			</ul>
+		</td>
+					<td></td>
+		                                 <td>
+                                    <ul class="list-unstyled">
+<li>
+   <a onclick="$(this).parents(&#39;tr&#39;).css(&#39;background-color&#39;, &#39;#ccc&#39;)" target="_blank" data-toggle="tooltip" title="" href="https://timhangquangchau.com/thqc/rel/656/detail" class="btn btn-info btn-flat btn-xs" data-original-title="Xem chi tiết đơn hàng">chi tiết</a>
+               <a class="btn btn-danger btn-xs" href="https://timhangquangchau.com/thqc/complain/creat-complain-admin/656" target="_blank" title="" rel="tooltip" data-original-title="Tạo khiếu nại">Tạo khiếu nại</a>
+   </li>
+
+<li class="hidden">
+   <i class="fa fa-book"></i>
+   <span data-toggle="tooltip" title="" data-original-title="Phí trả thêm (tệ)">0.00<i class="fa fa-jpy"></i></span>
+   <span data-toggle="tooltip" title="" class="bold" data-original-title="Loại đơn hàng">Hàng ký gửi</span>
+</li>
+</ul>
+                                 </td>
+                              </tr>
+                                                         <tr id="order-688" class="">
+                                 <td style="width: 200px;">
+				<ul class="list-unstyled list-order">
+					<li>
+						<span class="text-info bold ">688</span> <span class="label label-danger">Thanh lý</span>
+					</li>
+					<li>
+						<label class="mg-0">Thông tin đơn hàng</label>
+						<span class="text-info bold btn-flat">a việt</span>
+					</li>
+					<li>
+						<label class="mg-0">Ngày tạo</label>
+						<span class="text-info bold btn-flat">
+							08-11-2016 
+						</span>
+					</li>
+				</ul>
+			</td>
+				<td>
+			<ul class="list-unstyled list-order">
+								<li><span class="lbl-value"> Vương Quốc Việt -  0941876666 </span></li>
+				<li><span class="lbl-value"> <a rel="tooltip" title="" target="_blank" href="https://timhangquangchau.com/thqc/payments/debt?user_id=22280" data-original-title="Xem công nợ khách">vuongquocviet1704@gmail.com</a></span></li>
+				<li><span class="lbl-value" data-toggle="tooltip" rel="tooltip" data-placement="top" data-original-title="Địa chỉ"> -- --</span></li>
+								<li><span class="lbl-value" rel="tooltip" title="" data-original-title="Hàng về kho"> Cầu Giấy</span>
+				</li>
+									<li>
+						<span data-toggle="tooltip" title="" data-original-title="Vip ">
+							Vip đơn: 0
+						</span>
+					</li>
+							</ul>
+		</td>
+		<td style="width: 170px">
+			<ul class="list-unstyled list-order">
+				<li>
+										<span>&nbsp;</span>	<span rel="tooltip" title="" class=" text-danger pull-right" data-original-title="Tiền hàng">0<sup>đ</sup></span>
+				</li>
+				<li>
+										<span>&nbsp;</span> <span rel="tooltip" title="" class=" text-danger pull-right" data-original-title="Thanh toán">0<sup>đ</sup></span>
+				</li>
+				<li style="border-top: 1px dotted #ccc;">
+					<span> &nbsp;</span><span class=" text-danger pull-right" rel="tooltip" title="" data-original-title="Còn thiếu">0<sup>đ</sup></span>
+				</li>
+			</ul>
+		</td>
+		<td style="width: 200px">
+			<ul class="list-unstyled list-order">
+				<li>
+										<span rel="tooltip" title="" class="pull-right" data-original-title="CSKH">CSKH Thủy</span>
+				</li>
+				<li>
+										<span rel="tooltip" title="" class="pull-right" data-original-title="ĐH">...</span>
+				</li>
+			</ul>
+		</td>
+					<td></td>
+		                                 <td>
+                                    <ul class="list-unstyled">
+<li>
+   <a onclick="$(this).parents(&#39;tr&#39;).css(&#39;background-color&#39;, &#39;#ccc&#39;)" target="_blank" data-toggle="tooltip" title="" href="https://timhangquangchau.com/thqc/rel/688/detail" class="btn btn-info btn-flat btn-xs" data-original-title="Xem chi tiết đơn hàng">chi tiết</a>
+               <a class="btn btn-danger btn-xs" href="https://timhangquangchau.com/thqc/complain/creat-complain-admin/688" target="_blank" title="" rel="tooltip" data-original-title="Tạo khiếu nại">Tạo khiếu nại</a>
+   </li>
+
+<li class="hidden">
+   <i class="fa fa-book"></i>
+   <span data-toggle="tooltip" title="" data-original-title="Phí trả thêm (tệ)">0.00<i class="fa fa-jpy"></i></span>
+   <span data-toggle="tooltip" title="" class="bold" data-original-title="Loại đơn hàng">Hàng ký gửi</span>
+</li>
+</ul>
+                                 </td>
+                              </tr>
+                                                         <tr id="order-808" class="">
+                                 <td style="width: 200px;">
+				<ul class="list-unstyled list-order">
+					<li>
+						<span class="text-info bold ">808</span> <span class="label label-danger">Thanh lý</span>
+					</li>
+					<li>
+						<label class="mg-0">Thông tin đơn hàng</label>
+						<span class="text-info bold btn-flat">A Việt</span>
+					</li>
+					<li>
+						<label class="mg-0">Ngày tạo</label>
+						<span class="text-info bold btn-flat">
+							12-11-2016 
+						</span>
+					</li>
+				</ul>
+			</td>
+				<td>
+			<ul class="list-unstyled list-order">
+								<li><span class="lbl-value"> Vương Quốc Việt -  0941876666 </span></li>
+				<li><span class="lbl-value"> <a rel="tooltip" title="" target="_blank" href="https://timhangquangchau.com/thqc/payments/debt?user_id=22280" data-original-title="Xem công nợ khách">vuongquocviet1704@gmail.com</a></span></li>
+				<li><span class="lbl-value" data-toggle="tooltip" rel="tooltip" data-placement="top" data-original-title="Địa chỉ"> -- --</span></li>
+								<li><span class="lbl-value" rel="tooltip" title="" data-original-title="Hàng về kho"> Cầu Giấy</span>
+				</li>
+									<li>
+						<span data-toggle="tooltip" title="" data-original-title="Vip ">
+							Vip đơn: 0
+						</span>
+					</li>
+							</ul>
+		</td>
+		<td style="width: 170px">
+			<ul class="list-unstyled list-order">
+				<li>
+										<span>&nbsp;</span>	<span rel="tooltip" title="" class=" text-danger pull-right" data-original-title="Tiền hàng">0<sup>đ</sup></span>
+				</li>
+				<li>
+										<span>&nbsp;</span> <span rel="tooltip" title="" class=" text-danger pull-right" data-original-title="Thanh toán">0<sup>đ</sup></span>
+				</li>
+				<li style="border-top: 1px dotted #ccc;">
+					<span> &nbsp;</span><span class=" text-danger pull-right" rel="tooltip" title="" data-original-title="Còn thiếu">0<sup>đ</sup></span>
+				</li>
+			</ul>
+		</td>
+		<td style="width: 200px">
+			<ul class="list-unstyled list-order">
+				<li>
+										<span rel="tooltip" title="" class="pull-right" data-original-title="CSKH">Hường</span>
+				</li>
+				<li>
+										<span rel="tooltip" title="" class="pull-right" data-original-title="ĐH">...</span>
+				</li>
+			</ul>
+		</td>
+					<td></td>
+		                                 <td>
+                                    <ul class="list-unstyled">
+<li>
+   <a onclick="$(this).parents(&#39;tr&#39;).css(&#39;background-color&#39;, &#39;#ccc&#39;)" target="_blank" data-toggle="tooltip" title="" href="https://timhangquangchau.com/thqc/rel/808/detail" class="btn btn-info btn-flat btn-xs" data-original-title="Xem chi tiết đơn hàng">chi tiết</a>
+               <a class="btn btn-danger btn-xs" href="https://timhangquangchau.com/thqc/complain/creat-complain-admin/808" target="_blank" title="" rel="tooltip" data-original-title="Tạo khiếu nại">Tạo khiếu nại</a>
+   </li>
+
+<li class="hidden">
+   <i class="fa fa-book"></i>
+   <span data-toggle="tooltip" title="" data-original-title="Phí trả thêm (tệ)">0.00<i class="fa fa-jpy"></i></span>
+   <span data-toggle="tooltip" title="" class="bold" data-original-title="Loại đơn hàng">Hàng ký gửi</span>
+</li>
+</ul>
+                                 </td>
+                              </tr>
+                                                         <tr id="order-826" class="">
+                                 <td style="width: 200px;">
+				<ul class="list-unstyled list-order">
+					<li>
+						<span class="text-info bold ">826</span> <span class="label label-danger">Thanh lý</span>
+					</li>
+					<li>
+						<label class="mg-0">Thông tin đơn hàng</label>
+						<span class="text-info bold btn-flat">a tuấn</span>
+					</li>
+					<li>
+						<label class="mg-0">Ngày tạo</label>
+						<span class="text-info bold btn-flat">
+							12-11-2016 
+						</span>
+					</li>
+				</ul>
+			</td>
+				<td>
+			<ul class="list-unstyled list-order">
+								<li><span class="lbl-value"> Tong Anh Tuan -  0965712201 </span></li>
+				<li><span class="lbl-value"> <a rel="tooltip" title="" target="_blank" href="https://timhangquangchau.com/thqc/payments/debt?user_id=22225" data-original-title="Xem công nợ khách">tuantdh2201@gmail.com</a></span></li>
+				<li><span class="lbl-value" data-toggle="tooltip" rel="tooltip" data-placement="top" data-original-title="Địa chỉ"> -- --</span></li>
+								<li><span class="lbl-value" rel="tooltip" title="" data-original-title="Hàng về kho"> Cầu Giấy</span>
+				</li>
+									<li>
+						<span data-toggle="tooltip" title="" data-original-title="Vip ">
+							Vip đơn: 0
+						</span>
+					</li>
+							</ul>
+		</td>
+		<td style="width: 170px">
+			<ul class="list-unstyled list-order">
+				<li>
+										<span>&nbsp;</span>	<span rel="tooltip" title="" class=" text-danger pull-right" data-original-title="Tiền hàng">0<sup>đ</sup></span>
+				</li>
+				<li>
+										<span>&nbsp;</span> <span rel="tooltip" title="" class=" text-danger pull-right" data-original-title="Thanh toán">0<sup>đ</sup></span>
+				</li>
+				<li style="border-top: 1px dotted #ccc;">
+					<span> &nbsp;</span><span class=" text-danger pull-right" rel="tooltip" title="" data-original-title="Còn thiếu">0<sup>đ</sup></span>
+				</li>
+			</ul>
+		</td>
+		<td style="width: 200px">
+			<ul class="list-unstyled list-order">
+				<li>
+										<span rel="tooltip" title="" class="pull-right" data-original-title="CSKH">Hường</span>
+				</li>
+				<li>
+										<span rel="tooltip" title="" class="pull-right" data-original-title="ĐH">...</span>
+				</li>
+			</ul>
+		</td>
+					<td></td>
+		                                 <td>
+                                    <ul class="list-unstyled">
+<li>
+   <a onclick="$(this).parents(&#39;tr&#39;).css(&#39;background-color&#39;, &#39;#ccc&#39;)" target="_blank" data-toggle="tooltip" title="" href="https://timhangquangchau.com/thqc/rel/826/detail" class="btn btn-info btn-flat btn-xs" data-original-title="Xem chi tiết đơn hàng">chi tiết</a>
+               <a class="btn btn-danger btn-xs" href="https://timhangquangchau.com/thqc/complain/creat-complain-admin/826" target="_blank" title="" rel="tooltip" data-original-title="Tạo khiếu nại">Tạo khiếu nại</a>
+   </li>
+
+<li class="hidden">
+   <i class="fa fa-book"></i>
+   <span data-toggle="tooltip" title="" data-original-title="Phí trả thêm (tệ)">0.00<i class="fa fa-jpy"></i></span>
+   <span data-toggle="tooltip" title="" class="bold" data-original-title="Loại đơn hàng">Hàng ký gửi</span>
+</li>
+</ul>
+                                 </td>
+                              </tr>
+                                                         <tr id="order-913" class="">
+                                 <td style="width: 200px;">
+				<ul class="list-unstyled list-order">
+					<li>
+						<span class="text-info bold ">913</span> <span class="label label-danger">Thanh lý</span>
+					</li>
+					<li>
+						<label class="mg-0">Thông tin đơn hàng</label>
+						<span class="text-info bold btn-flat">Vuong quoc viet</span>
+					</li>
+					<li>
+						<label class="mg-0">Ngày tạo</label>
+						<span class="text-info bold btn-flat">
+							15-11-2016 
+						</span>
+					</li>
+				</ul>
+			</td>
+				<td>
+			<ul class="list-unstyled list-order">
+								<li><span class="lbl-value"> Vương Quốc Việt -  0941876666 </span></li>
+				<li><span class="lbl-value"> <a rel="tooltip" title="" target="_blank" href="https://timhangquangchau.com/thqc/payments/debt?user_id=22280" data-original-title="Xem công nợ khách">vuongquocviet1704@gmail.com</a></span></li>
+				<li><span class="lbl-value" data-toggle="tooltip" rel="tooltip" data-placement="top" data-original-title="Địa chỉ"> -- --</span></li>
+								<li><span class="lbl-value" rel="tooltip" title="" data-original-title="Hàng về kho"> Cầu Giấy</span>
+				</li>
+									<li>
+						<span data-toggle="tooltip" title="" data-original-title="Vip ">
+							Vip đơn: 0
+						</span>
+					</li>
+							</ul>
+		</td>
+		<td style="width: 170px">
+			<ul class="list-unstyled list-order">
+				<li>
+										<span>&nbsp;</span>	<span rel="tooltip" title="" class=" text-danger pull-right" data-original-title="Tiền hàng">0<sup>đ</sup></span>
+				</li>
+				<li>
+										<span>&nbsp;</span> <span rel="tooltip" title="" class=" text-danger pull-right" data-original-title="Thanh toán">0<sup>đ</sup></span>
+				</li>
+				<li style="border-top: 1px dotted #ccc;">
+					<span> &nbsp;</span><span class=" text-danger pull-right" rel="tooltip" title="" data-original-title="Còn thiếu">0<sup>đ</sup></span>
+				</li>
+			</ul>
+		</td>
+		<td style="width: 200px">
+			<ul class="list-unstyled list-order">
+				<li>
+										<span rel="tooltip" title="" class="pull-right" data-original-title="CSKH">Hường</span>
+				</li>
+				<li>
+										<span rel="tooltip" title="" class="pull-right" data-original-title="ĐH">...</span>
+				</li>
+			</ul>
+		</td>
+					<td></td>
+		                                 <td>
+                                    <ul class="list-unstyled">
+<li>
+   <a onclick="$(this).parents(&#39;tr&#39;).css(&#39;background-color&#39;, &#39;#ccc&#39;)" target="_blank" data-toggle="tooltip" title="" href="https://timhangquangchau.com/thqc/rel/913/detail" class="btn btn-info btn-flat btn-xs" data-original-title="Xem chi tiết đơn hàng">chi tiết</a>
+               <a class="btn btn-danger btn-xs" href="https://timhangquangchau.com/thqc/complain/creat-complain-admin/913" target="_blank" title="" rel="tooltip" data-original-title="Tạo khiếu nại">Tạo khiếu nại</a>
+   </li>
+
+<li class="hidden">
+   <i class="fa fa-book"></i>
+   <span data-toggle="tooltip" title="" data-original-title="Phí trả thêm (tệ)">0.00<i class="fa fa-jpy"></i></span>
+   <span data-toggle="tooltip" title="" class="bold" data-original-title="Loại đơn hàng">Hàng ký gửi</span>
+</li>
+</ul>
+                                 </td>
+                              </tr>
+                                                         <tr id="order-1064" class="">
+                                 <td style="width: 200px;">
+				<ul class="list-unstyled list-order">
+					<li>
+						<span class="text-info bold ">1064</span> <span class="label label-danger">Thanh lý</span>
+					</li>
+					<li>
+						<label class="mg-0">Thông tin đơn hàng</label>
+						<span class="text-info bold btn-flat">23 kiện (thêm 725 tệ) + 13 kiện (thêm 455 tệ)</span>
+					</li>
+					<li>
+						<label class="mg-0">Ngày tạo</label>
+						<span class="text-info bold btn-flat">
+							22-11-2016 
+						</span>
+					</li>
+				</ul>
+			</td>
+				<td>
+			<ul class="list-unstyled list-order">
+								<li><span class="lbl-value"> Vương Quốc Việt -  0941876666 </span></li>
+				<li><span class="lbl-value"> <a rel="tooltip" title="" target="_blank" href="https://timhangquangchau.com/thqc/payments/debt?user_id=22280" data-original-title="Xem công nợ khách">vuongquocviet1704@gmail.com</a></span></li>
+				<li><span class="lbl-value" data-toggle="tooltip" rel="tooltip" data-placement="top" data-original-title="Địa chỉ"> -- --</span></li>
+								<li><span class="lbl-value" rel="tooltip" title="" data-original-title="Hàng về kho"> Cầu Giấy</span>
+				</li>
+									<li>
+						<span data-toggle="tooltip" title="" data-original-title="Vip ">
+							Vip đơn: 0
+						</span>
+					</li>
+							</ul>
+		</td>
+		<td style="width: 170px">
+			<ul class="list-unstyled list-order">
+				<li>
+										<span>&nbsp;</span>	<span rel="tooltip" title="" class=" text-danger pull-right" data-original-title="Tiền hàng">0<sup>đ</sup></span>
+				</li>
+				<li>
+										<span>&nbsp;</span> <span rel="tooltip" title="" class=" text-danger pull-right" data-original-title="Thanh toán">0<sup>đ</sup></span>
+				</li>
+				<li style="border-top: 1px dotted #ccc;">
+					<span> &nbsp;</span><span class=" text-danger pull-right" rel="tooltip" title="" data-original-title="Còn thiếu">0<sup>đ</sup></span>
+				</li>
+			</ul>
+		</td>
+		<td style="width: 200px">
+			<ul class="list-unstyled list-order">
+				<li>
+										<span rel="tooltip" title="" class="pull-right" data-original-title="CSKH">Hường</span>
+				</li>
+				<li>
+										<span rel="tooltip" title="" class="pull-right" data-original-title="ĐH">...</span>
+				</li>
+			</ul>
+		</td>
+					<td></td>
+		                                 <td>
+                                    <ul class="list-unstyled">
+<li>
+   <a onclick="$(this).parents(&#39;tr&#39;).css(&#39;background-color&#39;, &#39;#ccc&#39;)" target="_blank" data-toggle="tooltip" title="" href="https://timhangquangchau.com/thqc/rel/1064/detail" class="btn btn-info btn-flat btn-xs" data-original-title="Xem chi tiết đơn hàng">chi tiết</a>
+               <a class="btn btn-danger btn-xs" href="https://timhangquangchau.com/thqc/complain/creat-complain-admin/1064" target="_blank" title="" rel="tooltip" data-original-title="Tạo khiếu nại">Tạo khiếu nại</a>
+   </li>
+
+<li class="hidden">
+   <i class="fa fa-book"></i>
+   <span data-toggle="tooltip" title="" data-original-title="Phí trả thêm (tệ)">0.00<i class="fa fa-jpy"></i></span>
+   <span data-toggle="tooltip" title="" class="bold" data-original-title="Loại đơn hàng">Hàng ký gửi</span>
+</li>
+</ul>
+                                 </td>
+                              </tr>
+                                                         <tr id="order-1095" class="">
+                                 <td style="width: 200px;">
+				<ul class="list-unstyled list-order">
+					<li>
+						<span class="text-info bold ">1095</span> <span class="label label-danger">Thanh lý</span>
+					</li>
+					<li>
+						<label class="mg-0">Thông tin đơn hàng</label>
+						<span class="text-info bold btn-flat">Tuan </span>
+					</li>
+					<li>
+						<label class="mg-0">Ngày tạo</label>
+						<span class="text-info bold btn-flat">
+							23-11-2016 
+						</span>
+					</li>
+				</ul>
+			</td>
+				<td>
+			<ul class="list-unstyled list-order">
+								<li><span class="lbl-value"> Tong Anh Tuan -  0965712201 </span></li>
+				<li><span class="lbl-value"> <a rel="tooltip" title="" target="_blank" href="https://timhangquangchau.com/thqc/payments/debt?user_id=22225" data-original-title="Xem công nợ khách">tuantdh2201@gmail.com</a></span></li>
+				<li><span class="lbl-value" data-toggle="tooltip" rel="tooltip" data-placement="top" data-original-title="Địa chỉ"> -- --</span></li>
+								<li><span class="lbl-value" rel="tooltip" title="" data-original-title="Hàng về kho"> Cầu Giấy</span>
+				</li>
+									<li>
+						<span data-toggle="tooltip" title="" data-original-title="Vip ">
+							Vip đơn: 0
+						</span>
+					</li>
+							</ul>
+		</td>
+		<td style="width: 170px">
+			<ul class="list-unstyled list-order">
+				<li>
+										<span>&nbsp;</span>	<span rel="tooltip" title="" class=" text-danger pull-right" data-original-title="Tiền hàng">0<sup>đ</sup></span>
+				</li>
+				<li>
+										<span>&nbsp;</span> <span rel="tooltip" title="" class=" text-danger pull-right" data-original-title="Thanh toán">0<sup>đ</sup></span>
+				</li>
+				<li style="border-top: 1px dotted #ccc;">
+					<span> &nbsp;</span><span class=" text-danger pull-right" rel="tooltip" title="" data-original-title="Còn thiếu">0<sup>đ</sup></span>
+				</li>
+			</ul>
+		</td>
+		<td style="width: 200px">
+			<ul class="list-unstyled list-order">
+				<li>
+										<span rel="tooltip" title="" class="pull-right" data-original-title="CSKH">Hường</span>
+				</li>
+				<li>
+										<span rel="tooltip" title="" class="pull-right" data-original-title="ĐH">...</span>
+				</li>
+			</ul>
+		</td>
+					<td></td>
+		                                 <td>
+                                    <ul class="list-unstyled">
+<li>
+   <a onclick="$(this).parents(&#39;tr&#39;).css(&#39;background-color&#39;, &#39;#ccc&#39;)" target="_blank" data-toggle="tooltip" title="" href="https://timhangquangchau.com/thqc/rel/1095/detail" class="btn btn-info btn-flat btn-xs" data-original-title="Xem chi tiết đơn hàng">chi tiết</a>
+               <a class="btn btn-danger btn-xs" href="https://timhangquangchau.com/thqc/complain/creat-complain-admin/1095" target="_blank" title="" rel="tooltip" data-original-title="Tạo khiếu nại">Tạo khiếu nại</a>
+   </li>
+
+<li class="hidden">
+   <i class="fa fa-book"></i>
+   <span data-toggle="tooltip" title="" data-original-title="Phí trả thêm (tệ)">0.00<i class="fa fa-jpy"></i></span>
+   <span data-toggle="tooltip" title="" class="bold" data-original-title="Loại đơn hàng">Hàng ký gửi</span>
+</li>
+</ul>
+                                 </td>
+                              </tr>
+                                                         <tr id="order-1113" class="">
+                                 <td style="width: 200px;">
+				<ul class="list-unstyled list-order">
+					<li>
+						<span class="text-info bold ">1113</span> <span class="label label-danger">Thanh lý</span>
+					</li>
+					<li>
+						<label class="mg-0">Thông tin đơn hàng</label>
+						<span class="text-info bold btn-flat">Tuan</span>
+					</li>
+					<li>
+						<label class="mg-0">Ngày tạo</label>
+						<span class="text-info bold btn-flat">
+							24-11-2016 
+						</span>
+					</li>
+				</ul>
+			</td>
+				<td>
+			<ul class="list-unstyled list-order">
+								<li><span class="lbl-value"> Tong Anh Tuan -  0965712201 </span></li>
+				<li><span class="lbl-value"> <a rel="tooltip" title="" target="_blank" href="https://timhangquangchau.com/thqc/payments/debt?user_id=22225" data-original-title="Xem công nợ khách">tuantdh2201@gmail.com</a></span></li>
+				<li><span class="lbl-value" data-toggle="tooltip" rel="tooltip" data-placement="top" data-original-title="Địa chỉ"> -- --</span></li>
+								<li><span class="lbl-value" rel="tooltip" title="" data-original-title="Hàng về kho"> Cầu Giấy</span>
+				</li>
+									<li>
+						<span data-toggle="tooltip" title="" data-original-title="Vip ">
+							Vip đơn: 0
+						</span>
+					</li>
+							</ul>
+		</td>
+		<td style="width: 170px">
+			<ul class="list-unstyled list-order">
+				<li>
+										<span>&nbsp;</span>	<span rel="tooltip" title="" class=" text-danger pull-right" data-original-title="Tiền hàng">0<sup>đ</sup></span>
+				</li>
+				<li>
+										<span>&nbsp;</span> <span rel="tooltip" title="" class=" text-danger pull-right" data-original-title="Thanh toán">0<sup>đ</sup></span>
+				</li>
+				<li style="border-top: 1px dotted #ccc;">
+					<span> &nbsp;</span><span class=" text-danger pull-right" rel="tooltip" title="" data-original-title="Còn thiếu">0<sup>đ</sup></span>
+				</li>
+			</ul>
+		</td>
+		<td style="width: 200px">
+			<ul class="list-unstyled list-order">
+				<li>
+										<span rel="tooltip" title="" class="pull-right" data-original-title="CSKH">Hường</span>
+				</li>
+				<li>
+										<span rel="tooltip" title="" class="pull-right" data-original-title="ĐH">...</span>
+				</li>
+			</ul>
+		</td>
+					<td></td>
+		                                 <td>
+                                    <ul class="list-unstyled">
+<li>
+   <a onclick="$(this).parents(&#39;tr&#39;).css(&#39;background-color&#39;, &#39;#ccc&#39;)" target="_blank" data-toggle="tooltip" title="" href="https://timhangquangchau.com/thqc/rel/1113/detail" class="btn btn-info btn-flat btn-xs" data-original-title="Xem chi tiết đơn hàng">chi tiết</a>
+               <a class="btn btn-danger btn-xs" href="https://timhangquangchau.com/thqc/complain/creat-complain-admin/1113" target="_blank" title="" rel="tooltip" data-original-title="Tạo khiếu nại">Tạo khiếu nại</a>
+   </li>
+
+<li class="hidden">
+   <i class="fa fa-book"></i>
+   <span data-toggle="tooltip" title="" data-original-title="Phí trả thêm (tệ)">0.00<i class="fa fa-jpy"></i></span>
+   <span data-toggle="tooltip" title="" class="bold" data-original-title="Loại đơn hàng">Hàng ký gửi</span>
+</li>
+</ul>
+                                 </td>
+                              </tr>
+                                                         <tr id="order-1114" class="">
+                                 <td style="width: 200px;">
+				<ul class="list-unstyled list-order">
+					<li>
+						<span class="text-info bold ">1114</span> <span class="label label-danger">Thanh lý</span>
+					</li>
+					<li>
+						<label class="mg-0">Thông tin đơn hàng</label>
+						<span class="text-info bold btn-flat">Tuấn</span>
+					</li>
+					<li>
+						<label class="mg-0">Ngày tạo</label>
+						<span class="text-info bold btn-flat">
+							24-11-2016 
+						</span>
+					</li>
+				</ul>
+			</td>
+				<td>
+			<ul class="list-unstyled list-order">
+								<li><span class="lbl-value"> Tong Anh Tuan -  0965712201 </span></li>
+				<li><span class="lbl-value"> <a rel="tooltip" title="" target="_blank" href="https://timhangquangchau.com/thqc/payments/debt?user_id=22225" data-original-title="Xem công nợ khách">tuantdh2201@gmail.com</a></span></li>
+				<li><span class="lbl-value" data-toggle="tooltip" rel="tooltip" data-placement="top" data-original-title="Địa chỉ"> -- --</span></li>
+								<li><span class="lbl-value" rel="tooltip" title="" data-original-title="Hàng về kho"> Cầu Giấy</span>
+				</li>
+									<li>
+						<span data-toggle="tooltip" title="" data-original-title="Vip ">
+							Vip đơn: 0
+						</span>
+					</li>
+							</ul>
+		</td>
+		<td style="width: 170px">
+			<ul class="list-unstyled list-order">
+				<li>
+										<span>&nbsp;</span>	<span rel="tooltip" title="" class=" text-danger pull-right" data-original-title="Tiền hàng">0<sup>đ</sup></span>
+				</li>
+				<li>
+										<span>&nbsp;</span> <span rel="tooltip" title="" class=" text-danger pull-right" data-original-title="Thanh toán">0<sup>đ</sup></span>
+				</li>
+				<li style="border-top: 1px dotted #ccc;">
+					<span> &nbsp;</span><span class=" text-danger pull-right" rel="tooltip" title="" data-original-title="Còn thiếu">0<sup>đ</sup></span>
+				</li>
+			</ul>
+		</td>
+		<td style="width: 200px">
+			<ul class="list-unstyled list-order">
+				<li>
+										<span rel="tooltip" title="" class="pull-right" data-original-title="CSKH">CSKH Thủy</span>
+				</li>
+				<li>
+										<span rel="tooltip" title="" class="pull-right" data-original-title="ĐH">...</span>
+				</li>
+			</ul>
+		</td>
+					<td></td>
+		                                 <td>
+                                    <ul class="list-unstyled">
+<li>
+   <a onclick="$(this).parents(&#39;tr&#39;).css(&#39;background-color&#39;, &#39;#ccc&#39;)" target="_blank" data-toggle="tooltip" title="" href="https://timhangquangchau.com/thqc/rel/1114/detail" class="btn btn-info btn-flat btn-xs" data-original-title="Xem chi tiết đơn hàng">chi tiết</a>
+               <a class="btn btn-danger btn-xs" href="https://timhangquangchau.com/thqc/complain/creat-complain-admin/1114" target="_blank" title="" rel="tooltip" data-original-title="Tạo khiếu nại">Tạo khiếu nại</a>
+   </li>
+
+<li class="hidden">
+   <i class="fa fa-book"></i>
+   <span data-toggle="tooltip" title="" data-original-title="Phí trả thêm (tệ)">0.00<i class="fa fa-jpy"></i></span>
+   <span data-toggle="tooltip" title="" class="bold" data-original-title="Loại đơn hàng">Hàng ký gửi</span>
+</li>
+</ul>
+                                 </td>
+                              </tr>
+                                                                        </tbody>
+                  </table>
+               <div class="row-fluid">
+		<div class="span6">
+		<div class="dataTables_info">Đang hiển thị <b>20</b> trong tổng số <b>1830</b> bản ghi.</div>
+	</div>
+		<div class="span6"><div class="dataTables_paginate paging_bootstrap pagination"><ul class="pagination"><li class="disabled" aria-disabled="true"><a href="javascript:void(0)">« Trước</a></li> <li class="active"><a href="javascript:void(0)">1</a></li><li><a href="https://timhangquangchau.com/thqc/rel?type=2&amp;page=2">2</a></li><li><a href="https://timhangquangchau.com/thqc/rel?type=2&amp;page=3">3</a></li><li><a href="https://timhangquangchau.com/thqc/rel?type=2&amp;page=4">4</a></li><li><a href="https://timhangquangchau.com/thqc/rel?type=2&amp;page=5">5</a></li><li><a href="https://timhangquangchau.com/thqc/rel?type=2&amp;page=6">6</a></li><li><a href="https://timhangquangchau.com/thqc/rel?type=2&amp;page=7">7</a></li><li><a href="https://timhangquangchau.com/thqc/rel?type=2&amp;page=8">8</a></li><li class="disabled" aria-disabled="true"><a href="javascript:void(0)">…</a></li><li><a href="https://timhangquangchau.com/thqc/rel?type=2&amp;page=91">91</a></li><li><a href="https://timhangquangchau.com/thqc/rel?type=2&amp;page=92">92</a></li> <li><a href="https://timhangquangchau.com/thqc/rel?type=2&amp;page=2" rel="next">Sau »</a></li></ul></div></div>
+</div>
+            </div>
+         </section>
+      </div>
+   </div>
+<div class="modal fade change-care" role="dialog">
+   <div class="modal-dialog">
+      <div class="modal-content">
+         <div class="modal-header">
+            <h4 class="modal-title" id="modal-title-staff">Chuyển cho cskh</h4>
+         </div>
+         <div class="modal-body">
+            <form class="form-horizontal" id="frm-changeStaff" accept-charset="UTF-8" action="https://timhangquangchau.com/thqc/rel/swap-staff" method="POST">
+               <input type="hidden" class="order_id_1" name="order_id">
+               <input type="hidden" name="care_1" value="1">
+               <div class="form-group">
+                  <label for="staff_id" class="col-sm-2 control-label">CSKH</label>
+                  <div class="col-sm-10">
+                                          <select name="care_id_o" class="select2 form-control select2-hidden-accessible" style="width: 100%" tabindex="-1" aria-hidden="true">
+                                                      <option value="22226">Huyền Nguyễn</option>
+                                                      <option value="22231">CSKH Thủy</option>
+                                                      <option value="22232">Hường</option>
+                                                      <option value="22397">Huyền Nguyễn</option>
+                                                      <option value="22398">Phạm Thị Kiều Anh</option>
+                                                      <option value="22487">Sa</option>
+                                                      <option value="22554">CSKH</option>
+                                                      <option value="22595">Ngọc</option>
+                                                      <option value="22635">Hoai</option>
+                                                      <option value="22655">Kthn2-thể</option>
+                                                </select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-care_id_o-i1-container"><span class="select2-selection__rendered" id="select2-care_id_o-i1-container" title="Huyền Nguyễn">Huyền Nguyễn</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                       </div>
+               </div>
+
+               <div class="form-group">
+                  <div class="col-sm-10 col-sm-offset-2">
+                  <input type="hidden" name="_token" value="w0ZF4euKWqOnnZACQCrOSv8N29wV2LUISSakkAAT">
+                     <button type="button" data-dismiss="modal" class="btn btn-flat btn-default">Hủy</button>
+                     <input type="submit" class="btn btn-flat btn-primary" value="Chuyển">
+                  </div>
+               </div>
+            </form>
+         </div>
+      </div>
+   </div>
+</div>
+
+
+<div class="modal fade change-booker" role="dialog">
+   <div class="modal-dialog">
+      <div class="modal-content">
+         <div class="modal-header">
+            <h4 class="modal-title" id="modal-title-staff">Chuyển cho đặt hàng</h4>
+         </div>
+         <div class="modal-body">
+            <form class="form-horizontal" id="frm-changeStaff" accept-charset="UTF-8" action="https://timhangquangchau.com/thqc/rel/swap-staff" method="POST">
+               <input type="hidden" class="order_id_1" name="order_id">
+               <div class="form-group">
+                  <label for="staff_id" class="col-sm-2 control-label">ĐH</label>
+                  <div class="col-sm-10">
+                                          <select name="booker_id_o" class="select2 form-control select2-hidden-accessible" style="width: 100%" tabindex="-1" aria-hidden="true">
+                                                      <option value="22228">Hồng Nhung (Phạm Hảo)</option>
+                                                      <option value="22229">Thanh Thủy (Phạm Hảo)</option>
+                                                      <option value="22313">Admin (Lê Tân)</option>
+                                                      <option value="22314">Hồng Nhung (Lê Tân)</option>
+                                                      <option value="22333">Đinh Nhung (Hồng Nhung)</option>
+                                                      <option value="22334">Phán Vinh Phi</option>
+                                                      <option value="22561">Đặt Hàng -  Đảm (phạm Hảo)</option>
+                                                      <option value="22581">Thắng</option>
+                                                </select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-booker_id_o-fq-container"><span class="select2-selection__rendered" id="select2-booker_id_o-fq-container" title="Hồng Nhung (Phạm Hảo)">Hồng Nhung (Phạm Hảo)</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                       </div>
+               </div>
+
+               <div class="form-group">
+                  <div class="col-sm-10 col-sm-offset-2">
+                  <input type="hidden" name="_token" value="w0ZF4euKWqOnnZACQCrOSv8N29wV2LUISSakkAAT">
+                     <button type="button" data-dismiss="modal" class="btn btn-flat btn-default">Hủy</button>
+                     <input type="submit" class="btn btn-flat btn-primary" value="Chuyển">
+                  </div>
+               </div>
+            </form>
+         </div>
+      </div>
+   </div>
+</div><style type="text/css">
+   .order_info {
+      margin-right: 10px;
+   }
+</style>
+   </div>
+   <!-- /.content-wrapper -->
+   <footer class="main-footer">
+      timhangquangchau.com
+   </footer>
+      <!-- Control Sidebar -->
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery 2.2.3 -->
+<script src="./Danh sách đơn hàng-kygui_files/jquery-2.2.3.min.js.download"></script>
+<!-- jQuery UI 1.11.4 -->
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<!-- Bootstrap 3.3.6 -->
+<script src="./Danh sách đơn hàng-kygui_files/bootstrap.min.js.download"></script>
+<script type="text/javascript" src="./Danh sách đơn hàng-kygui_files/moment.min.js.download"></script>
+<script type="text/javascript" src="./Danh sách đơn hàng-kygui_files/bootstrap-datetimepicker.min.js.download"></script>
+<script src="./Danh sách đơn hàng-kygui_files/jquery.gritter.js.download"></script>
+<script src="./Danh sách đơn hàng-kygui_files/select2.min.js.download"></script>
+<script src="./Danh sách đơn hàng-kygui_files/sweetalert.min.js.download"></script>
+<!-- daterangepicker -->
+<!-- datepicker -->
+<script src="./Danh sách đơn hàng-kygui_files/bootstrap-datepicker.js.download"></script>
+<!-- Bootstrap WYSIHTML5 -->
+<!-- Slimscroll -->
+<script src="./Danh sách đơn hàng-kygui_files/jquery.slimscroll.min.js.download"></script>
+<!-- FastClick -->
+<script src="./Danh sách đơn hàng-kygui_files/fastclick.js.download"></script>
+<!-- AdminLTE App -->
+<script src="./Danh sách đơn hàng-kygui_files/app.min.js.download"></script>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<script src="./Danh sách đơn hàng-kygui_files/dashboard.js.download"></script>
+<script src="./Danh sách đơn hàng-kygui_files/nprogress.js.download"></script>
+<script src="./Danh sách đơn hàng-kygui_files/jquery.inputmask.numeric.extensions.js.download"></script>
+<script src="./Danh sách đơn hàng-kygui_files/main.js.download"></script>
+<script src="./Danh sách đơn hàng-kygui_files/admin.js.download"></script>
+<script type="text/javascript" src="./Danh sách đơn hàng-kygui_files/publicjs.js.download"></script>
+<!-- AdminLTE for demo purposes -->
+<script type="text/javascript">
+   jQuery(document).ready(function($) {
+      $('.swap-staff').on('click', function(event) {
+         var thisClick = $(this);
+         var oId = thisClick.attr('data-oid');
+
+         $('.order_id_1').val(oId);
+         
+
+         
+      });
+   });
+</script>
+
+
+</body></html>

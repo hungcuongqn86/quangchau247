@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<!-- saved from url=(0060)https://timhangquangchau.com/thqc/phieu-xuat/danh-sach-phieu -->
+<html class=" "><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <title>Danh sách phiếu xuất kho</title>
+   <!-- Tell the browser to be responsive to screen width -->
+   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+   <!-- Bootstrap 3.3.6 -->
+   <link rel="stylesheet" href="./Danh sách phiếu xuất kho-vietnam_files/bootstrap.min.css">
+   <!-- Font Awesome -->
+   <link rel="stylesheet" type="text/css" href="./Danh sách phiếu xuất kho-vietnam_files/font-awesome.min.css">
+   <link href="./Danh sách phiếu xuất kho-vietnam_files/sweetalert.css" rel="stylesheet">
+   <!-- Ionicons -->
+      <!-- Theme style -->
+   <link rel="stylesheet" href="./Danh sách phiếu xuất kho-vietnam_files/AdminLTE.min.css">
+   <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+   <link rel="stylesheet" href="./Danh sách phiếu xuất kho-vietnam_files/_all-skins.min.css">
+   <!-- iCheck -->
+   <link rel="stylesheet" href="./Danh sách phiếu xuất kho-vietnam_files/blue.css">
+   <!-- Date Picker -->
+   <link rel="stylesheet" href="./Danh sách phiếu xuất kho-vietnam_files/datepicker3.css">
+   <!-- Daterange picker -->
+      <!-- bootstrap wysihtml5 - text editor -->
+   <link rel="stylesheet" href="./Danh sách phiếu xuất kho-vietnam_files/bootstrap3-wysihtml5.min.css">
+
+   <link href="./Danh sách phiếu xuất kho-vietnam_files/jquery.gritter.css" rel="stylesheet">
+   <link href="./Danh sách phiếu xuất kho-vietnam_files/bootstrap-datepicker3.min.css" rel="stylesheet">
+   <link href="./Danh sách phiếu xuất kho-vietnam_files/select2.css" rel="stylesheet">
+   <!-- Custom style -->
+   <link rel="stylesheet" type="text/css" href="./Danh sách phiếu xuất kho-vietnam_files/style-version2.css">
+   <link rel="stylesheet" type="text/css" href="./Danh sách phiếu xuất kho-vietnam_files/admin-ver2.css">
+   <link rel="stylesheet" type="text/css" href="./Danh sách phiếu xuất kho-vietnam_files/public.css">
+   <link rel="stylesheet" href="./Danh sách phiếu xuất kho-vietnam_files/nprogress.css">
+   <link rel="stylesheet" href="./Danh sách phiếu xuất kho-vietnam_files/f-thqc.css">
+   <link rel="shortcut icon" type="image/x-icon" href="https://timhangquangchau.com/thqc/img/32.png">
+
+   <!--[if lt IE 9]>
+   <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+   <![endif]-->
+</head>
+<body class="skin-blue sidebar-mini" data-token="w0ZF4euKWqOnnZACQCrOSv8N29wV2LUISSakkAAT">
+<div class="wrapper">
+   <header class="main-header g-no-print">
+      <!-- Logo -->
+      <a href="https://timhangquangchau.com/" class="logo">
+         <!-- mini logo for sidebar mini 50x50 pixels -->
+         <span class="logo-mini"><b>Admin</b>THQC</span>
+         <!-- logo for regular state and mobile devices -->
+         <span class="logo-lg"><b>Admin</b>THQC</span>
+      </a>
+      <!-- Header Navbar: style can be found in header.less -->
+      <nav class="navbar navbar-static-top">
+         <!-- Sidebar toggle button-->
+        <a href="https://timhangquangchau.com/thqc/phieu-xuat/danh-sach-phieu#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+          <span class="sr-only">Toggle navigation</span>
+        </a>
+
+        <div class="navbar-custom-menu" style="float:none">
+         <ul class="nav navbar-nav navbar-right" style="margin: 0; height: inherit;">
+            <!-- alert comment order -->
+            <li class="dropdown noti-parent">
+               <a href="https://timhangquangchau.com/thqc/phieu-xuat/danh-sach-phieu#" class="dropdown-toggle noti-icon" data-show="false" data-url="https://timhangquangchau.com/thqc/ajax-get-comment-order" data-target="show-notification" data-toggle="dropdown">
+                  <i class="fa fa-globe"></i>
+                  <span class="noti-count"><b>0</b></span>
+                  <span class="caret"></span>
+               </a>
+
+               <ul class="dropdown-menu flat menu-down dropdown-menu-notificaion">
+                  <li class="dropdown-header header-noti-parent">
+                     <p class="header-noti" style="font-weight: bold">Thông báo đơn hàng</p>
+                  </li>
+                  <div class="menu-down-noti show-messagers show-notification" style="max-height: 416px;overflow-y: scroll;width: 100%;">
+                  </div>
+                  <li class="dropdown-header see-add">
+                  <a href="https://timhangquangchau.com/thqc/notifications" title="Xem tất cả thông báo">Xem tất cả thông báo</a>
+                  </li>
+               </ul>
+            </li>
+
+            <!-- alert all -->
+            <li class="dropdown noti-parent">
+               <a href="https://timhangquangchau.com/thqc/phieu-xuat/danh-sach-phieu#" class="dropdown-toggle noti-icon" data-show="false" data-url="https://timhangquangchau.com/thqc/ajax-get-message" data-toggle="dropdown" data-target="show-messager">
+                  <i class="fa fa-envelope-o"></i>
+                  <span class="noti-count"><b>0</b></span>
+                  <span class="caret"></span>
+               </a>
+               <ul class="dropdown-menu flat menu-down dropdown-menu-notificaion">
+                  <li class="dropdown-header header-noti-parent">
+                     <span class="header-noti">Tin nhắn</span>
+                     <span class="see-add-noti" title="Đánh dấu đã xem" data-url="https://timhangquangchau.com/quan-ly/tin-nhan/xem-tat-ca">Đánh dấu tất cả là đã đọc</span>
+                  </li>
+                  <div class="menu-down-noti show-messager">
+                  </div>
+                  <li class="dropdown-header see-add"><a href="https://timhangquangchau.com/thqc/notifications">Xem tất cả</a></li>
+               </ul>
+            </li>
+                        <li class="dropdown">
+               <a href="https://timhangquangchau.com/thqc/phieu-xuat/danh-sach-phieu#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user-secret"></i> <span class="caret"></span></a>
+               <ul class="dropdown-menu">
+                  <li><a href="https://timhangquangchau.com/thqc/users/profile"><i class=" fa fa-suitcase"></i> Đổi thông tin Hoai</a></li>
+                  <li><a href="https://timhangquangchau.com/thqc/users/password"><i class="fa fa-cog"></i> Đổi mật khẩu</a></li>
+                  <li><a href="https://timhangquangchau.com/thqc/logout"><i class="fa fa-key"></i> Log Out</a></li>
+               </ul>
+            </li>
+                     </ul>
+         </div>
+         </nav>
+    </header>      <!-- Left side column. contains the logo and sidebar -->
+   <aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+      <section class="sidebar" style="height: auto;">
+         <!-- Sidebar user panel -->
+         <div class="user-panel">
+            <div class="pull-left image">
+             <img src="./Danh sách phiếu xuất kho-vietnam_files/1024px-No_image_available.svg.png" class="img-circle" alt="User Image">
+            </div>
+            <div class="pull-left info">
+             <p>Hoai</p>
+             <a href="https://timhangquangchau.com/thqc/phieu-xuat/danh-sach-phieu#"><i class="fa fa-circle text-success"></i> Online</a>
+            </div>
+         </div>
+         <ul class="sidebar-menu">
+            <li class="treeview ">
+               <a href="https://timhangquangchau.com/thqc/phieu-xuat/danh-sach-phieu#">
+                  <i class="fa fa-dashboard"></i> <span>Thống kê</span>
+                  <span class="pull-right-container">
+                     <i class="fa fa-angle-left pull-right"></i>
+                  </span>
+               </a>
+               <ul class="treeview-menu">
+                  <li class=" hidden">
+                     <a href="https://timhangquangchau.com/thqc/dashboard"><i class="fa fa-cubes"></i> Trạng thái hệ thống</a>
+                  </li>
+                  <li class=" hidden">
+                     <a href="https://timhangquangchau.com/thqc/dashboard/don-hang"><i class="fa fa-cubes"></i> Thống kê đơn hàng</a>
+                  </li>
+                                    <li class=" hidden">
+                     <a href="https://timhangquangchau.com/thqc/dashboard/thong-ke-cskh"><i class="fa fa-cubes"></i> Thống kê CSKH</a>
+                  </li>
+                                 </ul>
+            </li>
+            <li class="">
+               <a href="https://timhangquangchau.com/thqc/rel">
+                  <i class="fa fa-th"></i> <span>Đơn hàng</span>
+               </a>
+            </li>
+                        <li class="">
+               <a href="https://timhangquangchau.com/thqc/rel/ky-gui/danh-sach-yeu-cau">
+                  <i class="fa fa-th"></i> <span>Yêu cầu ký gửi</span>
+               </a>
+            </li>
+            <li class="">
+               <a href="https://timhangquangchau.com/thqc/rel?type=2">
+                  <i class="fa fa-th"></i> <span>Đơn ký gửi</span>
+               </a>
+            </li>
+
+            <li class="">
+               <a href="https://timhangquangchau.com/thqc/order-shop/lading"><i class="fa fa-th"></i> Kiện hàng</a>
+            </li>
+                        <li class="treeview ">
+                <a href="https://timhangquangchau.com/thqc/phieu-xuat/danh-sach-phieu#">
+                  <i class="fa fa-dashboard"></i> <span>Khiếu nại</span>
+                  <span class="pull-right-container">
+                     <i class="fa fa-angle-left pull-right"></i>
+                  </span>
+               </a>
+               <ul class="treeview-menu">
+                  <li class="">
+                     <a href="https://timhangquangchau.com/thqc/complain/list-complain-new?check_complain=2"><i class="fa fa-phone"></i> Tất cả</a>
+                  </li>
+                  <li class="">
+                     <a href="https://timhangquangchau.com/thqc/complain/list-complain-new?type_order=0&amp;check_complain=2"><i class="fa fa-phone"></i> order</a>
+                  </li>
+                  <li class="">
+                     <a href="https://timhangquangchau.com/thqc/complain/list-complain-new?type_order=2"><i class="fa fa-phone"></i> ký gửi</a>
+                  </li>
+                   <li class=" hidden">
+                     <a href="https://timhangquangchau.com/thqc/complain/list-complain-new?type_order=1"><i class="fa fa-phone"></i> Khiếu nại đơn hàng lẻ</a>
+                  </li>
+               </ul>
+            </li>
+                                     <li class="treeview ">
+                <a href="https://timhangquangchau.com/thqc/phieu-xuat/danh-sach-phieu#">
+                  <i class="fa fa-dashboard"></i> <span>Kho TQ / 仓库</span>
+                  <span class="pull-right-container">
+                     <i class="fa fa-angle-left pull-right"></i>
+                  </span>
+               </a>
+               <ul class="treeview-menu">
+                                    <li class="">
+                     <a href="https://timhangquangchau.com/thqc/import/danh-sach-phieu-nhap-kho"><i class="fa fa-share"></i>Phiếu nhập kho</a>
+                  </li>
+                  <li class=" hidden">
+                     <a href="https://timhangquangchau.com/thqc/import/danh-sach-phieu-nhap-kho?i_inventory=1"><i class="fa fa-share"></i>Phiếu nhập kho - chờ đi container</a>
+                  </li>
+                                                         <li class="">
+                        <a href="https://timhangquangchau.com/thqc/bao-hang/danh-sach-bao-hang"><i class="fa fa-files-o"></i>Danh sách bao</a>
+                     </li>
+                                                         <li class="">
+                        <a href="https://timhangquangchau.com/thqc/bao-hang/tao-bao?fast=1"><i class="fa fa-plus"></i>Tạo bao nhanh / 造包货</a>
+                     </li>
+                     <li class="">
+                        <a href="https://timhangquangchau.com/thqc/users/kho-tao-don-ki-gui"><i class="fa fa-users"></i>&nbsp;Tạo đơn kí gửi</a>
+                     </li>
+                                                   </ul>
+            </li>
+            
+                        <li class="treeview ">
+                <a href="https://timhangquangchau.com/thqc/phieu-xuat/danh-sach-phieu#">
+                  <i class="fa fa-dashboard"></i> <span>Kho VN</span>
+                  <span class="pull-right-container">
+                     <i class="fa fa-angle-left pull-right"></i>
+                  </span>
+               </a>
+               <ul class="treeview-menu">
+                                       <li class="">
+                        <a href="https://timhangquangchau.com/thqc/phieu-xuat/co-the-xuat"><i class="fa fa-files-o"></i>Chờ xuất</a>
+                     </li>
+                     <li class="">
+                        <a href="https://timhangquangchau.com/thqc/phieu-xuat/danh-sach-phieu"><i class="fa fa-files-o"></i>Phiếu xuất</a>
+                     </li>
+                     <li class="">
+                        <a href="https://timhangquangchau.com/thqc/bao-hang/danh-sach-bao-hang"><i class="fa fa-files-o"></i>Danh sách bao</a>
+                     </li>
+                     <li class=" hidden">
+                        <a href="https://timhangquangchau.com/thqc/phieu-xuat/yeu-cau-ship"><i class="fa fa-truck" aria-hidden="true"></i>Yêu cầu ship</a>
+                     </li>
+                     <li class="">
+                        <a href="https://timhangquangchau.com/thqc/port/list"><i class="fa fa-refresh"></i>Phiếu điều chuyển</a>
+                     </li>
+                     <li class="">
+                        <a href="https://timhangquangchau.com/thqc/order-shop/truc-tiep-vn"><i class="fa fa-files-o"></i>Nhập kho VN</a>
+                     </li>
+                                 </ul>
+            </li>
+            
+                        <li class="treeview ">
+                <a href="https://timhangquangchau.com/thqc/phieu-xuat/danh-sach-phieu#">
+                  <i class="fa fa-dashboard"></i> <span>Sau mua hàng</span>
+                  <span class="pull-right-container">
+                     <i class="fa fa-angle-left pull-right"></i>
+                  </span>
+               </a>
+               <ul class="treeview-menu">
+                                    <li class="">
+                     <a href="https://timhangquangchau.com/thqc/orderDetails/losingid">
+                        <i class="fa fa-file-image-o"></i> Hàng mất mã</a>
+                  </li>
+                                    <li class="">
+                     <a href="https://timhangquangchau.com/thqc/order-shop/chuyen-ma-van-don">
+                        <i class="fa fa-file-image-o"></i> Chuyển mã</a>
+                  </li>
+                                 </ul>
+            </li>
+            
+            
+            
+            
+                         <li class="treeview ">
+                <a href="https://timhangquangchau.com/thqc/phieu-xuat/danh-sach-phieu#">
+                  <i class="fa fa-dashboard"></i> <span>Nhân viên</span>
+                  <span class="pull-right-container">
+                     <i class="fa fa-angle-left pull-right"></i>
+                  </span>
+               </a>
+               <ul class="treeview-menu">
+                  <li class="">
+                     <a href="https://timhangquangchau.com/thqc/employers"><i class="fa fa-user-secret"></i>&nbsp;Quản lý đi/nghỉ</a>
+                  </li>
+                  <li class=" hidden">
+                     <a href="https://timhangquangchau.com/admin/employers/cskh/gan-khach"><i class="fa fa-street-view"></i>Gán khách cho cskh</a>
+                  </li>
+                  <li class=" hidden">
+                     <a href="https://timhangquangchau.com/thqc/employers/trader/gan-khach"><i class="fa fa-street-view"></i>Gán khách cho đặt hàng</a>
+                  </li>
+               </ul>
+            </li>
+            
+                         <li class="treeview ">
+                <a href="https://timhangquangchau.com/thqc/phieu-xuat/danh-sach-phieu#">
+                  <i class="fa fa-dashboard"></i> <span>Tin tức - thông báo</span>
+                  <span class="pull-right-container">
+                     <i class="fa fa-angle-left pull-right"></i>
+                  </span>
+               </a>
+               <ul class="treeview-menu">
+                  <li class="">
+                     <a href="https://timhangquangchau.com/thqc/blogs"><i class="fa fa-rss-square"></i>&nbsp;Q.L Blogs</a>
+                  </li>
+                  <li class="">
+                     <a href="https://timhangquangchau.com/thqc/categories"><i class="fa fa-rss-square"></i>&nbsp;Q.L Danh mục</a>
+                  </li>
+               </ul>
+            </li>
+            
+                         <li class="treeview ">
+                <a href="https://timhangquangchau.com/thqc/phieu-xuat/danh-sach-phieu#">
+                  <i class="fa fa-dashboard"></i> <span>Người dùng</span>
+                  <span class="pull-right-container">
+                     <i class="fa fa-angle-left pull-right"></i>
+                  </span>
+               </a>
+               <ul class="treeview-menu">
+                  <li class="">
+                     <a href="https://timhangquangchau.com/thqc/users"><i class="fa fa-user"></i>&nbsp;Q.L người dùng</a>
+                  </li>
+                  <li class="">
+                     <a href="https://timhangquangchau.com/thqc/roles"><i class="fa fa-users"></i>&nbsp;Nhóm người dùng</a>
+                  </li>
+                  <li class="">
+                     <a href="https://timhangquangchau.com/thqc/permissions"><i class="fa fa-trophy"></i>&nbsp;Quyền</a>
+                  </li>
+               </ul>
+            </li>
+            
+            
+         </ul>
+       </section>
+    <!-- /.sidebar -->
+   </aside>
+
+   <!-- Content Wrapper. Contains page content -->
+   <div class="content-wrapper" style="min-height: 790px;">
+       <!-- Main content -->
+         <div class="no-print">
+            <div class="col-sm-12">
+                           </div>
+         </div>
+         	<section class="panel panel-default flat">
+		<header class="panel-heading uppercase">
+			Danh sách phiếu xuất kho
+			<a href="https://timhangquangchau.com/thqc/phieu-xuat/co-the-xuat" class="btn btn-primary btn-xs pull-right">Tạo phiếu xuất kho</a>
+		</header>
+		<div class="panel-body panel-overflow">
+
+				<form method="get" action="https://timhangquangchau.com/thqc/phieu-xuat/danh-sach-phieu" class="form-filter form-inline">
+				<div>
+					<div class="form-item form-group">
+						<input type="text" class="form-control datepicker" name="from" value="2-1-2017" placeholder="Từ ngày" rel="tooltip" title="" data-original-title="Từ ngày">
+					</div>
+					<div class="form-item form-group">
+						<input type="text" class="form-control datepicker" name="to" value="12-03-2019" placeholder="Tới ngày" rel="tooltip" title="" data-original-title="Tới ngày">
+					</div>
+				</div>
+				<br>
+				<div>
+					<div class="form-item form-group">
+						<input type="text" class="form-control" name="cu_id" value="" placeholder="Mã phiếu" rel="tooltip" title="" data-original-title="Mã phiếu">
+					</div>
+					<div class="form-item form-group hidden">
+						<input type="text" class="form-control" name="new_code" value="" placeholder="Mã phiếu" rel="tooltip" title="" data-original-title="Mã phiếu">
+					</div>
+					<div class="form-item form-group">
+						<input type="text" class="form-control" name="email" value="" placeholder="Email khách" rel="tooltip" title="" data-original-title="Email khách">
+					</div>
+					<div class="form-group form-item" rel="tooltip" title="" data-original-title="Nhân viên">
+						<select name="cu_staff_id" style="display:block" class="btn-flat form-control select2 select2-hidden-accessible" tabindex="-1" aria-hidden="true">
+								<option value="">-Nhân viên-</option>
+															<option value="22219">CSKH 1</option>
+															<option value="22226">Huyền Nguyễn</option>
+															<option value="22227">Phạm Hảo</option>
+															<option value="22228">Hồng Nhung (Phạm Hảo)</option>
+															<option value="22229">Thanh Thủy (Phạm Hảo)</option>
+															<option value="22230">Đinh Thị Hồng Nhung</option>
+															<option value="22231">CSKH Thủy</option>
+															<option value="22232">Hường</option>
+															<option value="22233">Kho TQ_ Lê Tân</option>
+															<option value="22313">Admin (Lê Tân)</option>
+															<option value="22314">Hồng Nhung (Lê Tân)</option>
+															<option value="22333">Đinh Nhung (Hồng Nhung)</option>
+															<option value="22334">Phán Vinh Phi</option>
+															<option value="22390">Trần Văn Hoài</option>
+															<option value="22397">Huyền Nguyễn</option>
+															<option value="22398">Phạm Thị Kiều Anh</option>
+															<option value="22457">Long</option>
+															<option value="22487">Sa</option>
+															<option value="22554">CSKH</option>
+															<option value="22561">Đặt Hàng -  Đảm (phạm Hảo)</option>
+															<option value="22581">Thắng</option>
+															<option value="22595">Ngọc</option>
+															<option value="22635">Hoai</option>
+															<option value="22655">Kthn2-thể</option>
+															<option value="22684">Kdhn6@thqc.com</option>
+															<option value="22689">Nguyễn Thanh Tùng</option>
+															<option value="22884">Nguyễn Văn Phúc</option>
+													</select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: 200px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-cu_staff_id-2a-container"><span class="select2-selection__rendered" id="select2-cu_staff_id-2a-container" title="-Nhân viên-">-Nhân viên-</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+					</div>
+					<div class="form-group form-item" rel="tooltip" title="" data-original-title="Kho xuất phiếu">
+						<select name="cu_warehouse_id" style="display:block" class="btn-flat form-control">
+								<option value="-1">-Kho xuất phiếu-</option>
+															<option value="1">Cầu Giấy</option>
+															<option value="4">HCM</option>
+															<option value="13">Ship tại nhà</option>
+													</select>
+					</div>
+					<div class="form-group form-item" rel="tooltip" title="" data-original-title="Trạng thái phiếu">
+						<select name="cu_status" style="display:block" class="btn-flat form-control">
+								<option value="-1">-Trạng thái-</option>
+															<option value="0">Đang lưu</option>
+															<option value="3">Đang giao</option>
+															<option value="1">Đã xuất</option>
+															<option value="2">Đã hủy</option>
+													</select>
+					</div>
+					<div class="form-item form-group">
+						<button id="btnSearch" type="submit" class="btn btn-primary">
+							<i class="fa fa-filter"></i>
+						</button>
+						<button rel="tooltip" title="" name="excel" type="submit" value="1" class="btn btn-success" data-original-title="Xuất excel">
+							<i class="fa fa-file-excel-o"></i>
+						</button>
+					</div>
+				</div>
+
+			</form>
+			<hr>
+
+			
+			<div class="row-fluid">
+		<div class="span6">
+		<div class="dataTables_info">Đang hiển thị <b>30</b> trong tổng số <b>7860</b> bản ghi.</div>
+	</div>
+		<div class="span6"><div class="dataTables_paginate paging_bootstrap pagination"><ul class="pagination"><li class="disabled" aria-disabled="true"><a href="javascript:void(0)">« Trước</a></li> <li class="active"><a href="javascript:void(0)">1</a></li><li><a href="https://timhangquangchau.com/thqc/phieu-xuat/danh-sach-phieu?page=2">2</a></li><li><a href="https://timhangquangchau.com/thqc/phieu-xuat/danh-sach-phieu?page=3">3</a></li><li><a href="https://timhangquangchau.com/thqc/phieu-xuat/danh-sach-phieu?page=4">4</a></li><li><a href="https://timhangquangchau.com/thqc/phieu-xuat/danh-sach-phieu?page=5">5</a></li><li><a href="https://timhangquangchau.com/thqc/phieu-xuat/danh-sach-phieu?page=6">6</a></li><li><a href="https://timhangquangchau.com/thqc/phieu-xuat/danh-sach-phieu?page=7">7</a></li><li><a href="https://timhangquangchau.com/thqc/phieu-xuat/danh-sach-phieu?page=8">8</a></li><li class="disabled" aria-disabled="true"><a href="javascript:void(0)">…</a></li><li><a href="https://timhangquangchau.com/thqc/phieu-xuat/danh-sach-phieu?page=261">261</a></li><li><a href="https://timhangquangchau.com/thqc/phieu-xuat/danh-sach-phieu?page=262">262</a></li> <li><a href="https://timhangquangchau.com/thqc/phieu-xuat/danh-sach-phieu?page=2" rel="next">Sau »</a></li></ul></div></div>
+</div>
+				<table class="table table-bordered table-striped">
+					<thead>
+						<tr>
+							<th>Mã phiếu</th>
+							<th>Tạo ngày</th>
+							<th>Kho xuất</th>
+							<th>Khách hàng</th>
+							<th>Tổng cân</th>
+							<th>Tiền cân nặng</th>
+							<th>Tiền hoàn thành đơn</th>
+							<th>Nhân viên xuất</th>
+							<th>Số mã</th>
+							<th>Trạng thái</th>
+							<th>Thao tác</th>
+						</tr>
+					</thead>
+					<tbody data-coupon="https://timhangquangchau.com/thqc/phieu-xuat/xoa-phieu-luu">
+													<tr data-cu-id="8531">
+								<td>8531</td>
+								<td>12-03-2019 22:09:06</td>
+								<td>Cầu Giấy</td>
+								<td>ptttdong@gmail.com</td>
+								<td>0.00</td>
+								<td>0</td>
+								<td>0</td>
+								<td>Hoai</td>
+								<!-- <td><span class="item-staff" data-id="22635" data-referent="8531">Hoai</span></td> -->
+								<td>0</td>
+								<td>Đang lưu</td>
+								<td><a href="https://timhangquangchau.com/thqc/phieu-xuat/8531-phieu-xuat-kho" target="_blank" class="btn btn-xs btn-primary">chi tiết</a>
+																	<a class="btn btn-danger btn-xs deleteCoupon">Xóa phiếu</a>
+								
+								</td>
+							</tr>
+													<tr data-cu-id="8530">
+								<td>8530</td>
+								<td>12-03-2019 17:08:44</td>
+								<td>Cầu Giấy</td>
+								<td>tiepnt.rtbed@gmail.com</td>
+								<td>0.00</td>
+								<td>0</td>
+								<td>0</td>
+								<td>Hoai</td>
+								<!-- <td><span class="item-staff" data-id="22635" data-referent="8530">Hoai</span></td> -->
+								<td>6</td>
+								<td>Đang lưu</td>
+								<td><a href="https://timhangquangchau.com/thqc/phieu-xuat/8530-phieu-xuat-kho" target="_blank" class="btn btn-xs btn-primary">chi tiết</a>
+								
+								</td>
+							</tr>
+													<tr data-cu-id="8528">
+								<td>8528</td>
+								<td>12-03-2019 16:47:27</td>
+								<td>Cầu Giấy</td>
+								<td>tabanhat@gmail.com</td>
+								<td>0.00</td>
+								<td>0</td>
+								<td>0</td>
+								<td>Huyền Nguyễn</td>
+								<!-- <td><span class="item-staff" data-id="22226" data-referent="8528">Huyền Nguyễn</span></td> -->
+								<td>2</td>
+								<td>Đang lưu</td>
+								<td><a href="https://timhangquangchau.com/thqc/phieu-xuat/8528-phieu-xuat-kho" target="_blank" class="btn btn-xs btn-primary">chi tiết</a>
+								
+								</td>
+							</tr>
+													<tr data-cu-id="8527">
+								<td>8527</td>
+								<td>12-03-2019 16:39:22</td>
+								<td>Cầu Giấy</td>
+								<td>thietbicongnghiepgiaphu@gmail.com</td>
+								<td>0.00</td>
+								<td>0</td>
+								<td>0</td>
+								<td>Hoai</td>
+								<!-- <td><span class="item-staff" data-id="22635" data-referent="8527">Hoai</span></td> -->
+								<td>3</td>
+								<td>Đang lưu</td>
+								<td><a href="https://timhangquangchau.com/thqc/phieu-xuat/8527-phieu-xuat-kho" target="_blank" class="btn btn-xs btn-primary">chi tiết</a>
+								
+								</td>
+							</tr>
+													<tr data-cu-id="8526">
+								<td>8526</td>
+								<td>12-03-2019 16:32:14</td>
+								<td>Cầu Giấy</td>
+								<td>lenhanftu@gmail.com</td>
+								<td>0.00</td>
+								<td>0</td>
+								<td>0</td>
+								<td>Hoai</td>
+								<!-- <td><span class="item-staff" data-id="22635" data-referent="8526">Hoai</span></td> -->
+								<td>6</td>
+								<td>Đang lưu</td>
+								<td><a href="https://timhangquangchau.com/thqc/phieu-xuat/8526-phieu-xuat-kho" target="_blank" class="btn btn-xs btn-primary">chi tiết</a>
+								
+								</td>
+							</tr>
+													<tr data-cu-id="8525">
+								<td>8525</td>
+								<td>12-03-2019 16:31:10</td>
+								<td>Cầu Giấy</td>
+								<td>huongktvt@gmail.com</td>
+								<td>0.00</td>
+								<td>0</td>
+								<td>0</td>
+								<td>Huyền Nguyễn</td>
+								<!-- <td><span class="item-staff" data-id="22226" data-referent="8525">Huyền Nguyễn</span></td> -->
+								<td>5</td>
+								<td>Đang lưu</td>
+								<td><a href="https://timhangquangchau.com/thqc/phieu-xuat/8525-phieu-xuat-kho" target="_blank" class="btn btn-xs btn-primary">chi tiết</a>
+								
+								</td>
+							</tr>
+													<tr data-cu-id="8524">
+								<td>8524</td>
+								<td>12-03-2019 16:10:16</td>
+								<td>Cầu Giấy</td>
+								<td>nmtuan1111@gmail.com</td>
+								<td>0.00</td>
+								<td>0</td>
+								<td>0</td>
+								<td>Huyền Nguyễn</td>
+								<!-- <td><span class="item-staff" data-id="22226" data-referent="8524">Huyền Nguyễn</span></td> -->
+								<td>10</td>
+								<td>Đang lưu</td>
+								<td><a href="https://timhangquangchau.com/thqc/phieu-xuat/8524-phieu-xuat-kho" target="_blank" class="btn btn-xs btn-primary">chi tiết</a>
+								
+								</td>
+							</tr>
+													<tr data-cu-id="8523">
+								<td>8523</td>
+								<td>12-03-2019 16:03:31</td>
+								<td>Cầu Giấy</td>
+								<td>thuyvan.tendy@gmail.com</td>
+								<td>0.00</td>
+								<td>0</td>
+								<td>0</td>
+								<td>Huyền Nguyễn</td>
+								<!-- <td><span class="item-staff" data-id="22226" data-referent="8523">Huyền Nguyễn</span></td> -->
+								<td>13</td>
+								<td>Đang lưu</td>
+								<td><a href="https://timhangquangchau.com/thqc/phieu-xuat/8523-phieu-xuat-kho" target="_blank" class="btn btn-xs btn-primary">chi tiết</a>
+								
+								</td>
+							</tr>
+													<tr data-cu-id="8522">
+								<td>8522</td>
+								<td>12-03-2019 15:29:57</td>
+								<td>Cầu Giấy</td>
+								<td>sieuthidiy.com@gmail.com</td>
+								<td>0.00</td>
+								<td>0</td>
+								<td>0</td>
+								<td>Huyền Nguyễn</td>
+								<!-- <td><span class="item-staff" data-id="22226" data-referent="8522">Huyền Nguyễn</span></td> -->
+								<td>8</td>
+								<td>Đang lưu</td>
+								<td><a href="https://timhangquangchau.com/thqc/phieu-xuat/8522-phieu-xuat-kho" target="_blank" class="btn btn-xs btn-primary">chi tiết</a>
+								
+								</td>
+							</tr>
+													<tr data-cu-id="8521">
+								<td>8521</td>
+								<td>12-03-2019 14:32:10</td>
+								<td>Cầu Giấy</td>
+								<td>linhvu.ftu46@gmail.com</td>
+								<td>0.00</td>
+								<td>0</td>
+								<td>0</td>
+								<td>Hoai</td>
+								<!-- <td><span class="item-staff" data-id="22635" data-referent="8521">Hoai</span></td> -->
+								<td>4</td>
+								<td>Đang lưu</td>
+								<td><a href="https://timhangquangchau.com/thqc/phieu-xuat/8521-phieu-xuat-kho" target="_blank" class="btn btn-xs btn-primary">chi tiết</a>
+								
+								</td>
+							</tr>
+													<tr data-cu-id="8520">
+								<td>8520</td>
+								<td>12-03-2019 13:41:45</td>
+								<td>Cầu Giấy</td>
+								<td>thaylehuutri@gmail.com</td>
+								<td>0.00</td>
+								<td>0</td>
+								<td>0</td>
+								<td>Huyền Nguyễn</td>
+								<!-- <td><span class="item-staff" data-id="22226" data-referent="8520">Huyền Nguyễn</span></td> -->
+								<td>2</td>
+								<td>Đang lưu</td>
+								<td><a href="https://timhangquangchau.com/thqc/phieu-xuat/8520-phieu-xuat-kho" target="_blank" class="btn btn-xs btn-primary">chi tiết</a>
+								
+								</td>
+							</tr>
+													<tr data-cu-id="8519">
+								<td>8519</td>
+								<td>12-03-2019 13:57:37</td>
+								<td>Cầu Giấy</td>
+								<td>ny@dat.bike</td>
+								<td>25.00</td>
+								<td>525.000</td>
+								<td>618.112</td>
+								<td>Nguyễn Văn Phúc</td>
+								<!-- <td><span class="item-staff" data-id="22884" data-referent="8519">Nguy&ecirc;̃n Văn Phúc</span></td> -->
+								<td>1</td>
+								<td>Đã xuất</td>
+								<td><a href="https://timhangquangchau.com/thqc/phieu-xuat/8519-phieu-xuat-kho" target="_blank" class="btn btn-xs btn-primary">chi tiết</a>
+								
+								</td>
+							</tr>
+													<tr data-cu-id="8517">
+								<td>8517</td>
+								<td>12-03-2019 16:36:30</td>
+								<td>Cầu Giấy</td>
+								<td>ptttdong@gmail.com</td>
+								<td>26.90</td>
+								<td>538.000</td>
+								<td>0</td>
+								<td>Hoai</td>
+								<!-- <td><span class="item-staff" data-id="22635" data-referent="8517">Hoai</span></td> -->
+								<td>6</td>
+								<td>Đã xuất</td>
+								<td><a href="https://timhangquangchau.com/thqc/phieu-xuat/8517-phieu-xuat-kho" target="_blank" class="btn btn-xs btn-primary">chi tiết</a>
+								
+								</td>
+							</tr>
+													<tr data-cu-id="8516">
+								<td>8516</td>
+								<td>12-03-2019 10:44:39</td>
+								<td>Cầu Giấy</td>
+								<td>vanchuongth@gmail.com</td>
+								<td>0.00</td>
+								<td>0</td>
+								<td>0</td>
+								<td>Nguyễn Văn Phúc</td>
+								<!-- <td><span class="item-staff" data-id="22884" data-referent="8516">Nguy&ecirc;̃n Văn Phúc</span></td> -->
+								<td>5</td>
+								<td>Đang lưu</td>
+								<td><a href="https://timhangquangchau.com/thqc/phieu-xuat/8516-phieu-xuat-kho" target="_blank" class="btn btn-xs btn-primary">chi tiết</a>
+								
+								</td>
+							</tr>
+													<tr data-cu-id="8515">
+								<td>8515</td>
+								<td>12-03-2019 09:55:25</td>
+								<td>Cầu Giấy</td>
+								<td>mdnghia@gmail.com</td>
+								<td>0.00</td>
+								<td>0</td>
+								<td>0</td>
+								<td>Nguyễn Văn Phúc</td>
+								<!-- <td><span class="item-staff" data-id="22884" data-referent="8515">Nguy&ecirc;̃n Văn Phúc</span></td> -->
+								<td>12</td>
+								<td>Đang lưu</td>
+								<td><a href="https://timhangquangchau.com/thqc/phieu-xuat/8515-phieu-xuat-kho" target="_blank" class="btn btn-xs btn-primary">chi tiết</a>
+								
+								</td>
+							</tr>
+													<tr data-cu-id="8513">
+								<td>8513</td>
+								<td>11-03-2019 17:35:42</td>
+								<td>Cầu Giấy</td>
+								<td>anhnguyen92.pg@gmail.com</td>
+								<td>0.00</td>
+								<td>0</td>
+								<td>0</td>
+								<td>Nguyễn Văn Phúc</td>
+								<!-- <td><span class="item-staff" data-id="22884" data-referent="8513">Nguy&ecirc;̃n Văn Phúc</span></td> -->
+								<td>1</td>
+								<td>Đang lưu</td>
+								<td><a href="https://timhangquangchau.com/thqc/phieu-xuat/8513-phieu-xuat-kho" target="_blank" class="btn btn-xs btn-primary">chi tiết</a>
+								
+								</td>
+							</tr>
+													<tr data-cu-id="8512">
+								<td>8512</td>
+								<td>11-03-2019 17:28:34</td>
+								<td>Cầu Giấy</td>
+								<td>hgmyhuong88@gmail.com</td>
+								<td>0.00</td>
+								<td>0</td>
+								<td>0</td>
+								<td>Nguyễn Văn Phúc</td>
+								<!-- <td><span class="item-staff" data-id="22884" data-referent="8512">Nguy&ecirc;̃n Văn Phúc</span></td> -->
+								<td>14</td>
+								<td>Đang lưu</td>
+								<td><a href="https://timhangquangchau.com/thqc/phieu-xuat/8512-phieu-xuat-kho" target="_blank" class="btn btn-xs btn-primary">chi tiết</a>
+								
+								</td>
+							</tr>
+													<tr data-cu-id="8511">
+								<td>8511</td>
+								<td>12-03-2019 17:34:39</td>
+								<td>Cầu Giấy</td>
+								<td>leoanhmaitrang@gmail.com</td>
+								<td>11.20</td>
+								<td>201.600</td>
+								<td>4.371.198</td>
+								<td>Hoai</td>
+								<!-- <td><span class="item-staff" data-id="22635" data-referent="8511">Hoai</span></td> -->
+								<td>18</td>
+								<td>Đã xuất</td>
+								<td><a href="https://timhangquangchau.com/thqc/phieu-xuat/8511-phieu-xuat-kho" target="_blank" class="btn btn-xs btn-primary">chi tiết</a>
+								
+								</td>
+							</tr>
+													<tr data-cu-id="8510">
+								<td>8510</td>
+								<td>11-03-2019 17:28:15</td>
+								<td>Cầu Giấy</td>
+								<td>lekimoanh154@gmail.com</td>
+								<td>0.00</td>
+								<td>0</td>
+								<td>0</td>
+								<td>Hoai</td>
+								<!-- <td><span class="item-staff" data-id="22635" data-referent="8510">Hoai</span></td> -->
+								<td>36</td>
+								<td>Đang lưu</td>
+								<td><a href="https://timhangquangchau.com/thqc/phieu-xuat/8510-phieu-xuat-kho" target="_blank" class="btn btn-xs btn-primary">chi tiết</a>
+								
+								</td>
+							</tr>
+													<tr data-cu-id="8509">
+								<td>8509</td>
+								<td>12-03-2019 10:01:10</td>
+								<td>Cầu Giấy</td>
+								<td>lenhanftu@gmail.com</td>
+								<td>4.80</td>
+								<td>77.800</td>
+								<td>754.352</td>
+								<td>Hoai</td>
+								<!-- <td><span class="item-staff" data-id="22635" data-referent="8509">Hoai</span></td> -->
+								<td>4</td>
+								<td>Đã xuất</td>
+								<td><a href="https://timhangquangchau.com/thqc/phieu-xuat/8509-phieu-xuat-kho" target="_blank" class="btn btn-xs btn-primary">chi tiết</a>
+								
+								</td>
+							</tr>
+													<tr data-cu-id="8508">
+								<td>8508</td>
+								<td>12-03-2019 08:33:57</td>
+								<td>Cầu Giấy</td>
+								<td>haduongbg888@gmail.com</td>
+								<td>3.50</td>
+								<td>66.500</td>
+								<td>147.924</td>
+								<td>Nguyễn Văn Phúc</td>
+								<!-- <td><span class="item-staff" data-id="22884" data-referent="8508">Nguy&ecirc;̃n Văn Phúc</span></td> -->
+								<td>2</td>
+								<td>Đã xuất</td>
+								<td><a href="https://timhangquangchau.com/thqc/phieu-xuat/8508-phieu-xuat-kho" target="_blank" class="btn btn-xs btn-primary">chi tiết</a>
+								
+								</td>
+							</tr>
+													<tr data-cu-id="8507">
+								<td>8507</td>
+								<td>11-03-2019 17:11:35</td>
+								<td>Cầu Giấy</td>
+								<td>trannam.n13@gmail.com</td>
+								<td>0.00</td>
+								<td>0</td>
+								<td>0</td>
+								<td>Hoai</td>
+								<!-- <td><span class="item-staff" data-id="22635" data-referent="8507">Hoai</span></td> -->
+								<td>5</td>
+								<td>Đang lưu</td>
+								<td><a href="https://timhangquangchau.com/thqc/phieu-xuat/8507-phieu-xuat-kho" target="_blank" class="btn btn-xs btn-primary">chi tiết</a>
+								
+								</td>
+							</tr>
+													<tr data-cu-id="8506">
+								<td>8506</td>
+								<td>12-03-2019 08:33:32</td>
+								<td>Cầu Giấy</td>
+								<td>bichphuong151198@gmail.com</td>
+								<td>3.30</td>
+								<td>82.500</td>
+								<td>206.085</td>
+								<td>Nguyễn Văn Phúc</td>
+								<!-- <td><span class="item-staff" data-id="22884" data-referent="8506">Nguy&ecirc;̃n Văn Phúc</span></td> -->
+								<td>6</td>
+								<td>Đã xuất</td>
+								<td><a href="https://timhangquangchau.com/thqc/phieu-xuat/8506-phieu-xuat-kho" target="_blank" class="btn btn-xs btn-primary">chi tiết</a>
+								
+								</td>
+							</tr>
+													<tr data-cu-id="8505">
+								<td>8505</td>
+								<td>12-03-2019 17:34:58</td>
+								<td>Cầu Giấy</td>
+								<td>kimxinhh993@gmail.com</td>
+								<td>4.70</td>
+								<td>184.000</td>
+								<td>0</td>
+								<td>Hoai</td>
+								<!-- <td><span class="item-staff" data-id="22635" data-referent="8505">Hoai</span></td> -->
+								<td>8</td>
+								<td>Đã xuất</td>
+								<td><a href="https://timhangquangchau.com/thqc/phieu-xuat/8505-phieu-xuat-kho" target="_blank" class="btn btn-xs btn-primary">chi tiết</a>
+								
+								</td>
+							</tr>
+													<tr data-cu-id="8503">
+								<td>8503</td>
+								<td>11-03-2019 10:30:03</td>
+								<td>Cầu Giấy</td>
+								<td>cpro@gmail.com</td>
+								<td>0.00</td>
+								<td>0</td>
+								<td>0</td>
+								<td>Huyền Nguyễn</td>
+								<!-- <td><span class="item-staff" data-id="22226" data-referent="8503">Huyền Nguyễn</span></td> -->
+								<td>4</td>
+								<td>Đang lưu</td>
+								<td><a href="https://timhangquangchau.com/thqc/phieu-xuat/8503-phieu-xuat-kho" target="_blank" class="btn btn-xs btn-primary">chi tiết</a>
+								
+								</td>
+							</tr>
+													<tr data-cu-id="8502">
+								<td>8502</td>
+								<td>12-03-2019 10:12:58</td>
+								<td>Cầu Giấy</td>
+								<td>mdnghia@gmail.com</td>
+								<td>5.30</td>
+								<td>131.700</td>
+								<td>0</td>
+								<td>Hoai</td>
+								<!-- <td><span class="item-staff" data-id="22635" data-referent="8502">Hoai</span></td> -->
+								<td>2</td>
+								<td>Đã xuất</td>
+								<td><a href="https://timhangquangchau.com/thqc/phieu-xuat/8502-phieu-xuat-kho" target="_blank" class="btn btn-xs btn-primary">chi tiết</a>
+								
+								</td>
+							</tr>
+													<tr data-cu-id="8501">
+								<td>8501</td>
+								<td>11-03-2019 15:57:28</td>
+								<td>Cầu Giấy</td>
+								<td>thietbicongnghiepgiaphu@gmail.com</td>
+								<td>11.70</td>
+								<td>187.200</td>
+								<td>3.511.289</td>
+								<td>Nguyễn Văn Phúc</td>
+								<!-- <td><span class="item-staff" data-id="22884" data-referent="8501">Nguy&ecirc;̃n Văn Phúc</span></td> -->
+								<td>3</td>
+								<td>Đã xuất</td>
+								<td><a href="https://timhangquangchau.com/thqc/phieu-xuat/8501-phieu-xuat-kho" target="_blank" class="btn btn-xs btn-primary">chi tiết</a>
+								
+								</td>
+							</tr>
+													<tr data-cu-id="8500">
+								<td>8500</td>
+								<td>11-03-2019 09:17:12</td>
+								<td>Cầu Giấy</td>
+								<td>thuyhangnguyen2701@gmail.com</td>
+								<td>0.00</td>
+								<td>0</td>
+								<td>0</td>
+								<td>Nguyễn Văn Phúc</td>
+								<!-- <td><span class="item-staff" data-id="22884" data-referent="8500">Nguy&ecirc;̃n Văn Phúc</span></td> -->
+								<td>2</td>
+								<td>Đang lưu</td>
+								<td><a href="https://timhangquangchau.com/thqc/phieu-xuat/8500-phieu-xuat-kho" target="_blank" class="btn btn-xs btn-primary">chi tiết</a>
+								
+								</td>
+							</tr>
+													<tr data-cu-id="8499">
+								<td>8499</td>
+								<td>11-03-2019 08:41:12</td>
+								<td>Cầu Giấy</td>
+								<td>junytuongvy@gmail.com</td>
+								<td>0.00</td>
+								<td>0</td>
+								<td>0</td>
+								<td>Nguyễn Văn Phúc</td>
+								<!-- <td><span class="item-staff" data-id="22884" data-referent="8499">Nguy&ecirc;̃n Văn Phúc</span></td> -->
+								<td>20</td>
+								<td>Đang lưu</td>
+								<td><a href="https://timhangquangchau.com/thqc/phieu-xuat/8499-phieu-xuat-kho" target="_blank" class="btn btn-xs btn-primary">chi tiết</a>
+								
+								</td>
+							</tr>
+													<tr data-cu-id="8498">
+								<td>8498</td>
+								<td>11-03-2019 15:43:42</td>
+								<td>Cầu Giấy</td>
+								<td>joelchen.vn@gmail.com</td>
+								<td>7.00</td>
+								<td>133.000</td>
+								<td>21.120</td>
+								<td>Huyền Nguyễn</td>
+								<!-- <td><span class="item-staff" data-id="22226" data-referent="8498">Huyền Nguyễn</span></td> -->
+								<td>9</td>
+								<td>Đã xuất</td>
+								<td><a href="https://timhangquangchau.com/thqc/phieu-xuat/8498-phieu-xuat-kho" target="_blank" class="btn btn-xs btn-primary">chi tiết</a>
+								
+								</td>
+							</tr>
+											</tbody>
+				</table>
+			<div class="row-fluid">
+		<div class="span6">
+		<div class="dataTables_info">Đang hiển thị <b>30</b> trong tổng số <b>7860</b> bản ghi.</div>
+	</div>
+		<div class="span6"><div class="dataTables_paginate paging_bootstrap pagination"><ul class="pagination"><li class="disabled" aria-disabled="true"><a href="javascript:void(0)">« Trước</a></li> <li class="active"><a href="javascript:void(0)">1</a></li><li><a href="https://timhangquangchau.com/thqc/phieu-xuat/danh-sach-phieu?page=2">2</a></li><li><a href="https://timhangquangchau.com/thqc/phieu-xuat/danh-sach-phieu?page=3">3</a></li><li><a href="https://timhangquangchau.com/thqc/phieu-xuat/danh-sach-phieu?page=4">4</a></li><li><a href="https://timhangquangchau.com/thqc/phieu-xuat/danh-sach-phieu?page=5">5</a></li><li><a href="https://timhangquangchau.com/thqc/phieu-xuat/danh-sach-phieu?page=6">6</a></li><li><a href="https://timhangquangchau.com/thqc/phieu-xuat/danh-sach-phieu?page=7">7</a></li><li><a href="https://timhangquangchau.com/thqc/phieu-xuat/danh-sach-phieu?page=8">8</a></li><li class="disabled" aria-disabled="true"><a href="javascript:void(0)">…</a></li><li><a href="https://timhangquangchau.com/thqc/phieu-xuat/danh-sach-phieu?page=261">261</a></li><li><a href="https://timhangquangchau.com/thqc/phieu-xuat/danh-sach-phieu?page=262">262</a></li> <li><a href="https://timhangquangchau.com/thqc/phieu-xuat/danh-sach-phieu?page=2" rel="next">Sau »</a></li></ul></div></div>
+</div>
+		</div>
+
+	</section>
+   </div>
+   <!-- /.content-wrapper -->
+   <footer class="main-footer">
+      timhangquangchau.com
+   </footer>
+      <!-- Control Sidebar -->
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery 2.2.3 -->
+<script src="./Danh sách phiếu xuất kho-vietnam_files/jquery-2.2.3.min.js.download"></script>
+<!-- jQuery UI 1.11.4 -->
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<!-- Bootstrap 3.3.6 -->
+<script src="./Danh sách phiếu xuất kho-vietnam_files/bootstrap.min.js.download"></script>
+<script type="text/javascript" src="./Danh sách phiếu xuất kho-vietnam_files/moment.min.js.download"></script>
+<script type="text/javascript" src="./Danh sách phiếu xuất kho-vietnam_files/bootstrap-datetimepicker.min.js.download"></script>
+<script src="./Danh sách phiếu xuất kho-vietnam_files/jquery.gritter.js.download"></script>
+<script src="./Danh sách phiếu xuất kho-vietnam_files/select2.min.js.download"></script>
+<script src="./Danh sách phiếu xuất kho-vietnam_files/sweetalert.min.js.download"></script>
+<!-- daterangepicker -->
+<!-- datepicker -->
+<script src="./Danh sách phiếu xuất kho-vietnam_files/bootstrap-datepicker.js.download"></script>
+<!-- Bootstrap WYSIHTML5 -->
+<!-- Slimscroll -->
+<script src="./Danh sách phiếu xuất kho-vietnam_files/jquery.slimscroll.min.js.download"></script>
+<!-- FastClick -->
+<script src="./Danh sách phiếu xuất kho-vietnam_files/fastclick.js.download"></script>
+<!-- AdminLTE App -->
+<script src="./Danh sách phiếu xuất kho-vietnam_files/app.min.js.download"></script>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<script src="./Danh sách phiếu xuất kho-vietnam_files/dashboard.js.download"></script>
+<script src="./Danh sách phiếu xuất kho-vietnam_files/nprogress.js.download"></script>
+<script src="./Danh sách phiếu xuất kho-vietnam_files/jquery.inputmask.numeric.extensions.js.download"></script>
+<script src="./Danh sách phiếu xuất kho-vietnam_files/main.js.download"></script>
+<script src="./Danh sách phiếu xuất kho-vietnam_files/admin.js.download"></script>
+<script type="text/javascript" src="./Danh sách phiếu xuất kho-vietnam_files/publicjs.js.download"></script>
+<!-- AdminLTE for demo purposes -->
+<script>
+jQuery(document).ready(function($) {
+	$('.deleteCoupon').on('click', function(event) {
+		event.preventDefault();
+		var thisClick = $(this);
+		var tr = thisClick.parents('tr');
+		swal({
+         title: "Bạn có chắc chắn thực hiện?",
+         type: "warning",
+         showCancelButton: true,
+         confirmButtonColor: "#DD6B55",
+         confirmButtonText: "Ok",
+         cancelButtonText: "Cancel",
+         showLoaderOnConfirm: true,
+         closeOnConfirm: true
+      }, function(){
+      	$.ajax({
+      		url: thisClick.parents('tbody').attr('data-coupon'),
+      		type: 'POST',
+      		dataType: 'JSON',
+      		data: {cu_id: tr.attr('data-cu-id'), '_token' : $('body').attr('data-token')},
+      		beforeSend: function (){
+      			myUtility.loading();
+      		},
+      		success: function (data){
+      			if(data.error == 0)
+      				tr.remove();
+      			$('.my_loading').remove();
+      			myUtility.showNotify(data.message);
+      		}
+      	});
+
+      });
+
+	});
+});
+</script>
+
+
+</body></html>

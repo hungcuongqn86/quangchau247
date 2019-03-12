@@ -1,0 +1,416 @@
+$(document).ajaxStart(function() {
+   NProgress.start();
+});
+$(document).ajaxStop(function() {
+   NProgress.done();
+});
+
+NProgress.start();
+jQuery(document).ready(function($) {
+	NProgress.done();
+});
+
+var myUtility =  {
+	showNotify : function(stringAlert){
+		$.gritter.add({
+			// (string | mandatory) the heading of the notification
+			title: 'Thông báo',
+			// (string | mandatory) the text inside the notification
+			text: stringAlert,
+			time: 2000,
+		});
+	},
+
+	loading : function (){
+		// var tail = "<a id='my_loading' style='position: fixed; top: 30$; left: 50%; z-index: 99999;' class='btn btn-primary my_loading'><i class='fa fa-refresh fa-spin fa-1x'></i>  đợi một chút ...</a>";
+		// $('body').append(tail);
+	},
+
+	redirectToURL : function(href) {
+		window.location.href = href;
+	},
+}
+
+function ajaxSelectPosition(){
+	$('.select-position').on('change', function () {
+		var thisChange = $(this);
+		var url = thisChange.attr('data-url');
+		var shopId = thisChange.attr('data-id');
+		var value = thisChange.val();
+
+		$.ajax({
+			url: url,
+			type: 'POST',
+			dataType: 'JSON',
+			data: {
+				_token: $('body').attr('data-token'),
+				orderShopId: shopId,
+				positionId: value,
+				whId: thisChange.attr('data-warehouse'),
+			},
+			beforeSend: function(){
+				myUtility.loading();
+			},
+			success: function(response){
+				$('#my_loading').remove();
+				$('.my_loading').remove();
+				myUtility.showNotify(response.message);
+			},
+
+		});
+	});
+}
+
+function deleteMoney() {
+	jQuery(document).ready(function($) {
+		$('.btnDelete').on('click', function(event) {
+			event.preventDefault();
+			thisClick = $(this);
+
+			swal({
+				title: "Bạn có chắc chắn thực hiện giao dịch này?",
+				type: "warning",
+				showCancelButton: true,
+				confirmButtonColor: "#DD6B55",
+				confirmButtonText: "Ok",
+				cancelButtonText: "Cancel",
+				showLoaderOnConfirm: true,
+			}, function() {
+				$.ajax({
+					url: thisClick.attr('data-url'),   
+					type: 'POST',
+					dataType: 'JSON',
+					data: { 
+						_token: $('body').attr('data-token'),
+						id : thisClick.attr('data-id'),
+					},
+					beforeSend: function(){
+						myUtility.loading();
+					},
+					success: function(response){
+						$('#my_loading').remove();
+						$('.my_loading').remove();
+						myUtility.showNotify(response.message);
+						thisClick.parents('tr').remove();
+					}
+				});
+			});
+
+
+		});
+	});
+}
+
+
+$('#disableEnter').on('keyup keypress', function(e) {
+  var code = e.keyCode || e.which;
+  if (code == 13) { 
+	 e.preventDefault();
+	 return false;
+  }
+});
+
+// xác nhận bao hàng
+jQuery(document).ready(function($) {
+	$('.btnConfirmPack').click(function() {
+
+		var r = confirm("Bạn có chắc là bao này trong kho hiện tại của bạn");
+		if(!r) {
+			return;
+		}
+
+		var thisClick = $(this);
+		$.ajax({
+			url: thisClick.parents('#pack-confirm').attr('data-confirm'),
+			type: 'POST',
+			dataType: 'JSON',
+			data: {
+				_token: $('body').attr('data-token'),
+				p_id: thisClick.attr('data-id')
+			},
+			beforeSend: function(){
+				myUtility.loading();
+				thisClick.addClass('disabled');
+			},
+			success: function(data){
+				$('#my_loading').remove();
+				$('.my_loading').remove();
+				if(data.error == 1) {
+					alert(data.message);
+					return;
+				}
+				myUtility.showNotify(data.message);
+				thisClick.html('Đã xác nhận');
+				window.location.reload();
+			}
+		});
+		
+	});
+});
+
+// chuyển trạng thái đủ hàng và thiếu hàng của hàng kiểm đếm
+jQuery(document).ready(function($) {
+	$('.btnSwapLink').on('click', function(event) {
+		event.preventDefault();
+		var thisClick = $(this);
+		var url = thisClick.parents('tbody').attr('data-swaplack');
+
+		$.ajax({
+			url: url,
+			type: 'POST',
+			dataType: 'JSON',
+			data: {
+				id: thisClick.attr('data-id'),
+				_token: $('body').attr('data-token'),
+			},
+			beforeSend: function(){
+				myUtility.loading();
+			},
+			success: function(data){
+				$('#my_loading').remove();
+				myUtility.showNotify(data.message);
+				thisClick.html(data.status);
+
+			}
+		});
+	});
+});
+
+gOrder = {
+	deleteOrderShop : function(){
+		$('.btnDeleteShop').on('click', function(event) {
+
+         event.preventDefault();
+         var thisClick = $(this);
+         var url = thisClick.attr('data-url');
+         swal({
+				title: "Có chắc xóa mã này",
+				type: "warning",
+				showCancelButton: true,
+				confirmButtonColor: "#DD6B55",
+				confirmButtonText: "Ok",
+				cancelButtonText: "Cancel",
+				showLoaderOnConfirm: true,
+
+			}, function() {
+				$.ajax({
+            url: url,
+            type: 'POST',
+            dataType: 'JSON',
+            data: {
+               _token: $('body').attr('data-token'),
+            },
+            beforeSend: function(){
+               myUtility.loading();
+            },
+            success: function(response) {
+               $('#my_loading').remove();
+               thisClick.parents('tr').remove();
+               myUtility.showNotify(response.message);
+               window.location.reload();
+            }
+        		});
+			});
+        
+
+      });
+	},
+
+	showHideAlipay: function(){
+
+		$('.real-group').fadeOut('fast');
+
+		$('.pay_by').change(function() {
+			thisChange = $(this);
+			if(thisChange.val() == 1 ) {
+				$('.real-group').fadeIn('fast');
+			} else {
+				$('.real-group').fadeOut('fast');
+			}
+
+		});
+	},
+
+}
+
+
+var gComment = {
+	loadComment : function(linkedId, frontend)	{
+			$.ajax({
+			url: '/comment/get-comment-' + linkedId,
+			type: 'GET',
+			dataType: 'JSON',
+			beforeSend: function(){
+				myUtility.loading();
+			},
+			success: function(data) {
+				$('.my_loading').remove();
+				gComment.commentContainer(data, frontend);
+				gComment.calcuComment(frontend);
+				
+			}
+		});
+	},
+
+	/**
+	 * width của ô comment
+	 */
+	calcuComment : function(frontend) {
+		if(frontend) return;
+		var width1 = $('#c_comment').width();
+		var width2 = $('.doComment').width();
+		$('#c_comment').css({
+			width: width1 - width2
+		});
+
+	},
+
+	extractComment : function(comments, frontend) {
+		tempContainer = '';
+
+		$.each(comments, function(index, comment) {
+
+			if(frontend) {
+				
+				tempContainer += "<div class='info-user-chatbox'>";
+				tempContainer += 		"<span col-md-3>&nbsp;</span>";
+
+				if(comment.c_style == 2) {
+					tempContainer +=		"<p class='show-name'><span class='User-name'><b>" + comment.name +"</b></span></p>";
+				} else {
+					tempContainer +=		"<p class='show-name'><b>" + comment.name +"</b></p>";
+				}
+				tempContainer += 		"<p class='show-time text-right'>" + comment.c_created_at + "</p>";
+				tempContainer +=	 	"<p class='show-content'>" + comment.c_body + "</p>";
+				tempContainer +=	"</div>";
+			} else {
+				if(comment.c_style == 2) {
+					tempContainer +=		"<div class='c-staff text-comment'><span  rel='tooltip' title='" + comment.c_created_at + "'><b>" + comment.name + ": </b>" + comment.c_body + "</span></div>";
+				} else {
+					tempContainer +=		"<div class='c-customer text-comment'><span rel='tooltip' title='" + comment.c_created_at + "'><b>" + comment.name + ": </b>" + comment.c_body + "</span></div>";
+				}
+
+			}
+		});
+		return tempContainer;
+	},
+
+	toComment : function(){
+		$('[data-toggle="tooltip"], [rel="tooltip"]').tooltip();
+		$('.body-comment, .body-comment .content').animate({
+	    	scrollTop: $('.body-comment .content > div:last-child').offset().top
+		}, 1000);
+	},
+
+
+	/**
+	 * Comment
+	 */
+	commentContainer : function(data, frontend){	
+		var com = $('.comment-container');
+
+		var container = '';
+
+		container += "<div class='body-comment'>";
+		container +=	"<div class='content'>";
+
+		if(data.code == 0) {
+			container += "<div>Chưa có trao đổi nào</div>"
+		} else {
+			container += gComment.extractComment(data.comments, frontend);
+		}
+		container +=	"</div>";
+		container += "</div>";
+
+			container += "<div class='send-comment block-chatbox'>";
+			container +=	"<textarea placeholder='gửi comment' name='c_comment' id='c_comment' class='form-control inline'></textarea>";
+			container +=	"<div><button type='button' class='doComment btn btn-info btn-action-pass btn-chatbox inline'>comment</button></div>";
+			container += "</div>";
+
+		com.html(container);
+		gComment.toComment();
+	},
+
+	doComment : function (frontend){
+		$('.comment-container').on('click', '.doComment', function(event) {
+			event.preventDefault();
+			var value = $('#c_comment').val();
+			if(value == '') {
+				alert('Mời bạn gửi trao đổi cho chúng tôi');
+				return;
+			}
+			var thisDo = $(this);
+			var parentDo = thisDo.parents('.comment-container');
+			var cStyle = parentDo.attr('data-style');
+			var cType = parentDo.attr('data-type');
+			var cLinked = parentDo.attr('data-linked');
+
+			$.ajax({
+				url: parentDo.attr('data-comment'),	
+				type: 'POST',
+				dataType: 'JSON',
+				data: {
+					c_body : value,
+					_token : $('body').attr('data-token'),
+					c_style : cStyle,
+					c_type : cType,
+					c_linked_to : cLinked,
+				},
+				beforeSend: function() {
+					myUtility.loading();
+					$('#c_comment').val('');
+				},
+				success: function(data){
+					$('.my_loading').remove();
+					appendHtml = gComment.extractComment(data.comment, frontend);
+					$('.comment-container .content').append(appendHtml);
+					gComment.toComment();
+				}
+			});
+		});
+	},
+
+	showHideCommentBar : function (){
+		$('.public-comment').on('click', '.btnComment', function() {
+	      var linked = $('.comment-container').attr('data-linked');
+	      gComment.loadComment(linked);
+	      $(this).removeClass('btnComment').addClass('btnHide');
+	      $('.comment-container').show('fast');
+	   });
+		$('.public-comment').on('click', '.btnHide', function(event) {
+			$(this).removeClass('btnHide').addClass('btnComment');
+	   	$('.comment-container').hide('fast');
+	   });
+	},
+
+	countUnreadComment : function() {
+		var numberComment = $('.number-comment');
+		linkedId = numberComment.attr('data-linked');
+		$.ajax({
+			url: '/comment/count-unread-' + linkedId,
+			type: 'GET',
+			dataType: 'JSON',
+			success : function(data){
+				numberComment.html(data);
+			}
+		});
+		
+	}
+}
+jQuery(document).ready(function($) {
+	frontend = $('.comment-container').attr('data-frontend');
+	gComment.showHideCommentBar();
+	gComment.doComment(frontend);
+});
+
+   var inputOption;
+   $("input.money").inputmask('numeric', inputOption);
+   $("input.money-decimal").inputmask('numeric', {
+      placeholder: '',
+      digitsOptional: false,
+      digits: 2,
+      autoGroup: true,
+      groupSeparator: ',',
+      autoUnmask: true,
+      removeMaskOnSubmit: true
+   });

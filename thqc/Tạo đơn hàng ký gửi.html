@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<!-- saved from url=(0058)https://timhangquangchau.com/thqc/users/kho-tao-don-ki-gui -->
+<html class=" "><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <title>Tạo đơn hàng ký gửi</title>
+   <!-- Tell the browser to be responsive to screen width -->
+   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+   <!-- Bootstrap 3.3.6 -->
+   <link rel="stylesheet" href="./Tạo đơn hàng ký gửi_files/bootstrap.min.css">
+   <!-- Font Awesome -->
+   <link rel="stylesheet" type="text/css" href="./Tạo đơn hàng ký gửi_files/font-awesome.min.css">
+   <link href="./Tạo đơn hàng ký gửi_files/sweetalert.css" rel="stylesheet">
+   <!-- Ionicons -->
+      <!-- Theme style -->
+   <link rel="stylesheet" href="./Tạo đơn hàng ký gửi_files/AdminLTE.min.css">
+   <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+   <link rel="stylesheet" href="./Tạo đơn hàng ký gửi_files/_all-skins.min.css">
+   <!-- iCheck -->
+   <link rel="stylesheet" href="./Tạo đơn hàng ký gửi_files/blue.css">
+   <!-- Date Picker -->
+   <link rel="stylesheet" href="./Tạo đơn hàng ký gửi_files/datepicker3.css">
+   <!-- Daterange picker -->
+      <!-- bootstrap wysihtml5 - text editor -->
+   <link rel="stylesheet" href="./Tạo đơn hàng ký gửi_files/bootstrap3-wysihtml5.min.css">
+
+   <link href="./Tạo đơn hàng ký gửi_files/jquery.gritter.css" rel="stylesheet">
+   <link href="./Tạo đơn hàng ký gửi_files/bootstrap-datepicker3.min.css" rel="stylesheet">
+   <link href="./Tạo đơn hàng ký gửi_files/select2.css" rel="stylesheet">
+   <!-- Custom style -->
+   <link rel="stylesheet" type="text/css" href="./Tạo đơn hàng ký gửi_files/style-version2.css">
+   <link rel="stylesheet" type="text/css" href="./Tạo đơn hàng ký gửi_files/admin-ver2.css">
+   <link rel="stylesheet" type="text/css" href="./Tạo đơn hàng ký gửi_files/public.css">
+   <link rel="stylesheet" href="./Tạo đơn hàng ký gửi_files/nprogress.css">
+   <link rel="stylesheet" href="./Tạo đơn hàng ký gửi_files/f-thqc.css">
+   <link rel="shortcut icon" type="image/x-icon" href="https://timhangquangchau.com/thqc/img/32.png">
+
+   <!--[if lt IE 9]>
+   <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+   <![endif]-->
+   <style>
+      .delete-lading-js{
+         position: absolute;
+         right: 5%;
+         top: 25%
+      }
+   </style>
+</head>
+<body class="skin-blue sidebar-mini" data-token="w0ZF4euKWqOnnZACQCrOSv8N29wV2LUISSakkAAT">
+<div class="wrapper">
+   <header class="main-header g-no-print">
+      <!-- Logo -->
+      <a href="https://timhangquangchau.com/" class="logo">
+         <!-- mini logo for sidebar mini 50x50 pixels -->
+         <span class="logo-mini"><b>Admin</b>THQC</span>
+         <!-- logo for regular state and mobile devices -->
+         <span class="logo-lg"><b>Admin</b>THQC</span>
+      </a>
+      <!-- Header Navbar: style can be found in header.less -->
+      <nav class="navbar navbar-static-top">
+         <!-- Sidebar toggle button-->
+        <a href="https://timhangquangchau.com/thqc/users/kho-tao-don-ki-gui#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+          <span class="sr-only">Toggle navigation</span>
+        </a>
+
+        <div class="navbar-custom-menu" style="float:none">
+         <ul class="nav navbar-nav navbar-right" style="margin: 0; height: inherit;">
+            <!-- alert comment order -->
+            <li class="dropdown noti-parent">
+               <a href="https://timhangquangchau.com/thqc/users/kho-tao-don-ki-gui#" class="dropdown-toggle noti-icon" data-show="false" data-url="https://timhangquangchau.com/thqc/ajax-get-comment-order" data-target="show-notification" data-toggle="dropdown">
+                  <i class="fa fa-globe"></i>
+                  <span class="noti-count"><b>0</b></span>
+                  <span class="caret"></span>
+               </a>
+
+               <ul class="dropdown-menu flat menu-down dropdown-menu-notificaion">
+                  <li class="dropdown-header header-noti-parent">
+                     <p class="header-noti" style="font-weight: bold">Thông báo đơn hàng</p>
+                  </li>
+                  <div class="menu-down-noti show-messagers show-notification" style="max-height: 416px;overflow-y: scroll;width: 100%;">
+                  </div>
+                  <li class="dropdown-header see-add">
+                  <a href="https://timhangquangchau.com/thqc/notifications" title="Xem tất cả thông báo">Xem tất cả thông báo</a>
+                  </li>
+               </ul>
+            </li>
+
+            <!-- alert all -->
+            <li class="dropdown noti-parent">
+               <a href="https://timhangquangchau.com/thqc/users/kho-tao-don-ki-gui#" class="dropdown-toggle noti-icon" data-show="false" data-url="https://timhangquangchau.com/thqc/ajax-get-message" data-toggle="dropdown" data-target="show-messager">
+                  <i class="fa fa-envelope-o"></i>
+                  <span class="noti-count"><b>0</b></span>
+                  <span class="caret"></span>
+               </a>
+               <ul class="dropdown-menu flat menu-down dropdown-menu-notificaion">
+                  <li class="dropdown-header header-noti-parent">
+                     <span class="header-noti">Tin nhắn</span>
+                     <span class="see-add-noti" title="Đánh dấu đã xem" data-url="https://timhangquangchau.com/quan-ly/tin-nhan/xem-tat-ca">Đánh dấu tất cả là đã đọc</span>
+                  </li>
+                  <div class="menu-down-noti show-messager">
+                  </div>
+                  <li class="dropdown-header see-add"><a href="https://timhangquangchau.com/thqc/notifications">Xem tất cả</a></li>
+               </ul>
+            </li>
+                        <li class="dropdown">
+               <a href="https://timhangquangchau.com/thqc/users/kho-tao-don-ki-gui#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user-secret"></i> <span class="caret"></span></a>
+               <ul class="dropdown-menu">
+                  <li><a href="https://timhangquangchau.com/thqc/users/profile"><i class=" fa fa-suitcase"></i> Đổi thông tin Hoai</a></li>
+                  <li><a href="https://timhangquangchau.com/thqc/users/password"><i class="fa fa-cog"></i> Đổi mật khẩu</a></li>
+                  <li><a href="https://timhangquangchau.com/thqc/logout"><i class="fa fa-key"></i> Log Out</a></li>
+               </ul>
+            </li>
+                     </ul>
+         </div>
+         </nav>
+    </header>      <!-- Left side column. contains the logo and sidebar -->
+   <aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+      <section class="sidebar" style="height: auto;">
+         <!-- Sidebar user panel -->
+         <div class="user-panel">
+            <div class="pull-left image">
+             <img src="./Tạo đơn hàng ký gửi_files/1024px-No_image_available.svg.png" class="img-circle" alt="User Image">
+            </div>
+            <div class="pull-left info">
+             <p>Hoai</p>
+             <a href="https://timhangquangchau.com/thqc/users/kho-tao-don-ki-gui#"><i class="fa fa-circle text-success"></i> Online</a>
+            </div>
+         </div>
+         <ul class="sidebar-menu">
+            <li class="treeview ">
+               <a href="https://timhangquangchau.com/thqc/users/kho-tao-don-ki-gui#">
+                  <i class="fa fa-dashboard"></i> <span>Thống kê</span>
+                  <span class="pull-right-container">
+                     <i class="fa fa-angle-left pull-right"></i>
+                  </span>
+               </a>
+               <ul class="treeview-menu">
+                  <li class=" hidden">
+                     <a href="https://timhangquangchau.com/thqc/dashboard"><i class="fa fa-cubes"></i> Trạng thái hệ thống</a>
+                  </li>
+                  <li class=" hidden">
+                     <a href="https://timhangquangchau.com/thqc/dashboard/don-hang"><i class="fa fa-cubes"></i> Thống kê đơn hàng</a>
+                  </li>
+                                    <li class=" hidden">
+                     <a href="https://timhangquangchau.com/thqc/dashboard/thong-ke-cskh"><i class="fa fa-cubes"></i> Thống kê CSKH</a>
+                  </li>
+                                 </ul>
+            </li>
+            <li class="">
+               <a href="https://timhangquangchau.com/thqc/rel">
+                  <i class="fa fa-th"></i> <span>Đơn hàng</span>
+               </a>
+            </li>
+                        <li class="">
+               <a href="https://timhangquangchau.com/thqc/rel/ky-gui/danh-sach-yeu-cau">
+                  <i class="fa fa-th"></i> <span>Yêu cầu ký gửi</span>
+               </a>
+            </li>
+            <li class="">
+               <a href="https://timhangquangchau.com/thqc/rel?type=2">
+                  <i class="fa fa-th"></i> <span>Đơn ký gửi</span>
+               </a>
+            </li>
+
+            <li class="">
+               <a href="https://timhangquangchau.com/thqc/order-shop/lading"><i class="fa fa-th"></i> Kiện hàng</a>
+            </li>
+                        <li class="treeview ">
+                <a href="https://timhangquangchau.com/thqc/users/kho-tao-don-ki-gui#">
+                  <i class="fa fa-dashboard"></i> <span>Khiếu nại</span>
+                  <span class="pull-right-container">
+                     <i class="fa fa-angle-left pull-right"></i>
+                  </span>
+               </a>
+               <ul class="treeview-menu">
+                  <li class="">
+                     <a href="https://timhangquangchau.com/thqc/complain/list-complain-new?check_complain=2"><i class="fa fa-phone"></i> Tất cả</a>
+                  </li>
+                  <li class="">
+                     <a href="https://timhangquangchau.com/thqc/complain/list-complain-new?type_order=0&amp;check_complain=2"><i class="fa fa-phone"></i> order</a>
+                  </li>
+                  <li class="">
+                     <a href="https://timhangquangchau.com/thqc/complain/list-complain-new?type_order=2"><i class="fa fa-phone"></i> ký gửi</a>
+                  </li>
+                   <li class=" hidden">
+                     <a href="https://timhangquangchau.com/thqc/complain/list-complain-new?type_order=1"><i class="fa fa-phone"></i> Khiếu nại đơn hàng lẻ</a>
+                  </li>
+               </ul>
+            </li>
+                                     <li class="treeview ">
+                <a href="https://timhangquangchau.com/thqc/users/kho-tao-don-ki-gui#">
+                  <i class="fa fa-dashboard"></i> <span>Kho TQ / 仓库</span>
+                  <span class="pull-right-container">
+                     <i class="fa fa-angle-left pull-right"></i>
+                  </span>
+               </a>
+               <ul class="treeview-menu">
+                                    <li class="">
+                     <a href="https://timhangquangchau.com/thqc/import/danh-sach-phieu-nhap-kho"><i class="fa fa-share"></i>Phiếu nhập kho</a>
+                  </li>
+                  <li class=" hidden">
+                     <a href="https://timhangquangchau.com/thqc/import/danh-sach-phieu-nhap-kho?i_inventory=1"><i class="fa fa-share"></i>Phiếu nhập kho - chờ đi container</a>
+                  </li>
+                                                         <li class="">
+                        <a href="https://timhangquangchau.com/thqc/bao-hang/danh-sach-bao-hang"><i class="fa fa-files-o"></i>Danh sách bao</a>
+                     </li>
+                                                         <li class="">
+                        <a href="https://timhangquangchau.com/thqc/bao-hang/tao-bao?fast=1"><i class="fa fa-plus"></i>Tạo bao nhanh / 造包货</a>
+                     </li>
+                     <li class="active">
+                        <a href="https://timhangquangchau.com/thqc/users/kho-tao-don-ki-gui"><i class="fa fa-users"></i>&nbsp;Tạo đơn kí gửi</a>
+                     </li>
+                                                   </ul>
+            </li>
+            
+                        <li class="treeview ">
+                <a href="https://timhangquangchau.com/thqc/users/kho-tao-don-ki-gui#">
+                  <i class="fa fa-dashboard"></i> <span>Kho VN</span>
+                  <span class="pull-right-container">
+                     <i class="fa fa-angle-left pull-right"></i>
+                  </span>
+               </a>
+               <ul class="treeview-menu">
+                                       <li class="">
+                        <a href="https://timhangquangchau.com/thqc/phieu-xuat/co-the-xuat"><i class="fa fa-files-o"></i>Chờ xuất</a>
+                     </li>
+                     <li class="">
+                        <a href="https://timhangquangchau.com/thqc/phieu-xuat/danh-sach-phieu"><i class="fa fa-files-o"></i>Phiếu xuất</a>
+                     </li>
+                     <li class="">
+                        <a href="https://timhangquangchau.com/thqc/bao-hang/danh-sach-bao-hang"><i class="fa fa-files-o"></i>Danh sách bao</a>
+                     </li>
+                     <li class=" hidden">
+                        <a href="https://timhangquangchau.com/thqc/phieu-xuat/yeu-cau-ship"><i class="fa fa-truck" aria-hidden="true"></i>Yêu cầu ship</a>
+                     </li>
+                     <li class="">
+                        <a href="https://timhangquangchau.com/thqc/port/list"><i class="fa fa-refresh"></i>Phiếu điều chuyển</a>
+                     </li>
+                     <li class="">
+                        <a href="https://timhangquangchau.com/thqc/order-shop/truc-tiep-vn"><i class="fa fa-files-o"></i>Nhập kho VN</a>
+                     </li>
+                                 </ul>
+            </li>
+            
+                        <li class="treeview ">
+                <a href="https://timhangquangchau.com/thqc/users/kho-tao-don-ki-gui#">
+                  <i class="fa fa-dashboard"></i> <span>Sau mua hàng</span>
+                  <span class="pull-right-container">
+                     <i class="fa fa-angle-left pull-right"></i>
+                  </span>
+               </a>
+               <ul class="treeview-menu">
+                                    <li class="">
+                     <a href="https://timhangquangchau.com/thqc/orderDetails/losingid">
+                        <i class="fa fa-file-image-o"></i> Hàng mất mã</a>
+                  </li>
+                                    <li class="">
+                     <a href="https://timhangquangchau.com/thqc/order-shop/chuyen-ma-van-don">
+                        <i class="fa fa-file-image-o"></i> Chuyển mã</a>
+                  </li>
+                                 </ul>
+            </li>
+            
+            
+            
+            
+                         <li class="treeview ">
+                <a href="https://timhangquangchau.com/thqc/users/kho-tao-don-ki-gui#">
+                  <i class="fa fa-dashboard"></i> <span>Nhân viên</span>
+                  <span class="pull-right-container">
+                     <i class="fa fa-angle-left pull-right"></i>
+                  </span>
+               </a>
+               <ul class="treeview-menu">
+                  <li class="">
+                     <a href="https://timhangquangchau.com/thqc/employers"><i class="fa fa-user-secret"></i>&nbsp;Quản lý đi/nghỉ</a>
+                  </li>
+                  <li class=" hidden">
+                     <a href="https://timhangquangchau.com/admin/employers/cskh/gan-khach"><i class="fa fa-street-view"></i>Gán khách cho cskh</a>
+                  </li>
+                  <li class=" hidden">
+                     <a href="https://timhangquangchau.com/thqc/employers/trader/gan-khach"><i class="fa fa-street-view"></i>Gán khách cho đặt hàng</a>
+                  </li>
+               </ul>
+            </li>
+            
+                         <li class="treeview ">
+                <a href="https://timhangquangchau.com/thqc/users/kho-tao-don-ki-gui#">
+                  <i class="fa fa-dashboard"></i> <span>Tin tức - thông báo</span>
+                  <span class="pull-right-container">
+                     <i class="fa fa-angle-left pull-right"></i>
+                  </span>
+               </a>
+               <ul class="treeview-menu">
+                  <li class="">
+                     <a href="https://timhangquangchau.com/thqc/blogs"><i class="fa fa-rss-square"></i>&nbsp;Q.L Blogs</a>
+                  </li>
+                  <li class="">
+                     <a href="https://timhangquangchau.com/thqc/categories"><i class="fa fa-rss-square"></i>&nbsp;Q.L Danh mục</a>
+                  </li>
+               </ul>
+            </li>
+            
+                         <li class="treeview ">
+                <a href="https://timhangquangchau.com/thqc/users/kho-tao-don-ki-gui#">
+                  <i class="fa fa-dashboard"></i> <span>Người dùng</span>
+                  <span class="pull-right-container">
+                     <i class="fa fa-angle-left pull-right"></i>
+                  </span>
+               </a>
+               <ul class="treeview-menu">
+                  <li class="">
+                     <a href="https://timhangquangchau.com/thqc/users"><i class="fa fa-user"></i>&nbsp;Q.L người dùng</a>
+                  </li>
+                  <li class="">
+                     <a href="https://timhangquangchau.com/thqc/roles"><i class="fa fa-users"></i>&nbsp;Nhóm người dùng</a>
+                  </li>
+                  <li class="">
+                     <a href="https://timhangquangchau.com/thqc/permissions"><i class="fa fa-trophy"></i>&nbsp;Quyền</a>
+                  </li>
+               </ul>
+            </li>
+            
+            
+         </ul>
+       </section>
+    <!-- /.sidebar -->
+   </aside>
+
+   <!-- Content Wrapper. Contains page content -->
+   <div class="content-wrapper" style="min-height: 790px;">
+       <!-- Main content -->
+         <div class="no-print">
+            <div class="col-sm-12">
+                           </div>
+         </div>
+         <!-- start create order -->
+<section id="createConsign" class="text-black bg-fafafa">
+   <div class="container">
+      <div class="text-center mg-bottom-40">
+         <h3 class="text-uppercase bd-bt-bg">TẠO ĐƠN KÍ GỬI</h3><br>
+      </div>
+      <!-- end notification -->
+
+      <div class="text-left">
+         <form action="https://timhangquangchau.com/thqc/users/kho-tao-don-ki-gui" method="post" class="form-horizontal consigning" role="form" accept-charset="UTF-8">
+            <div class="row">
+               <div class="col-sm-2"></div>
+               <div class="col-sm-8">
+
+                  <div class="col-sm-12 form-group">
+                     <label for="crate_order">Tạo đơn cho khách hàng <b class="text-danger">*</b></label>
+                     <select required="" class="select2-ajax form-control select2-hidden-accessible" name="user_id" id="user_id" data-url="https://timhangquangchau.com/users/list-user-ajax" data-type="user" placeholder="Tên Người dùng, email hoặc sđt" tabindex="-1" aria-hidden="true">
+                                             </select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: 720px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-user_id-container"><span class="select2-selection__rendered" id="select2-user_id-container"><span class="select2-selection__placeholder">Tên Người dùng, email hoặc sđt</span></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                        
+                  </div>
+
+                  <div class="col-sm-12 form-group">
+                     <label for="crate_order">Hàng về kho<b class="text-danger">*</b></label>
+                     <select name="warehouse" data-original-title="Hàng về kho" rel="tooltip" class="form-control search-box-modules input-sm">
+                        <option value="">--- Chọn kho ---</option>
+                                                   <option value="1">
+                              Cầu Giấy
+                           </option>
+                                                   <option value="4">
+                              Kho HCM
+                           </option>
+                                                </select>
+                     
+                  </div>
+
+                  <div class="col-sm-12  form-group">
+                     <label for="crate_order">Số thùng, kiện hàng (số lượng) <b class="text-danger">*</b></label>
+                     <div>
+                        <input required="" type="text" id="crate_order" name="crate_order" value="" class="form-control bd-radius-none" placeholder="Số thùng, kiện hàng">
+                        <span class="input-group-addon-1"></span>
+                     </div>
+                     
+                  </div>
+
+                  <div class="col-sm-12  form-group">
+                     <label>Thông tin trên thùng hàng <b class="text-danger">*</b></label>
+                     <div>
+                        <textarea required="" name="info_crate" rows="7" class="form-control bd-radius-none" placeholder="Thông tin trên thùng hàng"></textarea>
+                        <span class="input-group-addon-1"></span>
+                     </div>
+                     
+                  </div>
+
+                  <div class="col-sm-12 form-group">
+                     <label title="Sản phẩm có đóng gỗ hay không" style="font-size: 20px">
+                        <input type="checkbox" name="is_pack" id="is_pack" value="1">
+                        Đóng gỗ
+                     </label>
+                  </div>
+
+               </div>
+               <div class="col-sm-2"></div>
+            </div>
+
+            <div class="row">
+               <div class="items index-0 col-sm-12" data-index="0" title="Kiện 1">
+                  <div class="form-group">
+                     <div class="col-sm-3 ">
+                        <label for="type_of_consign" class="control-label">Loại hàng hóa <b class="text-danger">*</b></label>
+                        <div>
+                           <input data-type="type_of_consign" required="required" type="text" class="form-control bd-radius-none" id="type_of_consign" name="ordershop[0][type_of_consign]" placeholder="Loại hàng hóa" value="">
+                        </div>
+                        
+                     </div>
+
+                     <div class="col-sm-3 ">
+                        <label>Cân nặng (kg) <b class="text-danger">*</b></label>
+                        <div>
+                           <input required="" data-type="total_weight" type="text" id="total_weight" name="ordershop[0][total_weight]" value="" class="form-control bd-radius-none" placeholder="Cân nặng">
+                           <span class="input-group-addon-1"></span>
+                        </div>
+                        
+                     </div>
+
+                     <div class="col-sm-4 ">
+                        <label for="lading" class="control-label">Mã vận đơn </label>
+                        <div>
+                           <input data-type="lading" type="text" class="form-control bd-radius-none" id="lading" name="ordershop[0][lading]" placeholder="Mã vận đơn" value="">
+                        </div>
+                        
+                     </div>
+
+                     <div class="col-sm-2">
+                        <label title="Sản phẩm có pin hay không">
+                           <input data-type="pin" style="margin-top: 60%" type="checkbox" name="ordershop[0][pin]" id="pin" value="1">
+                           Có pin
+                        </label>
+                     </div>
+
+                  </div>
+               </div>
+            </div>
+            
+            <input type="hidden" name="_token" value="w0ZF4euKWqOnnZACQCrOSv8N29wV2LUISSakkAAT">
+            <div class="row text-center">
+               <button type="button" class="btn btn-success btn-flat text-uppercase text-center btnAddOrderShop hidden" data-target=".index-0">Thêm mã vận đơn</button>
+               <button type="submit" class="btn btn-danger btn-flat text-uppercase text-center">Tạo đơn</button>
+            </div>
+         </form>
+      </div>
+      <!--  -->
+   </div>
+</section>
+<!-- end create order -->
+   </div>
+   <!-- /.content-wrapper -->
+   <footer class="main-footer">
+      timhangquangchau.com
+   </footer>
+      <!-- Control Sidebar -->
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery 2.2.3 -->
+<script src="./Tạo đơn hàng ký gửi_files/jquery-2.2.3.min.js.download"></script>
+<!-- jQuery UI 1.11.4 -->
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<!-- Bootstrap 3.3.6 -->
+<script src="./Tạo đơn hàng ký gửi_files/bootstrap.min.js.download"></script>
+<script type="text/javascript" src="./Tạo đơn hàng ký gửi_files/moment.min.js.download"></script>
+<script type="text/javascript" src="./Tạo đơn hàng ký gửi_files/bootstrap-datetimepicker.min.js.download"></script>
+<script src="./Tạo đơn hàng ký gửi_files/jquery.gritter.js.download"></script>
+<script src="./Tạo đơn hàng ký gửi_files/select2.min.js.download"></script>
+<script src="./Tạo đơn hàng ký gửi_files/sweetalert.min.js.download"></script>
+<!-- daterangepicker -->
+<!-- datepicker -->
+<script src="./Tạo đơn hàng ký gửi_files/bootstrap-datepicker.js.download"></script>
+<!-- Bootstrap WYSIHTML5 -->
+<!-- Slimscroll -->
+<script src="./Tạo đơn hàng ký gửi_files/jquery.slimscroll.min.js.download"></script>
+<!-- FastClick -->
+<script src="./Tạo đơn hàng ký gửi_files/fastclick.js.download"></script>
+<!-- AdminLTE App -->
+<script src="./Tạo đơn hàng ký gửi_files/app.min.js.download"></script>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<script src="./Tạo đơn hàng ký gửi_files/dashboard.js.download"></script>
+<script src="./Tạo đơn hàng ký gửi_files/nprogress.js.download"></script>
+<script src="./Tạo đơn hàng ký gửi_files/jquery.inputmask.numeric.extensions.js.download"></script>
+<script src="./Tạo đơn hàng ký gửi_files/main.js.download"></script>
+<script src="./Tạo đơn hàng ký gửi_files/admin.js.download"></script>
+<script type="text/javascript" src="./Tạo đơn hàng ký gửi_files/publicjs.js.download"></script>
+<!-- AdminLTE for demo purposes -->
+<script type="text/javascript">
+   $(".btnAddOrderShop").on('click',function(){
+      var index = parseInt($('.items:last').data('index'));
+      var index_next = index + 1;
+      var target = $(this).data('target');
+      var add_clone = $(target).clone(true);
+      add_clone.find('input').each(function(ix) {
+         var input_name = $(this).data('type');
+         $(this).find('.pin-consign').attr('value', '1');
+         $(this).attr('name', 'ordershop[' + index_next + '][' + input_name + ']');
+      });
+      var html = [
+         '<div class="col-sm-12 items index-' + index_next + '" data-index="' + index_next +  '" title="Kiện '+ (index_next + 1) +'">' + add_clone.html() + '<div class="delete-lading-js"><a onclick="$(this).parent().parent().remove()" class="btn btn-danger" title="Xóa kiện"><i class="fa fa-trash-o"></i></a></div>',
+      ];
+      $('.index-' + index).after(html.join());
+   });
+
+   function getColspan(index_next) {
+      $('.index-'+index_next).find('.last-td').remove();
+   }
+</script>
+
+
+</body></html>

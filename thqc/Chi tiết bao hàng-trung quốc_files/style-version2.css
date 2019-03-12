@@ -1,0 +1,383 @@
+body {
+	font-size: 12px;
+	font-family: "Open Sans",sans-serif;
+}
+.table td, .table th {
+	border-color: #ccc !important;
+}
+.form-horizontal .control-label.text-left {
+	text-align: left !important;
+}
+.form-horizontal .control-label.text-center {
+	text-align: center !important;
+}
+.table-condensed>thead>tr>th, .table-condensed>tbody>tr>th, .table-condensed>tfoot>tr>th, .table-condensed>thead>tr>td, .table-condensed>tbody>tr>td, .table-condensed>tfoot>tr>td {
+	padding: 3px;
+}
+
+.before-edit {
+	background: url(/images/loading.gif) no-repeat 50% 50%;
+}
+
+.form-item {
+	width: 200px;
+}
+
+.modal-open {
+    overflow: auto;
+}
+
+.btn-dark-gray {
+	background: #34495e;
+	color: white;
+}
+
+.btn-dark-gray:hover {
+	color: white;
+}
+
+.btn, .flat, .form-control {
+	border-radius: 0 !important;
+}
+
+.btn {
+
+}
+
+/* button */
+.btn-primary {
+
+
+}
+.btn-link, .btn-link:hover {
+	!important;
+}
+/*.form-control {
+	border: 1px solid #A880AB;
+}*/
+.form-control:focus {
+
+   box-shadow: inset 0 1px 1px rgba(168, 128, 171, 0.45),0 0 8px rgba(168, 128, 171, 0.3);
+}
+::selection {
+  background: rgba(168, 128, 171, 0.45);
+}
+::-moz-selection {
+
+}
+
+/* Let's get this party started */
+::-webkit-scrollbar {
+   width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background: #fff;
+	-webkit-box-shadow: inset 0 0 4px #3c8dbc;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+
+   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+::-webkit-scrollbar-thumb:window-inactive {
+	background: #fff;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+
+
+}
+.navbar-brand {
+	padding: 0px 15px 30px 0px;
+	line-height: 30px;
+	overflow: hidden;
+	text-align: center;
+	display: block;
+}
+.dropdown-menu>li>a>i {
+	width: 20px;
+	text-align: left;
+}
+.dropdown-menu {
+	font-size: 13px;
+	color: #777;
+}
+.dropdown-menu>li>a {
+	color: #777;
+}
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:hover,
+.navbar-default .navbar-nav>.active>a:focus {
+
+	color: #fff;
+}
+.navbar-default .navbar-nav>li>a:hover,
+.navbar-default .navbar-nav>li>a:focus {
+
+	color: #fff;
+}
+.navbar-default .navbar-nav>.open>a,
+.navbar-default .navbar-nav>.open>a:hover,
+.navbar-default .navbar-nav>.open>a:focus {
+	background: #A880AB;
+	color: #fff;
+}
+.no-print {
+	width: 100%;
+	overflow: hidden;
+	display: block;
+}
+.main-content {
+	width: 100%;
+	overflow: visible;
+	display: block;
+}
+.main-content .content-block {
+	margin-left: -5px;
+	margin-right: -5px;
+}
+
+form.search {
+	margin-bottom: 10px;
+}
+.view-field.hide {
+   display: none;
+}
+.edit-field {
+	opacity: 0;
+	height: 0px;
+	margin-top: -15px;
+	/*display: inline-block;*/
+}
+.edit-field.show {
+	opacity: 1;
+	height: auto;
+	margin-top: 0px;
+}
+.list-understyle{
+	list-style: none;
+	padding-left: 10px;
+	margin-bottom: 0;
+	width: 100%;
+}
+.list-order > li{
+	border-bottom: 1px dotted #ccc;
+	display: block;
+	line-height: 20px;
+	overflow: hidden;
+	padding: 5px 0;
+}
+.list-order > li:last-child{
+   border-bottom: none !important;
+}
+
+.inline {
+	display: inline-block;
+}
+
+.view-field {
+	color: #1CA59E;
+}
+
+.edit-field {
+	padding-left: 1px;
+	padding-right: 1px;
+}
+
+.dropdown-selected {
+	background: #474752;
+	color: #fff !important;
+}
+.admin .dropdown-menu>li>a {
+    padding: 10px 20px;
+    font-size: 13px;
+}
+
+.admin .dropdown-menu > li > a:hover, .admin .dropdown-menu > li > a:focus {
+    background-color: #474752;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+.table .btn {
+    margin-bottom: 3px;
+}
+.btn-fake {
+	cursor: default;
+}
+td.link-detail {
+	line-height: 20px;
+}
+.link-primary {
+	!important;
+}
+.text-primary {
+	!important;
+}
+.form-filter .form-control {
+	width: 200px !important;
+}
+.form-filter div.form-control {
+	display: inline-block !important;
+	border-radius: 0px !important;
+}
+.form-filter div.form-control a {
+	border-radius: 0px !important;
+}
+.table-info li {
+   border-bottom: 1px dotted rgba(153,153,153,0.25);
+   line-height: 26px;
+   cursor: default;
+   overflow: hidden;
+}
+.table-info li.dropdown {
+	overflow: initial;
+}
+.table-info li i {
+   width: 16px;
+   text-align: center;
+}
+.table-info li:last-child {
+   border-bottom: none;
+}
+
+.date_picker_label {
+   position: relative !important;
+}
+.disabled {
+	background-color: #EEEEEE;
+	cursor: not-allowed;
+}
+
+.mini-stat {
+	margin-bottom: 15px;
+	min-height: 50px;
+	padding: 12px;
+	color: #fff;
+	border-radius: 2px;
+}
+.mini-stat span {
+	display: block;
+	min-height: 25px;
+	line-height: 40px;
+	font-size: 16px;
+}
+.mini-stat .mini-stat-count {
+	font-weight: bold;
+	line-height: 50px;
+	font-size: 36px;
+	width: 40%;
+	float: left;
+	text-align: right;
+	padding-right: 10px;
+}
+.mini-stat .mini-stat-status {
+	font-weight: bold;
+	line-height: 50px;
+	width: 60%;
+	float: left;
+	text-align: left;
+}
+.mini-stat .mini-stat-today {
+	width: 50%;
+	float: left;
+}
+.mini-stat .mini-stat-today:first-child:after {
+	content: "/";
+	position: absolute;
+	font-size: 110px;
+	line-height: 50px;
+}
+.order-style {
+	display: block;
+}
+
+.js-copytextarea {
+	height: 27px;
+	margin-bottom: -7px;
+	padding-top: 6px;
+	padding-bottom: 0px;
+	line-height: 20px;
+	font-weight: bold;
+	border: none;
+	display: inline-block;
+	resize: none;
+	width: 390px;
+	background: #fff;
+	cursor: pointer;
+}
+.js-copytextarea:focus {
+	border: none;
+	outline: none;
+}
+.js-textareacopybtn {
+	margin-left: -28px;
+}
+.paginate-top .pagination {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+.pagination>li>a, .pagination>li>span {
+
+}
+.pagination>li>a:hover, .pagination>li>span:hover, .pagination>li>a:focus, .pagination>li>span:focus {
+
+}
+.pagination>.active>a, .pagination>.active>span, .pagination>.active>a:hover, .pagination>.active>span:hover, .pagination>.active>a:focus, .pagination>.active>span:focus {
+
+}
+.panel.panel-child {
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	border-left: none;
+	border-right: none;
+	border-bottom: none;
+}
+.select2-container--default .select2-results > .select2-results__options {
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+.panel-heading {
+}
+.parent_edit-field, td {
+	position: relative;
+}
+textarea.edit-field {
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
+}
+
+.form-inline .form-group {
+	margin-bottom: 6px;
+}
+
+.btn-new-1 {
+	background-color: #aaa;
+}
+.special_status_show {
+	color: #333;
+    background-color: #ebebeb;
+    border-color: #adadad;
+}
+
+.table tbody tr.warning {
+	background: #fcf8e3;
+}
+
+.table tbody tr.danger {
+	background: #f2dede;
+}
+
+.warning-header {
+	background: #fcf8e3;
+}
+.danger-header {
+	background: #f2dede;
+
+}

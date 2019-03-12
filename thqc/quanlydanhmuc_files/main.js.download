@@ -1,0 +1,739 @@
+jQuery(document).ready(function($) {
+
+   var inputOption = {
+      placeholder: '',
+      digitsOptional: false,
+      digits: 0,
+      autoGroup: true,
+      groupSeparator: ',',
+      autoUnmask: true,
+      removeMaskOnSubmit: true
+   };
+
+   $("input.money").inputmask('numeric', inputOption);
+   $("input.money-decimal").inputmask('numeric', {
+      placeholder: '',
+      digitsOptional: false,
+      digits: 2,
+      autoGroup: true,
+      groupSeparator: ',',
+      autoUnmask: true,
+      removeMaskOnSubmit: true
+   });
+
+	$('.btn-active').click(function(e) {
+		e.preventDefault();
+		var _this = $(this);
+		$.ajax({
+			url: _this.attr('href'),
+			type: 'GET',
+			dataType: 'json',
+			success: function(data) {
+				if(data.code == 1) {
+					if(data.status == 1) {
+						_this.html('<i class="fa fa-check-square"></i>');
+					}else {
+						_this.html('<i class="fa fa-square"></i>');
+					}
+				} else {
+					alert(data.messages);
+				}
+			}
+		});
+	});
+
+
+	$('.datepicker').datepicker({
+		format: "dd-mm-yyyy",
+		todayBtn: true,
+		clearBtn: true,
+		language: "vi",
+		autoclose: true,
+		todayHighlight: true
+   });
+
+   $('.datetimeselector').datetimepicker({
+      format: 'DD-MM-YYYY HH:mm:ss',
+      showTodayButton: true,
+      showClear: true,
+      dayViewHeaderFormat: 'DD-MM-YYYY HH:mm:ss',
+   });
+
+   $('.datetimeselector-en').datetimepicker({
+      format: 'YYYY-MM-DD HH:mm:ss',
+      showTodayButton: true,
+      showClear: true,
+      dayViewHeaderFormat: 'YYYY-MM-DD HH:mm:ss',
+   });
+
+   $('.select2').select2();
+   select2_ajax();
+   function select2_ajax () {
+      $('.select2-ajax').each(function( index ) {
+         var _url         = $(this).data('url');
+         var _type        = $(this).data('type');
+         var _placeholder = $(this).attr('placeholder');
+         var _num = 1;
+         if (_type == 'user') {
+            var _formatRepo          = formatRepo;
+            var _formatRepoSelection = formatRepoSelection;
+         }else if(_type == 'bank'){
+            var _formatRepo          = formatRepoBank;
+            var _formatRepoSelection = formatRepoSelectionBank;
+         }else if(_type == 'order'){
+            var _formatRepo          = formatRepoOrder;
+            var _formatRepoSelection = formatRepoSelectionOrder;
+         }else if(_type == 'shop'){
+            var _formatRepo          = formatRepoShop;
+            var _formatRepoSelection = formatRepoSelectionShop;
+         } else if(_type == 'province'){
+            var _formatRepo          = formatRepoProvince;
+            var _formatRepoSelection = formatRepoSelectionProvince;
+         } else if(_type == 'local'){
+            var _formatRepo          = formatRepoProvinceLocal;
+            var _formatRepoSelection = formatRepoSelectionProvinceLocal;
+            _num = 0;
+         }
+
+         $(this).select2({
+            ajax: {
+               url: _url,
+               dataType: 'json',
+               delay: 250,
+               cache : true,
+               data: function (params) {
+                  console.log(params);
+                  if(_type == 'local') {
+                     return {
+                        q: params.term, // search term
+                        page: params.page,
+                        provinceid: $('.select2-province').val(),
+                        districtid: $('.select2-district').val()
+                     };
+                  }
+                  return {
+                     q: params.term, // search term
+                     page: params.page
+                  };
+               },
+               processResults: function (data, params) {
+                  params.page = params.page || 1;
+                  console.log(data);
+                  console.log(params);
+                  return {
+                     results: data.items,
+                     pagination: {
+                        more: (params.page * 10) < data.total_count
+                     }
+                  };
+               }
+            },
+            escapeMarkup: function (markup) { return markup; }, // let our custom formatter work
+            minimumInputLength: _num,
+            templateResult: _formatRepo, // omitted for brevity, see the source of this page
+            templateSelection: _formatRepoSelection, // omitted for brevity, see the source of this page
+            placeholder: _placeholder,
+            allowClear: true
+         });
+      });
+
+      $(".select2-ajax-local").on("select2:open", function() {
+          $(".select2-search__field").attr("placeholder", "Tìm kiếm");
+      });
+
+   }
+   function formatRepo (repo) {
+      if (repo.loading) return repo.text;
+
+      var markup = "<div class='select2-result-repository clearfix'>" +
+         "<div class='select2-result-repository__name'>" + repo.name + "</div>" +
+         "<div class='select2-result-repository__phone'>" + repo.phone + "</div>" +
+         "<div class='select2-result-repository__email'>" + repo.email + "</div>";
+      return markup;
+   }
+   function formatRepoBank (repo) {
+      if (repo.loading) return repo.text;
+
+      var markup = "<div class='select2-result-repository clearfix'>" +
+         "<div class='select2-result-repository__name'>" + repo.name + "</div>" +
+         "<div class='select2-result-repository__phone'>" + repo.account + "</div>" +
+         "<div class='select2-result-repository__email'>" + repo.number + "</div>";
+      return markup;
+   }
+   function formatRepoOrder (repo) {
+      if (repo.loading) return repo.text;
+
+      var markup = "<div class='select2-result-repository clearfix'>" +
+         "<div class='select2-result-repository__id'>" + repo.id + "</div>";
+      return markup;
+   }
+   function formatRepoSelection (repo) {
+      return repo.email || repo.text;
+   }
+   function formatRepoSelectionBank (repo) {
+      return repo.name || repo.text;
+   }
+   function formatRepoSelectionOrder (repo) {
+      return repo.id || repo.text;
+   }
+
+   function formatRepoShop (repo) {
+      if (repo.loading) return repo.text;
+
+      var markup = "<div class='select2-result-repository clearfix'>" +
+         "<div class='select2-result-repository__name'>" + repo.name + "</div>"
+      return markup;
+   }
+   function formatRepoSelectionShop (repo) {
+      return repo.name || repo.text;
+   }
+   function formatRepoProvince (repo) {
+      if (repo.loading) return repo.text;
+
+      var markup = "<div class='select2-result-repository clearfix'>" +
+         "<div class='select2-result-repository__name'>" + repo.id + " - " + repo.name + "</div>" +
+         "</div>";
+      return markup;
+   }
+   function formatRepoSelectionProvince (repo) {
+      return repo.name || repo.text;
+   }
+
+
+   $('.btn-confirm-input-action').click(function(e) {
+      e.preventDefault();
+      var _url = $(this).attr('href');
+      var _type = $(this).data('type') || '';
+      var _relation = $(this).data('relation') || '';
+      var deleteBtn = $(this);
+      swal({
+         title: "Bạn có chắc chắn thực hiện?",
+         text: 'Hãy nhập lý do hủy trước khi xác nhận "OK" để hủy',
+         type: "input",
+         showCancelButton: true,
+         confirmButtonColor: "#DD6B55",
+         confirmButtonText: "Ok",
+         cancelButtonText: "Cancel",
+         showLoaderOnConfirm: true,
+         closeOnConfirm: false,
+         animation: "slide-from-top",
+         inputPlaceholder: "Lý do hủy"
+      },
+      function(inputValue){
+         if (inputValue === false) return false;
+
+         if (inputValue === "") {     swal.showInputError("Hãy nhập lý do hủy yêu cầu ship!");     return false   }
+
+         $.ajax({
+            url : _url + "?why=" + inputValue,
+            type: "GET",
+            beforeSend: function(){
+               deleteBtn.addClass('disabled');
+            },
+            success: function(data)
+            {
+               if (data.status == 'success') {
+                  if (_type == 'delete') {
+                     deleteBtn.parents('tr').hide('fast');
+                     if (_relation != "") $(_relation).hide('fast');
+                  }
+                  var msg = data.msg || "Thực hiện thành công.";
+                  swal({
+                     type: "success",
+                     title: "Action!",
+                     text: msg,
+                     timer: 2000,
+                     showConfirmButton: false
+                  });
+               } else if (data.status == 'error') {
+                  deleteBtn.removeClass('disabled');
+                  var msg = data.msg || "Thực hiện thất bại.";
+                  swal({
+                     type: "error",
+                     title: "Action!",
+                     text: msg,
+                     timer: 2000,
+                     showConfirmButton: false
+                  });
+               }
+            }
+         });
+      });
+   });
+   /*==================== all action confirm ====================*/
+   $('.btn-confirm-action').click(function(e){
+      e.preventDefault();
+      var _url = $(this).attr('href');
+      var _type = $(this).data('type') || '';
+      var _relation = $(this).data('relation') || '';
+      var deleteBtn = $(this);
+      swal({
+         title: "Bạn có chắc chắn thực hiện?",
+         type: "warning",
+         showCancelButton: true,
+         confirmButtonColor: "#DD6B55",
+         confirmButtonText: "Ok",
+         cancelButtonText: "Cancel",
+         showLoaderOnConfirm: true,
+         closeOnConfirm: false
+      },
+      function(){
+         $.ajax({
+            url : _url,
+            type: "GET",
+            beforeSend: function(){
+               deleteBtn.addClass('disabled');
+            },
+            success: function(data)
+            {
+               if (data.status == 'success') {
+                  if (_type == 'delete') {
+                     deleteBtn.parents('tr').hide('fast');
+                     if (_relation != "") $(_relation).hide('fast');
+                  }
+                  var msg = data.msg || "Thực hiện thành công.";
+                  swal({
+                     type: "success",
+                     title: "Action!",
+                     text: msg,
+                     timer: 2000,
+                     showConfirmButton: false
+                  });
+               } else if (data.status == 'error') {
+                  deleteBtn.removeClass('disabled');
+                  var msg = data.msg || "Thực hiện thất bại.";
+                  swal({
+                     type: "error",
+                     title: "Action!",
+                     text: msg,
+                     timer: 2000,
+                     showConfirmButton: false
+                  });
+               }
+            }
+         });
+      });
+   });
+
+   $('.btn-confirm-action-child-table').click(function(e){
+      e.preventDefault();
+      var _url = $(this).attr('href');
+      var _type = $(this).data('type') || '';
+      var _relation = $(this).data('relation') || '';
+      var deleteBtn = $(this);
+      swal({
+         title: "Bạn có chắc chắn thực hiện?",
+         type: "warning",
+         showCancelButton: true,
+         confirmButtonColor: "#DD6B55",
+         confirmButtonText: "Ok",
+         cancelButtonText: "Cancel",
+         showLoaderOnConfirm: true,
+         closeOnConfirm: false
+      },
+      function(){
+         $.ajax({
+            url : _url,
+            type: "GET",
+            beforeSend: function(){
+               deleteBtn.addClass('disabled');
+            },
+            success: function(data)
+            {
+               if (data.status == 'success') {
+                  if (_type == 'delete') {
+                     if( data.cancel == 'true' ) {
+                        deleteBtn.parents('tr').hide('fast');
+                     }
+                     deleteBtn.parents('tr.for-hiden').hide('fast');
+                     if (_relation != "") $(_relation).hide('fast');
+                  }
+                  var msg = data.msg || "Thực hiện thành công.";
+                  swal({
+                     type: "success",
+                     title: "Action!",
+                     text: msg,
+                     timer: 2000,
+                     showConfirmButton: false
+                  });
+               } else if (data.status == 'error') {
+                  deleteBtn.removeClass('disabled');
+                  var msg = data.msg || "Thực hiện thất bại.";
+                  swal({
+                     type: "error",
+                     title: "Action!",
+                     text: msg,
+                     timer: 2000,
+                     showConfirmButton: false
+                  });
+               }
+            }
+         });
+      });
+   });
+
+//xác nhận cho form
+   $('.confirmForm').on('click',function(e){
+       e.preventDefault();
+       var form = $(this).parents('form');
+       swal({
+           title: "Bạn chắc chắn chứ?",
+           type: "warning",
+           showCancelButton: true,
+           confirmButtonColor: "#DD6B55",
+           confirmButtonText: "OK",
+           closeOnConfirm: false,
+           showLoaderOnConfirm: true
+       }, function(isConfirm){
+           if (isConfirm) form.submit();
+       });
+   });
+   // xác nhận cho thẻ a
+   $('.confirmHref').on('click',function(e){
+    e.preventDefault();
+    var href = $(this).attr('href');
+    swal({
+        title: "Bạn chắc chắn chứ?",
+        type: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#DD6B55",
+        confirmButtonText: "OK",
+        closeOnConfirm: false,
+        showLoaderOnConfirm: true
+   }, function(isConfirm){
+         if (isConfirm){
+            window.location.href = href;
+         }
+      });
+   });
+
+   // xác nhận cho dat hang xong thieu tien
+   $('.confirmHrefOrdered').on('click',function(e){
+    e.preventDefault();
+    var _this = $(this);
+    var href = $(this).attr('href');
+    var _accHref = $(this).data('acchref');
+    var newValue = $(this).data('value');
+    var text = "Đơn hàng này khách đặt cọc thiếu tiền, bạn muốn tiếp tục hay báo cho kế toán đặt cọc lại? (Số tiền thiếu: " + newValue + "đ)";
+    swal({
+        title: "Cảnh báo!",
+        text: text,
+        type: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#DD6B55",
+        confirmButtonText: "Tiếp tục!",
+        cancelButtonText: "Báo kế toán!",
+        closeOnConfirm: false,
+        showLoaderOnConfirm: true
+   }, function(isConfirm){
+         if (isConfirm){
+            window.location.href = href;
+         } else {
+            $.ajax({
+               url : _accHref,
+               type: "GET",
+               success: function(data)
+               {
+                  if (data.status == 'success') {
+                     var msg = data.msg || "Thực hiện thành công.";
+                     swal({
+                        type: "success",
+                        title: "Action!",
+                        text: msg,
+                        timer: 2000,
+                        showConfirmButton: false
+                     });
+                     _this.addClass('disabled');
+                  } else {
+                     var msg = data.msg || "Thực hiện thất bại.";
+                     swal({
+                        type: "error",
+                        title: "Action!",
+                        text: msg,
+                        timer: 2000,
+                        showConfirmButton: false
+                     });
+                  }
+               }
+            });
+            //
+         }
+      });
+   });
+
+   $('[data-toggle="tooltip"], [rel="tooltip"]').tooltip();
+
+   /*==================== reveive order from staff other ====================*/
+   $('.receivedOrderStaff').click(function(){
+      var order_id = $(this).data('id');
+      var receivedOrder = $(this);
+      swal({
+         title: "Bạn có muốn nhận đơn?",
+         type: "warning",
+         showCancelButton: true,
+         confirmButtonColor: "#DD6B55",
+         confirmButtonText: "Ok",
+         cancelButtonText: "Cancel",
+         showLoaderOnConfirm: true,
+         closeOnConfirm: false
+      },
+      function(){
+         $.ajax({
+            url : "/ajax/backend/receivedOrder/" + order_id,
+            type: "GET",
+            beforeSend: function(){
+               receivedOrder.addClass('disabled');
+               receivedOrder.parents('tr').attr('class', '');
+            },
+            success: function(data)
+            {
+               swal({
+                  type: "success",
+                  title: "Received!",
+                  text: "Nhận đơn thành công.",
+                  timer: 1000,
+                  showConfirmButton: false
+               });
+            }
+         });
+      });
+   });
+   $('[rel=tooltip]').tooltip();
+
+   /*==================== edit table ====================*/
+   var editable = function(){
+      var parent = $('.edit-field').parents('td');
+
+      $('tbody').on('click', 'td', function(e){
+         $('.edit-field').removeClass('show');
+         $('.view-field').removeClass('hide');
+
+         var view_field = $(this).find('.view-field');
+         var edit_field = $(this).children('.edit-field');
+         edit_field.attr('autocomplete', "off");
+         if(edit_field.length > 0) {
+            view_field.addClass('hide');
+         }
+
+         td = edit_field.parents('td');
+
+         if(edit_field.is('textarea')) {
+            // edit_field.css('height' , td.height());
+         }
+         edit_field.addClass('show');
+         td.css({'width': edit_field.width()});
+
+         edit_field.select();
+      });
+
+      $('tbody').on('keydown', 'td .edit-field', function(e) {
+         if ((e.keyCode === 13) ) {
+            e.preventDefault();
+            var thisEdit    = $(this);
+            var url         = $(this).parents('tr').data('url');
+            var edit_field  = $(this);
+            var view_field  = $(this).siblings('.view-field');
+            var type        = $(this).attr('type');
+            var name        = $(this).attr('name'); //tên trường
+            var data        = $(this).val(); //giá trị mới
+            var token       = $('body').data('token');
+
+            if (data !== view_field.html()) {
+               $.ajax({
+                  url : url,
+                  type : 'POST',
+                  dataType : 'json',
+                  data: { col: name, data: data, _token: token },
+                  beforeSend: function(){
+                     thisEdit.parent().addClass('before-edit');
+                  },
+                  success : function(response) {
+                     if (response.status == 'success') {
+                        tally_charge      = response.checked;
+                        money_service     = response.service_charge;
+                        total_money       = response.total_money;
+                        money_deposit_new = response.deposit_all;
+                        is_select         = response.is_select;
+                        class_hover       = response.class_hover;//show text hover khiếu nại
+                        if( is_select == 'true' ) {
+                           view_field.html(response.value);
+                        } else {
+                           view_field.html(data);
+                        }
+                        if( class_hover != 'undefined' && class_hover != '' ) {
+                           thisEdit.parents(class_hover).find('.show-tooltip').html(data);
+                        }
+                        updateMoneyByQuantity(edit_field);
+                     }
+
+                     if(response.error == 0) {
+                        view_field.html(data);
+                     }
+
+                     if(response.error == 1) {
+                        view_field.html(data);
+                        view_field.parent().css('background-color', 'yellow');
+                     }
+                     myUtility.showNotify(response.text);
+
+                     thisEdit.parent().removeClass('before-edit');
+
+                     if(response.link == 1) {
+                        reloadLink(response, thisEdit);
+                     }
+                     if(response.shop == 1) {
+                        reloadShop(response);
+                     }
+
+                     if(response.coupon == 1) {
+                        //phiếu xuất kho
+                        alert(response.message);
+                        window.location.reload();
+                     }
+
+                  },
+               });
+            };
+            $('.edit_field').focusout();
+            $('.edit-field').removeClass('show');
+            $('.view-field').removeClass('hide');
+         }
+      });
+   }
+      var updateMoneyByQuantity = function(el){
+         var rate                = parseInt($('body').data('rate'));
+         var quantity            = parseInt(el.val());// số lượng mới
+         var price               = parseFloat(el.parents('tr').find('.price').data('value'));
+         var money_before        = parseFloat(el.parents('tr').find('.money').data('value'));
+         // giá trị tiền kiểm đếm
+         var money_test          = parseFloat(el.parents('.update-edit').find('.money_test').attr('data-value'));
+         // số sản phẩm ban đầu
+         var amount              = parseFloat(el.parents('tr').find('.amount').attr('data-value'));
+         // phần trăm tiền đặt cọc
+         var deposit             = parseFloat(el.parents('.update-edit').find('.money_deposit').data('value'));
+         // tiền đặt cọc cũ
+         var money_deposit_old   = parseFloat(el.parents('.update-edit').find('.money_deposit').attr('deposit-money'));
+         // tổng tiền đặt cọc tất cả
+         var money_all_deposit_old = parseFloat(el.parents('form').find('.money_deposit_all').attr('money-all-deposit'));
+         // tiền ship
+         var shipguest           = parseFloat(el.parents('.update-edit').find('.shipguest').attr('shipguest'));
+         var money               = quantity * price * rate;
+         // thành tiền
+         el.parents('tr').find('.money').data('value', money);
+         el.parents('tr').find('.money').text(numeral(money).format('0,0') + 'đ');
+         // tiền mua hàng
+         var money_shopping = parseFloat(el.parents('.update-edit').find('.money_shopping').data('value'));
+         money_shopping = money_shopping - money_before + money;//tiền hàng
+         //tiền dịch vụ
+         el.parents('.update-edit').find('.money_shopping').data('value', money_shopping);
+         el.parents('.update-edit').find('.money_shopping').text(numeral(money_shopping).format('0,0') + 'đ');
+         el.parents('.update-edit').find('.phi_dv').text(numeral(money_service).format('0,0') + 'đ');
+         el.parents('.update-edit').find('.money_shopping').attr("data-value",money_shopping); // update data-value view list-product
+         // tổng chi phí
+         el.parents('.update-edit').find('.total_money').attr('data-value', total_money);
+         el.parents('.update-edit').find('.total_money').text(numeral(total_money).format('0,0') + 'đ');
+         //add input hidden để truyền tổng tiền hàng cho đặt cọc
+         el.parents('.update-edit').find('.total_js').html('<input type="hidden" name="total_money" value="" />');
+         el.parents('.update-edit').find('.total_js input').attr('value',total_money);//add giá trị
+         //cập nhật lại phí kiểm đếm
+         el.parents('.update-edit').find('.money_test').text(numeral(tally_charge).format('0,0') + 'đ');
+         el.parents('.update-edit').find('.money_test').attr("checked-money",tally_charge); // update data-value view list-product
+         //tổng tiền đặt cọc mới
+         money_all_deposit_new = money_all_deposit_old - money_deposit_old + money_deposit_new;
+         // phải đặt cọc
+         reposit = total_money * deposit;
+         el.parents('.update-edit').find('.money_deposit').attr("deposit-money",reposit);
+         el.parents('.update-edit').find('.money_deposit').text(numeral(reposit).format('0,0') + 'đ');//tiền đặt cọc từng đơn
+         el.parents('form').find('.money_deposit_all').text(numeral(money_all_deposit_new).format('0,0') + 'đ');// tổng tiền đặt cọc
+         el.parents('form').find('.money_deposit_all').attr("all-deposit",money_all_deposit_new);
+         el.parents('form').find('.money_deposit_all').attr("money-all-deposit",money_all_deposit_new);
+      };
+
+   var focusEndOfInput = function(el){
+      el.focus();
+      var tmpStr = el.val();
+      el.val('');
+      el.val(tmpStr);
+   };
+   editable();
+});
+
+function confirmReposit() {
+   var a;
+   a =  confirm("Khi bạn đồng ý tài khoản bạn sẽ bị trừ tiền. Bạn chắc chắn chứ?");
+   if(a==false)
+   {
+      return false;
+   }
+   else
+   {
+      return true;
+   }
+}
+
+function reloadLink(response, thisChange){
+   var orderId = response.data.order_id;
+
+   var td = thisChange.parent();
+
+   td.siblings('.par-quantity').find('.quantity').text(response.data.quantity);
+   td.siblings('.par-booker-quantity').find('.booker_quantity').text(response.data.booker_quantity);
+   td.siblings('.par-price').find('.price').text(response.data.price);
+   td.siblings('.priceQuantity').text(response.data.price * response.data.booker_quantity);
+   var inMoney = response.data.price * response.data.booker_quantity;
+   $('.money_det').text(inMoney);
+   $('.money_sho_dicker').text(response.info[orderId].money_sho_dicker);
+}
+
+function reloadShop(response, thisChange){
+   var orderId = response.data.order_id;
+   var td = thisChange;
+   // $('.ship_received').text(response.info[orderId].ship_received);
+   // $('.ship_payment').text(response.info[orderId].ship_payment);
+   $('.money_sho_dicker').text(response.info[orderId].money_sho_dicker);
+   $('.shop_status').text(response.data.status);
+
+}
+
+// select2
+   function formatRepoProvinceLocal (repo) {
+      if (repo.loading) return repo.text;
+
+      var markup = "<div class='select2-result-repository clearfix'>" +
+         "<div class='select2-result-repository__name'>" + repo.id + " - " + repo.name + "</div>" +
+         "</div>";
+      return markup;
+   }
+   function formatRepoSelectionProvinceLocal (repo) {
+      return repo.name || repo.text;
+   }
+
+   if( $('.select2-province').val() > 0 ) {
+      $('.select2-district').prop("disabled", false);
+   } else {
+      $('.select2-district').prop("disabled", true);
+   }
+   if( $('.select2-district').val() > 0 ) {
+      $('.select2-ward').prop("disabled", false);
+   } else {
+      $('.select2-ward').prop("disabled", true);
+   }
+   // custome select2 for local
+   $('.select2-province').on('change', function() {
+      $('.select2-district').val(null).trigger("change");
+      if( $(this).val() > 0 ) {
+         $('.select2-district').prop("disabled", false);
+      } else {
+         $('.select2-district').prop("disabled", true);
+      }
+   });
+
+   $('.select2-district').on('change', function() {
+      $('.select2-ward').val(null).trigger("change");
+      if( $(this).val() > 0 ) {
+         $('.select2-ward').prop("disabled", false);
+      } else {
+         $('.select2-ward').prop("disabled", true);
+      }
+   });
+// end select 2

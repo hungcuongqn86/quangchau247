@@ -1,0 +1,1630 @@
+<!DOCTYPE html>
+<!-- saved from url=(0056)https://timhangquangchau.com/thqc/phieu-xuat/co-the-xuat -->
+<html class=" "><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <title>Những khách có hàng có thể xuất kho</title>
+   <!-- Tell the browser to be responsive to screen width -->
+   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+   <!-- Bootstrap 3.3.6 -->
+   <link rel="stylesheet" href="./Những khách có hàng có thể xuất kho-chờ xuất kho_files/bootstrap.min.css">
+   <!-- Font Awesome -->
+   <link rel="stylesheet" type="text/css" href="./Những khách có hàng có thể xuất kho-chờ xuất kho_files/font-awesome.min.css">
+   <link href="./Những khách có hàng có thể xuất kho-chờ xuất kho_files/sweetalert.css" rel="stylesheet">
+   <!-- Ionicons -->
+      <!-- Theme style -->
+   <link rel="stylesheet" href="./Những khách có hàng có thể xuất kho-chờ xuất kho_files/AdminLTE.min.css">
+   <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+   <link rel="stylesheet" href="./Những khách có hàng có thể xuất kho-chờ xuất kho_files/_all-skins.min.css">
+   <!-- iCheck -->
+   <link rel="stylesheet" href="./Những khách có hàng có thể xuất kho-chờ xuất kho_files/blue.css">
+   <!-- Date Picker -->
+   <link rel="stylesheet" href="./Những khách có hàng có thể xuất kho-chờ xuất kho_files/datepicker3.css">
+   <!-- Daterange picker -->
+      <!-- bootstrap wysihtml5 - text editor -->
+   <link rel="stylesheet" href="./Những khách có hàng có thể xuất kho-chờ xuất kho_files/bootstrap3-wysihtml5.min.css">
+
+   <link href="./Những khách có hàng có thể xuất kho-chờ xuất kho_files/jquery.gritter.css" rel="stylesheet">
+   <link href="./Những khách có hàng có thể xuất kho-chờ xuất kho_files/bootstrap-datepicker3.min.css" rel="stylesheet">
+   <link href="./Những khách có hàng có thể xuất kho-chờ xuất kho_files/select2.css" rel="stylesheet">
+   <!-- Custom style -->
+   <link rel="stylesheet" type="text/css" href="./Những khách có hàng có thể xuất kho-chờ xuất kho_files/style-version2.css">
+   <link rel="stylesheet" type="text/css" href="./Những khách có hàng có thể xuất kho-chờ xuất kho_files/admin-ver2.css">
+   <link rel="stylesheet" type="text/css" href="./Những khách có hàng có thể xuất kho-chờ xuất kho_files/public.css">
+   <link rel="stylesheet" href="./Những khách có hàng có thể xuất kho-chờ xuất kho_files/nprogress.css">
+   <link rel="stylesheet" href="./Những khách có hàng có thể xuất kho-chờ xuất kho_files/f-thqc.css">
+   <link rel="shortcut icon" type="image/x-icon" href="https://timhangquangchau.com/thqc/img/32.png">
+
+   <!--[if lt IE 9]>
+   <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+   <![endif]-->
+</head>
+<body class="skin-blue sidebar-mini" data-token="w0ZF4euKWqOnnZACQCrOSv8N29wV2LUISSakkAAT">
+<div class="wrapper">
+   <header class="main-header g-no-print">
+      <!-- Logo -->
+      <a href="https://timhangquangchau.com/" class="logo">
+         <!-- mini logo for sidebar mini 50x50 pixels -->
+         <span class="logo-mini"><b>Admin</b>THQC</span>
+         <!-- logo for regular state and mobile devices -->
+         <span class="logo-lg"><b>Admin</b>THQC</span>
+      </a>
+      <!-- Header Navbar: style can be found in header.less -->
+      <nav class="navbar navbar-static-top">
+         <!-- Sidebar toggle button-->
+        <a href="https://timhangquangchau.com/thqc/phieu-xuat/co-the-xuat#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+          <span class="sr-only">Toggle navigation</span>
+        </a>
+
+        <div class="navbar-custom-menu" style="float:none">
+         <ul class="nav navbar-nav navbar-right" style="margin: 0; height: inherit;">
+            <!-- alert comment order -->
+            <li class="dropdown noti-parent">
+               <a href="https://timhangquangchau.com/thqc/phieu-xuat/co-the-xuat#" class="dropdown-toggle noti-icon" data-show="false" data-url="https://timhangquangchau.com/thqc/ajax-get-comment-order" data-target="show-notification" data-toggle="dropdown">
+                  <i class="fa fa-globe"></i>
+                  <span class="noti-count"><b>0</b></span>
+                  <span class="caret"></span>
+               </a>
+
+               <ul class="dropdown-menu flat menu-down dropdown-menu-notificaion">
+                  <li class="dropdown-header header-noti-parent">
+                     <p class="header-noti" style="font-weight: bold">Thông báo đơn hàng</p>
+                  </li>
+                  <div class="menu-down-noti show-messagers show-notification" style="max-height: 416px;overflow-y: scroll;width: 100%;">
+                  </div>
+                  <li class="dropdown-header see-add">
+                  <a href="https://timhangquangchau.com/thqc/notifications" title="Xem tất cả thông báo">Xem tất cả thông báo</a>
+                  </li>
+               </ul>
+            </li>
+
+            <!-- alert all -->
+            <li class="dropdown noti-parent">
+               <a href="https://timhangquangchau.com/thqc/phieu-xuat/co-the-xuat#" class="dropdown-toggle noti-icon" data-show="false" data-url="https://timhangquangchau.com/thqc/ajax-get-message" data-toggle="dropdown" data-target="show-messager">
+                  <i class="fa fa-envelope-o"></i>
+                  <span class="noti-count"><b>0</b></span>
+                  <span class="caret"></span>
+               </a>
+               <ul class="dropdown-menu flat menu-down dropdown-menu-notificaion">
+                  <li class="dropdown-header header-noti-parent">
+                     <span class="header-noti">Tin nhắn</span>
+                     <span class="see-add-noti" title="Đánh dấu đã xem" data-url="https://timhangquangchau.com/quan-ly/tin-nhan/xem-tat-ca">Đánh dấu tất cả là đã đọc</span>
+                  </li>
+                  <div class="menu-down-noti show-messager">
+                  </div>
+                  <li class="dropdown-header see-add"><a href="https://timhangquangchau.com/thqc/notifications">Xem tất cả</a></li>
+               </ul>
+            </li>
+                        <li class="dropdown">
+               <a href="https://timhangquangchau.com/thqc/phieu-xuat/co-the-xuat#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user-secret"></i> <span class="caret"></span></a>
+               <ul class="dropdown-menu">
+                  <li><a href="https://timhangquangchau.com/thqc/users/profile"><i class=" fa fa-suitcase"></i> Đổi thông tin Hoai</a></li>
+                  <li><a href="https://timhangquangchau.com/thqc/users/password"><i class="fa fa-cog"></i> Đổi mật khẩu</a></li>
+                  <li><a href="https://timhangquangchau.com/thqc/logout"><i class="fa fa-key"></i> Log Out</a></li>
+               </ul>
+            </li>
+                     </ul>
+         </div>
+         </nav>
+    </header>      <!-- Left side column. contains the logo and sidebar -->
+   <aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+      <section class="sidebar" style="height: auto;">
+         <!-- Sidebar user panel -->
+         <div class="user-panel">
+            <div class="pull-left image">
+             <img src="./Những khách có hàng có thể xuất kho-chờ xuất kho_files/1024px-No_image_available.svg.png" class="img-circle" alt="User Image">
+            </div>
+            <div class="pull-left info">
+             <p>Hoai</p>
+             <a href="https://timhangquangchau.com/thqc/phieu-xuat/co-the-xuat#"><i class="fa fa-circle text-success"></i> Online</a>
+            </div>
+         </div>
+         <ul class="sidebar-menu">
+            <li class="treeview ">
+               <a href="https://timhangquangchau.com/thqc/phieu-xuat/co-the-xuat#">
+                  <i class="fa fa-dashboard"></i> <span>Thống kê</span>
+                  <span class="pull-right-container">
+                     <i class="fa fa-angle-left pull-right"></i>
+                  </span>
+               </a>
+               <ul class="treeview-menu">
+                  <li class=" hidden">
+                     <a href="https://timhangquangchau.com/thqc/dashboard"><i class="fa fa-cubes"></i> Trạng thái hệ thống</a>
+                  </li>
+                  <li class=" hidden">
+                     <a href="https://timhangquangchau.com/thqc/dashboard/don-hang"><i class="fa fa-cubes"></i> Thống kê đơn hàng</a>
+                  </li>
+                                    <li class=" hidden">
+                     <a href="https://timhangquangchau.com/thqc/dashboard/thong-ke-cskh"><i class="fa fa-cubes"></i> Thống kê CSKH</a>
+                  </li>
+                                 </ul>
+            </li>
+            <li class="">
+               <a href="https://timhangquangchau.com/thqc/rel">
+                  <i class="fa fa-th"></i> <span>Đơn hàng</span>
+               </a>
+            </li>
+                        <li class="">
+               <a href="https://timhangquangchau.com/thqc/rel/ky-gui/danh-sach-yeu-cau">
+                  <i class="fa fa-th"></i> <span>Yêu cầu ký gửi</span>
+               </a>
+            </li>
+            <li class="">
+               <a href="https://timhangquangchau.com/thqc/rel?type=2">
+                  <i class="fa fa-th"></i> <span>Đơn ký gửi</span>
+               </a>
+            </li>
+
+            <li class="">
+               <a href="https://timhangquangchau.com/thqc/order-shop/lading"><i class="fa fa-th"></i> Kiện hàng</a>
+            </li>
+                        <li class="treeview ">
+                <a href="https://timhangquangchau.com/thqc/phieu-xuat/co-the-xuat#">
+                  <i class="fa fa-dashboard"></i> <span>Khiếu nại</span>
+                  <span class="pull-right-container">
+                     <i class="fa fa-angle-left pull-right"></i>
+                  </span>
+               </a>
+               <ul class="treeview-menu">
+                  <li class="">
+                     <a href="https://timhangquangchau.com/thqc/complain/list-complain-new?check_complain=2"><i class="fa fa-phone"></i> Tất cả</a>
+                  </li>
+                  <li class="">
+                     <a href="https://timhangquangchau.com/thqc/complain/list-complain-new?type_order=0&amp;check_complain=2"><i class="fa fa-phone"></i> order</a>
+                  </li>
+                  <li class="">
+                     <a href="https://timhangquangchau.com/thqc/complain/list-complain-new?type_order=2"><i class="fa fa-phone"></i> ký gửi</a>
+                  </li>
+                   <li class=" hidden">
+                     <a href="https://timhangquangchau.com/thqc/complain/list-complain-new?type_order=1"><i class="fa fa-phone"></i> Khiếu nại đơn hàng lẻ</a>
+                  </li>
+               </ul>
+            </li>
+                                     <li class="treeview ">
+                <a href="https://timhangquangchau.com/thqc/phieu-xuat/co-the-xuat#">
+                  <i class="fa fa-dashboard"></i> <span>Kho TQ / 仓库</span>
+                  <span class="pull-right-container">
+                     <i class="fa fa-angle-left pull-right"></i>
+                  </span>
+               </a>
+               <ul class="treeview-menu">
+                                    <li class="">
+                     <a href="https://timhangquangchau.com/thqc/import/danh-sach-phieu-nhap-kho"><i class="fa fa-share"></i>Phiếu nhập kho</a>
+                  </li>
+                  <li class=" hidden">
+                     <a href="https://timhangquangchau.com/thqc/import/danh-sach-phieu-nhap-kho?i_inventory=1"><i class="fa fa-share"></i>Phiếu nhập kho - chờ đi container</a>
+                  </li>
+                                                         <li class="">
+                        <a href="https://timhangquangchau.com/thqc/bao-hang/danh-sach-bao-hang"><i class="fa fa-files-o"></i>Danh sách bao</a>
+                     </li>
+                                                         <li class="">
+                        <a href="https://timhangquangchau.com/thqc/bao-hang/tao-bao?fast=1"><i class="fa fa-plus"></i>Tạo bao nhanh / 造包货</a>
+                     </li>
+                     <li class="">
+                        <a href="https://timhangquangchau.com/thqc/users/kho-tao-don-ki-gui"><i class="fa fa-users"></i>&nbsp;Tạo đơn kí gửi</a>
+                     </li>
+                                                   </ul>
+            </li>
+            
+                        <li class="treeview  active">
+                <a href="https://timhangquangchau.com/thqc/phieu-xuat/co-the-xuat#">
+                  <i class="fa fa-dashboard"></i> <span>Kho VN</span>
+                  <span class="pull-right-container">
+                     <i class="fa fa-angle-left pull-right"></i>
+                  </span>
+               </a>
+               <ul class="treeview-menu menu-open" style="display: block;">
+                                       <li class="">
+                        <a href="https://timhangquangchau.com/thqc/phieu-xuat/co-the-xuat"><i class="fa fa-files-o"></i>Chờ xuất</a>
+                     </li>
+                     <li class="">
+                        <a href="https://timhangquangchau.com/thqc/phieu-xuat/danh-sach-phieu"><i class="fa fa-files-o"></i>Phiếu xuất</a>
+                     </li>
+                     <li class="">
+                        <a href="https://timhangquangchau.com/thqc/bao-hang/danh-sach-bao-hang"><i class="fa fa-files-o"></i>Danh sách bao</a>
+                     </li>
+                     <li class=" hidden">
+                        <a href="https://timhangquangchau.com/thqc/phieu-xuat/yeu-cau-ship"><i class="fa fa-truck" aria-hidden="true"></i>Yêu cầu ship</a>
+                     </li>
+                     <li class="">
+                        <a href="https://timhangquangchau.com/thqc/port/list"><i class="fa fa-refresh"></i>Phiếu điều chuyển</a>
+                     </li>
+                     <li class="">
+                        <a href="https://timhangquangchau.com/thqc/order-shop/truc-tiep-vn"><i class="fa fa-files-o"></i>Nhập kho VN</a>
+                     </li>
+                                 </ul>
+            </li>
+            
+                        <li class="treeview ">
+                <a href="https://timhangquangchau.com/thqc/phieu-xuat/co-the-xuat#">
+                  <i class="fa fa-dashboard"></i> <span>Sau mua hàng</span>
+                  <span class="pull-right-container">
+                     <i class="fa fa-angle-left pull-right"></i>
+                  </span>
+               </a>
+               <ul class="treeview-menu">
+                                    <li class="">
+                     <a href="https://timhangquangchau.com/thqc/orderDetails/losingid">
+                        <i class="fa fa-file-image-o"></i> Hàng mất mã</a>
+                  </li>
+                                    <li class="">
+                     <a href="https://timhangquangchau.com/thqc/order-shop/chuyen-ma-van-don">
+                        <i class="fa fa-file-image-o"></i> Chuyển mã</a>
+                  </li>
+                                 </ul>
+            </li>
+            
+            
+            
+            
+                         <li class="treeview ">
+                <a href="https://timhangquangchau.com/thqc/phieu-xuat/co-the-xuat#">
+                  <i class="fa fa-dashboard"></i> <span>Nhân viên</span>
+                  <span class="pull-right-container">
+                     <i class="fa fa-angle-left pull-right"></i>
+                  </span>
+               </a>
+               <ul class="treeview-menu">
+                  <li class="">
+                     <a href="https://timhangquangchau.com/thqc/employers"><i class="fa fa-user-secret"></i>&nbsp;Quản lý đi/nghỉ</a>
+                  </li>
+                  <li class=" hidden">
+                     <a href="https://timhangquangchau.com/admin/employers/cskh/gan-khach"><i class="fa fa-street-view"></i>Gán khách cho cskh</a>
+                  </li>
+                  <li class=" hidden">
+                     <a href="https://timhangquangchau.com/thqc/employers/trader/gan-khach"><i class="fa fa-street-view"></i>Gán khách cho đặt hàng</a>
+                  </li>
+               </ul>
+            </li>
+            
+                         <li class="treeview ">
+                <a href="https://timhangquangchau.com/thqc/phieu-xuat/co-the-xuat#">
+                  <i class="fa fa-dashboard"></i> <span>Tin tức - thông báo</span>
+                  <span class="pull-right-container">
+                     <i class="fa fa-angle-left pull-right"></i>
+                  </span>
+               </a>
+               <ul class="treeview-menu">
+                  <li class="">
+                     <a href="https://timhangquangchau.com/thqc/blogs"><i class="fa fa-rss-square"></i>&nbsp;Q.L Blogs</a>
+                  </li>
+                  <li class="">
+                     <a href="https://timhangquangchau.com/thqc/categories"><i class="fa fa-rss-square"></i>&nbsp;Q.L Danh mục</a>
+                  </li>
+               </ul>
+            </li>
+            
+                         <li class="treeview ">
+                <a href="https://timhangquangchau.com/thqc/phieu-xuat/co-the-xuat#">
+                  <i class="fa fa-dashboard"></i> <span>Người dùng</span>
+                  <span class="pull-right-container">
+                     <i class="fa fa-angle-left pull-right"></i>
+                  </span>
+               </a>
+               <ul class="treeview-menu">
+                  <li class="">
+                     <a href="https://timhangquangchau.com/thqc/users"><i class="fa fa-user"></i>&nbsp;Q.L người dùng</a>
+                  </li>
+                  <li class="">
+                     <a href="https://timhangquangchau.com/thqc/roles"><i class="fa fa-users"></i>&nbsp;Nhóm người dùng</a>
+                  </li>
+                  <li class="">
+                     <a href="https://timhangquangchau.com/thqc/permissions"><i class="fa fa-trophy"></i>&nbsp;Quyền</a>
+                  </li>
+               </ul>
+            </li>
+            
+            
+         </ul>
+       </section>
+    <!-- /.sidebar -->
+   </aside>
+
+   <!-- Content Wrapper. Contains page content -->
+   <div class="content-wrapper" style="min-height: 790px;">
+       <!-- Main content -->
+         <div class="no-print">
+            <div class="col-sm-12">
+                           </div>
+         </div>
+         	<section class="panel panel-default flat">
+		<header class="panel-heading uppercase">
+			Những khách có hàng có thể xuất kho
+			Bạn đang ở kho <b>Cầu Giấy</b>
+		</header>
+		<div class="panel-body panel-overflow">
+			<form method="get">
+				<div class="">
+					<div class="form-group form-item inline">
+						<input value="" rel="tooltip" title="" placeholder="Email khách" type="text" class="form-control" name="email" data-original-title="Email khách">
+					</div>
+					<div class="form-group form-item inline">
+						<input value="" rel="tooltip" title="" placeholder="Mã kiểm soát" type="text" class="form-control" name="new_code" data-original-title="Mã kiểm soát">
+					</div>
+					<div class="form-group form-item inline">
+						<input value="" rel="tooltip" title="" placeholder="Mã vận đơn" type="text" class="form-control" name="lading_code" data-original-title="Mã vận đơn">
+					</div>
+					<div class="form-group form-item inline">
+						<input value="" rel="tooltip" title="" placeholder="Mã đơn" type="text" class="form-control" name="order_id" data-original-title="Mã đơn">
+					</div>
+					<div class="form-group form-item inline">
+						<input value="" rel="tooltip" title="" placeholder="Quá số ngày chưa xuất kho" type="text" class="form-control" name="over_invault" data-original-title="Quá số ngày chưa xuất kho">
+					</div>
+					<div class="form-group form-item inline hidden">
+						<input value="" rel="tooltip" title="" placeholder="Quá số ngày gọi điện" type="text" class="form-control" name="over_phone" data-original-title="Quá số ngày gọi điện">
+					</div>
+					<div class="form-group form-item inline">
+						<select name="current_warehouse" class="form-control">
+							<option value="">--Hàng ở kho--</option>
+															<option value="1">Cầu Giấy</option>
+															<option value="4">HCM</option>
+															<option value="13">Ship tại nhà</option>
+													</select>
+					</div>
+					<div class="form-group form-item inline">
+						<button class="btn btn-primary" type="submit">Tìm</button>
+					</div>
+				</div>
+			</form>
+			<span class="clearfix"></span>
+			<hr>
+			<div>
+			<div class="row-fluid">
+		<div class="span6">
+		<div class="dataTables_info">Đang hiển thị <b>20</b> trong tổng số <b>66</b> bản ghi.</div>
+	</div>
+		<div class="span6"><div class="dataTables_paginate paging_bootstrap pagination"><ul class="pagination"><li class="disabled" aria-disabled="true"><a href="javascript:void(0)">« Trước</a></li> <li class="active"><a href="javascript:void(0)">1</a></li><li><a href="https://timhangquangchau.com/thqc/phieu-xuat/co-the-xuat?page=2">2</a></li><li><a href="https://timhangquangchau.com/thqc/phieu-xuat/co-the-xuat?page=3">3</a></li><li><a href="https://timhangquangchau.com/thqc/phieu-xuat/co-the-xuat?page=4">4</a></li> <li><a href="https://timhangquangchau.com/thqc/phieu-xuat/co-the-xuat?page=2" rel="next">Sau »</a></li></ul></div></div>
+</div>
+				<table class="display table table-bordered">
+					<thead>
+						<tr>
+							<th style="width: 250px;">Email khách</th>
+							<th>Thông tin xuất kho</th>
+							<th class="text-center" style="width= 700px; ">
+									Thông tin thêm
+							</th>
+							<th class="hidden">Gọi điện lần cuối</th>
+							<th>Ghi chú</th>
+							<th style="width: 100px;">Thao tác</th>
+						</tr>
+					</thead>
+					<tbody data-call="https://timhangquangchau.com/thqc/users/goi-dien" data-checkout="https://timhangquangchau.com/thqc/phieu-xuat/tinh-tam-tien-xuat-kho">
+													<tr data-customer-id="22903" data-url="https://timhangquangchau.com/thqc/users/sua-nhanh-nguoi-dung-22903">
+								<td>
+									<ul class="list-unstyled list-order">
+										<li>ptttdong@gmail.com</li>
+										<li>Phan Thanh Đông</li>
+										<li>0905401599</li>
+										<li><span rel="tooltip" title="" data-original-title="Địa chỉ khách"></span></li>
+										<li><span rel="tooltip" title="" data-original-title="Kho khách chọn">Cầu Giấy</span></li>
+									</ul>
+								</td>
+								<td class="text-right">
+									<ul class="list-unstyled list-order">
+										<li><a href="javascript:;" data-user-id="22903" class="btn btnTempCheckout btn-danger btn-xs">Xem tiền thiếu</a></li>
+										<li class="user-available">
+										</li>
+										<li class="money-export">
+										</li>
+										<li class="last-balance">
+										</li>
+									</ul>
+								</td>
+								<td>
+
+									<table class="table table-bordered">
+										<thead>
+											<tr><th style="width: 20%">Hàng ở kho</th>
+											<th style="width: 10%">Số lượng</th>
+											<th style="width: 35%">Vị trí</th>
+											<th style="width: 35%">Mã VĐ</th>
+										</tr></thead>
+										<tbody>
+																																				<tr>
+														<td>Cầu Giấy</td>
+														<td>1</td>
+														<td></td>
+														<td>75132825913696 / 10.80</td>
+													</tr>
+																																	</tbody>
+									</table>
+								</td>
+								<td class="text-center hidden">
+									<ul class="list-unstyled list-order">
+									<li rel="tooltip" title="" data-original-title="08:00:00">...</li>
+									<li>bởi - ...</li>
+									<li><a href="javascript:;" class="btnCall btn btn-default btn-xs">Gọi điện</a></li>
+									</ul>
+								</td>
+								<td>
+									<span class="view-field u_note"></span>
+			                  <textarea class="edit-field form-control" type="text" name="u_note"></textarea>
+								</td>
+								<td>
+									<a href="https://timhangquangchau.com/thqc/phieu-xuat/22903-tao-phieu" class="btn btn-xs btn-primary">Tạo phiếu</a>
+									<a href="https://timhangquangchau.com/thqc/phieu-xuat/22903-tao-du-ma" title="Tạo phiếu với tất cả mã hiện trong kho vào phiếu này" class="btn btn-xs btn-success confirmHref">Tạo phiếu đủ mã</a>
+								</td>
+							</tr>
+													<tr data-customer-id="23060" data-url="https://timhangquangchau.com/thqc/users/sua-nhanh-nguoi-dung-23060">
+								<td>
+									<ul class="list-unstyled list-order">
+										<li>maytranghht189@gmail.com</li>
+										<li>MinhAnh</li>
+										<li>0972062941</li>
+										<li><span rel="tooltip" title="" data-original-title="Địa chỉ khách"></span></li>
+										<li><span rel="tooltip" title="" data-original-title="Kho khách chọn">Cầu Giấy</span></li>
+									</ul>
+								</td>
+								<td class="text-right">
+									<ul class="list-unstyled list-order">
+										<li><a href="javascript:;" data-user-id="23060" class="btn btnTempCheckout btn-danger btn-xs">Xem tiền thiếu</a></li>
+										<li class="user-available">
+										</li>
+										<li class="money-export">
+										</li>
+										<li class="last-balance">
+										</li>
+									</ul>
+								</td>
+								<td>
+
+									<table class="table table-bordered">
+										<thead>
+											<tr><th style="width: 20%">Hàng ở kho</th>
+											<th style="width: 10%">Số lượng</th>
+											<th style="width: 35%">Vị trí</th>
+											<th style="width: 35%">Mã VĐ</th>
+										</tr></thead>
+										<tbody>
+																																				<tr>
+														<td>Cầu Giấy</td>
+														<td>1</td>
+														<td></td>
+														<td>3919203413391 / 0.50</td>
+													</tr>
+																																	</tbody>
+									</table>
+								</td>
+								<td class="text-center hidden">
+									<ul class="list-unstyled list-order">
+									<li rel="tooltip" title="" data-original-title="08:00:00">...</li>
+									<li>bởi - ...</li>
+									<li><a href="javascript:;" class="btnCall btn btn-default btn-xs">Gọi điện</a></li>
+									</ul>
+								</td>
+								<td>
+									<span class="view-field u_note"></span>
+			                  <textarea class="edit-field form-control" type="text" name="u_note"></textarea>
+								</td>
+								<td>
+									<a href="https://timhangquangchau.com/thqc/phieu-xuat/23060-tao-phieu" class="btn btn-xs btn-primary">Tạo phiếu</a>
+									<a href="https://timhangquangchau.com/thqc/phieu-xuat/23060-tao-du-ma" title="Tạo phiếu với tất cả mã hiện trong kho vào phiếu này" class="btn btn-xs btn-success confirmHref">Tạo phiếu đủ mã</a>
+								</td>
+							</tr>
+													<tr data-customer-id="23026" data-url="https://timhangquangchau.com/thqc/users/sua-nhanh-nguoi-dung-23026">
+								<td>
+									<ul class="list-unstyled list-order">
+										<li>chichilam91@gmail.com</li>
+										<li>Chi</li>
+										<li>0966298175</li>
+										<li><span rel="tooltip" title="" data-original-title="Địa chỉ khách"></span></li>
+										<li><span rel="tooltip" title="" data-original-title="Kho khách chọn">Cầu Giấy</span></li>
+									</ul>
+								</td>
+								<td class="text-right">
+									<ul class="list-unstyled list-order">
+										<li><a href="javascript:;" data-user-id="23026" class="btn btnTempCheckout btn-danger btn-xs">Xem tiền thiếu</a></li>
+										<li class="user-available">
+										</li>
+										<li class="money-export">
+										</li>
+										<li class="last-balance">
+										</li>
+									</ul>
+								</td>
+								<td>
+
+									<table class="table table-bordered">
+										<thead>
+											<tr><th style="width: 20%">Hàng ở kho</th>
+											<th style="width: 10%">Số lượng</th>
+											<th style="width: 35%">Vị trí</th>
+											<th style="width: 35%">Mã VĐ</th>
+										</tr></thead>
+										<tbody>
+																																				<tr>
+														<td>Cầu Giấy</td>
+														<td>1</td>
+														<td></td>
+														<td>3833259578018 / 0.50</td>
+													</tr>
+																																	</tbody>
+									</table>
+								</td>
+								<td class="text-center hidden">
+									<ul class="list-unstyled list-order">
+									<li rel="tooltip" title="" data-original-title="08:00:00">...</li>
+									<li>bởi - ...</li>
+									<li><a href="javascript:;" class="btnCall btn btn-default btn-xs">Gọi điện</a></li>
+									</ul>
+								</td>
+								<td>
+									<span class="view-field u_note"></span>
+			                  <textarea class="edit-field form-control" type="text" name="u_note"></textarea>
+								</td>
+								<td>
+									<a href="https://timhangquangchau.com/thqc/phieu-xuat/23026-tao-phieu" class="btn btn-xs btn-primary">Tạo phiếu</a>
+									<a href="https://timhangquangchau.com/thqc/phieu-xuat/23026-tao-du-ma" title="Tạo phiếu với tất cả mã hiện trong kho vào phiếu này" class="btn btn-xs btn-success confirmHref">Tạo phiếu đủ mã</a>
+								</td>
+							</tr>
+													<tr data-customer-id="22986" data-url="https://timhangquangchau.com/thqc/users/sua-nhanh-nguoi-dung-22986">
+								<td>
+									<ul class="list-unstyled list-order">
+										<li>trinhtiendung193@gmail.com</li>
+										<li>Mr Tiến Dũng</li>
+										<li>0822555111</li>
+										<li><span rel="tooltip" title="" data-original-title="Địa chỉ khách"></span></li>
+										<li><span rel="tooltip" title="" data-original-title="Kho khách chọn">Cầu Giấy</span></li>
+									</ul>
+								</td>
+								<td class="text-right">
+									<ul class="list-unstyled list-order">
+										<li><a href="javascript:;" data-user-id="22986" class="btn btnTempCheckout btn-danger btn-xs">Xem tiền thiếu</a></li>
+										<li class="user-available">
+										</li>
+										<li class="money-export">
+										</li>
+										<li class="last-balance">
+										</li>
+									</ul>
+								</td>
+								<td>
+
+									<table class="table table-bordered">
+										<thead>
+											<tr><th style="width: 20%">Hàng ở kho</th>
+											<th style="width: 10%">Số lượng</th>
+											<th style="width: 35%">Vị trí</th>
+											<th style="width: 35%">Mã VĐ</th>
+										</tr></thead>
+										<tbody>
+																																				<tr>
+														<td>Cầu Giấy</td>
+														<td>6</td>
+														<td>- - - - - </td>
+														<td>75132417743117 / 2.30<br> 75132417882806 / 2.30<br> 75132417470911 / 2.30<br> 75132417470866 / 2.20<br> 75132417470700 / 2.20<br> 75132417882416 / 2.20</td>
+													</tr>
+																																	</tbody>
+									</table>
+								</td>
+								<td class="text-center hidden">
+									<ul class="list-unstyled list-order">
+									<li rel="tooltip" title="" data-original-title="08:00:00">...</li>
+									<li>bởi - ...</li>
+									<li><a href="javascript:;" class="btnCall btn btn-default btn-xs">Gọi điện</a></li>
+									</ul>
+								</td>
+								<td>
+									<span class="view-field u_note"></span>
+			                  <textarea class="edit-field form-control" type="text" name="u_note"></textarea>
+								</td>
+								<td>
+									<a href="https://timhangquangchau.com/thqc/phieu-xuat/22986-tao-phieu" class="btn btn-xs btn-primary">Tạo phiếu</a>
+									<a href="https://timhangquangchau.com/thqc/phieu-xuat/22986-tao-du-ma" title="Tạo phiếu với tất cả mã hiện trong kho vào phiếu này" class="btn btn-xs btn-success confirmHref">Tạo phiếu đủ mã</a>
+								</td>
+							</tr>
+													<tr data-customer-id="22348" data-url="https://timhangquangchau.com/thqc/users/sua-nhanh-nguoi-dung-22348">
+								<td>
+									<ul class="list-unstyled list-order">
+										<li>banhang876@gmail.com</li>
+										<li>Nguyễn Hương</li>
+										<li>0941927725</li>
+										<li><span rel="tooltip" title="" data-original-title="Địa chỉ khách"></span></li>
+										<li><span rel="tooltip" title="" data-original-title="Kho khách chọn">Cầu Giấy</span></li>
+									</ul>
+								</td>
+								<td class="text-right">
+									<ul class="list-unstyled list-order">
+										<li><a href="javascript:;" data-user-id="22348" class="btn btnTempCheckout btn-danger btn-xs">Xem tiền thiếu</a></li>
+										<li class="user-available">
+										</li>
+										<li class="money-export">
+										</li>
+										<li class="last-balance">
+										</li>
+									</ul>
+								</td>
+								<td>
+
+									<table class="table table-bordered">
+										<thead>
+											<tr><th style="width: 20%">Hàng ở kho</th>
+											<th style="width: 10%">Số lượng</th>
+											<th style="width: 35%">Vị trí</th>
+											<th style="width: 35%">Mã VĐ</th>
+										</tr></thead>
+										<tbody>
+																																				<tr>
+														<td>Cầu Giấy</td>
+														<td>3</td>
+														<td>- - </td>
+														<td>9894950064116 / 0.60<br> 3726011461076 / 0.50<br> 75132459108769 / 0.50</td>
+													</tr>
+																																	</tbody>
+									</table>
+								</td>
+								<td class="text-center hidden">
+									<ul class="list-unstyled list-order">
+									<li rel="tooltip" title="" data-original-title="08:00:00">...</li>
+									<li>bởi - ...</li>
+									<li><a href="javascript:;" class="btnCall btn btn-default btn-xs">Gọi điện</a></li>
+									</ul>
+								</td>
+								<td>
+									<span class="view-field u_note"></span>
+			                  <textarea class="edit-field form-control" type="text" name="u_note"></textarea>
+								</td>
+								<td>
+									<a href="https://timhangquangchau.com/thqc/phieu-xuat/22348-tao-phieu" class="btn btn-xs btn-primary">Tạo phiếu</a>
+									<a href="https://timhangquangchau.com/thqc/phieu-xuat/22348-tao-du-ma" title="Tạo phiếu với tất cả mã hiện trong kho vào phiếu này" class="btn btn-xs btn-success confirmHref">Tạo phiếu đủ mã</a>
+								</td>
+							</tr>
+													<tr data-customer-id="22772" data-url="https://timhangquangchau.com/thqc/users/sua-nhanh-nguoi-dung-22772">
+								<td>
+									<ul class="list-unstyled list-order">
+										<li>vuanhhuong.mb@gmail.com</li>
+										<li>Vũ Thị ánh Hương</li>
+										<li>0963791204</li>
+										<li><span rel="tooltip" title="" data-original-title="Địa chỉ khách"></span></li>
+										<li><span rel="tooltip" title="" data-original-title="Kho khách chọn">Cầu Giấy</span></li>
+									</ul>
+								</td>
+								<td class="text-right">
+									<ul class="list-unstyled list-order">
+										<li><a href="javascript:;" data-user-id="22772" class="btn btnTempCheckout btn-danger btn-xs">Xem tiền thiếu</a></li>
+										<li class="user-available">
+										</li>
+										<li class="money-export">
+										</li>
+										<li class="last-balance">
+										</li>
+									</ul>
+								</td>
+								<td>
+
+									<table class="table table-bordered">
+										<thead>
+											<tr><th style="width: 20%">Hàng ở kho</th>
+											<th style="width: 10%">Số lượng</th>
+											<th style="width: 35%">Vị trí</th>
+											<th style="width: 35%">Mã VĐ</th>
+										</tr></thead>
+										<tbody>
+																																				<tr>
+														<td>Cầu Giấy</td>
+														<td>4</td>
+														<td>- - - </td>
+														<td>804642079139064827 / 0.80<br> 804636930917874984 / 0.60<br> 3700329170133 / 9.40<br> 669730257976 / 2.30</td>
+													</tr>
+																																	</tbody>
+									</table>
+								</td>
+								<td class="text-center hidden">
+									<ul class="list-unstyled list-order">
+									<li rel="tooltip" title="" data-original-title="08:00:00">...</li>
+									<li>bởi - ...</li>
+									<li><a href="javascript:;" class="btnCall btn btn-default btn-xs">Gọi điện</a></li>
+									</ul>
+								</td>
+								<td>
+									<span class="view-field u_note"></span>
+			                  <textarea class="edit-field form-control" type="text" name="u_note"></textarea>
+								</td>
+								<td>
+									<a href="https://timhangquangchau.com/thqc/phieu-xuat/22772-tao-phieu" class="btn btn-xs btn-primary">Tạo phiếu</a>
+									<a href="https://timhangquangchau.com/thqc/phieu-xuat/22772-tao-du-ma" title="Tạo phiếu với tất cả mã hiện trong kho vào phiếu này" class="btn btn-xs btn-success confirmHref">Tạo phiếu đủ mã</a>
+								</td>
+							</tr>
+													<tr data-customer-id="23067" data-url="https://timhangquangchau.com/thqc/users/sua-nhanh-nguoi-dung-23067">
+								<td>
+									<ul class="list-unstyled list-order">
+										<li>khanhduong.vn2017@gmail.com</li>
+										<li>Trần Thụ</li>
+										<li>0973346822</li>
+										<li><span rel="tooltip" title="" data-original-title="Địa chỉ khách"></span></li>
+										<li><span rel="tooltip" title="" data-original-title="Kho khách chọn">Cầu Giấy</span></li>
+									</ul>
+								</td>
+								<td class="text-right">
+									<ul class="list-unstyled list-order">
+										<li><a href="javascript:;" data-user-id="23067" class="btn btnTempCheckout btn-danger btn-xs">Xem tiền thiếu</a></li>
+										<li class="user-available">
+										</li>
+										<li class="money-export">
+										</li>
+										<li class="last-balance">
+										</li>
+									</ul>
+								</td>
+								<td>
+
+									<table class="table table-bordered">
+										<thead>
+											<tr><th style="width: 20%">Hàng ở kho</th>
+											<th style="width: 10%">Số lượng</th>
+											<th style="width: 35%">Vị trí</th>
+											<th style="width: 35%">Mã VĐ</th>
+										</tr></thead>
+										<tbody>
+																																				<tr>
+														<td>Cầu Giấy</td>
+														<td>2</td>
+														<td>- </td>
+														<td>578361291000236634 / 40.00<br> 75132410045688 / 9.20</td>
+													</tr>
+																																	</tbody>
+									</table>
+								</td>
+								<td class="text-center hidden">
+									<ul class="list-unstyled list-order">
+									<li rel="tooltip" title="" data-original-title="08:00:00">...</li>
+									<li>bởi - ...</li>
+									<li><a href="javascript:;" class="btnCall btn btn-default btn-xs">Gọi điện</a></li>
+									</ul>
+								</td>
+								<td>
+									<span class="view-field u_note"></span>
+			                  <textarea class="edit-field form-control" type="text" name="u_note"></textarea>
+								</td>
+								<td>
+									<a href="https://timhangquangchau.com/thqc/phieu-xuat/23067-tao-phieu" class="btn btn-xs btn-primary">Tạo phiếu</a>
+									<a href="https://timhangquangchau.com/thqc/phieu-xuat/23067-tao-du-ma" title="Tạo phiếu với tất cả mã hiện trong kho vào phiếu này" class="btn btn-xs btn-success confirmHref">Tạo phiếu đủ mã</a>
+								</td>
+							</tr>
+													<tr data-customer-id="22863" data-url="https://timhangquangchau.com/thqc/users/sua-nhanh-nguoi-dung-22863">
+								<td>
+									<ul class="list-unstyled list-order">
+										<li>trannam.n13@gmail.com</li>
+										<li>Trần Văn Nam</li>
+										<li>0984176214</li>
+										<li><span rel="tooltip" title="" data-original-title="Địa chỉ khách">103 Lương Thế Vinh, Thanh Xuân, HN</span></li>
+										<li><span rel="tooltip" title="" data-original-title="Kho khách chọn">Cầu Giấy</span></li>
+									</ul>
+								</td>
+								<td class="text-right">
+									<ul class="list-unstyled list-order">
+										<li><a href="javascript:;" data-user-id="22863" class="btn btnTempCheckout btn-danger btn-xs">Xem tiền thiếu</a></li>
+										<li class="user-available">
+										</li>
+										<li class="money-export">
+										</li>
+										<li class="last-balance">
+										</li>
+									</ul>
+								</td>
+								<td>
+
+									<table class="table table-bordered">
+										<thead>
+											<tr><th style="width: 20%">Hàng ở kho</th>
+											<th style="width: 10%">Số lượng</th>
+											<th style="width: 35%">Vị trí</th>
+											<th style="width: 35%">Mã VĐ</th>
+										</tr></thead>
+										<tbody>
+																																				<tr>
+														<td>Cầu Giấy</td>
+														<td>11</td>
+														<td>- - - - - - - - - - </td>
+														<td>3700453555585 / 3.20<br> 804696784495458606 / 6.40<br> 900077732351 / 26.50<br> 3700105591992 / 9.90<br> 71580189265867 / 5.90<br> 804694854524155676 / 2.90<br> 3833296065094 / 12.80<br> 3833417282479 / 1.10<br> 804656611833216282 / 2.10<br> 3700314995650 / 12.50<br> 640119890567 / 3.00</td>
+													</tr>
+																																	</tbody>
+									</table>
+								</td>
+								<td class="text-center hidden">
+									<ul class="list-unstyled list-order">
+									<li rel="tooltip" title="" data-original-title="08:00:00">...</li>
+									<li>bởi - ...</li>
+									<li><a href="javascript:;" class="btnCall btn btn-default btn-xs">Gọi điện</a></li>
+									</ul>
+								</td>
+								<td>
+									<span class="view-field u_note"></span>
+			                  <textarea class="edit-field form-control" type="text" name="u_note"></textarea>
+								</td>
+								<td>
+									<a href="https://timhangquangchau.com/thqc/phieu-xuat/22863-tao-phieu" class="btn btn-xs btn-primary">Tạo phiếu</a>
+									<a href="https://timhangquangchau.com/thqc/phieu-xuat/22863-tao-du-ma" title="Tạo phiếu với tất cả mã hiện trong kho vào phiếu này" class="btn btn-xs btn-success confirmHref">Tạo phiếu đủ mã</a>
+								</td>
+							</tr>
+													<tr data-customer-id="23029" data-url="https://timhangquangchau.com/thqc/users/sua-nhanh-nguoi-dung-23029">
+								<td>
+									<ul class="list-unstyled list-order">
+										<li>joelchen.vn@gmail.com</li>
+										<li>Trần Như Nghĩa</li>
+										<li>0964713714</li>
+										<li><span rel="tooltip" title="" data-original-title="Địa chỉ khách">Chung Cư Happy City , đường Nguyễn Văn Linh, Xã Bình Hưng , Huyện Bình Chánh, TpHCM</span></li>
+										<li><span rel="tooltip" title="" data-original-title="Kho khách chọn">Cầu Giấy</span></li>
+									</ul>
+								</td>
+								<td class="text-right">
+									<ul class="list-unstyled list-order">
+										<li><a href="javascript:;" data-user-id="23029" class="btn btnTempCheckout btn-danger btn-xs">Xem tiền thiếu</a></li>
+										<li class="user-available">
+										</li>
+										<li class="money-export">
+										</li>
+										<li class="last-balance">
+										</li>
+									</ul>
+								</td>
+								<td>
+
+									<table class="table table-bordered">
+										<thead>
+											<tr><th style="width: 20%">Hàng ở kho</th>
+											<th style="width: 10%">Số lượng</th>
+											<th style="width: 35%">Vị trí</th>
+											<th style="width: 35%">Mã VĐ</th>
+										</tr></thead>
+										<tbody>
+																																				<tr>
+														<td>Cầu Giấy</td>
+														<td>6</td>
+														<td>- - - - - </td>
+														<td>3707103835961 / 0.90<br> 9894925752311 / 0.50<br> 804710127409145614 / 0.50<br> 71428667808719 / 0.50<br> 9894925795529 / 0.50<br> 9894926525441 / 0.50</td>
+													</tr>
+																																	</tbody>
+									</table>
+								</td>
+								<td class="text-center hidden">
+									<ul class="list-unstyled list-order">
+									<li rel="tooltip" title="" data-original-title="08:00:00">...</li>
+									<li>bởi - ...</li>
+									<li><a href="javascript:;" class="btnCall btn btn-default btn-xs">Gọi điện</a></li>
+									</ul>
+								</td>
+								<td>
+									<span class="view-field u_note"></span>
+			                  <textarea class="edit-field form-control" type="text" name="u_note"></textarea>
+								</td>
+								<td>
+									<a href="https://timhangquangchau.com/thqc/phieu-xuat/23029-tao-phieu" class="btn btn-xs btn-primary">Tạo phiếu</a>
+									<a href="https://timhangquangchau.com/thqc/phieu-xuat/23029-tao-du-ma" title="Tạo phiếu với tất cả mã hiện trong kho vào phiếu này" class="btn btn-xs btn-success confirmHref">Tạo phiếu đủ mã</a>
+								</td>
+							</tr>
+													<tr data-customer-id="22967" data-url="https://timhangquangchau.com/thqc/users/sua-nhanh-nguoi-dung-22967">
+								<td>
+									<ul class="list-unstyled list-order">
+										<li>ckip.vu981227@gmail.com</li>
+										<li>Minh Tú Vũ</li>
+										<li>0335885504</li>
+										<li><span rel="tooltip" title="" data-original-title="Địa chỉ khách"></span></li>
+										<li><span rel="tooltip" title="" data-original-title="Kho khách chọn">Cầu Giấy</span></li>
+									</ul>
+								</td>
+								<td class="text-right">
+									<ul class="list-unstyled list-order">
+										<li><a href="javascript:;" data-user-id="22967" class="btn btnTempCheckout btn-danger btn-xs">Xem tiền thiếu</a></li>
+										<li class="user-available">
+										</li>
+										<li class="money-export">
+										</li>
+										<li class="last-balance">
+										</li>
+									</ul>
+								</td>
+								<td>
+
+									<table class="table table-bordered">
+										<thead>
+											<tr><th style="width: 20%">Hàng ở kho</th>
+											<th style="width: 10%">Số lượng</th>
+											<th style="width: 35%">Vị trí</th>
+											<th style="width: 35%">Mã VĐ</th>
+										</tr></thead>
+										<tbody>
+																																				<tr>
+														<td>Cầu Giấy</td>
+														<td>7</td>
+														<td>- - - - - - </td>
+														<td>71468372795954 / 0.50<br> 804627134742670006 / 0.50<br> 3700181105752 / 0.50<br> 4619217122431 / 0.50<br> 3710960032665 / 0.50<br> 3834473928700 / 0.50<br> 70438037520446 / 1.10</td>
+													</tr>
+																																	</tbody>
+									</table>
+								</td>
+								<td class="text-center hidden">
+									<ul class="list-unstyled list-order">
+									<li rel="tooltip" title="" data-original-title="08:00:00">...</li>
+									<li>bởi - ...</li>
+									<li><a href="javascript:;" class="btnCall btn btn-default btn-xs">Gọi điện</a></li>
+									</ul>
+								</td>
+								<td>
+									<span class="view-field u_note"></span>
+			                  <textarea class="edit-field form-control" type="text" name="u_note"></textarea>
+								</td>
+								<td>
+									<a href="https://timhangquangchau.com/thqc/phieu-xuat/22967-tao-phieu" class="btn btn-xs btn-primary">Tạo phiếu</a>
+									<a href="https://timhangquangchau.com/thqc/phieu-xuat/22967-tao-du-ma" title="Tạo phiếu với tất cả mã hiện trong kho vào phiếu này" class="btn btn-xs btn-success confirmHref">Tạo phiếu đủ mã</a>
+								</td>
+							</tr>
+													<tr data-customer-id="22687" data-url="https://timhangquangchau.com/thqc/users/sua-nhanh-nguoi-dung-22687">
+								<td>
+									<ul class="list-unstyled list-order">
+										<li>lenhanftu@gmail.com</li>
+										<li>Le Thi Nhan</li>
+										<li>0949821949</li>
+										<li><span rel="tooltip" title="" data-original-title="Địa chỉ khách"></span></li>
+										<li><span rel="tooltip" title="" data-original-title="Kho khách chọn">Cầu Giấy</span></li>
+									</ul>
+								</td>
+								<td class="text-right">
+									<ul class="list-unstyled list-order">
+										<li><a href="javascript:;" data-user-id="22687" class="btn btnTempCheckout btn-danger btn-xs">Xem tiền thiếu</a></li>
+										<li class="user-available">
+										</li>
+										<li class="money-export">
+										</li>
+										<li class="last-balance">
+										</li>
+									</ul>
+								</td>
+								<td>
+
+									<table class="table table-bordered">
+										<thead>
+											<tr><th style="width: 20%">Hàng ở kho</th>
+											<th style="width: 10%">Số lượng</th>
+											<th style="width: 35%">Vị trí</th>
+											<th style="width: 35%">Mã VĐ</th>
+										</tr></thead>
+										<tbody>
+																																				<tr>
+														<td>Cầu Giấy</td>
+														<td>6</td>
+														<td>- - - - - </td>
+														<td>669728111790 / 3.30<br> 3861210501305 / 0.90<br> 804627178189199417 / 2.80<br> 3861210500567 / 0.90<br> 804631009098492447 / 1.30<br> 3861210500986 / 0.80</td>
+													</tr>
+																																	</tbody>
+									</table>
+								</td>
+								<td class="text-center hidden">
+									<ul class="list-unstyled list-order">
+									<li rel="tooltip" title="" data-original-title="08:00:00">...</li>
+									<li>bởi - ...</li>
+									<li><a href="javascript:;" class="btnCall btn btn-default btn-xs">Gọi điện</a></li>
+									</ul>
+								</td>
+								<td>
+									<span class="view-field u_note"></span>
+			                  <textarea class="edit-field form-control" type="text" name="u_note"></textarea>
+								</td>
+								<td>
+									<a href="https://timhangquangchau.com/thqc/phieu-xuat/22687-tao-phieu" class="btn btn-xs btn-primary">Tạo phiếu</a>
+									<a href="https://timhangquangchau.com/thqc/phieu-xuat/22687-tao-du-ma" title="Tạo phiếu với tất cả mã hiện trong kho vào phiếu này" class="btn btn-xs btn-success confirmHref">Tạo phiếu đủ mã</a>
+								</td>
+							</tr>
+													<tr data-customer-id="22950" data-url="https://timhangquangchau.com/thqc/users/sua-nhanh-nguoi-dung-22950">
+								<td>
+									<ul class="list-unstyled list-order">
+										<li>leoanhmaitrang@gmail.com</li>
+										<li>Lê Oanh</li>
+										<li>0968686156</li>
+										<li><span rel="tooltip" title="" data-original-title="Địa chỉ khách"></span></li>
+										<li><span rel="tooltip" title="" data-original-title="Kho khách chọn">Cầu Giấy</span></li>
+									</ul>
+								</td>
+								<td class="text-right">
+									<ul class="list-unstyled list-order">
+										<li><a href="javascript:;" data-user-id="22950" class="btn btnTempCheckout btn-danger btn-xs">Xem tiền thiếu</a></li>
+										<li class="user-available">
+										</li>
+										<li class="money-export">
+										</li>
+										<li class="last-balance">
+										</li>
+									</ul>
+								</td>
+								<td>
+
+									<table class="table table-bordered">
+										<thead>
+											<tr><th style="width: 20%">Hàng ở kho</th>
+											<th style="width: 10%">Số lượng</th>
+											<th style="width: 35%">Vị trí</th>
+											<th style="width: 35%">Mã VĐ</th>
+										</tr></thead>
+										<tbody>
+																																				<tr>
+														<td>Cầu Giấy</td>
+														<td>7</td>
+														<td>- - - - - - </td>
+														<td>75131603684026 / 1.90<br> 3399891369409 / 0.50<br> 75131984423886 / 0.90<br> 75131716843331 / 0.80<br> 75131568992847 / 0.80<br> 3831925628441 / 0.60<br> 3903757552561 / 0.60</td>
+													</tr>
+																																	</tbody>
+									</table>
+								</td>
+								<td class="text-center hidden">
+									<ul class="list-unstyled list-order">
+									<li rel="tooltip" title="" data-original-title="08:00:00">...</li>
+									<li>bởi - ...</li>
+									<li><a href="javascript:;" class="btnCall btn btn-default btn-xs">Gọi điện</a></li>
+									</ul>
+								</td>
+								<td>
+									<span class="view-field u_note"></span>
+			                  <textarea class="edit-field form-control" type="text" name="u_note"></textarea>
+								</td>
+								<td>
+									<a href="https://timhangquangchau.com/thqc/phieu-xuat/22950-tao-phieu" class="btn btn-xs btn-primary">Tạo phiếu</a>
+									<a href="https://timhangquangchau.com/thqc/phieu-xuat/22950-tao-du-ma" title="Tạo phiếu với tất cả mã hiện trong kho vào phiếu này" class="btn btn-xs btn-success confirmHref">Tạo phiếu đủ mã</a>
+								</td>
+							</tr>
+													<tr data-customer-id="22591" data-url="https://timhangquangchau.com/thqc/users/sua-nhanh-nguoi-dung-22591">
+								<td>
+									<ul class="list-unstyled list-order">
+										<li>thaovu0408@gmail.com</li>
+										<li>Ms Thảo</li>
+										<li>0982905491</li>
+										<li><span rel="tooltip" title="" data-original-title="Địa chỉ khách">651 đường Giải Phóng - Hoàng Mai - Hà Nội</span></li>
+										<li><span rel="tooltip" title="" data-original-title="Kho khách chọn">Cầu Giấy</span></li>
+									</ul>
+								</td>
+								<td class="text-right">
+									<ul class="list-unstyled list-order">
+										<li><a href="javascript:;" data-user-id="22591" class="btn btnTempCheckout btn-danger btn-xs">Xem tiền thiếu</a></li>
+										<li class="user-available">
+										</li>
+										<li class="money-export">
+										</li>
+										<li class="last-balance">
+										</li>
+									</ul>
+								</td>
+								<td>
+
+									<table class="table table-bordered">
+										<thead>
+											<tr><th style="width: 20%">Hàng ở kho</th>
+											<th style="width: 10%">Số lượng</th>
+											<th style="width: 35%">Vị trí</th>
+											<th style="width: 35%">Mã VĐ</th>
+										</tr></thead>
+										<tbody>
+																																				<tr>
+														<td>Cầu Giấy</td>
+														<td>5</td>
+														<td>- - - - </td>
+														<td>71331934563105 / 0.70<br> 900316303564 / 3.40<br> 3908858228020 / 0.80<br> 75130106726111 / 0.70<br> 75131797513910 / 0.50</td>
+													</tr>
+																																	</tbody>
+									</table>
+								</td>
+								<td class="text-center hidden">
+									<ul class="list-unstyled list-order">
+									<li rel="tooltip" title="" data-original-title="08:00:00">...</li>
+									<li>bởi - ...</li>
+									<li><a href="javascript:;" class="btnCall btn btn-default btn-xs">Gọi điện</a></li>
+									</ul>
+								</td>
+								<td>
+									<span class="view-field u_note"></span>
+			                  <textarea class="edit-field form-control" type="text" name="u_note"></textarea>
+								</td>
+								<td>
+									<a href="https://timhangquangchau.com/thqc/phieu-xuat/22591-tao-phieu" class="btn btn-xs btn-primary">Tạo phiếu</a>
+									<a href="https://timhangquangchau.com/thqc/phieu-xuat/22591-tao-du-ma" title="Tạo phiếu với tất cả mã hiện trong kho vào phiếu này" class="btn btn-xs btn-success confirmHref">Tạo phiếu đủ mã</a>
+								</td>
+							</tr>
+													<tr data-customer-id="22953" data-url="https://timhangquangchau.com/thqc/users/sua-nhanh-nguoi-dung-22953">
+								<td>
+									<ul class="list-unstyled list-order">
+										<li>anhnguyen92.pg@gmail.com</li>
+										<li>Nguyễn Thị Quỳnh Anh</li>
+										<li>0932300100</li>
+										<li><span rel="tooltip" title="" data-original-title="Địa chỉ khách"></span></li>
+										<li><span rel="tooltip" title="" data-original-title="Kho khách chọn">Cầu Giấy</span></li>
+									</ul>
+								</td>
+								<td class="text-right">
+									<ul class="list-unstyled list-order">
+										<li><a href="javascript:;" data-user-id="22953" class="btn btnTempCheckout btn-danger btn-xs">Xem tiền thiếu</a></li>
+										<li class="user-available">
+										</li>
+										<li class="money-export">
+										</li>
+										<li class="last-balance">
+										</li>
+									</ul>
+								</td>
+								<td>
+
+									<table class="table table-bordered">
+										<thead>
+											<tr><th style="width: 20%">Hàng ở kho</th>
+											<th style="width: 10%">Số lượng</th>
+											<th style="width: 35%">Vị trí</th>
+											<th style="width: 35%">Mã VĐ</th>
+										</tr></thead>
+										<tbody>
+																																				<tr>
+														<td>Cầu Giấy</td>
+														<td>1</td>
+														<td></td>
+														<td>75131574796636 / 11.80</td>
+													</tr>
+																																	</tbody>
+									</table>
+								</td>
+								<td class="text-center hidden">
+									<ul class="list-unstyled list-order">
+									<li rel="tooltip" title="" data-original-title="08:00:00">...</li>
+									<li>bởi - ...</li>
+									<li><a href="javascript:;" class="btnCall btn btn-default btn-xs">Gọi điện</a></li>
+									</ul>
+								</td>
+								<td>
+									<span class="view-field u_note"></span>
+			                  <textarea class="edit-field form-control" type="text" name="u_note"></textarea>
+								</td>
+								<td>
+									<a href="https://timhangquangchau.com/thqc/phieu-xuat/22953-tao-phieu" class="btn btn-xs btn-primary">Tạo phiếu</a>
+									<a href="https://timhangquangchau.com/thqc/phieu-xuat/22953-tao-du-ma" title="Tạo phiếu với tất cả mã hiện trong kho vào phiếu này" class="btn btn-xs btn-success confirmHref">Tạo phiếu đủ mã</a>
+								</td>
+							</tr>
+													<tr data-customer-id="23024" data-url="https://timhangquangchau.com/thqc/users/sua-nhanh-nguoi-dung-23024">
+								<td>
+									<ul class="list-unstyled list-order">
+										<li>vanchuongth@gmail.com</li>
+										<li>Van</li>
+										<li>0995489589</li>
+										<li><span rel="tooltip" title="" data-original-title="Địa chỉ khách">HH3C Linh Đàm</span></li>
+										<li><span rel="tooltip" title="" data-original-title="Kho khách chọn">Cầu Giấy</span></li>
+									</ul>
+								</td>
+								<td class="text-right">
+									<ul class="list-unstyled list-order">
+										<li><a href="javascript:;" data-user-id="23024" class="btn btnTempCheckout btn-danger btn-xs">Xem tiền thiếu</a></li>
+										<li class="user-available">
+										</li>
+										<li class="money-export">
+										</li>
+										<li class="last-balance">
+										</li>
+									</ul>
+								</td>
+								<td>
+
+									<table class="table table-bordered">
+										<thead>
+											<tr><th style="width: 20%">Hàng ở kho</th>
+											<th style="width: 10%">Số lượng</th>
+											<th style="width: 35%">Vị trí</th>
+											<th style="width: 35%">Mã VĐ</th>
+										</tr></thead>
+										<tbody>
+																																				<tr>
+														<td>Cầu Giấy</td>
+														<td>6</td>
+														<td>- - - - - </td>
+														<td>75132202438946 / 2.30<br> 804672390208420342 / 2.00<br> 75132202433418 / 2.80<br> 3912546675652 / 4.80<br> 804648026505464753 / 8.60<br> 3712509433674 / 1.30</td>
+													</tr>
+																																	</tbody>
+									</table>
+								</td>
+								<td class="text-center hidden">
+									<ul class="list-unstyled list-order">
+									<li rel="tooltip" title="" data-original-title="08:00:00">...</li>
+									<li>bởi - ...</li>
+									<li><a href="javascript:;" class="btnCall btn btn-default btn-xs">Gọi điện</a></li>
+									</ul>
+								</td>
+								<td>
+									<span class="view-field u_note"></span>
+			                  <textarea class="edit-field form-control" type="text" name="u_note"></textarea>
+								</td>
+								<td>
+									<a href="https://timhangquangchau.com/thqc/phieu-xuat/23024-tao-phieu" class="btn btn-xs btn-primary">Tạo phiếu</a>
+									<a href="https://timhangquangchau.com/thqc/phieu-xuat/23024-tao-du-ma" title="Tạo phiếu với tất cả mã hiện trong kho vào phiếu này" class="btn btn-xs btn-success confirmHref">Tạo phiếu đủ mã</a>
+								</td>
+							</tr>
+													<tr data-customer-id="23055" data-url="https://timhangquangchau.com/thqc/users/sua-nhanh-nguoi-dung-23055">
+								<td>
+									<ul class="list-unstyled list-order">
+										<li>huongktvt@gmail.com</li>
+										<li>Ms Mai Hương</li>
+										<li>0918049090</li>
+										<li><span rel="tooltip" title="" data-original-title="Địa chỉ khách"></span></li>
+										<li><span rel="tooltip" title="" data-original-title="Kho khách chọn">Cầu Giấy</span></li>
+									</ul>
+								</td>
+								<td class="text-right">
+									<ul class="list-unstyled list-order">
+										<li><a href="javascript:;" data-user-id="23055" class="btn btnTempCheckout btn-danger btn-xs">Xem tiền thiếu</a></li>
+										<li class="user-available">
+										</li>
+										<li class="money-export">
+										</li>
+										<li class="last-balance">
+										</li>
+									</ul>
+								</td>
+								<td>
+
+									<table class="table table-bordered">
+										<thead>
+											<tr><th style="width: 20%">Hàng ở kho</th>
+											<th style="width: 10%">Số lượng</th>
+											<th style="width: 35%">Vị trí</th>
+											<th style="width: 35%">Mã VĐ</th>
+										</tr></thead>
+										<tbody>
+																																				<tr>
+														<td>Cầu Giấy</td>
+														<td>5</td>
+														<td>- - - - </td>
+														<td>3834513708916 / 0.50<br> 3833988223412 / 0.80<br> 3833930275215 / 0.60<br> 804652999861632069 / 0.50<br> 71596061099472 / 1.40</td>
+													</tr>
+																																	</tbody>
+									</table>
+								</td>
+								<td class="text-center hidden">
+									<ul class="list-unstyled list-order">
+									<li rel="tooltip" title="" data-original-title="08:00:00">...</li>
+									<li>bởi - ...</li>
+									<li><a href="javascript:;" class="btnCall btn btn-default btn-xs">Gọi điện</a></li>
+									</ul>
+								</td>
+								<td>
+									<span class="view-field u_note"></span>
+			                  <textarea class="edit-field form-control" type="text" name="u_note"></textarea>
+								</td>
+								<td>
+									<a href="https://timhangquangchau.com/thqc/phieu-xuat/23055-tao-phieu" class="btn btn-xs btn-primary">Tạo phiếu</a>
+									<a href="https://timhangquangchau.com/thqc/phieu-xuat/23055-tao-du-ma" title="Tạo phiếu với tất cả mã hiện trong kho vào phiếu này" class="btn btn-xs btn-success confirmHref">Tạo phiếu đủ mã</a>
+								</td>
+							</tr>
+													<tr data-customer-id="23064" data-url="https://timhangquangchau.com/thqc/users/sua-nhanh-nguoi-dung-23064">
+								<td>
+									<ul class="list-unstyled list-order">
+										<li>irisngo.bn@gmail.com</li>
+										<li>Ngô Minh Trang</li>
+										<li>0979219185</li>
+										<li><span rel="tooltip" title="" data-original-title="Địa chỉ khách"></span></li>
+										<li><span rel="tooltip" title="" data-original-title="Kho khách chọn">Cầu Giấy</span></li>
+									</ul>
+								</td>
+								<td class="text-right">
+									<ul class="list-unstyled list-order">
+										<li><a href="javascript:;" data-user-id="23064" class="btn btnTempCheckout btn-danger btn-xs">Xem tiền thiếu</a></li>
+										<li class="user-available">
+										</li>
+										<li class="money-export">
+										</li>
+										<li class="last-balance">
+										</li>
+									</ul>
+								</td>
+								<td>
+
+									<table class="table table-bordered">
+										<thead>
+											<tr><th style="width: 20%">Hàng ở kho</th>
+											<th style="width: 10%">Số lượng</th>
+											<th style="width: 35%">Vị trí</th>
+											<th style="width: 35%">Mã VĐ</th>
+										</tr></thead>
+										<tbody>
+																																				<tr>
+														<td>Cầu Giấy</td>
+														<td>4</td>
+														<td>- - - </td>
+														<td>75131959545164 / 0.60<br> 7735483050 / 0.50<br> 3399846728235 / 4.00<br> SN0030008558265600 / 0.60</td>
+													</tr>
+																																	</tbody>
+									</table>
+								</td>
+								<td class="text-center hidden">
+									<ul class="list-unstyled list-order">
+									<li rel="tooltip" title="" data-original-title="08:00:00">...</li>
+									<li>bởi - ...</li>
+									<li><a href="javascript:;" class="btnCall btn btn-default btn-xs">Gọi điện</a></li>
+									</ul>
+								</td>
+								<td>
+									<span class="view-field u_note"></span>
+			                  <textarea class="edit-field form-control" type="text" name="u_note"></textarea>
+								</td>
+								<td>
+									<a href="https://timhangquangchau.com/thqc/phieu-xuat/23064-tao-phieu" class="btn btn-xs btn-primary">Tạo phiếu</a>
+									<a href="https://timhangquangchau.com/thqc/phieu-xuat/23064-tao-du-ma" title="Tạo phiếu với tất cả mã hiện trong kho vào phiếu này" class="btn btn-xs btn-success confirmHref">Tạo phiếu đủ mã</a>
+								</td>
+							</tr>
+													<tr data-customer-id="22527" data-url="https://timhangquangchau.com/thqc/users/sua-nhanh-nguoi-dung-22527">
+								<td>
+									<ul class="list-unstyled list-order">
+										<li>lekimoanh154@gmail.com</li>
+										<li>Lê Kim Oanh</li>
+										<li>0839863338</li>
+										<li><span rel="tooltip" title="" data-original-title="Địa chỉ khách"></span></li>
+										<li><span rel="tooltip" title="" data-original-title="Kho khách chọn">Cầu Giấy</span></li>
+									</ul>
+								</td>
+								<td class="text-right">
+									<ul class="list-unstyled list-order">
+										<li><a href="javascript:;" data-user-id="22527" class="btn btnTempCheckout btn-danger btn-xs">Xem tiền thiếu</a></li>
+										<li class="user-available">
+										</li>
+										<li class="money-export">
+										</li>
+										<li class="last-balance">
+										</li>
+									</ul>
+								</td>
+								<td>
+
+									<table class="table table-bordered">
+										<thead>
+											<tr><th style="width: 20%">Hàng ở kho</th>
+											<th style="width: 10%">Số lượng</th>
+											<th style="width: 35%">Vị trí</th>
+											<th style="width: 35%">Mã VĐ</th>
+										</tr></thead>
+										<tbody>
+																																				<tr>
+														<td>Cầu Giấy</td>
+														<td>47</td>
+														<td>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - </td>
+														<td>804657645731510542 / 0.50<br> 804624750649953656 / 0.50<br> 3834492022175 / 0.80<br> 71579311334037 / 2.00<br> 75131890411940 / 0.80<br> 804645239859273513 / 1.40<br> 3834668994138 / 0.50<br> 3399854212808 / 0.80<br> 804570359158765952 / 0.50<br> 75132173192634 / 0.50<br> 804658372333244807 / 0.50<br> 75131933954383 / 0.50<br> 3399846121162 / 0.50<br> 75131961618497 / 0.50<br> 75131965529366 / 0.80<br> 3399847483549 / 0.50<br> 75131933241691 / 1.10<br> 75131350513135 / 0.80<br> 75131928985592 / 0.90<br> 3988740216091 / 0.60<br> 75131698462379 / 0.50<br> 75131928985636 / 0.90<br> 804576638241158876 / 1.30<br> 75131790808962 / 0.60<br> 3963100602659 / 0.60<br> 3833185374097 / 0.50<br> 3399564214935 / 0.50<br> 71580980883680 / 0.50<br> 3833366028789 / 0.50<br> 75131491275719 / 0.70<br> 75129491935589 / 0.80<br> 75131433736586 / 0.50<br> 75131283538936 / 0.50<br> 75131443976727 / 0.70<br> 3906601242439 / 0.50<br> 75131960297014 / 1.10<br> 804588017189418803 / 0.50<br> 3700103202631 / 0.50<br> 3399700451388 / 0.50</td>
+													</tr>
+																																	</tbody>
+									</table>
+								</td>
+								<td class="text-center hidden">
+									<ul class="list-unstyled list-order">
+									<li rel="tooltip" title="" data-original-title="08:00:00">...</li>
+									<li>bởi - ...</li>
+									<li><a href="javascript:;" class="btnCall btn btn-default btn-xs">Gọi điện</a></li>
+									</ul>
+								</td>
+								<td>
+									<span class="view-field u_note"></span>
+			                  <textarea class="edit-field form-control" type="text" name="u_note"></textarea>
+								</td>
+								<td>
+									<a href="https://timhangquangchau.com/thqc/phieu-xuat/22527-tao-phieu" class="btn btn-xs btn-primary">Tạo phiếu</a>
+									<a href="https://timhangquangchau.com/thqc/phieu-xuat/22527-tao-du-ma" title="Tạo phiếu với tất cả mã hiện trong kho vào phiếu này" class="btn btn-xs btn-success confirmHref">Tạo phiếu đủ mã</a>
+								</td>
+							</tr>
+													<tr data-customer-id="22386" data-url="https://timhangquangchau.com/thqc/users/sua-nhanh-nguoi-dung-22386">
+								<td>
+									<ul class="list-unstyled list-order">
+										<li>mdnghia@gmail.com</li>
+										<li>Nghĩa Mã Đại</li>
+										<li>0988699282</li>
+										<li><span rel="tooltip" title="" data-original-title="Địa chỉ khách">Ngõ 562 đường láng-đống đa-HN</span></li>
+										<li><span rel="tooltip" title="" data-original-title="Kho khách chọn">Cầu Giấy</span></li>
+									</ul>
+								</td>
+								<td class="text-right">
+									<ul class="list-unstyled list-order">
+										<li><a href="javascript:;" data-user-id="22386" class="btn btnTempCheckout btn-danger btn-xs">Xem tiền thiếu</a></li>
+										<li class="user-available">
+										</li>
+										<li class="money-export">
+										</li>
+										<li class="last-balance">
+										</li>
+									</ul>
+								</td>
+								<td>
+
+									<table class="table table-bordered">
+										<thead>
+											<tr><th style="width: 20%">Hàng ở kho</th>
+											<th style="width: 10%">Số lượng</th>
+											<th style="width: 35%">Vị trí</th>
+											<th style="width: 35%">Mã VĐ</th>
+										</tr></thead>
+										<tbody>
+																																				<tr>
+														<td>Cầu Giấy</td>
+														<td>23</td>
+														<td>- - - - - - - - - - - - - - - - - - - - - - </td>
+														<td>804615281285401877 / 0.60<br> 3834222825342 / 0.60<br> 3901344399736 / 0.50<br> 3700442034852 / 0.50<br> 3399528774104 / 0.80<br> 640116737824 / 8.60<br> 804615993318864729 / 0.50<br> 3733110092182 / 0.70<br> 75132450410206 / 0.50<br> 804643281588076170 / 1.00<br> 804569063887549720 / 45.30<br> 75132389810126 / 0.50<br> 804652337674044625 / 0.60<br> 804648949732633881 / 0.90<br> 804605526567660932 / 29.20<br> 804672445048226383 / 0.70<br> 804643221389711314 / 7.00<br> 3399575068992 / 0.60<br> 3102341549455 / 12.40<br> 804632808973246667 / 16.40<br> 3833012729707 / 0.50<br> 75132131893689 / 0.50<br> 669726119957 / 0.50</td>
+													</tr>
+																																	</tbody>
+									</table>
+								</td>
+								<td class="text-center hidden">
+									<ul class="list-unstyled list-order">
+									<li rel="tooltip" title="" data-original-title="08:00:00">...</li>
+									<li>bởi - ...</li>
+									<li><a href="javascript:;" class="btnCall btn btn-default btn-xs">Gọi điện</a></li>
+									</ul>
+								</td>
+								<td>
+									<span class="view-field u_note"></span>
+			                  <textarea class="edit-field form-control" type="text" name="u_note"></textarea>
+								</td>
+								<td>
+									<a href="https://timhangquangchau.com/thqc/phieu-xuat/22386-tao-phieu" class="btn btn-xs btn-primary">Tạo phiếu</a>
+									<a href="https://timhangquangchau.com/thqc/phieu-xuat/22386-tao-du-ma" title="Tạo phiếu với tất cả mã hiện trong kho vào phiếu này" class="btn btn-xs btn-success confirmHref">Tạo phiếu đủ mã</a>
+								</td>
+							</tr>
+													<tr data-customer-id="22661" data-url="https://timhangquangchau.com/thqc/users/sua-nhanh-nguoi-dung-22661">
+								<td>
+									<ul class="list-unstyled list-order">
+										<li>ngothanh81@gmail.com</li>
+										<li>Ngô Thành</li>
+										<li>0977798866</li>
+										<li><span rel="tooltip" title="" data-original-title="Địa chỉ khách"></span></li>
+										<li><span rel="tooltip" title="" data-original-title="Kho khách chọn">Cầu Giấy</span></li>
+									</ul>
+								</td>
+								<td class="text-right">
+									<ul class="list-unstyled list-order">
+										<li><a href="javascript:;" data-user-id="22661" class="btn btnTempCheckout btn-danger btn-xs">Xem tiền thiếu</a></li>
+										<li class="user-available">
+										</li>
+										<li class="money-export">
+										</li>
+										<li class="last-balance">
+										</li>
+									</ul>
+								</td>
+								<td>
+
+									<table class="table table-bordered">
+										<thead>
+											<tr><th style="width: 20%">Hàng ở kho</th>
+											<th style="width: 10%">Số lượng</th>
+											<th style="width: 35%">Vị trí</th>
+											<th style="width: 35%">Mã VĐ</th>
+										</tr></thead>
+										<tbody>
+																																				<tr>
+														<td>Cầu Giấy</td>
+														<td>2</td>
+														<td>- </td>
+														<td>3963620482672 / 0.70<br> 75131506223787 / 2.20</td>
+													</tr>
+																																	</tbody>
+									</table>
+								</td>
+								<td class="text-center hidden">
+									<ul class="list-unstyled list-order">
+									<li rel="tooltip" title="" data-original-title="08:00:00">...</li>
+									<li>bởi - ...</li>
+									<li><a href="javascript:;" class="btnCall btn btn-default btn-xs">Gọi điện</a></li>
+									</ul>
+								</td>
+								<td>
+									<span class="view-field u_note"></span>
+			                  <textarea class="edit-field form-control" type="text" name="u_note"></textarea>
+								</td>
+								<td>
+									<a href="https://timhangquangchau.com/thqc/phieu-xuat/22661-tao-phieu" class="btn btn-xs btn-primary">Tạo phiếu</a>
+									<a href="https://timhangquangchau.com/thqc/phieu-xuat/22661-tao-du-ma" title="Tạo phiếu với tất cả mã hiện trong kho vào phiếu này" class="btn btn-xs btn-success confirmHref">Tạo phiếu đủ mã</a>
+								</td>
+							</tr>
+											</tbody>
+				</table>
+			<div class="row-fluid">
+		<div class="span6">
+		<div class="dataTables_info">Đang hiển thị <b>20</b> trong tổng số <b>66</b> bản ghi.</div>
+	</div>
+		<div class="span6"><div class="dataTables_paginate paging_bootstrap pagination"><ul class="pagination"><li class="disabled" aria-disabled="true"><a href="javascript:void(0)">« Trước</a></li> <li class="active"><a href="javascript:void(0)">1</a></li><li><a href="https://timhangquangchau.com/thqc/phieu-xuat/co-the-xuat?page=2">2</a></li><li><a href="https://timhangquangchau.com/thqc/phieu-xuat/co-the-xuat?page=3">3</a></li><li><a href="https://timhangquangchau.com/thqc/phieu-xuat/co-the-xuat?page=4">4</a></li> <li><a href="https://timhangquangchau.com/thqc/phieu-xuat/co-the-xuat?page=2" rel="next">Sau »</a></li></ul></div></div>
+</div>
+			</div>
+		</div>
+
+	</section>
+   </div>
+   <!-- /.content-wrapper -->
+   <footer class="main-footer">
+      timhangquangchau.com
+   </footer>
+      <!-- Control Sidebar -->
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery 2.2.3 -->
+<script src="./Những khách có hàng có thể xuất kho-chờ xuất kho_files/jquery-2.2.3.min.js.download"></script>
+<!-- jQuery UI 1.11.4 -->
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<!-- Bootstrap 3.3.6 -->
+<script src="./Những khách có hàng có thể xuất kho-chờ xuất kho_files/bootstrap.min.js.download"></script>
+<script type="text/javascript" src="./Những khách có hàng có thể xuất kho-chờ xuất kho_files/moment.min.js.download"></script>
+<script type="text/javascript" src="./Những khách có hàng có thể xuất kho-chờ xuất kho_files/bootstrap-datetimepicker.min.js.download"></script>
+<script src="./Những khách có hàng có thể xuất kho-chờ xuất kho_files/jquery.gritter.js.download"></script>
+<script src="./Những khách có hàng có thể xuất kho-chờ xuất kho_files/select2.min.js.download"></script>
+<script src="./Những khách có hàng có thể xuất kho-chờ xuất kho_files/sweetalert.min.js.download"></script>
+<!-- daterangepicker -->
+<!-- datepicker -->
+<script src="./Những khách có hàng có thể xuất kho-chờ xuất kho_files/bootstrap-datepicker.js.download"></script>
+<!-- Bootstrap WYSIHTML5 -->
+<!-- Slimscroll -->
+<script src="./Những khách có hàng có thể xuất kho-chờ xuất kho_files/jquery.slimscroll.min.js.download"></script>
+<!-- FastClick -->
+<script src="./Những khách có hàng có thể xuất kho-chờ xuất kho_files/fastclick.js.download"></script>
+<!-- AdminLTE App -->
+<script src="./Những khách có hàng có thể xuất kho-chờ xuất kho_files/app.min.js.download"></script>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<script src="./Những khách có hàng có thể xuất kho-chờ xuất kho_files/dashboard.js.download"></script>
+<script src="./Những khách có hàng có thể xuất kho-chờ xuất kho_files/nprogress.js.download"></script>
+<script src="./Những khách có hàng có thể xuất kho-chờ xuất kho_files/jquery.inputmask.numeric.extensions.js.download"></script>
+<script src="./Những khách có hàng có thể xuất kho-chờ xuất kho_files/main.js.download"></script>
+<script src="./Những khách có hàng có thể xuất kho-chờ xuất kho_files/admin.js.download"></script>
+<script type="text/javascript" src="./Những khách có hàng có thể xuất kho-chờ xuất kho_files/publicjs.js.download"></script>
+<!-- AdminLTE for demo purposes -->
+<script>
+	jQuery(document).ready(function($) {
+
+		// gọi điện
+		$('.btnCall').click(function(event) {
+			var thisCall = $(this);
+
+			$.ajax({
+				url: thisCall.parents('tbody').attr('data-call'),
+				type: 'POST',
+				dataType: 'JSON',
+				data: {id: thisCall.parents('tr').attr('data-customer-id'), _token : $('body').attr('data-token') },
+				beforeSend: function(){
+					myUtility.loading();
+				},
+				success: function(){
+					$('.my_loading').remove();
+					window.location.reload();
+				}
+			});
+		});
+
+		// tính số tiền cần để xuất kho
+		$('.btnTempCheckout').on('click', function(event) {
+			event.preventDefault();
+			var thisClick = $(this);
+
+			$.ajax({
+				url: thisClick.parents('tbody').attr('data-checkout'),
+				type: 'POST',
+				dataType: 'JSON',
+				data: {
+					id: thisClick.attr('data-user-id'),
+					_token : $('body').attr('data-token')
+				},
+				beforeSend: function(){
+					myUtility.loading();
+				},
+				success: function(data){
+					$('.my_loading').remove();
+					var li = thisClick.parent();
+
+					var balanceHtml = "<span data-toggle='tooltip' title='Số dư' class='pull-right'>" + data.balance + "</span>";
+					var needMoneyHtml = "<span data-toggle='tooltip' title='Số tiền cần để xuất kho' class='pull-right'>" + data.needMoney + "</span>";
+					var lastBalanceHtml = "<span data-toggle='tooltip' title='Số dư sau xuất kho (nhỏ hơn 0 thì yêu cầu khách nạp tiền)' class='pull-right'>" + data.lastBalance + "</span>";
+
+					li.siblings('.user-available').html(balanceHtml);
+					li.siblings('.money-export').html(needMoneyHtml);
+					li.siblings('.last-balance').html(lastBalanceHtml);
+					$('[data-toggle="tooltip"], [rel="tooltip"]').tooltip();
+
+
+					if(parseInt(data.lastBalance) < 0) {
+						thisClick.parents('tr').addClass('bg-danger')
+					}
+				}
+			})
+
+		});
+
+
+	});
+</script>
+
+
+</body></html>

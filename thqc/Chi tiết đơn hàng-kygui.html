@@ -1,0 +1,1663 @@
+<!DOCTYPE html>
+<!-- saved from url=(0048)https://timhangquangchau.com/thqc/rel/103/detail -->
+<html class=" "><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <title>Chi tiết đơn hàng</title>
+   <!-- Tell the browser to be responsive to screen width -->
+   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+   <!-- Bootstrap 3.3.6 -->
+   <link rel="stylesheet" href="./Chi tiết đơn hàng-kygui_files/bootstrap.min.css">
+   <!-- Font Awesome -->
+   <link rel="stylesheet" type="text/css" href="./Chi tiết đơn hàng-kygui_files/font-awesome.min.css">
+   <link href="./Chi tiết đơn hàng-kygui_files/sweetalert.css" rel="stylesheet">
+   <!-- Ionicons -->
+      <!-- Theme style -->
+   <link rel="stylesheet" href="./Chi tiết đơn hàng-kygui_files/AdminLTE.min.css">
+   <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+   <link rel="stylesheet" href="./Chi tiết đơn hàng-kygui_files/_all-skins.min.css">
+   <!-- iCheck -->
+   <link rel="stylesheet" href="./Chi tiết đơn hàng-kygui_files/blue.css">
+   <!-- Date Picker -->
+   <link rel="stylesheet" href="./Chi tiết đơn hàng-kygui_files/datepicker3.css">
+   <!-- Daterange picker -->
+      <!-- bootstrap wysihtml5 - text editor -->
+   <link rel="stylesheet" href="./Chi tiết đơn hàng-kygui_files/bootstrap3-wysihtml5.min.css">
+
+   <link href="./Chi tiết đơn hàng-kygui_files/jquery.gritter.css" rel="stylesheet">
+   <link href="./Chi tiết đơn hàng-kygui_files/bootstrap-datepicker3.min.css" rel="stylesheet">
+   <link href="./Chi tiết đơn hàng-kygui_files/select2.css" rel="stylesheet">
+   <!-- Custom style -->
+   <link rel="stylesheet" type="text/css" href="./Chi tiết đơn hàng-kygui_files/style-version2.css">
+   <link rel="stylesheet" type="text/css" href="./Chi tiết đơn hàng-kygui_files/admin-ver2.css">
+   <link rel="stylesheet" type="text/css" href="./Chi tiết đơn hàng-kygui_files/public.css">
+   <link rel="stylesheet" href="./Chi tiết đơn hàng-kygui_files/nprogress.css">
+   <link rel="stylesheet" href="./Chi tiết đơn hàng-kygui_files/f-thqc.css">
+   <link rel="shortcut icon" type="image/x-icon" href="https://timhangquangchau.com/thqc/img/32.png">
+
+   <!--[if lt IE 9]>
+   <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+   <![endif]-->
+   <style>
+      .table img {
+         width: 100px;
+      }
+      label {
+         cursor: pointer;
+      }
+   </style>
+</head>
+<body class="skin-blue sidebar-mini" data-token="w0ZF4euKWqOnnZACQCrOSv8N29wV2LUISSakkAAT">
+<div class="wrapper">
+   <header class="main-header g-no-print">
+      <!-- Logo -->
+      <a href="https://timhangquangchau.com/" class="logo">
+         <!-- mini logo for sidebar mini 50x50 pixels -->
+         <span class="logo-mini"><b>Admin</b>THQC</span>
+         <!-- logo for regular state and mobile devices -->
+         <span class="logo-lg"><b>Admin</b>THQC</span>
+      </a>
+      <!-- Header Navbar: style can be found in header.less -->
+      <nav class="navbar navbar-static-top">
+         <!-- Sidebar toggle button-->
+        <a href="https://timhangquangchau.com/thqc/rel/103/detail#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+          <span class="sr-only">Toggle navigation</span>
+        </a>
+
+        <div class="navbar-custom-menu" style="float:none">
+         <ul class="nav navbar-nav navbar-right" style="margin: 0; height: inherit;">
+            <!-- alert comment order -->
+            <li class="dropdown noti-parent">
+               <a href="https://timhangquangchau.com/thqc/rel/103/detail#" class="dropdown-toggle noti-icon" data-show="false" data-url="https://timhangquangchau.com/thqc/ajax-get-comment-order" data-target="show-notification" data-toggle="dropdown">
+                  <i class="fa fa-globe"></i>
+                  <span class="noti-count"><b>0</b></span>
+                  <span class="caret"></span>
+               </a>
+
+               <ul class="dropdown-menu flat menu-down dropdown-menu-notificaion">
+                  <li class="dropdown-header header-noti-parent">
+                     <p class="header-noti" style="font-weight: bold">Thông báo đơn hàng</p>
+                  </li>
+                  <div class="menu-down-noti show-messagers show-notification" style="max-height: 416px;overflow-y: scroll;width: 100%;">
+                  </div>
+                  <li class="dropdown-header see-add">
+                  <a href="https://timhangquangchau.com/thqc/notifications" title="Xem tất cả thông báo">Xem tất cả thông báo</a>
+                  </li>
+               </ul>
+            </li>
+
+            <!-- alert all -->
+            <li class="dropdown noti-parent">
+               <a href="https://timhangquangchau.com/thqc/rel/103/detail#" class="dropdown-toggle noti-icon" data-show="false" data-url="https://timhangquangchau.com/thqc/ajax-get-message" data-toggle="dropdown" data-target="show-messager">
+                  <i class="fa fa-envelope-o"></i>
+                  <span class="noti-count"><b>0</b></span>
+                  <span class="caret"></span>
+               </a>
+               <ul class="dropdown-menu flat menu-down dropdown-menu-notificaion">
+                  <li class="dropdown-header header-noti-parent">
+                     <span class="header-noti">Tin nhắn</span>
+                     <span class="see-add-noti" title="Đánh dấu đã xem" data-url="https://timhangquangchau.com/quan-ly/tin-nhan/xem-tat-ca">Đánh dấu tất cả là đã đọc</span>
+                  </li>
+                  <div class="menu-down-noti show-messager">
+                  </div>
+                  <li class="dropdown-header see-add"><a href="https://timhangquangchau.com/thqc/notifications">Xem tất cả</a></li>
+               </ul>
+            </li>
+                        <li class="dropdown">
+               <a href="https://timhangquangchau.com/thqc/rel/103/detail#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user-secret"></i> <span class="caret"></span></a>
+               <ul class="dropdown-menu">
+                  <li><a href="https://timhangquangchau.com/thqc/users/profile"><i class=" fa fa-suitcase"></i> Đổi thông tin Hoai</a></li>
+                  <li><a href="https://timhangquangchau.com/thqc/users/password"><i class="fa fa-cog"></i> Đổi mật khẩu</a></li>
+                  <li><a href="https://timhangquangchau.com/thqc/logout"><i class="fa fa-key"></i> Log Out</a></li>
+               </ul>
+            </li>
+                     </ul>
+         </div>
+         </nav>
+    </header>      <!-- Left side column. contains the logo and sidebar -->
+   <aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+      <section class="sidebar" style="height: auto;">
+         <!-- Sidebar user panel -->
+         <div class="user-panel">
+            <div class="pull-left image">
+             <img src="./Chi tiết đơn hàng-kygui_files/1024px-No_image_available.svg.png" class="img-circle" alt="User Image">
+            </div>
+            <div class="pull-left info">
+             <p>Hoai</p>
+             <a href="https://timhangquangchau.com/thqc/rel/103/detail#"><i class="fa fa-circle text-success"></i> Online</a>
+            </div>
+         </div>
+         <ul class="sidebar-menu">
+            <li class="treeview ">
+               <a href="https://timhangquangchau.com/thqc/rel/103/detail#">
+                  <i class="fa fa-dashboard"></i> <span>Thống kê</span>
+                  <span class="pull-right-container">
+                     <i class="fa fa-angle-left pull-right"></i>
+                  </span>
+               </a>
+               <ul class="treeview-menu">
+                  <li class=" hidden">
+                     <a href="https://timhangquangchau.com/thqc/dashboard"><i class="fa fa-cubes"></i> Trạng thái hệ thống</a>
+                  </li>
+                  <li class=" hidden">
+                     <a href="https://timhangquangchau.com/thqc/dashboard/don-hang"><i class="fa fa-cubes"></i> Thống kê đơn hàng</a>
+                  </li>
+                                    <li class=" hidden">
+                     <a href="https://timhangquangchau.com/thqc/dashboard/thong-ke-cskh"><i class="fa fa-cubes"></i> Thống kê CSKH</a>
+                  </li>
+                                 </ul>
+            </li>
+            <li class="">
+               <a href="https://timhangquangchau.com/thqc/rel">
+                  <i class="fa fa-th"></i> <span>Đơn hàng</span>
+               </a>
+            </li>
+                        <li class="">
+               <a href="https://timhangquangchau.com/thqc/rel/ky-gui/danh-sach-yeu-cau">
+                  <i class="fa fa-th"></i> <span>Yêu cầu ký gửi</span>
+               </a>
+            </li>
+            <li class="">
+               <a href="https://timhangquangchau.com/thqc/rel?type=2">
+                  <i class="fa fa-th"></i> <span>Đơn ký gửi</span>
+               </a>
+            </li>
+
+            <li class="">
+               <a href="https://timhangquangchau.com/thqc/order-shop/lading"><i class="fa fa-th"></i> Kiện hàng</a>
+            </li>
+                        <li class="treeview ">
+                <a href="https://timhangquangchau.com/thqc/rel/103/detail#">
+                  <i class="fa fa-dashboard"></i> <span>Khiếu nại</span>
+                  <span class="pull-right-container">
+                     <i class="fa fa-angle-left pull-right"></i>
+                  </span>
+               </a>
+               <ul class="treeview-menu">
+                  <li class="">
+                     <a href="https://timhangquangchau.com/thqc/complain/list-complain-new?check_complain=2"><i class="fa fa-phone"></i> Tất cả</a>
+                  </li>
+                  <li class="">
+                     <a href="https://timhangquangchau.com/thqc/complain/list-complain-new?type_order=0&amp;check_complain=2"><i class="fa fa-phone"></i> order</a>
+                  </li>
+                  <li class="">
+                     <a href="https://timhangquangchau.com/thqc/complain/list-complain-new?type_order=2"><i class="fa fa-phone"></i> ký gửi</a>
+                  </li>
+                   <li class=" hidden">
+                     <a href="https://timhangquangchau.com/thqc/complain/list-complain-new?type_order=1"><i class="fa fa-phone"></i> Khiếu nại đơn hàng lẻ</a>
+                  </li>
+               </ul>
+            </li>
+                                     <li class="treeview ">
+                <a href="https://timhangquangchau.com/thqc/rel/103/detail#">
+                  <i class="fa fa-dashboard"></i> <span>Kho TQ / 仓库</span>
+                  <span class="pull-right-container">
+                     <i class="fa fa-angle-left pull-right"></i>
+                  </span>
+               </a>
+               <ul class="treeview-menu">
+                                    <li class="">
+                     <a href="https://timhangquangchau.com/thqc/import/danh-sach-phieu-nhap-kho"><i class="fa fa-share"></i>Phiếu nhập kho</a>
+                  </li>
+                  <li class=" hidden">
+                     <a href="https://timhangquangchau.com/thqc/import/danh-sach-phieu-nhap-kho?i_inventory=1"><i class="fa fa-share"></i>Phiếu nhập kho - chờ đi container</a>
+                  </li>
+                                                         <li class="">
+                        <a href="https://timhangquangchau.com/thqc/bao-hang/danh-sach-bao-hang"><i class="fa fa-files-o"></i>Danh sách bao</a>
+                     </li>
+                                                         <li class="">
+                        <a href="https://timhangquangchau.com/thqc/bao-hang/tao-bao?fast=1"><i class="fa fa-plus"></i>Tạo bao nhanh / 造包货</a>
+                     </li>
+                     <li class="">
+                        <a href="https://timhangquangchau.com/thqc/users/kho-tao-don-ki-gui"><i class="fa fa-users"></i>&nbsp;Tạo đơn kí gửi</a>
+                     </li>
+                                                   </ul>
+            </li>
+            
+                        <li class="treeview ">
+                <a href="https://timhangquangchau.com/thqc/rel/103/detail#">
+                  <i class="fa fa-dashboard"></i> <span>Kho VN</span>
+                  <span class="pull-right-container">
+                     <i class="fa fa-angle-left pull-right"></i>
+                  </span>
+               </a>
+               <ul class="treeview-menu">
+                                       <li class="">
+                        <a href="https://timhangquangchau.com/thqc/phieu-xuat/co-the-xuat"><i class="fa fa-files-o"></i>Chờ xuất</a>
+                     </li>
+                     <li class="">
+                        <a href="https://timhangquangchau.com/thqc/phieu-xuat/danh-sach-phieu"><i class="fa fa-files-o"></i>Phiếu xuất</a>
+                     </li>
+                     <li class="">
+                        <a href="https://timhangquangchau.com/thqc/bao-hang/danh-sach-bao-hang"><i class="fa fa-files-o"></i>Danh sách bao</a>
+                     </li>
+                     <li class=" hidden">
+                        <a href="https://timhangquangchau.com/thqc/phieu-xuat/yeu-cau-ship"><i class="fa fa-truck" aria-hidden="true"></i>Yêu cầu ship</a>
+                     </li>
+                     <li class="">
+                        <a href="https://timhangquangchau.com/thqc/port/list"><i class="fa fa-refresh"></i>Phiếu điều chuyển</a>
+                     </li>
+                     <li class="">
+                        <a href="https://timhangquangchau.com/thqc/order-shop/truc-tiep-vn"><i class="fa fa-files-o"></i>Nhập kho VN</a>
+                     </li>
+                                 </ul>
+            </li>
+            
+                        <li class="treeview ">
+                <a href="https://timhangquangchau.com/thqc/rel/103/detail#">
+                  <i class="fa fa-dashboard"></i> <span>Sau mua hàng</span>
+                  <span class="pull-right-container">
+                     <i class="fa fa-angle-left pull-right"></i>
+                  </span>
+               </a>
+               <ul class="treeview-menu">
+                                    <li class="">
+                     <a href="https://timhangquangchau.com/thqc/orderDetails/losingid">
+                        <i class="fa fa-file-image-o"></i> Hàng mất mã</a>
+                  </li>
+                                    <li class="">
+                     <a href="https://timhangquangchau.com/thqc/order-shop/chuyen-ma-van-don">
+                        <i class="fa fa-file-image-o"></i> Chuyển mã</a>
+                  </li>
+                                 </ul>
+            </li>
+            
+            
+            
+            
+                         <li class="treeview ">
+                <a href="https://timhangquangchau.com/thqc/rel/103/detail#">
+                  <i class="fa fa-dashboard"></i> <span>Nhân viên</span>
+                  <span class="pull-right-container">
+                     <i class="fa fa-angle-left pull-right"></i>
+                  </span>
+               </a>
+               <ul class="treeview-menu">
+                  <li class="">
+                     <a href="https://timhangquangchau.com/thqc/employers"><i class="fa fa-user-secret"></i>&nbsp;Quản lý đi/nghỉ</a>
+                  </li>
+                  <li class=" hidden">
+                     <a href="https://timhangquangchau.com/admin/employers/cskh/gan-khach"><i class="fa fa-street-view"></i>Gán khách cho cskh</a>
+                  </li>
+                  <li class=" hidden">
+                     <a href="https://timhangquangchau.com/thqc/employers/trader/gan-khach"><i class="fa fa-street-view"></i>Gán khách cho đặt hàng</a>
+                  </li>
+               </ul>
+            </li>
+            
+                         <li class="treeview ">
+                <a href="https://timhangquangchau.com/thqc/rel/103/detail#">
+                  <i class="fa fa-dashboard"></i> <span>Tin tức - thông báo</span>
+                  <span class="pull-right-container">
+                     <i class="fa fa-angle-left pull-right"></i>
+                  </span>
+               </a>
+               <ul class="treeview-menu">
+                  <li class="">
+                     <a href="https://timhangquangchau.com/thqc/blogs"><i class="fa fa-rss-square"></i>&nbsp;Q.L Blogs</a>
+                  </li>
+                  <li class="">
+                     <a href="https://timhangquangchau.com/thqc/categories"><i class="fa fa-rss-square"></i>&nbsp;Q.L Danh mục</a>
+                  </li>
+               </ul>
+            </li>
+            
+                         <li class="treeview ">
+                <a href="https://timhangquangchau.com/thqc/rel/103/detail#">
+                  <i class="fa fa-dashboard"></i> <span>Người dùng</span>
+                  <span class="pull-right-container">
+                     <i class="fa fa-angle-left pull-right"></i>
+                  </span>
+               </a>
+               <ul class="treeview-menu">
+                  <li class="">
+                     <a href="https://timhangquangchau.com/thqc/users"><i class="fa fa-user"></i>&nbsp;Q.L người dùng</a>
+                  </li>
+                  <li class="">
+                     <a href="https://timhangquangchau.com/thqc/roles"><i class="fa fa-users"></i>&nbsp;Nhóm người dùng</a>
+                  </li>
+                  <li class="">
+                     <a href="https://timhangquangchau.com/thqc/permissions"><i class="fa fa-trophy"></i>&nbsp;Quyền</a>
+                  </li>
+               </ul>
+            </li>
+            
+            
+         </ul>
+       </section>
+    <!-- /.sidebar -->
+   </aside>
+
+   <!-- Content Wrapper. Contains page content -->
+   <div class="content-wrapper" style="min-height: 1086px;">
+       <!-- Main content -->
+         <div class="no-print">
+            <div class="col-sm-12">
+                           </div>
+         </div>
+            <div class="row content-block">
+      <div class="col-sm-12">
+         <section class="panel panel-default">
+            <header class="panel-heading">
+               <span class="col-md-4 uppercase">Chi tiết đơn hàng</span>
+               <span class="col-md-4 text-center"><a data-id="103" data-toggle="modal" data-target=".log-order-lg" class="btn btn-danger btn-xs view-log-order"><i class="fa fa-history"></i> Lịch sử đơn hàng</a>
+               </span>
+
+               <span class="col-md-4">
+                  <a class="btn btn-primary btn-xs pull-right" href="https://timhangquangchau.com/thqc/rel">
+                     <i class="glyphicon glyphicon-circle-arrow-left"></i> Quay lại
+                  </a>
+                                        <a class="btn btn-danger btn-xs pull-right" href="https://timhangquangchau.com/thqc/complain/creat-complain-admin/103" target="_blank" title="" rel="tooltip" data-original-title="Tạo khiếu nại" style="margin-right: 5px"><i class="fa fa-phone"></i> Khiếu nại</a>
+                                 </span>
+
+               <span class="clearfix"></span>
+            </header>
+            <div class="panel-body row">
+                              <div class="panel panel-child col-md-4">
+                  <header class="panel-heading uppercase">
+                     Thông tin khách hàng
+                  </header>
+                  <div class="panel-body">
+                     <ul class="list-understyle list-order">
+                                                <li>
+                           <i class="fa fa-user"></i>
+                           <span class="text-info bold btn-flat">Tong Anh Tuan</span>
+                        </li>
+                        <li>
+                           <i class="fa fa-envelope-o"></i>
+                           <span class="text-info bold btn-flat">tuantdh2201@gmail.com</span>
+                        </li>
+                        <li>
+                           <i class="fa fa-phone"></i>
+                           <span class="text-info bold btn-flat">0965712201</span>
+                        </li>
+                        <li>
+                           <i class="fa fa-home"></i>
+                           <span class="text-info bold btn-flat">-- --</span>
+                        </li>
+                        <li class="hidden">
+                           <i class="fa fa-plus"></i>
+                           <a href="https://timhangquangchau.com/thqc/rel/103/detail?export_excel=iath" class="btn btn-danger btn-xs btn-flat show-my-title" title="Chức năng xuất đơn ra excel" data-placement="bottom"><i class="fa fa-file-excel-o"></i> Xuất Excel</a>
+                        </li>
+                                             </ul>
+                  </div>
+               </div>
+                              <div class="panel panel-child col-md-4">
+                  <header class="panel-heading uppercase">
+                     THÔNG TIN ĐƠN HÀNG
+                  </header>
+                  <div class="panel-body">
+                     <ul class="list-understyle list-order">
+                        <li><i class="fa fa-bell"></i>Trạng thái <span class="label label-danger">Thanh lý</span></li>
+                        <li>
+                           <i class="fa fa-qrcode"></i>
+                           <span class="text-info bold btn-flat" rel="tooltip" title="" data-original-title="Mã đơn">103</span>
+                           <i class="fa fa-calendar"></i>
+                           <span class="text-info bold btn-flat">
+                              <i rel="tooltip" title="" data-original-title="Ngày tạo đơn">13-10-2016 20:51:41</i>
+                              - <i rel="tooltip" title="" data-original-title="Ngày đặt cọc">--</i>
+                           </span>
+                        </li>
+                        <li>
+                           <i class="fa fa-money"></i>
+                                                         <span class="text-info bold btn-flat">Tổng tiền 1.569.100<sup>đ</sup></span>
+                                                   </li>
+                        <li>
+                           <i class="fa fa-archive"></i>
+                           <span class="text-info bold btn-flat view_store">
+                           Cầu Giấy
+                           <a class="edit_event btn btn-danger btn-xs"><i class="fa fa-pencil"> Sửa</i></a>
+                           </span>
+                           <div class="view_form hidden" style="padding: 5px 0px;">
+                              <form class="form-horizontal" id="frm-update-store">
+                                 <input type="hidden" name="order_id" id="order_id" value="103">
+                                 <input type="hidden" name="_token" value="w0ZF4euKWqOnnZACQCrOSv8N29wV2LUISSakkAAT">
+                                                                  <select name="warehouse_id" class="form-control btn-flat" style="margin-bottom: 5px;">
+                                                                           <option selected="" value="1">Cầu Giấy</option>
+                                                                           <option value="4">HCM</option>
+                                                                           <option value="13">Ship tại nhà</option>
+                                                                     </select>
+                                                                  <button class="btn btn-danger btn-sm btnChangeStore btn-flat">Lưu</button>
+                                 <button type="button" class="btn btn-primary btn-flat btn-sm btnCancel">Hủy</button>
+                              </form>
+                           </div>
+                        </li>
+
+                        <li style="overflow: visible" class="extra-fee-parent">
+                           <i class="fa fa-book"></i>
+                           <span class="text-info bold extra-fee" rel="tooltip" title="" data-original-title="Phí trả thêm (tệ)">0.00<i class="fa fa-jpy"></i></span>
+                           <div class="dropdown inline">
+                              <button class="btn btn-xs btn-primary btn-flat disabled" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                 <span class="caret-text">Hàng ký gửi</span> <span class="caret"></span>
+                              </button>
+                              <ul class="dropdown-menu btn-flat type-parent" role="menu" style="position: absolute;">
+                                                                     <li><a data-id="103" data-type-string="Hàng order" data-type="0" class="editType " href="javascript:;">Hàng order</a></li>
+                                                                     <li><a data-id="103" data-type-string="Hàng lẻ" data-type="1" class="editType " href="javascript:;">Hàng lẻ</a></li>
+                                                                     <li><a data-id="103" data-type-string="Hàng ký gửi" data-type="2" class="editType dropdown-selected" href="javascript:;">Hàng ký gửi</a></li>
+                                                                     <li><a data-id="103" data-type-string="Loại khác" data-type="3" class="editType " href="javascript:;">Loại khác</a></li>
+                                                               </ul>
+                           </div>
+                        </li>
+                        <li>
+                           <i class="fa fa-internet-explorer"></i>
+                           <span class="text-info">Đặt tại website
+                              <span class="label label-danger"> --</span>
+                           </span>
+
+                        </li>
+                        <li>CSKH: <b class="item-staff" data-id="22231" data-referent="103" data-type="1">CSKH Thủy <i class="fa fa-exclamation-triangle"></i></b></li>
+                        <li>ĐH: <b class="item-staff" data-id="0" data-referent="103" data-type="1">... <i class="fa fa-exclamation-triangle"></i></b></li>
+
+                     </ul>                  </div>
+               </div>
+               <div class="panel panel-child col-md-4">
+                  <header class="panel-heading uppercase">
+                     Comments
+                  </header>
+                  <div class="panel-body">
+                     <section class="public-comment" id="comment-relative">
+                        <p class="btnComment">Trao đổi (comments) <span data-linked="103" class="badge number-comment">0</span></p>
+                        <div class="comment-container" data-linked="103" data-type="1" data-style="2" data-comment=" https://timhangquangchau.com/comment/do-comment "><div class="body-comment"><div class="content"><div>Chưa có trao đổi nào</div></div></div><div class="send-comment block-chatbox"><textarea placeholder="gửi comment" name="c_comment" id="c_comment" class="form-control inline" style="width: 656px;"></textarea><div><button type="button" class="doComment btn btn-info btn-action-pass btn-chatbox inline">comment</button></div></div></div>
+                     </section>
+                  </div>
+               </div>
+                                 <section class="panel panel-child col-md-12">
+                     <header class="panel-heading uppercase">
+                        Thông tin đơn hàng ký gửi <a data-toggle="modal" data-target=".edit-consigning-lg" class="hidden btn btn-primary btn-sm">Sửa thông tin hàng ký gửi</a>
+                     </header>
+                     <div class="panel-body">
+                        <div class="row">
+<div class="col-md-6">
+   <ul class="list-understyle list-order">
+      <li>
+         <label class="mg-0">Mã đơn: </label>
+         <span class="text-info bold btn-flat"><b>103</b></span> - <span class="btn btn-xs" style="background-color: #5cb85c; color: #fff;">Thanh lý</span>
+      </li>
+      <li>
+         <label class="mg-0">Số thùng, kiện / Số lượng: </label>
+         <span class="text-info bold btn-flat"><b>1</b> / <b>0</b></span>
+      </li>
+      <li>
+         <label class="mg-0">Người gửi =&gt; Người nhận: </label>
+         <span class="text-info bold btn-flat"><b>NaN </b> =&gt; <b>NaN </b></span>
+      </li>
+      <li>
+         <label class="mg-0">Thanh toán: </label>
+         <span class="text-info bold btn-flat">-- <sup>(Chưa thanh toán)</sup></span>
+      </li>
+      <li>
+         <label class="mg-0">Thông tin: </label>
+         <span class="text-info bold btn-flat">KH A Tuấn 0965712201</span>
+      </li>
+   </ul>
+</div>
+
+</div>
+
+   <div class="hidden modal fade edit-consigning-lg" tabindex="-5" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h4>Sửa hàng ký gửi</h4>
+            </div>
+            <div class="modal-body">
+               <form role="form" class="form-horizontal" accept-charset="UTF-8" action="https://timhangquangchau.com/thqc/rel/%7Bid%7D/edit-consign" method="post">
+                  <input type="hidden" name="_token" value="w0ZF4euKWqOnnZACQCrOSv8N29wV2LUISSakkAAT">
+                  <div class="form-group">
+                     <label for="package_hkg" class="col-sm-3 control-label">Số thùng, kiện</label>
+                     <div class="col-sm-5">
+                        <input required="" value="" type="number" max="100" name="package_hkg" class="form-control money" id="package_hkg">
+                     </div>
+                  </div>
+                  <div class="form-group">
+                     <label for="quantity_hkg" class="col-sm-3 control-label">Số lượng</label>
+                     <div class="col-sm-5">
+                        <input required="" value="" type="text" max="100" name="quantity_hkg" class="form-control money" id="quantity_hkg" style="text-align: right;">
+                     </div>
+                  </div>
+                  <div class="form-group">
+                     <label for="total_money_hkg" class="col-sm-3 control-label">Giá trị lô hàng (tệ)</label>
+                     <div class="col-sm-5">
+                        <input required="" value="" type="text" name="total_money_hkg" class="form-control decimal" id="total_money_hkg">
+                     </div>
+                  </div>
+                  <div class="form-group">
+                     <label for="service_charge" class="col-sm-3 control-label">Thu phí dịch vụ</label>
+                     <div class="col-sm-5">
+                        <select name="service_charge" class="form-control" style="display: block" id="service_charge">
+                                                                                                            </select>
+                     </div>
+                  </div>
+                  <div class="form-group text-center">
+                     <button type="button" data-dismiss="modal" class="btn btn-flat btn-default">Hủy</button>
+                     <input type="submit" class="btn  btn-flat btn-danger" value="Lưu lại">
+                  </div>
+               </form>
+            </div>
+         </div>
+      </div>
+   </div>                     </div>
+                  </section>
+                              <span class="clearfix"></span>
+               <section class="panel panel-child panel-default">
+                  <header class="panel-heading" id="extraService" data-id="103" data-url="https://timhangquangchau.com/thqc/rel/swap-extra-service">
+                     <div class="col-md-2">
+                        <input class="btnExtra" type="checkbox" id="g_check" value="is_checked_number" disabled="disabled">
+                        <label for="g_check">
+                           Kiểm đếm số lượng
+                        </label>
+                     </div>
+                     <div class="col-md-2 hidden">
+                        <input class="btnExtra" type="checkbox" id="fast_logistic" value="fast_logistic" disabled="disabled">
+                        <label for="fast_logistic">
+                           Chuyển phát nhanh
+                        </label>
+                     </div>
+                     <div class="col-md-2">
+                        <input class="btnExtra" type="checkbox" id="g_pack" value="is_packed" disabled="disabled">
+                        <label for="g_pack">
+                           Đóng kiện
+                        </label>
+                     </div>
+                     <div class="col-md-2">
+                        <input class="btnExtra" type="checkbox" id="is_container" value="is_container" disabled="disabled">
+                        <label for="is_container">
+                           Đi container
+                        </label>
+                     </div>
+                     <div class="col-md-2 hidden">
+                        <input class="btnExtra" type="checkbox" id="is_slow" value="is_slow" disabled="disabled">
+                        <label for="is_slow">
+                           Đi chậm
+                        </label>
+                     </div>
+                     <div class="col-md-2">
+                        <input class="btnExtra" type="checkbox" id="is_egg" value="is_egg" disabled="disabled">
+                        <label for="is_egg">
+                           Dễ vỡ
+                        </label>
+                     </div>
+                     <div class="col-md-2">
+                        <input class="btnExtra" type="checkbox" id="is_wet" value="is_wet" disabled="disabled">
+                        <label for="is_wet">
+                           Chống thấm
+                        </label>
+                     </div>
+                     <span class="clearfix"></span>
+                  </header>
+                  <div class="panel-body panel-overflow">
+                                       <a href="https://timhangquangchau.com/thqc/rel/103/ordered" class="btn btn-warning btn-flat btn-sm my-confirm" rel="tooltip" data-original-title="" title=""><i class="fa fa-check"></i> Xử lý xong</a>
+<hr>
+<table class="table table-bordered table-condensed">
+   <thead>
+      <tr class="text-center">
+         <th>#</th>
+         <th>Mã vận đơn</th>
+         <th>Trạng thái shop</th>
+         <th>Alipay</th>
+         <th>Nhận lại</th>
+         <th>Cân nặng (kg)</th>
+         <th>Thể tích (m<sup>3</sup>)</th>
+         <th>Quy đổi</th>
+         <th>Giá (vnđ)</th>
+         <th>Tính theo</th>
+         <th>Thành tiền</th>
+         <th>Loại hàng</th>
+         <th>Pin</th>
+         <th>Ghi chú</th>
+         <th width="100px">Thao tác</th>
+      </tr>
+   </thead>
+   <tbody>
+            <tr data-url="https://timhangquangchau.com/thqc/order-shop/edit-order-group/102">
+         <td>1</td>
+         <td class="text-right editLading show-my-title" data-id="102" data-status-string="Đã trả hàng" data-name="lading_code">
+            <span class="view-field lading_code">880207314478</span>
+                        <input class="edit-field form-control" type="text" name="lading_code" value="880207314478">
+                     </td>
+         <td class="shop_status">Đã trả hàng</td>
+         <td class="text-right"><a href="javascript:;" data-toggle="modal" data-target=".modal-checkout" class="btn btn-dark-gray btn-xs g-checkout">0</a></td>
+         <td class="text-right"><a href="javascript:;" data-toggle="modal" data-target=".modal-feedback" class="btn btn-dark-gray btn-xs g-checkout">0</a></td>
+         <td data-id="102" data-name="weight" class="editLading">
+            <span class="view-field weight">29.30</span>
+            <input class="edit-field form-control" type="text" name="weight" value="29.30">
+         </td>
+         <td data-id="102" data-name="mass" class="editLading">
+            <span class="view-field mass">0.00</span>
+            <input class="edit-field form-control" type="text" name="mass" value="0.00">
+         </td>
+         <td data-id="102" data-name="weight_exchange" class="editLading">
+            <span class="view-field weight_exchange">29.30</span>
+            <input class="edit-field form-control" type="text" name="weight_exchange" value="29.30">
+         </td>
+         <td data-id="102" data-name="ship_received_consign" class="editLading">
+            <span class="view-field ship_received_consign">17000</span>
+            <input class="edit-field form-control" type="text" name="ship_received_consign" value="17000">
+         </td>
+         <td>
+            <div data-url="https://timhangquangchau.com/thqc/order-shop/chuyen-tinh-tien-102" class="dropdown inline admin" rel="tooltip" title="" data-original-title="Trạng thái link -  Tính tiền theo cân nặng">
+               <button class="btn btn-xs btn-warning btn-flat" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="fa fa-exclamation-triangle"></i><span class="caret"></span>
+               </button>
+               <ul class="dropdown-menu btn-flat" role="menu" style="left: -120px">
+                                       <li><a data-id="102" data-status-string="Tính tiền theo cân nặng" data-status="0" class="changeStatus dropdown-selected" href="javascript:;">Tính tiền theo cân nặng</a></li>
+                                       <li><a data-id="102" data-status-string="Tính tiền theo thể tích" data-status="1" class="changeStatus " href="javascript:;">Tính tiền theo thể tích</a></li>
+                                       <li><a data-id="102" data-status-string="Tính tiền theo quy đổi" data-status="2" class="changeStatus " href="javascript:;">Tính tiền theo quy đổi</a></li>
+                                 </ul>
+            </div>
+         </td>
+         <td>
+            498100
+         </td>
+         <td data-id="102" data-name="type_of_consign" class="editLading">
+            <span class="view-field type_of_consign">Mạch in</span>
+            <input class="edit-field form-control" type="text" name="type_of_consign" value="Mạch in">
+         </td>
+         <td id="extraService" data-id="102" data-url="https://timhangquangchau.com/thqc/rel/edit-fiel-boolen-order-shop">
+            <input title="Không" class="btnExtra" type="checkbox" id="is_pin" value="is_pin" disabled="disabled">
+         </td>
+         <td data-id="102" data-name="note" class="editLading">
+            <span class="view-field note"></span>
+            <input class="edit-field form-control" type="text" name="note" value="">
+         </td>
+         <td class="text-center">
+                        <div>
+               <a data-url="https://timhangquangchau.com/thqc/rel/102/xoa-nhom" href="javascript:;" class="btn btn-xs btn-danger btnDeleteShop"><i class="fa fa-trash-o"></i></a>
+            </div>
+         </td>
+      </tr>
+                <tr data-url="https://timhangquangchau.com/thqc/order-shop/edit-order-group/147">
+            <td>2</td>
+            <td class="text-right editLading show-my-title" data-id="147" data-status-string="Đã trả hàng" data-name="lading_code">
+               <span class="view-field lading_code">880207314478001</span>
+                              <input class="edit-field form-control" type="text" name="lading_code" value="880207314478001">
+                           </td>
+            <td class="shop_status">Đã trả hàng</td>
+            <td></td>
+            <td></td>
+            <td data-id="147" data-name="weight" class="editLading">
+               <span class="view-field weight">31.50</span>
+               <input class="edit-field form-control" type="text" name="weight" value="31.50">
+            </td>
+            <td data-id="147" data-name="mass" class="editLading">
+               <span class="view-field mass">0.00</span>
+               <input class="edit-field form-control" type="text" name="mass" value="0.00">
+            </td>
+            <td data-id="147" data-name="weight_exchange" class="editLading">
+               <span class="view-field weight_exchange">31.50</span>
+               <input class="edit-field form-control" type="text" name="weight_exchange" value="31.50">
+            </td>
+            <td data-id="147" data-name="ship_received_consign" class="editLading">
+               <span class="view-field ship_received_consign">17000</span>
+               <input class="edit-field form-control" type="text" name="ship_received_consign" value="17000">
+            </td>
+            <td>
+               <div data-url="https://timhangquangchau.com/thqc/order-shop/chuyen-tinh-tien-147" class="dropdown inline admin" rel="tooltip" title="" data-original-title="Trạng thái link -  Tính tiền theo cân nặng">
+                  <button class="btn btn-xs btn-warning btn-flat" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                     <i class="fa fa-exclamation-triangle"></i><span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu btn-flat" role="menu" style="left: -120px">
+                                             <li><a data-id="147" data-status-string="Tính tiền theo cân nặng" data-status="0" class="changeStatus dropdown-selected" href="javascript:;">Tính tiền theo cân nặng</a></li>
+                                             <li><a data-id="147" data-status-string="Tính tiền theo thể tích" data-status="1" class="changeStatus " href="javascript:;">Tính tiền theo thể tích</a></li>
+                                             <li><a data-id="147" data-status-string="Tính tiền theo quy đổi" data-status="2" class="changeStatus " href="javascript:;">Tính tiền theo quy đổi</a></li>
+                                       </ul>
+               </div>
+            </td>
+            <td>
+               535500
+            </td>
+            <td data-id="147" data-name="type_of_consign" class="editLading">
+               <span class="view-field type_of_consign"></span>
+               <input class="edit-field form-control" type="text" name="type_of_consign" value="">
+            </td>
+            <td id="extraService" data-id="147" data-url="https://timhangquangchau.com/thqc/rel/edit-fiel-boolen-order-shop">
+               <input title="Không" class="btnExtra" type="checkbox" id="is_pin" value="is_pin" disabled="disabled">
+            </td>
+            <td data-id="147" data-name="note" class="editLading">
+               <span class="view-field note"></span>
+               <input class="edit-field form-control" type="text" name="note" value="">
+            </td>
+            <td class="text-center">
+                        </td>
+         </tr>
+               <tr data-url="https://timhangquangchau.com/thqc/order-shop/edit-order-group/148">
+            <td>3</td>
+            <td class="text-right editLading show-my-title" data-id="148" data-status-string="Đã trả hàng" data-name="lading_code">
+               <span class="view-field lading_code">880207314478002</span>
+                              <input class="edit-field form-control" type="text" name="lading_code" value="880207314478002">
+                           </td>
+            <td class="shop_status">Đã trả hàng</td>
+            <td></td>
+            <td></td>
+            <td data-id="148" data-name="weight" class="editLading">
+               <span class="view-field weight">31.50</span>
+               <input class="edit-field form-control" type="text" name="weight" value="31.50">
+            </td>
+            <td data-id="148" data-name="mass" class="editLading">
+               <span class="view-field mass">0.00</span>
+               <input class="edit-field form-control" type="text" name="mass" value="0.00">
+            </td>
+            <td data-id="148" data-name="weight_exchange" class="editLading">
+               <span class="view-field weight_exchange">31.50</span>
+               <input class="edit-field form-control" type="text" name="weight_exchange" value="31.50">
+            </td>
+            <td data-id="148" data-name="ship_received_consign" class="editLading">
+               <span class="view-field ship_received_consign">17000</span>
+               <input class="edit-field form-control" type="text" name="ship_received_consign" value="17000">
+            </td>
+            <td>
+               <div data-url="https://timhangquangchau.com/thqc/order-shop/chuyen-tinh-tien-148" class="dropdown inline admin" rel="tooltip" title="" data-original-title="Trạng thái link -  Tính tiền theo cân nặng">
+                  <button class="btn btn-xs btn-warning btn-flat" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                     <i class="fa fa-exclamation-triangle"></i><span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu btn-flat" role="menu" style="left: -120px">
+                                             <li><a data-id="148" data-status-string="Tính tiền theo cân nặng" data-status="0" class="changeStatus dropdown-selected" href="javascript:;">Tính tiền theo cân nặng</a></li>
+                                             <li><a data-id="148" data-status-string="Tính tiền theo thể tích" data-status="1" class="changeStatus " href="javascript:;">Tính tiền theo thể tích</a></li>
+                                             <li><a data-id="148" data-status-string="Tính tiền theo quy đổi" data-status="2" class="changeStatus " href="javascript:;">Tính tiền theo quy đổi</a></li>
+                                       </ul>
+               </div>
+            </td>
+            <td>
+               535500
+            </td>
+            <td data-id="148" data-name="type_of_consign" class="editLading">
+               <span class="view-field type_of_consign"></span>
+               <input class="edit-field form-control" type="text" name="type_of_consign" value="">
+            </td>
+            <td id="extraService" data-id="148" data-url="https://timhangquangchau.com/thqc/rel/edit-fiel-boolen-order-shop">
+               <input title="Không" class="btnExtra" type="checkbox" id="is_pin" value="is_pin" disabled="disabled">
+            </td>
+            <td data-id="148" data-name="note" class="editLading">
+               <span class="view-field note"></span>
+               <input class="edit-field form-control" type="text" name="note" value="">
+            </td>
+            <td class="text-center">
+                        </td>
+         </tr>
+            <tr class="text-right">
+            <td colspan="14">
+            <form action="https://timhangquangchau.com/thqc/rel/createGroupChild" method="post" class="add_order_shop_child_form">
+               <input class="hidden" name="order_id" type="text" value="103">
+               <input class="hidden" name="shop_id" type="text" value="0">
+               <input class="hidden" name="status" type="text" value="0">
+               <input class="hidden" name="parent_id" type="text" value="102">
+               <input type="hidden" name="_token" value="w0ZF4euKWqOnnZACQCrOSv8N29wV2LUISSakkAAT">
+               <button type="submit" class="btn-link add_order_shop_child"><i class="fa fa-plus"></i> Thêm mã vận đơn</button>
+            </form>
+            </td>
+         </tr>
+         </tbody>
+</table>                                    </div>
+               </section>
+            </div>
+                        <div class="modal fade remove-link" tabindex="-5" role="dialog" aria-hidden="true">
+               <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                     <div class="modal-header">
+                        <h4>Chức năng chuyển link sang đơn khác</h4>
+                     </div>
+                     <div class="modal-body">
+                           <input id="orderDetail_id" type="hidden" value="">
+                           <input id="orderid" type="hidden" value="">
+
+                           <div class="form-group" title="Nhập mã đơn hàng nhận link">
+                               <label class="col-sm-2 control-label" style="text-align:right;margin-top: 10px">Mã đơn <span class="text-danger">*</span></label>
+                              <div class="col-sm-5">
+                                 <input type="text" class="form-control order_remove" name="order_remove" required="">
+                              </div>
+                              <buttom remove-link="https://timhangquangchau.com/thqc/rel/remove-link-admin" class="btn btn-flat btn-primary btn-remove">
+                                 Chuyển link
+                              </buttom>
+                           </div>
+                        
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+      </div>
+   </div>
+<style>
+   #log-body span b:last-child {
+      color: red;
+   }
+   td {
+      padding: 1px;
+   }
+</style>
+   <div class="modal fade log-order-lg" tabindex="-5" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-lg" style="width: 90%">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h4>Lịch sử đơn hàng</h4>
+            </div>
+            <div class="modal-body modal-log">
+               <table class="table table-bordered">
+                  <thead>
+                     <tr><th>Ngày giờ</th>
+                     <th>Loại</th>
+                     <th>Tài khoản</th>
+                     <th style="max-width: 500px; word-wrap: break-word;">Nội dung</th>
+                  </tr></thead>
+                  <tbody id="#log-body">
+                                             <tr>
+                              <td>11-04-2017 14:13:24</td>
+                              <td>Đơn hàng</td>
+                              <td>khovn1@thqc.com</td>
+                              <td style="max-width: 500px; word-wrap: break-word;">{"id":"7237","order_id":"103","shop_id":"0","lading_code":"4444","contract_code":"","invault_position":"","note":"","liquidate_note":"","weight":"0.00","weight_exchange":"0.00","ship_payment":"0","ship_received":"0","status":"2","created_at":"11-04-2017 14:10:14","updated_at":"1491894794","outchina_at":"--","in_cn_at":"--","new_code":"","invn_at":"--","outvn_at":"--","import_id":"0","w_position_id":"0","commodity_kind":"","import_note":"","kind_note":"","vault_ship":"0.00","images":null,"parent_id":"102","current_warehouse":"0","o_coupon_id":"0","o_vault_note":"","o_weight_price":"0","mass":"0.00","pay_by":"0","type_of_consign":"","is_pin":"0","check_comment":"0","o_pure_price":"0","ship_received_request":"0","ship_received_consign":"0","shop_send_at":"1491894785","status_private":"0","referent_id":"0","importer_id":"0","fast_in_vn":"0","package_id":"0","book_status":"0","vault_status":"0","acc_status":"0","vault_id":"0","acc_id":"0","o_special_book_note":"","o_special_vault_note":"","o_special_acc_note":"","sort_special_status":"","found_in_vault":"0","cn_extra_ship":"0.00","payed":"0","money_save_warehouse":"0","order":{"id":"103","user_id":"22225","care_id":"22231","booker_id":"0","warehouse_id":"1","exchange_rate":"3399","service_charge":"0","total_money":"0","type":"2","style":"0","status":"20","pricing_at":"0","received_at":"0","booked_at":"0","liquidate_at":"1476696119","created_at":"1476366701","updated_at":"1491667121","source":"0","created_by":"0","fast_logistic":"0","is_packed":"0","is_checked_number":"0","deposit_at":"0","shop_id":"0","cancel_at":"0","crate_order":"1","total_weight":"0","info_crate":"KH A Tu\u1ea5n 0965712201","weight_charge":"1569100.00","tally_charge":"0.00","dis_service_charge":"0.00","dis_shipping_charge":"0.00","minimum_deposit":"0","name_of_from":"","phone_of_from":"","name_of_to":"","phone_of_to":"","pay_for":"0","is_pay":"0","is_container":"0","check_complain":"0","complain_note":"","reply_complain":"","complain_at":"0","is_slow":"0","type_complain":"0","user_level_id":"0","or_last_money":"0","note_booker":"","note_account":"","note_orders":"","c_reason":"0","c_note":"","receive_complain_at":"0","remove_complain_at":"0","cskh_complain_note":"","order_thumbnail":null,"order_domain":null,"service_charge_by_ware":"0.00","is_egg":"0","is_wet":"0","o_recipe":"0","o_cn_extra_ship":"0","o_money_save":"0","o_money_pack":"0","book_dicker":"0.00","ware_dicker":"0.00","ship_dicker":"0.00","o_domain":"0","o_vip_service":"0.00","or_weight_price":"0"}}</td>
+                        </tr>
+                                             <tr>
+                              <td>11-04-2017 14:13:14</td>
+                              <td>Đơn hàng</td>
+                              <td>khovn1@thqc.com</td>
+                              <td style="max-width: 500px; word-wrap: break-word;">Kiện hàng <b>7237</b>, <b>Mã vận đơn</b>: <b>232321</b> =&gt; <b>4444</b></td>
+                        </tr>
+                                             <tr>
+                              <td>11-04-2017 14:13:11</td>
+                              <td>Đơn hàng</td>
+                              <td>khovn1@thqc.com</td>
+                              <td style="max-width: 500px; word-wrap: break-word;">Kiện hàng <b>7237</b>, <b>Mã vận đơn</b>: <b>232323</b> =&gt; <b>232321</b></td>
+                        </tr>
+                                             <tr>
+                              <td>11-04-2017 14:13:05</td>
+                              <td>Đơn hàng</td>
+                              <td>khovn1@thqc.com</td>
+                              <td style="max-width: 500px; word-wrap: break-word;">Kiện hàng <b>7237</b>, <b>Mã vận đơn</b>: <b></b> =&gt; <b>232323</b></td>
+                        </tr>
+                                             <tr>
+                              <td>17-10-2016 16:21:12</td>
+                              <td>Đơn hàng</td>
+                              <td>ketoan@thqc.com</td>
+                              <td style="max-width: 500px; word-wrap: break-word;">Kiện hàng <b>102</b>: Nhập vào phiếu <b>11</b></td>
+                        </tr>
+                                             <tr>
+                              <td>17-10-2016 16:21:12</td>
+                              <td>Đơn hàng</td>
+                              <td>ketoan@thqc.com</td>
+                              <td style="max-width: 500px; word-wrap: break-word;">Kiện hàng <b>147</b>: Nhập vào phiếu <b>11</b></td>
+                        </tr>
+                                             <tr>
+                              <td>17-10-2016 16:21:12</td>
+                              <td>Đơn hàng</td>
+                              <td>ketoan@thqc.com</td>
+                              <td style="max-width: 500px; word-wrap: break-word;">Kiện hàng <b>148</b>: Nhập vào phiếu <b>11</b></td>
+                        </tr>
+                                             <tr>
+                              <td>17-10-2016 11:12:09</td>
+                              <td>Đơn hàng</td>
+                              <td>khovn1@thqc.com</td>
+                              <td style="max-width: 500px; word-wrap: break-word;">Kiện <b>148</b>: <b>Nhập kho VN</b></td>
+                        </tr>
+                                             <tr>
+                              <td>17-10-2016 11:12:06</td>
+                              <td>Đơn hàng</td>
+                              <td>khovn1@thqc.com</td>
+                              <td style="max-width: 500px; word-wrap: break-word;">Kiện <b>147</b>: <b>Nhập kho VN</b></td>
+                        </tr>
+                                             <tr>
+                              <td>17-10-2016 11:11:21</td>
+                              <td>Đơn hàng</td>
+                              <td>khotq1@thqc.com</td>
+                              <td style="max-width: 500px; word-wrap: break-word;">Kiện <b>147</b>: <b>Chờ về VN</b> =&gt; <b>Xuất kho TQ</b></td>
+                        </tr>
+                                             <tr>
+                              <td>17-10-2016 11:11:21</td>
+                              <td>Đơn hàng</td>
+                              <td>khotq1@thqc.com</td>
+                              <td style="max-width: 500px; word-wrap: break-word;">Kiện <b>148</b>: <b>Chờ về VN</b> =&gt; <b>Xuất kho TQ</b></td>
+                        </tr>
+                                             <tr>
+                              <td>17-10-2016 11:10:23</td>
+                              <td>Đơn hàng</td>
+                              <td>khotq1@thqc.com</td>
+                              <td style="max-width: 500px; word-wrap: break-word;">Kiện <b>148</b>: <b>Kho THQC nhận hàng</b> =&gt; <b>Chờ về VN</b></td>
+                        </tr>
+                                             <tr>
+                              <td>17-10-2016 11:10:15</td>
+                              <td>Đơn hàng</td>
+                              <td>khotq1@thqc.com</td>
+                              <td style="max-width: 500px; word-wrap: break-word;">Kiện <b>147</b>: <b>Kho THQC nhận hàng</b> =&gt; <b>Chờ về VN</b></td>
+                        </tr>
+                                             <tr>
+                              <td>15-10-2016 16:04:41</td>
+                              <td>Đơn hàng</td>
+                              <td>khotq1@thqc.com</td>
+                              <td style="max-width: 500px; word-wrap: break-word;">Kiện <b>148</b> nhập kho TQ</td>
+                        </tr>
+                                             <tr>
+                              <td>15-10-2016 16:04:11</td>
+                              <td>Đơn hàng</td>
+                              <td>khotq1@thqc.com</td>
+                              <td style="max-width: 500px; word-wrap: break-word;">Kiện <b>147</b> nhập kho TQ</td>
+                        </tr>
+                                             <tr>
+                              <td>15-10-2016 15:24:50</td>
+                              <td>Đơn hàng</td>
+                              <td>khovn1@thqc.com</td>
+                              <td style="max-width: 500px; word-wrap: break-word;">Kiện hàng <b>148</b>, <b>Cân nặng</b>: <b>0.00</b> =&gt; <b>31.5</b></td>
+                        </tr>
+                                             <tr>
+                              <td>15-10-2016 15:24:50</td>
+                              <td>Đơn hàng</td>
+                              <td>khovn1@thqc.com</td>
+                              <td style="max-width: 500px; word-wrap: break-word;">Kiện hàng <b>148</b>, <b>Cân nặng</b>: <b>0.00</b> =&gt; <b>31.5</b></td>
+                        </tr>
+                                             <tr>
+                              <td>15-10-2016 15:24:50</td>
+                              <td>Đơn hàng</td>
+                              <td>khovn1@thqc.com</td>
+                              <td style="max-width: 500px; word-wrap: break-word;">Kiện hàng <b>148</b>, <b>Cân nặng</b>: <b>31.50</b> =&gt; <b>31.5</b></td>
+                        </tr>
+                                             <tr>
+                              <td>15-10-2016 15:24:47</td>
+                              <td>Đơn hàng</td>
+                              <td>khovn1@thqc.com</td>
+                              <td style="max-width: 500px; word-wrap: break-word;">Kiện hàng <b>147</b>, <b>Cân nặng</b>: <b>0.00</b> =&gt; <b>31.5</b></td>
+                        </tr>
+                                             <tr>
+                              <td>15-10-2016 15:24:47</td>
+                              <td>Đơn hàng</td>
+                              <td>khovn1@thqc.com</td>
+                              <td style="max-width: 500px; word-wrap: break-word;">Kiện hàng <b>147</b>, <b>Cân nặng</b>: <b>0.00</b> =&gt; <b>31.5</b></td>
+                        </tr>
+                                             <tr>
+                              <td>15-10-2016 15:16:14</td>
+                              <td>Đơn hàng</td>
+                              <td>khovn1@thqc.com</td>
+                              <td style="max-width: 500px; word-wrap: break-word;">Kiện hàng <b>148</b>, <b>Mã vận đơn</b>: <b></b> =&gt; <b>880207314478002</b></td>
+                        </tr>
+                                             <tr>
+                              <td>15-10-2016 15:16:09</td>
+                              <td>Đơn hàng</td>
+                              <td>khovn1@thqc.com</td>
+                              <td style="max-width: 500px; word-wrap: break-word;">Kiện hàng <b>147</b>, <b>Mã vận đơn</b>: <b></b> =&gt; <b>880207314478001</b></td>
+                        </tr>
+                                             <tr>
+                              <td>15-10-2016 15:16:09</td>
+                              <td>Đơn hàng</td>
+                              <td>khovn1@thqc.com</td>
+                              <td style="max-width: 500px; word-wrap: break-word;">Kiện hàng <b>147</b>, <b>Mã vận đơn</b>: <b></b> =&gt; <b>880207314478001</b></td>
+                        </tr>
+                                             <tr>
+                              <td>15-10-2016 14:26:24</td>
+                              <td>Đơn hàng</td>
+                              <td>khovn1@thqc.com</td>
+                              <td style="max-width: 500px; word-wrap: break-word;">Kiện <b>102</b>: <b>Nhập kho VN</b></td>
+                        </tr>
+                                             <tr>
+                              <td>15-10-2016 14:09:34</td>
+                              <td>Đơn hàng</td>
+                              <td>khotq1@thqc.com</td>
+                              <td style="max-width: 500px; word-wrap: break-word;">Kiện <b>102</b>: <b>Chờ về VN</b> =&gt; <b>Xuất kho TQ</b></td>
+                        </tr>
+                                             <tr>
+                              <td>15-10-2016 13:48:00</td>
+                              <td>Đơn hàng</td>
+                              <td>khotq1@thqc.com</td>
+                              <td style="max-width: 500px; word-wrap: break-word;">Kiện <b>102</b>: <b>Kho THQC nhận hàng</b> =&gt; <b>Chờ về VN</b></td>
+                        </tr>
+                                             <tr>
+                              <td>13-10-2016 21:11:43</td>
+                              <td>Đơn hàng</td>
+                              <td>khovn1@thqc.com</td>
+                              <td style="max-width: 500px; word-wrap: break-word;">Kiện <b>102</b> nhập kho TQ</td>
+                        </tr>
+                                             <tr>
+                              <td>13-10-2016 20:51:41</td>
+                              <td>Đơn hàng</td>
+                              <td>tuantdh2201@gmail.com</td>
+                              <td style="max-width: 500px; word-wrap: break-word;">Tài khoản khovn1@thqc.com đã tạo đơn hàng ký gửi 103 cho tài khoản tuantdh2201@gmail.com</td>
+                        </tr>
+                                       </tbody>
+               </table>
+               </div>
+               <div class="text-center">
+                  <button type="button" data-dismiss="modal" class="btn btn-flat btn-default">Đóng</button>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   </div>
+   <!-- /.content-wrapper -->
+   <footer class="main-footer">
+      timhangquangchau.com
+   </footer>
+      <!-- Control Sidebar -->
+
+<!-- ./wrapper -->
+
+<!-- jQuery 2.2.3 -->
+<script src="./Chi tiết đơn hàng-kygui_files/jquery-2.2.3.min.js.download"></script>
+<!-- jQuery UI 1.11.4 -->
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<!-- Bootstrap 3.3.6 -->
+<script src="./Chi tiết đơn hàng-kygui_files/bootstrap.min.js.download"></script>
+<script type="text/javascript" src="./Chi tiết đơn hàng-kygui_files/moment.min.js.download"></script>
+<script type="text/javascript" src="./Chi tiết đơn hàng-kygui_files/bootstrap-datetimepicker.min.js.download"></script>
+<script src="./Chi tiết đơn hàng-kygui_files/jquery.gritter.js.download"></script>
+<script src="./Chi tiết đơn hàng-kygui_files/select2.min.js.download"></script>
+<script src="./Chi tiết đơn hàng-kygui_files/sweetalert.min.js.download"></script>
+<!-- daterangepicker -->
+<!-- datepicker -->
+<script src="./Chi tiết đơn hàng-kygui_files/bootstrap-datepicker.js.download"></script>
+<!-- Bootstrap WYSIHTML5 -->
+<!-- Slimscroll -->
+<script src="./Chi tiết đơn hàng-kygui_files/jquery.slimscroll.min.js.download"></script>
+<!-- FastClick -->
+<script src="./Chi tiết đơn hàng-kygui_files/fastclick.js.download"></script>
+<!-- AdminLTE App -->
+<script src="./Chi tiết đơn hàng-kygui_files/app.min.js.download"></script>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<script src="./Chi tiết đơn hàng-kygui_files/dashboard.js.download"></script>
+<script src="./Chi tiết đơn hàng-kygui_files/nprogress.js.download"></script>
+<script src="./Chi tiết đơn hàng-kygui_files/jquery.inputmask.numeric.extensions.js.download"></script>
+<script src="./Chi tiết đơn hàng-kygui_files/main.js.download"></script>
+<script src="./Chi tiết đơn hàng-kygui_files/admin.js.download"></script>
+<script type="text/javascript" src="./Chi tiết đơn hàng-kygui_files/publicjs.js.download"></script>
+<!-- AdminLTE for demo purposes -->
+<div class="modal fade modal-checkout" tabindex="-5" role="dialog" aria-hidden="true">
+   <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+         <div class="modal-header">
+            <h4>Thanh toán Trung Quốc</h4>
+         </div>
+         <div class="modal-body">
+            <form role="form" class="form-horizontal" accept-charset="UTF-8" action="https://timhangquangchau.com/thqc/payments/trung-quoc/tien-hang" method="POST">
+            <input type="hidden" name="_token" value="w0ZF4euKWqOnnZACQCrOSv8N29wV2LUISSakkAAT">
+            <input type="hidden" name="order_id" value="103">
+            <input type="hidden" name="order_shop_id" value="102">
+            <input type="hidden" name="type" value="2">
+            <input type="hidden" name="kind" value="21">
+            <input type="hidden" name="style" value="4">
+            <div class="form-group">
+               <label for="c_money" class="col-sm-3 control-label">Số tiền <span class="text-danger">*</span></label>
+               <div class="col-sm-5">
+                  <input type="text" class="form-control money-decimal" id="c_money" name="c_money" required="" style="text-align: right;">
+               </div>
+            </div>
+            <div class="form-group">
+               <label for="pay_by" class="col-sm-3 control-label">Thanh toán bằng <span class="text-danger">*</span></label>
+               <div class="col-sm-5">
+                  <select name="pay_by" id="pay_by" class="form-control pay_by">
+                     <option value="0">Alipay</option>
+                     <option value="1">Thực tế</option>
+                  </select>
+               </div>
+            </div>
+            <div class="form-group real-group" style="display: none;">
+               <label for="bank_id" class="col-sm-3 control-label">Ngân hàng <span class="text-danger">*</span></label>
+               <div class="col-sm-5">
+                  <select name="bank_id" id="bank_id" class="form-control">
+                     <option value="-1">Mời chọn</option>
+                                             <option value="10"> ICBC Phạm Hảo </option>
+                                             <option value="0"> Ngân hàng Nông Nghiệp </option>
+                                             <option value="1"> ICBC liên kết với Alipay </option>
+                                             <option value="3"> Nông Nghiệp Lê Tân </option>
+                                             <option value="6"> Nông Nghiệp Thanh Tùng </option>
+                                             <option value="7"> Nông Nghiệp Hồng Nhung </option>
+                                             <option value="8"> Ngân hàng thanh toán hộ </option>
+                                             <option value="9"> Quỹ tệ kho TQ </option>
+                                             <option value="11"> Phạm Văn Hảo TKBĐ </option>
+                                             <option value="12"> Alipay Phạm Hảo </option>
+                                       </select>
+               </div>
+            </div>
+             <div class="form-group">
+               <label for="created_at" class="col-sm-3 control-label">Ngày tháng </label>
+               <div class="col-sm-5">
+                  <input type="text" class="form-control datetimeselector-en" id="created_at" name="created_at" placeholder="Nếu bỏ trống thì lấy ngày giờ hiện tại">
+               </div>
+            </div>
+            <div class="form-group">
+               <label for="note" class="col-sm-3 control-label">Ghi chú thêm</label>
+               <div class="col-sm-5">
+                  <textarea maxlength="1000" name="note" class="form-control" id="note" placeholder="..."></textarea>
+               </div>
+            </div>
+            <div class="col-md-offset-3"><em>(*) là bắt buộc</em></div>
+            <div class="form-group text-center">
+               <button type="button" data-dismiss="modal" class="btn btn-flat btn-default">Hủy</button>
+               <input type="submit" class="btn my-confirm btn-flat btn-primary" value="Thêm mới">
+            </div>
+            </form>
+         </div>
+      </div>
+   </div>
+</div>
+
+<div class="modal fade modal-feedback" tabindex="-5" role="dialog" aria-hidden="true">
+   <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+         <div class="modal-header">
+            <h4>Nhận lại thanh toán Trung Quốc</h4>
+         </div>
+         <div class="modal-body">
+            <form role="form" class="form-horizontal" accept-charset="UTF-8" action="https://timhangquangchau.com/thqc/payments/trung-quoc/tien-hang" method="POST">
+            <input type="hidden" name="_token" value="w0ZF4euKWqOnnZACQCrOSv8N29wV2LUISSakkAAT">
+            <input type="hidden" name="order_id" value="103">
+            <input type="hidden" name="order_shop_id" value="102">
+            <input type="hidden" name="order_detail_id" value="">
+
+            <input type="hidden" name="type" value="1">
+            <input type="hidden" name="style" value="4">
+            <div class="form-group">
+               <label class="col-sm-3 control-label">Số tiền <span class="text-danger">*</span></label>
+               <div class="col-sm-5">
+                  <input type="text" class="form-control money-decimal" name="c_money" required="" style="text-align: right;">
+               </div>
+            </div>
+            <div class="form-group">
+               <label for="pay_by" class="col-sm-3 control-label">Thanh toán bằng <span class="text-danger">*</span></label>
+               <div class="col-sm-5">
+                  <select name="pay_by" class="form-control pay_by">
+                     <option value="0">Alipay</option>
+                     <option value="1">Nông nghiệp</option>
+                  </select>
+               </div>
+            </div>
+            <div class="form-group real-group" style="display: none;">
+               <label for="bank_id" class="col-sm-3 control-label">Ngân hàng <span class="text-danger">*</span></label>
+               <div class="col-sm-5">
+                  <select name="bank_id" class="form-control">
+                     <option value="-1">Mời chọn</option>
+                                             <option value="10"> ICBC Phạm Hảo </option>
+                                             <option value="0"> Ngân hàng Nông Nghiệp </option>
+                                             <option value="1"> ICBC liên kết với Alipay </option>
+                                             <option value="3"> Nông Nghiệp Lê Tân </option>
+                                             <option value="6"> Nông Nghiệp Thanh Tùng </option>
+                                             <option value="7"> Nông Nghiệp Hồng Nhung </option>
+                                             <option value="8"> Ngân hàng thanh toán hộ </option>
+                                             <option value="9"> Quỹ tệ kho TQ </option>
+                                             <option value="11"> Phạm Văn Hảo TKBĐ </option>
+                                             <option value="12"> Alipay Phạm Hảo </option>
+                                       </select>
+               </div>
+            </div>
+             <div class="form-group">
+               <label class="col-sm-3 control-label">Ngày tháng </label>
+               <div class="col-sm-5">
+                  <input type="text" class="form-control datetimeselector-en" name="created_at" placeholder="Nếu bỏ trống thì lấy ngày giờ hiện tại">
+               </div>
+            </div>
+            <div class="form-group">
+               <label for="" class="col-sm-3 control-label">Nhận lại do <span class="text-danger">*</span></label>
+               <div class="col-sm-6">
+                  <select class="form-control" name="kind" required="">
+                     <option value="22">Shop báo thiếu hàng sau khi giao dịch</option>
+                     <option value="23">Kho báo thiếu hàng</option>
+                  </select>
+               </div>
+            </div>
+            <div class="form-group">
+               <label class="col-sm-3 control-label">Ghi chú thêm</label>
+               <div class="col-sm-5">
+                  <textarea maxlength="1000" name="note" class="form-control" placeholder="..."></textarea>
+               </div>
+            </div>
+            <div class="col-md-offset-3"><em>(*) là bắt buộc</em></div>
+            <div class="form-group text-center">
+               <button type="button" data-dismiss="modal" class="btn btn-flat btn-default">Hủy</button>
+               <input type="submit" class="btn my-confirm  btn-flat btn-primary" value="Thêm mới">
+            </div>
+            </form>
+         </div>
+      </div>
+   </div>
+</div>
+
+<div class="modal fade care-to-status-sm" role="dialog">
+   <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+         <div class="modal-header">
+            <h4 class="modal-title">Chuyển đơn về trạng thái</h4>
+         </div>
+         <div class="modal-body">
+            <form accept-charset="UTF-8" action="https://timhangquangchau.com/thqc/rel/%7Bid%7D/change-status/%7Bstatus%7D" method="POST">
+               <input type="hidden" name="order_id" value="103">
+               <input type="hidden" name="_token" value="w0ZF4euKWqOnnZACQCrOSv8N29wV2LUISSakkAAT">
+               <div class="form-group">
+                  <select name="down_status" class="form-control btn-flat">
+                                                                     <option value="0">Chờ báo giá</option>
+                                                                                             <option value="1">Chờ đặt cọc</option>
+                                                                                             <option value="2">Đang mua hàng</option>
+                                                                                                                                                                                                                                                                                                                                                                                          </select>
+               </div>
+               <div class="text-center form-group">
+                  <button type="button" data-dismiss="modal" class="btn btn-flat btn-default">Hủy</button>
+                  <input type="submit" class="btn btn-flat btn-primary" value="Chuyển">
+               </div>
+            </form>
+         </div>
+      </div>
+   </div>
+</div>
+
+
+<div class="modal fade modal-cancel-order" role="dialog">
+   <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+         <div class="modal-header">
+            <h4 class="modal-title">Hủy đơn hàng</h4>
+         </div>
+         <div class="modal-body">
+            <form accept-charset="UTF-8" action="https://timhangquangchau.com/thqc/rel/103/cancel" method="GET">
+               <input name="status" type="hidden" id="text-cancel" value="99">
+               <div class="form-group">
+                  <label>Lý do hủy đơn</label>
+                  <select name="c_reason" required="" class="form-control btn-flat">
+                                             <option value="2">Không liên lạc được với shop</option>
+                                             <option value="3">Không liên lạc được với khách</option>
+                                             <option value="4">Khách yêu cầu hủy</option>
+                                             <option value="5">CSKH báo hủy (quý khách vui lòng liên hệ CSKH để biết rõ)</option>
+                                             <option value="6">Sản phẩm nằm trong danh sách hàng công ty không nhận đặt</option>
+                                       </select>
+               </div>
+               <div class="form-group">
+                  <label for="c_note">Ghi chú thêm</label>
+                  <textarea name="c_note" class="form-control"></textarea>
+               </div>
+               <div class="text-center form-group">
+                  <button type="button" data-dismiss="modal" class="btn btn-flat btn-default">Đóng</button>
+                  <input type="submit" class="btn btn-flat btn-primary confirmForm" value="Đồng ý">
+               </div>
+            </form>
+         </div>
+      </div>
+   </div>
+</div>
+
+
+<div class="modal fade order-exchange-to" role="dialog">
+   <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+         <div class="modal-header">
+            <h4 class="modal-title">Chuyển kiểu đơn hàng</h4>
+         </div>
+         <div class="modal-body">
+            <form accept-charset="UTF-8" action="https://timhangquangchau.com/thqc/rel/changeStyle" method="POST">
+               <input type="hidden" name="_token" value="w0ZF4euKWqOnnZACQCrOSv8N29wV2LUISSakkAAT">
+               <input type="hidden" name="order_id" value="103">
+               <div class="form-group">
+                  <select name="style" class="form-control btn-flat">
+                                             <option selected="" value="0">Hàng của khách</option>
+                                             <option value="1">Hàng công ty</option>
+                                       </select>
+               </div>
+               <div class="text-center form-group">
+                  <button type="button" data-dismiss="modal" class="btn btn-flat btn-default">Hủy</button>
+                  <input type="submit" class="btn btn-flat btn-primary" value="Chuyển">
+               </div>
+            </form>
+         </div>
+      </div>
+   </div>
+</div>      <script type="text/javascript">
+      $(document).ready(function() {
+         $('.my-select2').select2();
+         $('.btnRemove').click(function() {
+            var thisClick = $(this);
+            var link_id   = thisClick.parents('tr').attr('link-id');
+            var order_id  = thisClick.parents('tr').attr('order-id');
+
+            $('#orderDetail_id').val(link_id);
+            $('#orderid').val(order_id);
+
+         });
+
+         $(".btn-remove").on('click',function(){
+            var thisClick      = $(this);
+            var url            = thisClick.attr('remove-link');
+            var orderDetail_id = thisClick.parents('.remove-link').find('#orderDetail_id').val();
+            var order_id = thisClick.parents('.remove-link').find('#orderid').val();
+            var order_remove   = parseFloat(thisClick.parents('.remove-link').find('.order_remove').val());
+            $.ajax({
+            type: "POST",
+            url: url,
+            dataType: "JSON",
+            data:{
+                  orderDetail_id: orderDetail_id,
+                  order_remove:order_remove,
+                  order_id:order_id,
+                  _token: $('body').attr('data-token'),
+               },
+            success: function(response){
+               if (response.status == 'success') {
+                  swal({
+                     type: response.status,
+                     title: "ĐÃ CHUYỂN!",
+                     text: response.text,
+                     timer: 2000,
+                     showConfirmButton: false,
+                  });
+                  window.location.reload();
+
+               }else{
+                  swal({
+                     type: response.status,
+                     title: "THẤT BẠI!",
+                     text: response.text,
+                     timer: 2000,
+                     showConfirmButton: false,
+                  });
+               }
+            }
+         });
+         });
+
+      });
+   </script>
+
+   <script>
+      $(document).ready(function() {
+
+         $('.editType').on('click', function() {
+            thisClick = $(this);
+            var type = thisClick.attr('data-type');
+            var id = thisClick.attr('data-id');
+            var type_string = thisClick.attr('data-type-string');
+            var _token      = jQuery('body').data('token');
+            $.ajax({
+               url: "https://timhangquangchau.com/ajax/backend/changeType",
+               type: 'POST',
+               dataType: 'json',
+               data: {'type': type, 'id' : id,
+                     'type_string' : type_string, '_token' : _token },
+               beforeSend: function() {
+                  thisClick.parents('.type-parent').siblings('button')
+                     .addClass('disabled')
+                     .find('.caret-text')
+                     .text('...');
+               }
+            })
+            .success(function(response) {
+
+               myUtility.showNotify(response.mess);
+               if(response.result == 'per')
+                  return;
+
+               typeParent =  thisClick.parents('.type-parent');
+               typeParent.find('a').removeClass('dropdown-selected');
+               thisClick.addClass('dropdown-selected');
+
+               typeParent.siblings('button').removeClass('disabled').find('.caret-text').text(type_string);
+               thisClick.parents('.extra-fee-parent').find('.extra-fee').text(response.extra);
+
+            });
+
+         });
+
+         // event click edit
+         $('.edit_event').click(function(){
+            $('.view_form').toggle();
+         });
+         $('.edit_price').click(function(){
+            $('.view_form_price').toggle();
+         });
+         // event click cancel
+         $('.btnCancel').click(function(){
+            $('.view_form').hide();
+         });
+         $('.btnCancelPrice').click(function(){
+            $('.view_form_price').hide();
+         });
+         // event click save store
+         $('.btnChangeStore').on('click', function(e){
+            e.preventDefault();
+            var saveChangeStore = jQuery('#frm-update-store');
+            var _token = jQuery('body').data('token');
+            $.ajax({
+               url:  '/ajax/backend/changeWarehouse?_token=' + _token,
+               type: "POST",
+               data: jQuery('#frm-update-store').serialize(),
+               beforeSend :function(){
+                  $('.btnChangeStore').html('Đang xử lý...');
+               },
+               success: function (data) {
+                  if (data.result === 0) {
+                     bootbox.alert(data.message);
+                     return;
+                  }else{
+                     bootbox.alert(data.message);
+                     var event = setInterval(function () {
+                        clearInterval(event);
+                        window.location.reload();
+                     }, 1500);
+                  }
+               }
+            });
+         });
+
+         // event click save price
+         $('.btnEditPrice').click(function(e){
+            e.preventDefault();
+            var _token = jQuery('body').data('token');
+            var da = jQuery('#frm-update-price').serialize();
+            $.ajax({
+               url:  '/ajax/cap-nhat-tien-phi?_token=' + _token,
+               type: "POST",
+               data: da,
+               beforeSend :function(){
+                  $('.btnEditPrice').html('Đang xử lý...');
+               },
+               success: function (data) {
+                  if (data.result === 0) {
+                     bootbox.alert(data.message);
+                     return;
+                  }else{
+                     bootbox.alert(data.message);
+                     var event = setInterval(function () {
+                        clearInterval(event);
+                        window.location.reload();
+                     }, 1500);
+                  }
+               }
+            });
+         });
+
+          // Chuyển trạng thái
+
+         $('.changeStatus').click(function(event) {
+            var thisClick = $(this);
+
+            var url = thisClick.parents('.admin').attr('data-url');
+
+            swal({
+            title: "Bạn có chắc chắn thực hiện?",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#DD6B55",
+            confirmButtonText: "Ok",
+            cancelButtonText: "Cancel",
+            showLoaderOnConfirm: true,
+            closeOnConfirm: false
+            }, function () {
+
+               $.ajax({
+                  url: url,
+                  type: 'POST',
+                  dataType: 'JSON',
+                  data: {
+                     _token: $('body').data('token'),
+                     status: thisClick.attr('data-status'),
+                  },
+                  beforeSend : function() {
+                     myUtility.loading();
+                  },
+                  success : function(response){
+                     $('#my_loading').remove();
+
+                     swal({
+                        type: response.status,
+                        title: "Updated!",
+                        text: response.text,
+                        timer: 2000,
+                        showConfirmButton: false
+                     });
+                     window.location.reload();
+                  }
+               });
+            }); // end success
+
+         });
+
+         $('.my-confirm').click(function(event) {
+            return confirm("Bạn có chắc không?");
+         });
+
+         // alipay
+
+         $('.g-checkout').click(function() {
+
+         });
+
+
+         $('.btnExtra').change(function(event) {
+            event.preventDefault();
+            var thisChange = $(this);
+            var column = thisChange.val();
+            var par = thisChange.parents('#extraService');
+            var ordId = par.attr('data-id');
+            var url = par.attr('data-url');
+
+            $.ajax({
+               url: url,
+               type: 'POST',
+               dataType: 'JSON',
+               data: {
+                  value: column,
+                  id: ordId,
+                  _token: $('body').attr('data-token'),
+               },
+               beforeSend: function(){
+                  myUtility.loading();
+               },
+               success: function(response){
+
+                  swal({
+                     type: response.status,
+                     title: "Updated!",
+                     text: response.message,
+                     timer: 2000,
+                     showConfirmButton: false
+                  });
+                  $('#my_loading').remove();
+               }
+            })
+         });
+      });
+
+   </script>
+
+   <script type="text/javascript">
+   $(document).ready(function() {
+      $('.add_order_shop_child_form').submit(function(e) {
+         e.preventDefault();
+         var _form = $(this);
+         $.ajax({
+            type: 'post',
+            url: _form.attr('action'),
+            data: _form.serializeArray(),
+            dataType: 'json',
+            beforeSend: function() {
+               myUtility.loading();
+            },
+            success: function(data){
+               if(data.code == 1) {
+                  location.reload();
+               } else {
+                  alert(data.messages);
+               }
+            }
+         });
+      });
+   });
+   </script>
+
+   <script>
+   jQuery(document).ready(function($) {
+      gOrder.deleteOrderShop();
+   });
+
+   $('.btn-click').click(function(event) {
+      $(this).css('opacity', '.5');
+   });
+
+   </script>
+         <script>
+         $('.btnExtra').attr('disabled', '');
+      </script>
+   
+   <script>
+      jQuery(document).ready(function($) {
+         $('.edit_event').click(function(event) {
+            $('.view_form').removeClass('hidden');
+         });
+      });
+
+      // load comment
+   	gComment.countUnreadComment();
+      var linked = $('.comment-container').attr('data-linked');
+      gComment.loadComment(linked);
+
+      gOrder.showHideAlipay();
+   </script>
+
+   <script>
+      jQuery(document).ready(function($) {
+         $('#o-recipe').change(function(event) {
+            event.preventDefault();
+            var thisChangeO = $(this);
+            var url = thisChangeO.attr('data-url');
+
+            $.ajax({
+               url: url,
+               type: 'GET',
+               dataType: 'JSON',
+               data: {id: thisChangeO.attr('data-id'), recipe: thisChangeO.val()},
+               beforeSend: function(){
+                  myUtility.loading();
+               },
+               success: function(data) {
+                  $('.my_loading').remove();
+
+                  if(data.error == 1) {
+                     alert(data.message);
+                  } else 
+                     myUtility.showNotify(data.message);
+               }
+            })
+            
+
+         });
+      });
+   </script>
+
+   <script type="text/javascript">
+   $(function() {
+
+      $('.confirm-lading').on('click', function(e){
+         var _this = $(this);
+         var id    = _this.data('id');
+         var token = $('body').data('token');
+         bootbox.confirm('Chắc chắn có xác nhận đơn không?', function(result){
+            if (!result) {
+               return;
+            }
+            $.post('/ajax/code-lading-hkg', { id:id, _token: token }, function(result) {
+               if (result.code == 1) {
+                  bootbox.alert(result.message);
+                  return;
+               }
+               bootbox.alert(result.message);
+            });
+         });
+      });
+   });
+</script>
+
+</body></html>
