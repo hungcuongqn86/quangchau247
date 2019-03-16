@@ -46,8 +46,13 @@ class ShopController extends CommonController
                 return $this->sendError('Error', $validator->errors()->all());
             }
 
-            $create = ShopServiceFactory::mShopService()->create($input);
-            return $this->sendResponse($create, 'Successfully.');
+            $shop = ShopServiceFactory::mShopService()->findByUrl($input['url']);
+            if ($shop) {
+                return $this->sendResponse($shop, 'Successfully.');
+            } else {
+                $create = ShopServiceFactory::mShopService()->create($input);
+                return $this->sendResponse($create, 'Successfully.');
+            }
         } catch (\Exception $e) {
             return $this->sendError('Error', $e->getMessage());
         }
