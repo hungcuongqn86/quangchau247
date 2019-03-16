@@ -13,18 +13,22 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::post('login', 'App\Http\Controllers\API\PassportController@login');
-Route::post('register', 'App\Http\Controllers\API\PassportController@register');
-Route::group(['middleware' => 'auth:api'], function() {
-    Route::post('get-details', 'App\Http\Controllers\API\PassportController@getDetails');
-});
-
 // API Routes System
 Route::group(['prefix' => 'v1'], function () {
-    Route::group(['prefix' => 'media'], function () {
-        Route::group(['namespace' => 'Modules\Common\Http\Controllers'], function () {
-            Route::post('/upload', 'MediaController@upload');
-            Route::delete('/delete', 'MediaController@delete');
+    Route::group(['namespace' => 'Modules\Common\Http\Controllers'], function () {
+        Route::post('login', 'PassportController@login');
+        Route::post('register', 'PassportController@register');
+        Route::group(['middleware' => 'auth:api'], function () {
+            Route::post('get-details', 'PassportController@getDetails');
+        });
+    });
+
+    Route::group(['middleware' => 'auth:api'], function () {
+        Route::group(['prefix' => 'media'], function () {
+            Route::group(['namespace' => 'Modules\Common\Http\Controllers'], function () {
+                Route::post('/upload', 'MediaController@upload');
+                Route::delete('/delete', 'MediaController@delete');
+            });
         });
     });
 });
