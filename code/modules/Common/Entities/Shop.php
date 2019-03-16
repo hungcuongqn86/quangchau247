@@ -8,7 +8,7 @@ class Shop extends BaseEntity
 {
     use Notifiable;
 
-    protected $table = 'm_shop';
+    protected $table = 'shop';
     protected $primaryKey = 'id';
     public $timestamps = false;
     protected $fillable = [
