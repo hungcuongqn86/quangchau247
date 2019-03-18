@@ -35,3 +35,4 @@ Route::group(['prefix' => 'v1'], function () {
 
 // API Routes Pet
 require __DIR__ . '/api/shop.php';
+require __DIR__ . '/api/cart.php';

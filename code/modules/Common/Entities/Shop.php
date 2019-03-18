@@ -18,4 +18,11 @@ class Shop extends BaseEntity
         'created_at',
         'updated_at'
     ];
+
+    protected $appends = ['rate'];
+
+    public function getRateAttribute()
+    {
+        return 3520;
+    }
 }
