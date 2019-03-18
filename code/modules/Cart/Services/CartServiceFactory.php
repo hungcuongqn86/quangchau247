@@ -1,28 +1,18 @@
 <?php
 
-namespace Modules\Owner\Services;
+namespace Modules\Cart\Services;
 
-use Modules\Owner\Services\Impl\OwnerService;
-use Modules\Owner\Services\Impl\OwnerPetService;
+use Modules\Cart\Services\Impl\CartService;
 
-class OwnerServiceFactory
+class CartServiceFactory
 {
-    protected static $mOwnerService;
-    protected static $mOwnerPetService;
+    protected static $mCartService;
 
-    public static function mOwnerService()
+    public static function mCartService()
     {
-        if (self::$mOwnerService == null) {
-            self::$mOwnerService = new OwnerService();
+        if (self::$mCartService == null) {
+            self::$mCartService = new CartService();
         }
-        return self::$mOwnerService;
-    }
-
-    public static function mOwnerPetService()
-    {
-        if (self::$mOwnerPetService == null) {
-            self::$mOwnerPetService = new OwnerPetService();
-        }
-        return self::$mOwnerPetService;
+        return self::$mCartService;
     }
 }
