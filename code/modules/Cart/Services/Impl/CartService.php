@@ -19,13 +19,18 @@ class CartService extends CommonService implements ICartService
         return Cart::class;
     }
 
-    /**
-     * @param $filter
-     * @return mixed
-     */
-    public function search($filter)
+    public function search($userId)
     {
+        return [];
+    }
 
+    public function getDistinctShopCart($userId)
+    {
+        $query = Cart::distinct('shop_id')->where('is_deleted', '=', 0);
+        $query->where('status', '=', 1);
+        $query->where('user_id', '=', $userId);
+        $rResult = $query->pluck('shop_id');
+        return $rResult;
     }
 
     public function findById($id)

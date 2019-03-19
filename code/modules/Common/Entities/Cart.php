@@ -37,4 +37,9 @@ class Cart extends BaseEntity
         'created_at',
         'updated_at'
     ];
+
+    public function Shop()
+    {
+        return $this->belongsTo(Shop::class, 'shop_id', 'id');
+    }
 }

@@ -10,6 +10,19 @@ use Modules\Common\Http\Controllers\CommonController;
 
 class CartController extends CommonController
 {
+    public function search(Request $request)
+    {
+        $user = $request->user();
+        try {
+            // Lay theo shop
+            $shopids = CartServiceFactory::mCartService()->getDistinctShopCart($user->id);
+            $shops = ShopServiceFactory::mShopService()->getByIds($shopids);
+            return $this->sendResponse($shops, 'Successfully.');
+        } catch (\Exception $e) {
+            return $this->sendError('Error', $e->getMessage());
+        }
+    }
+
     public function create(Request $request)
     {
         $input = $request->all();
@@ -41,25 +54,15 @@ class CartController extends CommonController
             return $this->sendError('Error', $validator->errors()->all());
         }
 
-        // Shop
-        $shop = ShopServiceFactory::mShopService()->findByUrl($inputCart['shop_link']);
-        if(!$shop){
-            return $this->sendError('Error', 'Shop.' . $inputCart['shop_nick'].'.NotExit');
-        }
-        $inputCart['shop_id'] = $shop['id'];
-        $user = $request->user();
-        $inputCart['user_id'] = $user['id'];
-
         try {
             // Shop
             $shop = ShopServiceFactory::mShopService()->findByUrl($inputCart['shop_link']);
-            if(!$shop){
-                return $this->sendError('Error', 'Shop.' . $inputCart['shop_nick'].'.NotExit');
+            if (!$shop) {
+                return $this->sendError('Error', 'Shop.' . $inputCart['shop_nick'] . '.NotExit');
             }
             $inputCart['shop_id'] = $shop['id'];
             $user = $request->user();
             $inputCart['user_id'] = $user->id;
-            // return $this->sendResponse($inputCart, 'Successfully.');
             $create = CartServiceFactory::mCartService()->create($inputCart);
             return $this->sendResponse($create, 'Successfully.');
         } catch (\Exception $e) {

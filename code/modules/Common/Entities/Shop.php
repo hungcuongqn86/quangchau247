@@ -25,4 +25,9 @@ class Shop extends BaseEntity
     {
         return 3520;
     }
+
+    public function Cart()
+    {
+        return $this->hasMany(Cart::class, 'shop_id', 'id');
+    }
 }

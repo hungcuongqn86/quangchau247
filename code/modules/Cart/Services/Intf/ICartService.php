@@ -4,5 +4,5 @@ namespace Modules\Cart\Services\Intf;
 
 interface ICartService
 {
-    public function search($filter);
+    public function search($userId);
 }
